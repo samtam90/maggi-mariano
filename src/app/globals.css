@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@layer utilities {
+  .red-title-stroke {
+    stroke: red;
+    stroke-width: 2px;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+.sb-main-padded {
+  padding: 0 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat.woff2") format("woff2"),
+    url("/fonts/Montserrat.woff") format("woff"),
+    url("/fonts/Montserrat.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "MontserratBold";
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("/fonts/Montserrat-Bold.woff") format("woff"),
+    url("/fonts/Montserrat-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto.ttf");
+}
