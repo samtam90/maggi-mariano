@@ -13,19 +13,19 @@
     "test:e2e:silent": "jest ./src/__e2e__ --runInBand --silent"
   },
   "dependencies": {
-    "@italwebcom/brocante-shopapp-tailwind-components": "^1.28.1",
     "@italwebcom/crud-operations-wrapper": "^1.7.0",
     "@italwebcom/custom-react-hooks": "^5.7.1",
     "@italwebcom/logging-utils": "^0.1.3",
-    "@italwebcom/tailwind-components": "^1.14.8",
+    "@italwebcom/tailwind-components": "^1.15.3",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",
-    "next": "^13.4.19",
+    "next": "^14.2.30",
     "react": "18",
     "react-dom": "18",
     "regenerator-runtime": "^0.14.0",
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.2",
+    "zod": "^3.25.64"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.3",

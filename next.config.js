@@ -6,5 +6,9 @@ const millionConfig = { auto: true };
 export default million.next(nextConfig, millionConfig);
 */
 
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
+};
 module.exports = nextConfig;

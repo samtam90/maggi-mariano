@@ -10,6 +10,21 @@ module.exports = {
     "./node_modules/@italwebcom/brocante-shopapp-tailwind-components/*.js",
   ],
   theme: {
+    animation: {
+      grow: "grow 250ms ease-in-out 1",
+      "trace-path": "trace-path 1250ms ease-in-out 1",
+    },
+    keyframes: {
+      grow: {
+        "0%": { transform: "scale(1)" },
+        "80%": { transform: "scale(1.15)" },
+        "100%": { transform: "scale(1)" },
+      },
+      "trace-path": {
+        "0%": { "stroke-dasharray": "0 1500" },
+        "100%": { "stroke-dasharray": "1500 1500" },
+      },
+    },
     extend: {
       colors: {
         white: "#ffffff",
