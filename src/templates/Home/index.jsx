@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import Header from "../../components/Header";
 import {
   withViewportData,
@@ -265,7 +265,7 @@ function processDescriptionSectionData(data, imgDim) {
  * @returns
  * @param {HomeTemplateProps & AdditionalProps} param0
  */
-function HomeTemplate({ sections, mobile, viewportWidth }) {
+function HomeTemplate({ sections, mobile }) {
   const {
     top: topSectionData,
     title: titleSectionData,
@@ -275,11 +275,9 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
   } = sections;
 
   const highlightedElWrapperRef = useRef();
-  const mapDim = mobile ? viewportWidth : viewportWidth * 0.5;
 
   const processedDescriptionSectionData = processDescriptionSectionData(
-    descriptionSectionData,
-    mapDim
+    descriptionSectionData
   );
 
   const highlightedUnderlineActive = useScrollVisibility(
@@ -292,6 +290,7 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
       {renderTopNavBar({
         items: appConfig.data.topNavBar.items,
         maxWidth: "8xl",
+        className: "hidden md:block"
       })}
       <div className="sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} />
@@ -318,7 +317,7 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
       {renderFeedbackSection(feedbackContentData)}
       {renderMaps({
         data: appConfig.data.maps,
-        dimensions: { width: mapDim, height: mobile ? 200 : 350 },
+        dimensions: { width: "100%", height: "300" },
         className: "px-4 lg:max-w-8xl lg:px-0 mx-auto",
       })}
       {renderPageFooter({
@@ -331,4 +330,4 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
   );
 }
 
-export default withViewportData(HomeTemplate);
+export default memo(HomeTemplate);

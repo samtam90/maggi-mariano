@@ -11,15 +11,19 @@ function getInitialState() {
 }
 
 function useViewportDimensions(mobileThreshold) {
+  "use client";
+  
   const [dims, setDims] = useState(getInitialState());
 
   useEffect(() => {
-    function onSetDims(evt) {
-      const { innerWidth, innerHeight } = evt.target;
+    function onSetDims() {
+      const { innerWidth, innerHeight } = window;
       setDims({ width: innerWidth, height: innerHeight });
     }
     window.addEventListener("resize", onSetDims);
-    return () => window.removeEventListener("resize", onSetDims);
+    return () => {
+      window.removeEventListener("resize", onSetDims);
+    };
   }, [setDims]);
 
   const isMobile = useMemo(() => {

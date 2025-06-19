@@ -1,5 +1,11 @@
-import HomeTemplate from "@/templates/Home";
+import { renderSplashScreen } from "@/components/Splash";
+import dynamic from "next/dynamic";
 import React, { Suspense } from "react";
+
+const MobileHomeTemplate = dynamic(() => import("@/templates/Home/alt/mobile"));
+const DesktopHomeTemplate = dynamic(() =>
+  import("@/templates/Home/alt/desktop")
+);
 
 const props = {
   sections: {
@@ -113,10 +119,14 @@ const props = {
   },
 };
 
-async function Page() {
+async function Page({ searchParams }) {
   return (
-    <Suspense fallback={<div></div>}>
-      <HomeTemplate {...props} />
+    <Suspense fallback={renderSplashScreen()}>
+      {searchParams?.viewport === "mobile" ? (
+        <MobileHomeTemplate {...props} />
+      ) : (
+        <DesktopHomeTemplate {...props} />
+      )}
     </Suspense>
   );
 }

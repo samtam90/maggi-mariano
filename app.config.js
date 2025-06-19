@@ -314,5 +314,8 @@ module.exports = {
       width: 175,
       height: 64,
     },
+    title: "Maggi Mariano",
+    logoSrc:
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
   },
 };

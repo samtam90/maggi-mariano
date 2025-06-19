@@ -1,3 +1,5 @@
+"use client";
+
 import React, { memo, ComponentType } from "react";
 import useViewportDimensions from "./hooks/useViewportDimensions";
 import appConfig from "../../../app.config";
@@ -54,12 +56,12 @@ export function withViewportData(Component) {
   });
 }
 
-export function renderTopNavBar({ items, maxWidth }) {
+export function renderTopNavBar({ items, maxWidth, className }) {
   return (
     <NavBar
       variant="horizontal"
       maxWidth={maxWidth}
-      classNames={{ root: "py-4" }}
+      classNames={{ root: twClsx("py-4", className) }}
     >
       {items.map(({ title, link, icon }) => (
         <NavBar.Item

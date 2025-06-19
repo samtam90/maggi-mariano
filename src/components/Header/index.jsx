@@ -15,10 +15,6 @@ const { CompositeAppBar } = components;
  * @returns
  */
 function Header({ logoDimensions = appConfig.misc.logoDimensions, mobile }) {
-  const mounted = useMounted();
-  if (!mounted) {
-    return null;
-  }
   return (
     <CompositeAppBar
       logo={{

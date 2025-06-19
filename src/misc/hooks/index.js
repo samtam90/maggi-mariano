@@ -15,3 +15,13 @@ export function useMounted() {
 
   return mounted;
 }
+
+export function useActualUserAgent(props) {
+  let ua;
+  if (props.uaString) {
+    ua = useUserAgent(props.uaString);
+  } else {
+    ua = useUserAgent(window.navigator.userAgent);
+  }
+  return ua;
+}
