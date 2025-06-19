@@ -18,6 +18,10 @@ const props = {
       subtitle: "con telecamera robot",
       imageSrc:
         "https://www.maggi-mariano.it/wp-content/uploads/2022/05/home-1.jpg",
+      link: {
+        label: "Scopri di più",
+        href: "https://www.maggi-mariano.it",
+      },
     },
     title: {
       title: "servizi ecologici",

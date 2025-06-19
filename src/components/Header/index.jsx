@@ -3,9 +3,18 @@ import { components } from "@italwebcom/tailwind-components";
 import appConfig from "../../../app.config";
 import { renderHref } from "../misc";
 import { twClsx } from "../../misc/functions";
-import { useMounted } from "../../misc/hooks";
 
 const { CompositeAppBar } = components;
+
+function getActualLogoDimensions(logoDimensions, mobile) {
+  if (mobile) {
+    return {
+      width: logoDimensions.width * 0.75,
+      height: logoDimensions.height * 0.75,
+    };
+  }
+  return logoDimensions;
+}
 
 /**
  * @param {{
@@ -21,7 +30,7 @@ function Header({ logoDimensions = appConfig.misc.logoDimensions, mobile }) {
         href: appConfig.data.baseUrl,
         src: appConfig.data.header.logo.src,
         alt: appConfig.data.header.logo.alt,
-        dimensions: logoDimensions,
+        dimensions: getActualLogoDimensions(logoDimensions, mobile),
       }}
       variant={mobile ? "mobile" : "desktop"}
       sections={appConfig.data.header.navBarSections}

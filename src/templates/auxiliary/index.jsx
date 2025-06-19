@@ -88,7 +88,13 @@ export function renderPageFooter({
       contentMaxWidth={contentMaxWidth}
       titleHeadingElement={titleHeadingElement || "h4"}
       logo={logo}
-      classNames={{ root: "py-8", section: { additionalContent: "mt-6" } }}
+      classNames={{
+        root: "py-8",
+        section: {
+          additionalContent: "mt-6",
+          root: "mb-6 last:mb-0 lg:mb-0 flex flex-col items-center lg:block basis-1/4",
+        },
+      }}
     >
       {sections.map(({ title, navItems, additionalContent }, index) => (
         <PageFooter.Section
@@ -102,12 +108,12 @@ export function renderPageFooter({
   );
 }
 
-export function renderMaps({ data, dimensions, className }) {
+export function renderMaps({ data, dimensions, classNames }) {
   return (
     <div
       className={twClsx(
         "grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 lg:py-8 lg:gap-8",
-        className
+        classNames?.root
       )}
     >
       {data.map(({ title, subtitle, src }) => (
@@ -117,6 +123,7 @@ export function renderMaps({ data, dimensions, className }) {
           src={src}
           key={src}
           dimensions={dimensions}
+          classNames={{ map: classNames?.map }}
         />
       ))}
     </div>

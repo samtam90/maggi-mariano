@@ -83,7 +83,7 @@ export function renderParagraphs(paragraphs, className, capitalizedClassName) {
       <SpecialText.Capitalized
         component="p"
         classNames={{
-          root: twClsx(className, "mb-4"),
+          root: twClsx(className, "mb-4 text-sm lg:text-md"),
           first: capitalizedClassName,
         }}
       >
@@ -138,6 +138,7 @@ function ImageParagraphSections({
             "object-contain",
             isImgStartPos ? "order-1" : "order-2",
             !isVertVariant && "basis-1/2 shrink-0",
+            isVertVariant && (isImgStartPos ? "mb-4" : "mt-4"),
             classNames?.item?.image
           ),
         });

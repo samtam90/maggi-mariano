@@ -42,7 +42,8 @@ function DescriptionDivider({ fill }) {
  * @typedef {{
  *  title: string,
  *  subtitle: string,
- *  imageSrc: string
+ *  imageSrc: string,
+ *  link: {href: string, label: string}
  * }} TopSectionData
  *
  * @typedef {{
@@ -102,7 +103,7 @@ function DescriptionDivider({ fill }) {
  * @returns
  */
 function renderTopSection(sectionData) {
-  const { title, subtitle, imageSrc } = sectionData;
+  const { title, subtitle, imageSrc, link } = sectionData;
   return (
     <section key="top">
       <BgImageSection
@@ -110,11 +111,12 @@ function renderTopSection(sectionData) {
         content={subtitle}
         imageUrl={imageSrc}
         classNames={{
-          root: "py-16 lg:py-48 lg:max-w-8xl mx-auto px-6 lg:px-0",
+          root: "py-12 lg:py-24 lg:max-w-8xl mx-auto px-6 lg:px-0",
           title:
             "text-4xl lg:text-8xl text-red-opaqueTitle font-titleBold uppercase text-left red-title-stroke text-center lg:text-left",
           content:
             "text-white text-lg lg:text-2xl font-titleBold uppercase text-center lg:text-left",
+          backdrop: "opacity-45",
         }}
         renderInnerContent={(content) => (
           <FadeIn
@@ -126,6 +128,18 @@ function renderTopSection(sectionData) {
             {content}
           </FadeIn>
         )}
+        bottomContent={
+          link && (
+            <LinkButton
+              href={link.href}
+              label={link.label}
+              classNames={{
+                root: "lg:inline-block shadow-md",
+                button: "lg:text-lg lg:px-8",
+              }}
+            />
+          )
+        }
       />
     </section>
   );
@@ -156,7 +170,13 @@ function renderTitleSection(sectionData) {
           background: "bg-fixed",
           backdrop: "opacity-65",
         }}
-        bottomContent={<LinkButton href={href} label={label} />}
+        bottomContent={
+          <LinkButton
+            href={href}
+            label={label}
+            classNames={{ root: "shadow-md" }}
+          />
+        }
       />
     </section>
   );
@@ -171,11 +191,14 @@ function renderDescriptionSection({ headerImages, items }, mobile) {
   return (
     <ImageParagraphSections
       headerImages={headerImages}
-      items={items}
+      items={items.map((item) => ({
+        ...item,
+        imagePosition: mobile ? "start" : item.imagePosition,
+      }))}
       variant={mobile ? "vertical" : "horizontal"}
       classNames={{
-        root: "bg-green-dark py-4",
-        item: { paragraph: "text-white px-8" },
+        root: "bg-green-dark pb-4 pt-8",
+        item: { paragraph: "text-white lg:px-8", image: "px-4 lg:px-0" },
       }}
     />
   );
@@ -290,7 +313,7 @@ function HomeTemplate({ sections, mobile }) {
       {renderTopNavBar({
         items: appConfig.data.topNavBar.items,
         maxWidth: "8xl",
-        className: "hidden md:block"
+        className: "hidden md:block",
       })}
       <div className="sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} />
@@ -306,7 +329,7 @@ function HomeTemplate({ sections, mobile }) {
       />
       <div
         ref={(r) => (highlightedElWrapperRef.current = r)}
-        className="max-w-8xl mx-auto pb-8"
+        className="max-w-8xl mx-auto pb-8 px-4 lg:px-0"
       >
         {renderHighlightedContentData(
           highlightedContentData,
@@ -318,7 +341,10 @@ function HomeTemplate({ sections, mobile }) {
       {renderMaps({
         data: appConfig.data.maps,
         dimensions: { width: "100%", height: "300" },
-        className: "px-4 lg:max-w-8xl lg:px-0 mx-auto",
+        classNames: {
+          root: "px-4 lg:max-w-8xl lg:px-0 mx-auto mt-4 lg:mt-0",
+          map: "pb-8 lg:pb-0",
+        },
       })}
       {renderPageFooter({
         logo: appConfig.data.footer.logo,

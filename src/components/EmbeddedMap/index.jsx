@@ -44,7 +44,7 @@ function EmbeddedMap({
         subtitle={subtitle}
         classNames={{
           ...classNames?.title,
-          root: twClsx("mb-8", classNames?.title?.root),
+          root: twClsx("mb-6", classNames?.title?.root),
         }}
       />
       <iframe

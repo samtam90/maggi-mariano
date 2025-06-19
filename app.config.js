@@ -173,7 +173,7 @@ const footerData = {
   },
   sections: [
     {
-      title: "Maggi Mariano Servizi Ecologici srl",
+      title: "Le nostre sedi",
       navItems: [
         {
           title: "Via Aretina, 16",
@@ -248,6 +248,27 @@ const footerData = {
     },
     {
       title: "Privacy",
+      navItems: [
+        {
+          title: "Via Aretina, 16",
+          icon: "phone",
+          link: {
+            label: "52014 Ponte a Poppi (AR)",
+            href: "https://www.google.it",
+          },
+        },
+        {
+          title: "Via Aretina, 16",
+          icon: "phone",
+          link: {
+            label: "52014 Ponte a Poppi (AR)",
+            href: "https://www.google.it",
+          },
+        },
+      ],
+    },
+    {
+      title: "Servizi",
       navItems: [
         {
           title: "Via Aretina, 16",

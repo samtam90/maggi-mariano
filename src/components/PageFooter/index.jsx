@@ -54,7 +54,8 @@ const PageFooterSection = memo(
     return (
       <section
         className={twClsx(
-          variant === "horizontal" ? "shrink-0 basis-1/3" : "mb-4"
+          variant === "horizontal" ? "shrink-0 basis-1/3" : "mb-4",
+          classNames?.section?.root
         )}
       >
         {renderHeader(titleHeadingElement || "h5", title, {
@@ -101,7 +102,7 @@ const PageFooter = memo(
     <C.Provider value={{ classNames, titleHeadingElement, variant }}>
       <footer className={twClsx("bg-green-dark", classNames?.root)}>
         <div
-          className={twClsx("mx-auto", getMaxWidthClassName(contentMaxWidth))}
+          className={twClsx("mx-auto flex flex-col items-center lg:block", getMaxWidthClassName(contentMaxWidth))}
         >
           <img
             src={logo.src}
@@ -109,7 +110,7 @@ const PageFooter = memo(
             width={logo.dimensions.width}
             height={logo.dimensions.height}
             className={twClsx(
-              "inline-block max-w-full object-contain mb-4",
+              "inline-block max-w-full object-contain mb-8",
               classNames?.logo
             )}
           />
