@@ -312,7 +312,7 @@ module.exports = {
     mobileViewportThresholdPx: 768,
     logoDimensions: {
       width: 175,
-      height: 50,
+      height: 64,
     },
   },
 };

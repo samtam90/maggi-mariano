@@ -5,6 +5,7 @@ import { twClsx } from "../../misc/functions";
 import tailwindConfig from "../../../tailwind.config";
 import Link from "next/link";
 import { renderParagraphs } from "../ImageParagraphSections";
+import LinkButton from "../LinkButton";
 
 /**
  * @typedef {{
@@ -91,15 +92,11 @@ function HighlightedContentSection({
               classNames?.image
             )}
           />
-          <Link
+          <LinkButton
             href={link.href}
-            className={twClsx(
-              "font-title text-sm lg:text-md text-white text-center px-4 py-2 rounded-lg bg-green-primary inline-flex items-center",
-              classNames?.link
-            )}
-          >
-            {link.label}
-          </Link>
+            label={link.label}
+            className={classNames?.link}
+          />
         </div>
       </div>
     </section>

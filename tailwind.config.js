@@ -41,6 +41,7 @@ module.exports = {
         yellow: {
           primary: "#F8C100",
           default: "#F8C100",
+          alt: "#f0ad4e",
         },
       },
       fontFamily: {
@@ -61,6 +62,10 @@ module.exports = {
         "2/3": "75%",
         "1/2": "50%",
         "3/5": "66.66666667%",
+      },
+      backgroundImage: {
+        homeFeedbackImage:
+          "url('https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg')",
       },
     },
     zIndex: {

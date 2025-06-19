@@ -30,6 +30,11 @@
   .transform-3d {
     transform-style: preserve-3d;
   }
+
+  .star.filled::before {
+    content: "★";
+    position: absolute;
+  }
 }
 
 .sb-main-padded {

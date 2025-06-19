@@ -99,5 +99,31 @@ Base.args = {
       },
       title: { left: "New: ", right: "FRANTOIO MOBILE DI INERTI" },
     },
+    feedback: {
+      title: "Dicono di noi",
+      items: [
+        {
+          title: "Simone Soldani",
+          subtitle: "I am a useless subtitle",
+          stars: { total: 5, filled: 5 },
+          content:
+            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+        },
+        {
+          title: "Simone Soldani",
+          subtitle: "I am a useless subtitle",
+          stars: { total: 5, filled: 5 },
+          content:
+            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+        },
+        {
+          title: "Simone Soldani",
+          subtitle: "I am a useless subtitle",
+          stars: { total: 5, filled: 5 },
+          content:
+            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+        },
+      ],
+    },
   },
 };

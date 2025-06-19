@@ -11,7 +11,6 @@ import {
   renderMaps,
 } from "../auxiliary";
 import { components } from "@italwebcom/tailwind-components";
-import Link from "next/link";
 import appConfig from "../../../app.config";
 import ImageParagraphSections, {
   Image,
@@ -20,11 +19,18 @@ import ImageParagraphSections, {
 import tailwindConfig from "../../../tailwind.config";
 import HighlightedContentSection from "../../components/HighlightedContentSection";
 import { hooks } from "@italwebcom/tailwind-components";
+import FeedbackCard from "../../components/FeedbackCard";
+import LinkButton from "@/components/LinkButton";
 
 const { useScrollVisibility } = hooks;
+const { Carousel } = components;
 const { FadeIn } = components.Animations;
 const { BgImageSection } = components.sections;
 
+/**
+ * @param {{fill: string}} param0
+ * @returns
+ */
 function DescriptionDivider({ fill }) {
   return (
     <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 60">
@@ -69,11 +75,24 @@ function DescriptionDivider({ fill }) {
  * }} HighlightedContentData
  *
  * @typedef {{
+ *  title: string,
+ *  subtitle?: string,
+ *  content?: string,
+ *  stars: {total: number, filled: number}
+ * }} FeedbackSectionDataItem
+ *
+ * @typedef {{
+ *  title: string,
+ *  items: FeedbackSectionDataItem[]
+ * }} FeedbackSectionData
+ *
+ * @typedef {{
  *   sections: {
  *     top: TopSectionData,
  *     title: TitleSectionData,
  *     description: DescriptionSectionData,
- *     highlightedContent: HighlightedContentData
+ *     highlightedContent: HighlightedContentData,
+ *     feedback: FeedbackSectionData
  *   },
  * }} HomeTemplateProps
  */
@@ -137,17 +156,7 @@ function renderTitleSection(sectionData) {
           background: "bg-fixed",
           backdrop: "opacity-65",
         }}
-        bottomContent={
-          <Link
-            href={href}
-            target="_blank"
-            className="block text-center lg:hover:opacity-75 lg:transition-opacity"
-          >
-            <div className="inline-block bg-green-primary rounded-lg shadow-sm text-white font-titleBold text-sm px-4 py-3">
-              {label}
-            </div>
-          </Link>
-        }
+        bottomContent={<LinkButton href={href} label={label} />}
       />
     </section>
   );
@@ -166,7 +175,7 @@ function renderDescriptionSection({ headerImages, items }, mobile) {
       variant={mobile ? "vertical" : "horizontal"}
       classNames={{
         root: "bg-green-dark py-4",
-        item: { paragraph: "text-white" },
+        item: { paragraph: "text-white px-8" },
       }}
     />
   );
@@ -197,6 +206,62 @@ function renderHighlightedContentData(
 
 /**
  * @returns
+ * @param {FeedbackSectionData} param0
+ */
+function renderFeedbackSection({ title, items }) {
+  return (
+    <section className="bg-green-dark flex items-center justify-center lg:py-8 bg-homeFeedbackImage bg-fixed bg-cover relative">
+      <div className="absolute inset-0 bg-green-primary opacity-25 z-0"></div>
+      <div className="p-8 px-0 lg:px-12 rounded-lg shadow-md lg:max-w-6xl lg:mx-auto relative z-10 bg-green-dark">
+        <header className="mb-6 lg:mb-8">
+          <h2 className="font-titleBold text-3xl lg:text-4xl text-center text-white uppercase">
+            {title}
+          </h2>
+        </header>
+        <Carousel
+          defaultSelected={1}
+          arrows
+          arrowClassName="text-white opacity-1 bg-transparent"
+          arrowContainerClassName="relative w-20 lg:w-12 h-auto self-stretch"
+          dots
+          dotSelectionVariant="color"
+          dotColor="white"
+        >
+          {items.map(({ title, stars, subtitle, content }, index) => (
+            <Carousel.Item key={index} index={index} id={index}>
+              <FeedbackCard
+                title={title}
+                titleHeadingElement="h3"
+                subtitle={subtitle}
+                content={content}
+                stars={stars}
+                classNames={{ root: "max-w-3xl mx-auto" }}
+              />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * @returns
+ * @param {DescriptionSectionData} data
+ * @param {number} imgDim
+ */
+function processDescriptionSectionData(data, imgDim) {
+  return {
+    ...data,
+    items: data.items.map((item) => ({
+      ...item,
+      image: { ...item.image, dimensions: { width: imgDim, height: imgDim } },
+    })),
+  };
+}
+
+/**
+ * @returns
  * @param {HomeTemplateProps & AdditionalProps} param0
  */
 function HomeTemplate({ sections, mobile, viewportWidth }) {
@@ -205,10 +270,16 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
     title: titleSectionData,
     description: descriptionSectionData,
     highlightedContent: highlightedContentData,
+    feedback: feedbackContentData,
   } = sections;
 
   const highlightedElWrapperRef = useRef();
   const mapDim = mobile ? viewportWidth : viewportWidth * 0.5;
+
+  const processedDescriptionSectionData = processDescriptionSectionData(
+    descriptionSectionData,
+    mapDim
+  );
 
   const highlightedUnderlineActive = useScrollVisibility(
     highlightedElWrapperRef,
@@ -219,7 +290,7 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
     <main>
       {renderTopNavBar({
         items: appConfig.data.topNavBar.items,
-        maxWidth: "7xl",
+        maxWidth: "8xl",
       })}
       <div className="sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} />
@@ -229,13 +300,13 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
       <section key="services">
         {renderServicesNavGrid(appConfig.data.servicesGrid)}
       </section>
-      {renderDescriptionSection(descriptionSectionData)}
+      {renderDescriptionSection(processedDescriptionSectionData, mobile)}
       <DescriptionDivider
         fill={tailwindConfig.theme.extend.colors.green.dark}
       />
       <div
         ref={(r) => (highlightedElWrapperRef.current = r)}
-        className="max-w-8xl mx-auto"
+        className="max-w-8xl mx-auto pb-8"
       >
         {renderHighlightedContentData(
           highlightedContentData,
@@ -243,11 +314,11 @@ function HomeTemplate({ sections, mobile, viewportWidth }) {
           highlightedUnderlineActive
         )}
       </div>
-      <div className="h-[64px] bg-green-dark" />
+      {renderFeedbackSection(feedbackContentData)}
       {renderMaps({
         data: appConfig.data.maps,
         dimensions: { width: mapDim, height: mobile ? 200 : 350 },
-        className: "px-8",
+        className: "px-4 lg:max-w-8xl lg:px-0 mx-auto",
       })}
       {renderPageFooter({
         logo: appConfig.data.footer.logo,

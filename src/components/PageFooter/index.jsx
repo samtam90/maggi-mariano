@@ -112,7 +112,6 @@ const PageFooter = memo(
               "inline-block max-w-full object-contain mb-4",
               classNames?.logo
             )}
-            style={logo.dimensions}
           />
           <nav className={twClsx(variant === "horizontal" && "flex flex-wrap")}>
             {children}

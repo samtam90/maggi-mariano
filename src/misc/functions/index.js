@@ -37,8 +37,10 @@ export function getMaxWidthClassName(maxWidth) {
         return "max-w-5xl";
       case "6xl":
         return "max-w-6xl";
-      default:
+      case "7xl":
         return "max-w-7xl";
+      default:
+        return "max-w-8xl";
     }
   }
   return null;

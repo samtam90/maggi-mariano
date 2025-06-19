@@ -88,11 +88,12 @@ export function renderPageFooter({
       logo={logo}
       classNames={{ root: "py-8", section: { additionalContent: "mt-6" } }}
     >
-      {sections.map(({ title, navItems, additionalContent }) => (
+      {sections.map(({ title, navItems, additionalContent }, index) => (
         <PageFooter.Section
           title={title}
           navItems={processFooterNavItems(navItems)}
           additionalContent={additionalContent}
+          key={`${title}-${index}`}
         />
       ))}
     </PageFooter>
@@ -103,7 +104,7 @@ export function renderMaps({ data, dimensions, className }) {
   return (
     <div
       className={twClsx(
-        "grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 lg:py-8",
+        "grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 lg:py-8 lg:gap-8",
         className
       )}
     >
@@ -131,7 +132,7 @@ export function renderServicesNavGrid({
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
       <div className="absolute inset-0 bg-green-primary opacity-50 z-0"></div>
-      <div className="max-w-7xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16">
+      <div className="max-w-8xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16">
         <BorderedColoredText
           left="I nostri"
           right="servizi"
