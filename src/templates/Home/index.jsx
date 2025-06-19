@@ -10,7 +10,7 @@ import {
   renderPageFooter,
   renderMaps,
 } from "../auxiliary";
-import { components } from "@italwebcom/tailwind-components";
+import { components, hooks } from "@italwebcom/tailwind-components";
 import appConfig from "../../../app.config";
 import ImageParagraphSections, {
   Image,
@@ -18,9 +18,8 @@ import ImageParagraphSections, {
 } from "../../components/ImageParagraphSections";
 import tailwindConfig from "../../../tailwind.config";
 import HighlightedContentSection from "../../components/HighlightedContentSection";
-import { hooks } from "@italwebcom/tailwind-components";
 import FeedbackCard from "../../components/FeedbackCard";
-import LinkButton from "@/components/LinkButton";
+import LinkButton from "../../components/LinkButton";
 
 const { useScrollVisibility } = hooks;
 const { Carousel } = components;

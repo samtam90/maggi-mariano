@@ -1,4 +1,5 @@
 import HomeTemplate from "@/templates/Home";
+import React, { Suspense } from "react";
 
 const props = {
   sections: {
@@ -112,6 +113,12 @@ const props = {
   },
 };
 
-export default function Page() {
-  return <HomeTemplate {...props} />;
+async function Page() {
+  return (
+    <Suspense fallback={<div></div>}>
+      <HomeTemplate {...props} />
+    </Suspense>
+  );
 }
+
+export default Page;

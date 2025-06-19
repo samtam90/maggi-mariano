@@ -3,6 +3,7 @@ import { components } from "@italwebcom/tailwind-components";
 import appConfig from "../../../app.config";
 import { renderHref } from "../misc";
 import { twClsx } from "../../misc/functions";
+import { useMounted } from "../../misc/hooks";
 
 const { CompositeAppBar } = components;
 
@@ -14,6 +15,10 @@ const { CompositeAppBar } = components;
  * @returns
  */
 function Header({ logoDimensions = appConfig.misc.logoDimensions, mobile }) {
+  const mounted = useMounted();
+  if (!mounted) {
+    return null;
+  }
   return (
     <CompositeAppBar
       logo={{
