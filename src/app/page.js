@@ -83,6 +83,7 @@ const props = {
       title: { left: "New: ", right: "FRANTOIO MOBILE DI INERTI" },
     },
     feedback: {
+      autoScrollTimeoutMs: 5000,
       title: "Dicono di noi",
       items: [
         {

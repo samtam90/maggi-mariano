@@ -83,7 +83,8 @@ function DescriptionDivider({ fill }) {
  *
  * @typedef {{
  *  title: string,
- *  items: FeedbackSectionDataItem[]
+ *  items: FeedbackSectionDataItem[],
+ *  autoScrollTimeoutMs?: number
  * }} FeedbackSectionData
  *
  * @typedef {{
@@ -208,7 +209,7 @@ function renderHighlightedContentData(
  * @returns
  * @param {FeedbackSectionData} param0
  */
-function renderFeedbackSection({ title, items }) {
+function renderFeedbackSection({ title, items, autoScrollTimeoutMs }) {
   return (
     <section className="bg-green-dark flex items-center justify-center lg:py-8 bg-homeFeedbackImage bg-fixed bg-cover relative">
       <div className="absolute inset-0 bg-green-primary opacity-25 z-0"></div>
@@ -226,6 +227,7 @@ function renderFeedbackSection({ title, items }) {
           dots
           dotSelectionVariant="color"
           dotColor="white"
+          autoScrollTimeoutMs={autoScrollTimeoutMs || 5000}
         >
           {items.map(({ title, stars, subtitle, content }, index) => (
             <Carousel.Item key={index} index={index} id={index}>
