@@ -1,5 +1,3 @@
-import { getBaseProps, withBaseProps } from "../page";
+import { withBaseProps } from "../page";
 
-export default withBaseProps(
-  getBaseProps({ title: "Noleggio bagni chimici Cavriglia" })
-);
+export default withBaseProps({ title: "Noleggio bagni chimici Cavriglia" });
