@@ -42,6 +42,7 @@ module.exports = {
           primary: "#F8C100",
           default: "#F8C100",
           alt: "#f0ad4e",
+          light: "#f0f6eb",
         },
       },
       fontFamily: {
@@ -87,6 +88,7 @@ module.exports = {
       20: "0.2",
       25: "0.25",
       30: "0.3",
+      33: "0.33",
       35: "0.35",
       40: "0.4",
       45: "0.45",
@@ -104,7 +106,6 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwindcss-ripple")(),
     plugin(function ({ addBase }) {
       addBase({
         '[type="search"]::-webkit-search-decoration': { display: "none" },

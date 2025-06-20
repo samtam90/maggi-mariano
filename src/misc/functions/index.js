@@ -1,5 +1,6 @@
 import { twJoin, twMerge, ClassNameValue } from "tailwind-merge";
-import React, { ReactNode } from "react";
+import React, { ReactNode, ComponentType, memo, Suspense } from "react";
+import { renderSplashScreen } from "../../components/Splash";
 
 /**
  * @typedef {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} HeaderComponent
@@ -68,4 +69,24 @@ export function renderHeader(component, content, props) {
     default:
       return <h6 {...props}>{content}</h6>;
   }
+}
+
+/**
+ * @template {T}
+ * @param {{Mobile: ComponentType<T>, Desktop: ComponentType<T>}} Components
+ * @returns
+ */
+export function withConditionalRendering(Components) {
+  return memo(async (props) => {
+    const { searchParams } = props;
+    return (
+      <Suspense fallback={renderSplashScreen()}>
+        {searchParams?.viewport === "mobile" ? (
+          <Components.Mobile {...props} />
+        ) : (
+          <Components.Desktop {...props} />
+        )}
+      </Suspense>
+    );
+  });
 }

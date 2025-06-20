@@ -1,12 +1,26 @@
 const baseUrl = "https://www.maggi-mariano.it";
 
+const links = {
+  autospurgo: {
+    root: "/autospurgo",
+    anghiari: "/autospurgo/autospurgo-anghiari",
+    arezzo: "/autospurgo/autospurgo-arezzo",
+    "badia-tedalda": "/autospurgo/autospurgo-badia-tedalda",
+    bibbiena: "/autospurgo/autospurgo-bibbiena",
+    bucine: "/autospurgo/autospurgo-bucine",
+    capolona: "/autospurgo/autospurgo-capolona",
+  },
+};
+
 const navBarSections = {
   Home: baseUrl,
   Autospurgo: {
-    "Autospurgo Anghiari":
-      "https://www.maggi-mariano.it/autospurgo/autospurgo-anghiari/",
-    "Autospurgo Arezzo":
-      "https://www.maggi-mariano.it/autospurgo/autospurgo-arezzo/",
+    "Autospurgo Anghiari": links.autospurgo.anghiari,
+    "Autospurgo Arezzo": links.autospurgo.arezzo,
+    "Autospurgo Badia Tedalda": links.autospurgo["badia-tedalda"],
+    "Autospurgo Bibbiena": links.autospurgo.bibbiena,
+    "Autospurgo Bucine": links.autospurgo.bucine,
+    "Autospurgo Capolona": links.autospurgo.capolona,
   },
   Servizi: {
     "Frantoio mobile inerti": {
@@ -27,6 +41,19 @@ const navBarSections = {
   Documenti: baseUrl,
   Videogallery: baseUrl,
   Contatti: baseUrl,
+};
+
+const mainTitleData = {
+  title: "servizi ecologici",
+  preTitle: "Maggi Mariano",
+  subtitle:
+    "Da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente",
+  imageSrc:
+    "https://www.maggi-mariano.it/wp-content/uploads/2022/05/ecologia.jpg",
+  button: {
+    href: "https://www.maggi-mariano.it",
+    label: "Per info o preventivi contattaci",
+  },
 };
 
 const servicesNavGridData = [
@@ -314,6 +341,7 @@ module.exports = {
     ],
     footer: footerData,
     topNavBar: topNavBarData,
+    mainTitle: mainTitleData,
     header: {
       navBarSections,
       logo: {
@@ -339,4 +367,5 @@ module.exports = {
     logoSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
   },
+  links,
 };

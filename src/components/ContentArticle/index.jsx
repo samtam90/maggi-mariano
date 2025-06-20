@@ -43,7 +43,26 @@ function getImgSizesAttr(dimensions) {
  * }} SectionContent
  *
  * @typedef {{
- *    type: SectionType,
+ *    root?: string,
+ *    title?: string,
+ *    paragraph?: string,
+ *    mediaContainer?: string,
+ *    paragraphsContainer?: string
+ * }} SectionClassNames
+ * 
+ * @typedef {{
+ *   title?: string,
+ *   root?: string,
+ *   section?: {
+ *       root?: string,
+ *       title?: string,
+ *       paragraph?: string,
+ *       mediaContainer?: string,
+ *       paragraphsContainer?: string
+ *   }
+ * }} ClassNames
+ *
+ * @typedef {{
  *    title?: string
  * } & SectionContent} SectionProps
  */
@@ -54,10 +73,18 @@ function getImgSizesAttr(dimensions) {
  * @param {ReactNode[]} mediaNodes
  * @param {MediaPosition} mediaPosition
  */
-function assembleSectionContent(paragraphNodes, mediaNodes, mediaPosition) {
-  const outMediaNodes = (
-    <div className="grid grid-cols-2 gap-4">{mediaNodes}</div>
-  );
+function assembleSectionContent(
+  paragraphNodes,
+  mediaNodes,
+  mediaPosition,
+  sectionClassNames
+) {
+  const outMediaNodes =
+    mediaNodes.length > 1 ? (
+      <div className="grid grid-cols-2 gap-4">{mediaNodes}</div>
+    ) : (
+      mediaNodes
+    );
   if (mediaPosition === "bottom" || mediaPosition === "top") {
     const isTopPos = mediaPosition === "top";
     return (
@@ -73,12 +100,18 @@ function assembleSectionContent(paragraphNodes, mediaNodes, mediaPosition) {
         <div
           className={twClsx(
             "basis-1/2 shrink-0",
-            isLeftPos ? "order-1" : "order-2"
+            isLeftPos ? "order-1 mr-4" : "order-2 ml-4",
+            sectionClassNames?.mediaContainer
           )}
         >
           {outMediaNodes}
         </div>
-        <div className={twClsx(isLeftPos ? "order-2" : "order-1")}>
+        <div
+          className={twClsx(
+            isLeftPos ? "order-2" : "order-1",
+            sectionClassNames?.paragraphsContainer
+          )}
+        >
           {paragraphNodes}
         </div>
       </div>
@@ -151,10 +184,16 @@ const ContentArticleSection = memo(
    * @returns
    * @param {SectionProps} param0
    */
-  ({ title, paragraphs, mediaElements, mediaPosition, content }) => {
-
+  ({
+    title,
+    paragraphs,
+    mediaElements,
+    mediaPosition,
+    content,
+    classNames: inClassNames,
+  }) => {
     const { classNames, titleHeadingElements } = useContext(C);
-    const sectionClassNames = classNames?.section;
+    const sectionClassNames = inClassNames || classNames?.section;
 
     if (!content) {
       const paragraphNodes = paragraphs.map((par) =>
@@ -179,10 +218,11 @@ const ContentArticleSection = memo(
       content = assembleSectionContent(
         paragraphNodes,
         mediaElementsNodes,
-        mediaPosition
+        mediaPosition,
+        sectionClassNames
       );
     }
-    
+
     return (
       <section className={sectionClassNames?.root}>
         <header className="mb-3">
@@ -206,21 +246,14 @@ const ContentArticle = memo(
    *   title: {left: string, right: string, fillColor?: string},
    *   titleHeadingElements?: {article?: HeaderComponent, section?: HeaderComponent},
    *   children: ReactElement<SectionProps, ComponentType<SectionProps>>,
-   *   classNames?: {
-   *     title?: string,
-   *     section?: {
-   *       root?: string,
-   *       title?: string,
-   *       paragraph?: string
-   *     }
-   *   }
+   *   classNames?: ClassNames
    * }} param0
    */
   ({ title, titleHeadingElements, children, classNames }) => {
     const { left, right } = title;
     return (
       <C.Provider value={{ titleHeadingElements, classNames }}>
-        <article>
+        <article className={classNames?.root}>
           <header className="mb-6">
             <BorderedColoredText
               left={left}

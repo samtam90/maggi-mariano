@@ -46,6 +46,7 @@ function renderImage({ src, alt, dimensions, className }) {
       width={dimensions.width}
       height={dimensions.height}
       className={className}
+      key={alt}
     />
   );
 }
@@ -54,14 +55,16 @@ function renderImage({ src, alt, dimensions, className }) {
  * @returns
  * @param {Paragraph} content
  * @param {string} className
+ * @param {string | number} key
  */
-export function renderParagraph(content, className) {
+export function renderParagraph(content, className, key) {
   return (
     <p
       className={twClsx(
         "font-title text-sm lg:text-md mb-4 leading-normal",
         className
       )}
+      key={key}
     >
       {content}
     </p>
@@ -86,13 +89,18 @@ export function renderParagraphs(paragraphs, className, capitalizedClassName) {
           root: twClsx(className, "mb-4 text-sm lg:text-md"),
           first: capitalizedClassName,
         }}
+        key="capitalized"
       >
         {first}
       </SpecialText.Capitalized>
     ) : (
-      renderParagraph(first, className)
+      renderParagraph(first, className, "first")
     ),
-  ].concat(others.map((par) => renderParagraph(par, className)));
+  ].concat(
+    others.map((par, index) =>
+      renderParagraph(par, className, index.toString())
+    )
+  );
 }
 
 /**

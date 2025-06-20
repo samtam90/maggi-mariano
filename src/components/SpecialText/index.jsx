@@ -8,12 +8,20 @@ function checkChildType(children) {
   }
 }
 
-function wrap(content, { component, className }) {
+function wrap(content, { component, className, key }) {
   switch (component) {
     case "span":
-      return <span className={className}>{content}</span>;
+      return (
+        <span className={className} key={key}>
+          {content}
+        </span>
+      );
     default:
-      return <p className={className}>{content}</p>;
+      return (
+        <p className={className} key={key}>
+          {content}
+        </p>
+      );
   }
 }
 
@@ -59,13 +67,18 @@ function CapitalizedText({ children, classNames, component }) {
           "inline-flex font-titleBold float-left border-[2px] border-white items-center justify-center text-3xl lg:text-5xl p-1 px-2 mr-2",
           classNames?.first
         )}
+        key="first"
       >
         {first}
       </span>
       {rest}
     </>
   );
-  return wrap(innerContent, { component, className: rootClassName });
+  return wrap(innerContent, {
+    component,
+    className: rootClassName,
+    key: "capitalized",
+  });
 }
 
 /**
@@ -74,10 +87,7 @@ function CapitalizedText({ children, classNames, component }) {
  */
 function CircledText({ children, className, component, stroke, active }) {
   checkChildType(children);
-  const rootClassName = twClsx(
-    "inline-block relative z-0",
-    className
-  );
+  const rootClassName = twClsx("inline-block relative z-0", className);
   const innerContent = (
     <>
       <Decorations.Circle

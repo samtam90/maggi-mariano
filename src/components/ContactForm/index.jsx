@@ -126,7 +126,7 @@ function SubmitButton({ label, className, disabled }) {
       type="submit"
       disabled={disabled || pending}
       className={twClsx(
-        "block text-center font-titleBold py-2 rounded-lg bg-gray-700 text-white text-sm w-full mt-6",
+        "block text-center font-titleBold py-2 rounded-lg bg-gray-700 text-white text-sm w-full mt-3",
         className,
         disabled && "opacity-75 cursor-not-allowed"
       )}
@@ -149,10 +149,21 @@ function SubmitButton({ label, className, disabled }) {
  *      input?: string,
  *      error?: string
  *   },
- *   error?: string
+ *   error?: string,
+ *   checkbox?: boolean,
+ *   textarea?: boolean
  * }} param0
  */
-function Input({ label, id, name, type, classNames, error, checkbox }) {
+function Input({
+  label,
+  id,
+  name,
+  type,
+  classNames,
+  error,
+  checkbox,
+  textarea,
+}) {
   const labelNode = (
     <label
       htmlFor={id}
@@ -164,19 +175,31 @@ function Input({ label, id, name, type, classNames, error, checkbox }) {
       {label}
     </label>
   );
-  const inputNode = (
-    <input
-      id={id}
-      type={checkbox ? "checkbox" : type}
-      name={name}
-      className={twClsx(
-        !checkbox &&
-          "border-b border-gray-500 bg-white block w-full py-1 px-2 focus:outline-none font-content",
-        classNames?.input
-      )}
-      required
-    />
+
+  const inputClassName = twClsx(
+    !checkbox &&
+      "border-b border-gray-500 bg-white block w-full py-1 px-2 focus:outline-none font-content",
+    classNames?.input
   );
+
+  let inputNode;
+
+  if (textarea) {
+    inputNode = (
+      <textarea id={id} name={name} className={inputClassName} required />
+    );
+  } else {
+    inputNode = (
+      <input
+        id={id}
+        type={checkbox ? "checkbox" : type}
+        name={name}
+        className={inputClassName}
+        required
+      />
+    );
+  }
+
   return (
     <div className={twClsx("mb-4", classNames?.root)}>
       {checkbox ? (
@@ -275,11 +298,15 @@ function ContactForm({
       {FIELDS.map((field) => (
         <Input
           label={labels?.[field] || DEFAULT_LABELS[field]}
-          id={ids.input(field)}
+          id={ids?.input(field)}
           name={field}
           type={getInputType(field)}
           classNames={{
             ...classNames?.input,
+            root: twClsx(
+              classNames?.input?.root,
+              field === "privacy" && "mb-0"
+            ),
             label: twClsx(
               classNames?.input?.label,
               field === "privacy" && "inline ml-2 text-xs text-gray-700"
@@ -291,6 +318,7 @@ function ContactForm({
           }}
           error={state.errors?.[field]}
           checkbox={field === "privacy"}
+          textarea={field === "content"}
         />
       ))}
       <SubmitButton

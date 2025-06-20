@@ -3,12 +3,12 @@
 import React, { memo, useRef } from "react";
 import Header from "../../components/Header";
 import {
-  withViewportData,
   AdditionalProps,
   renderServicesNavGrid,
   renderTopNavBar,
   renderPageFooter,
   renderMaps,
+  renderTitleSection,
 } from "../auxiliary";
 import { components, hooks } from "@italwebcom/tailwind-components";
 import appConfig from "../../../app.config";
@@ -47,17 +47,6 @@ function DescriptionDivider({ fill }) {
  * }} TopSectionData
  *
  * @typedef {{
- *  title: string,
- *  subtitle: string,
- *  preTitle: string,
- *  button: {
- *   label: string,
- *   href: string
- *  },
- *  imageSrc: string
- * }} TitleSectionData
- *
- * @typedef {{
  *  image: Image,
  *  paragraphs?: Paragraph[]
  * }} DescriptionSectionDataItem
@@ -90,11 +79,11 @@ function DescriptionDivider({ fill }) {
  * @typedef {{
  *   sections: {
  *     top: TopSectionData,
- *     title: TitleSectionData,
  *     description: DescriptionSectionData,
  *     highlightedContent: HighlightedContentData,
  *     feedback: FeedbackSectionData
  *   },
+ *   mobile?: boolean
  * }} HomeTemplateProps
  */
 
@@ -139,43 +128,6 @@ function renderTopSection(sectionData) {
               }}
             />
           )
-        }
-      />
-    </section>
-  );
-}
-
-/**
- * @param {TitleSectionData} sectionData
- * @returns
- */
-function renderTitleSection(sectionData) {
-  const { preTitle, title, subtitle, button, imageSrc } = sectionData;
-  const { label, href } = button;
-  return (
-    <section key="title">
-      <BgImageSection
-        preTitle={preTitle}
-        title={title}
-        content={subtitle}
-        imageUrl={imageSrc}
-        classNames={{
-          root: "py-16 lg:ml-12 lg:py-32 lg:max-w-5xl lg:mx-auto flex flex-col items-center",
-          preTitle:
-            "text-3xl lg:text-7xl text-white font-titleBold uppercase border border-white leading-normal mb-2 lg:mb-3 px-2",
-          title:
-            "text-2xl lg:text-5xl text-yellow-primary font-title uppercase border border-yellow-primary leading-normal mb-8 px-2",
-          content:
-            "text-sm lg:text-xl text-white font-title uppercase text-center self-stretch",
-          background: "bg-fixed",
-          backdrop: "opacity-65",
-        }}
-        bottomContent={
-          <LinkButton
-            href={href}
-            label={label}
-            classNames={{ root: "shadow-md" }}
-          />
         }
       />
     </section>
@@ -286,12 +238,11 @@ function processDescriptionSectionData(data, imgDim) {
 
 /**
  * @returns
- * @param {HomeTemplateProps & AdditionalProps} param0
+ * @param {HomeTemplateProps} param0
  */
 function HomeTemplate({ sections, mobile }) {
   const {
     top: topSectionData,
-    title: titleSectionData,
     description: descriptionSectionData,
     highlightedContent: highlightedContentData,
     feedback: feedbackContentData,
@@ -319,7 +270,7 @@ function HomeTemplate({ sections, mobile }) {
         <Header mobile={mobile} />
       </div>
       {renderTopSection(topSectionData)}
-      {renderTitleSection(titleSectionData)}
+      {renderTitleSection(appConfig.data.mainTitle)}
       <section key="services">
         {renderServicesNavGrid(appConfig.data.servicesGrid)}
       </section>

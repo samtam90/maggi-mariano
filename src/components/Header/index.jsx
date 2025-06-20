@@ -23,7 +23,11 @@ function getActualLogoDimensions(logoDimensions, mobile) {
  * }} param0
  * @returns
  */
-function Header({ logoDimensions = appConfig.misc.logoDimensions, mobile }) {
+function Header({
+  logoDimensions = appConfig.misc.logoDimensions,
+  mobile,
+  classNames,
+}) {
   return (
     <CompositeAppBar
       logo={{
@@ -41,7 +45,10 @@ function Header({ logoDimensions = appConfig.misc.logoDimensions, mobile }) {
         },
       }}
       classNames={{
-        contentWrapper: "max-w-8xl mx-auto pt-4 lg:pb-4",
+        contentWrapper: twClsx(
+          "max-w-8xl mx-auto pt-4 lg:pb-4",
+          classNames?.contentWrapper
+        ),
         root: "shadow-md",
         innerContentWrapper: "pb-4 lg:pb-0 px-4 lg:px-0",
         sections: {

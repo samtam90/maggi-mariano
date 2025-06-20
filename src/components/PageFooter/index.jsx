@@ -70,8 +70,13 @@ const PageFooterSection = memo(
           disableNavElement
           classNames={classNames?.section?.navBar}
         >
-          {navItems.map(({ title, icon, link }) => (
-            <NavBar.Item title={title} icon={icon} link={link} key={title} />
+          {navItems.map(({ title, icon, link }, index) => (
+            <NavBar.Item
+              title={title}
+              icon={icon}
+              link={link}
+              key={`${title}-${index}`}
+            />
           ))}
         </NavBar>
         {additionalContent && (
@@ -102,7 +107,10 @@ const PageFooter = memo(
     <C.Provider value={{ classNames, titleHeadingElement, variant }}>
       <footer className={twClsx("bg-green-dark", classNames?.root)}>
         <div
-          className={twClsx("mx-auto flex flex-col items-center lg:block", getMaxWidthClassName(contentMaxWidth))}
+          className={twClsx(
+            "mx-auto flex flex-col items-center lg:block",
+            getMaxWidthClassName(contentMaxWidth)
+          )}
         >
           <img
             src={logo.src}

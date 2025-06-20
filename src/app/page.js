@@ -1,11 +1,6 @@
-import { renderSplashScreen } from "@/components/Splash";
+import React from "react";
+import { withConditionalRendering } from "@/misc/functions";
 import dynamic from "next/dynamic";
-import React, { Suspense } from "react";
-
-const MobileHomeTemplate = dynamic(() => import("@/templates/Home/alt/mobile"));
-const DesktopHomeTemplate = dynamic(() =>
-  import("@/templates/Home/alt/desktop")
-);
 
 const props = {
   sections: {
@@ -23,28 +18,16 @@ const props = {
         href: "https://www.maggi-mariano.it",
       },
     },
-    title: {
-      title: "servizi ecologici",
-      preTitle: "Maggi Mariano",
-      subtitle:
-        "Da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente",
-      imageSrc:
-        "https://www.maggi-mariano.it/wp-content/uploads/2022/05/ecologia.jpg",
-      button: {
-        href: "https://www.maggi-mariano.it",
-        label: "Per info o preventivi contattaci",
-      },
-    },
     description: {
       headerImages: [
         {
           src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi-white.png",
-          alt: "Maggi",
+          alt: "Maggi 1",
           dimensions: { width: 300, height: 110 },
         },
         {
           src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/eco.png",
-          alt: "Maggi",
+          alt: "Maggi 2",
           dimensions: { width: 85, height: 105 },
         },
       ],
@@ -53,8 +36,8 @@ const props = {
           paragraphs: [
             "Da oltre quarant'anni, la nostra azienda opera nel settore dei servizi ecologici, mettendo a disposizione delle industrie, dei privati e degli enti un valido supporto nella gestione dei rifiuti speciali e pericolosi.",
             "Grazie alla nostra vasta esperienza, siamo in grado di offrire servizi di alta qualità, che comprendono il ritiro, il trasporto e lo smaltimento o il recupero dei rifiuti, nonché lo svuotamento e lo spurgo di fosse biologiche, la stasatura delle condotte, le videoispezioni e la disidratazione dei fanghi di depurazione civili e industriali.",
-            "Inoltre, offriamo anche il noleggio di bagni chimici per eventi e manifestazioni, la raccolta di ferro e metalli in genere, il trasporto dell’acqua e molti altri servizi, sempre nel rispetto dell’ambiente.",
-            "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell’ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
+            "Inoltre, offriamo anche il noleggio di bagni chimici per eventi e manifestazioni, la raccolta di ferro e metalli in genere, il trasporto dell'acqua e molti altri servizi, sempre nel rispetto dell'ambiente.",
+            "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell'ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
           ],
           image: {
             src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
@@ -68,7 +51,7 @@ const props = {
           ],
           image: {
             src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
-            alt: "Servizio 1",
+            alt: "Servizio 2",
           },
           imagePosition: "start",
         },
@@ -123,16 +106,11 @@ const props = {
   },
 };
 
-async function Page({ searchParams }) {
-  return (
-    <Suspense fallback={renderSplashScreen()}>
-      {searchParams?.viewport === "mobile" ? (
-        <MobileHomeTemplate {...props} />
-      ) : (
-        <DesktopHomeTemplate {...props} />
-      )}
-    </Suspense>
-  );
-}
+const ConditionalPage = withConditionalRendering({
+  Mobile: dynamic(() => import("@/templates/Home/alt/mobile")),
+  Desktop: dynamic(() => import("@/templates/Home/alt/desktop")),
+});
 
-export default Page;
+export default function Page({ searchParams }) {
+  return <ConditionalPage searchParams={searchParams} {...props} />;
+}

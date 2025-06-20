@@ -1,0 +1,60 @@
+import React, { memo, ReactNode } from "react";
+import { renderHeader, HeaderComponent, twClsx } from "../../misc/functions";
+import Link from "next/link";
+
+/**
+ * @typedef {{label: string, href: string}} LocationsGridItem
+ * @typedef {{
+ *    title?: string,
+ *    item?: string,
+ *    root?: string,
+ *    contentContainer?: string
+ * }} ClassNames
+ *
+ * @param {{
+ *    items: LocationsGridItem[],
+ *    classNames?: ClassNames,
+ *    title?: ReactNode | string,
+ *    titleHeadingElement?: HeaderComponent
+ * }} param0
+ */
+function LocationsGrid({ items, classNames, title, titleHeadingElement }) {
+  return (
+    <section
+      className={twClsx(
+        "bg-green-dark font-titleBold text-white uppercase",
+        classNames?.root
+      )}
+    >
+      <div
+        className={twClsx("max-w-6xl mx-auto", classNames?.contentContainer)}
+      >
+        <header className="mb-8">
+          {renderHeader(titleHeadingElement, title, {
+            className: twClsx(
+              "text-lg lg:text-xl text-center underline leading-loose",
+              classNames?.title
+            ),
+          })}
+        </header>
+        <nav>
+          <ul className="grid grid-cols-2 lg:grid-cols-8 gap-4">
+            {items.map(({ label, href }) => (
+              <li key={label}>
+                <Link
+                  href={href}
+                  aria-label={label}
+                  className="text-sm text-center block lg:hover:underline"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </section>
+  );
+}
+
+export default memo(LocationsGrid);

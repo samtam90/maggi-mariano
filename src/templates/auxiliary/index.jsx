@@ -1,8 +1,6 @@
 "use client";
 
-import React, { memo, ComponentType } from "react";
-import useViewportDimensions from "./hooks/useViewportDimensions";
-import appConfig from "../../../app.config";
+import React, { ReactNode } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import Link from "next/link";
 import tailwindConfig from "../../../tailwind.config";
@@ -11,9 +9,15 @@ import NavBar from "../../components/NavBar";
 import PageFooter from "../../components/PageFooter";
 import EmbeddedMap from "../../components/EmbeddedMap";
 import { twClsx } from "../../misc/functions";
+import LinkButton from "../../components/LinkButton";
+import LocationsGrid, {
+  LocationsGridItem,
+  ClassNames as LocationsGridClassNames,
+} from "../../components/LocationsGrid";
+import { HeaderComponent } from "../../misc/functions";
 
 const { BorderedColoredText, FlipCard } = components;
-const { NavButtonsGrid } = components.sections;
+const { NavButtonsGrid, BgImageSection } = components.sections;
 
 function getIcon(iconName) {
   switch (iconName) {
@@ -27,33 +31,6 @@ function processFooterNavItems(navItems) {
     ...navItem,
     icon: getIcon(navItem.icon),
   }));
-}
-
-/**
- * @typedef {{viewportWidth: number, viewportHeight: number, mobile: boolean}} AdditionalProps
- */
-
-/**
- * @template T
- * @param {ComponentType<T>} Component
- * @returns {ComponentType<T & AdditionalProps>}
- */
-export function withViewportData(Component) {
-  return memo((props) => {
-    const {
-      isMobile: mobile,
-      width: viewportWidth,
-      height: viewportHeight,
-    } = useViewportDimensions(appConfig.misc.mobileViewportThresholdPx);
-    return (
-      <Component
-        {...props}
-        mobile={mobile}
-        viewportWidth={viewportWidth}
-        viewportHeight={viewportHeight}
-      />
-    );
-  });
 }
 
 export function renderTopNavBar({ items, maxWidth, className }) {
@@ -108,6 +85,61 @@ export function renderPageFooter({
   );
 }
 
+/**
+ * @param {{
+ *  title: string,
+ *  subtitle: string,
+ *  preTitle: string,
+ *  button: {
+ *   label: string,
+ *   href: string
+ *  },
+ *  imageSrc: string
+ * }} sectionData
+ * @returns
+ */
+export function renderTitleSection(sectionData) {
+  const { preTitle, title, subtitle, button, imageSrc } = sectionData;
+  const { label, href } = button;
+  return (
+    <section key="title">
+      <BgImageSection
+        preTitle={preTitle}
+        title={title}
+        content={subtitle}
+        imageUrl={imageSrc}
+        classNames={{
+          root: "py-16 lg:ml-12 lg:py-32 lg:max-w-5xl lg:mx-auto flex flex-col items-center",
+          preTitle:
+            "text-3xl lg:text-7xl text-white font-titleBold uppercase border border-white leading-normal mb-2 lg:mb-3 px-2",
+          title:
+            "text-2xl lg:text-5xl text-yellow-primary font-title uppercase border border-yellow-primary leading-normal mb-8 px-2",
+          content:
+            "text-sm lg:text-xl text-white font-title uppercase text-center self-stretch",
+          background: "bg-fixed",
+          backdrop: "opacity-65",
+        }}
+        bottomContent={
+          <LinkButton
+            href={href}
+            label={label}
+            classNames={{ root: "shadow-md" }}
+          />
+        }
+      />
+    </section>
+  );
+}
+
+/**
+ * @typedef {{title: string, subtitle: string, src: string}} MapData
+ * @param {{
+ *    data: MapData[],
+ *    dimensions: {width: number, height: number},
+ *    classNames?: {root: string, map: string}
+ * }} param0
+ * @returns
+ */
 export function renderMaps({ data, dimensions, classNames }) {
   return (
     <div
@@ -116,12 +148,12 @@ export function renderMaps({ data, dimensions, classNames }) {
         classNames?.root
       )}
     >
-      {data.map(({ title, subtitle, src }) => (
+      {data.map(({ title, subtitle, src }, index) => (
         <EmbeddedMap
           title={title}
           subtitle={subtitle}
           src={src}
-          key={src}
+          key={`${title}-${index}`}
           dimensions={dimensions}
           classNames={{ map: classNames?.map }}
         />
@@ -130,10 +162,26 @@ export function renderMaps({ data, dimensions, classNames }) {
   );
 }
 
+/**
+ * @typedef {{
+ *    id: number | string,
+ *    title: string,
+ *    subtitle: string,
+ *    href: string,
+ *    iconSrc: string
+ * }} ServiceData
+ * @param {{
+ *    data: ServiceData[],
+ *    decorationImageUrl?: string,
+ *    backgroundImageUrl?: string
+ * }} param0
+ * @returns
+ */
 export function renderServicesNavGrid({
   data,
   decorationImageUrl,
   backgroundImageUrl,
+  className,
 }) {
   return (
     <div
@@ -141,7 +189,12 @@ export function renderServicesNavGrid({
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
       <div className="absolute inset-0 bg-green-primary opacity-50 z-0"></div>
-      <div className="max-w-8xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16">
+      <div
+        className={twClsx(
+          "max-w-8xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16",
+          className
+        )}
+      >
         <BorderedColoredText
           left="I nostri"
           right="servizi"
@@ -193,5 +246,32 @@ export function renderServicesNavGrid({
         </NavButtonsGrid>
       </div>
     </div>
+  );
+}
+
+/**
+ * @typedef {{
+ *    title: string | ReactNode,
+ *    items: LocationsGridItem[],
+ *    titleHeadingElement?: HeaderComponent,
+ *    classNames?: LocationsGridClassNames
+ * }} LocationsGridData
+ *
+ * @returns
+ * @param {LocationsGridData} param0
+ */
+export function renderLocationsGrid({
+  title,
+  items,
+  titleHeadingElement,
+  classNames,
+}) {
+  return (
+    <LocationsGrid
+      title={title}
+      titleHeadingElement={titleHeadingElement}
+      items={items}
+      classNames={classNames}
+    />
   );
 }
