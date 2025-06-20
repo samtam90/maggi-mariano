@@ -54,10 +54,11 @@ function Header({
         sections: {
           element: ({ isNestedContentOpen, nested }) => ({
             root: twClsx(
-              "font-content text-gray-700 hover:text-white hover:bg-green-primary text-sm lg:text-md px-4",
+              "text-gray-700 hover:text-white hover:bg-green-primary text-sm lg:text-md px-4",
               !nested ? "uppercase" : "bg-gray-50 text-xs lg:text-sm",
               isNestedContentOpen && "text-white bg-green-primary"
             ),
+            label: "font-title"
           }),
         },
       }}

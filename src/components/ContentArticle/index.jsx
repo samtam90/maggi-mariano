@@ -49,7 +49,7 @@ function getImgSizesAttr(dimensions) {
  *    mediaContainer?: string,
  *    paragraphsContainer?: string
  * }} SectionClassNames
- * 
+ *
  * @typedef {{
  *   title?: string,
  *   root?: string,
@@ -67,6 +67,22 @@ function getImgSizesAttr(dimensions) {
  * } & SectionContent} SectionProps
  */
 
+function wrapMediaNodes(mediaNodes, sectionClassNames) {
+  if (mediaNodes.length > 1) {
+    return (
+      <div
+        className={twClsx(
+          "grid grid-cols-2 gap-4",
+          sectionClassNames?.mediaGrid
+        )}
+      >
+        {mediaNodes}
+      </div>
+    );
+  }
+  return mediaNodes;
+}
+
 /**
  * @returns
  * @param {ReactNode[]} paragraphNodes
@@ -79,43 +95,47 @@ function assembleSectionContent(
   mediaPosition,
   sectionClassNames
 ) {
-  const outMediaNodes =
-    mediaNodes.length > 1 ? (
-      <div className="grid grid-cols-2 gap-4">{mediaNodes}</div>
-    ) : (
-      mediaNodes
-    );
-  if (mediaPosition === "bottom" || mediaPosition === "top") {
-    const isTopPos = mediaPosition === "top";
-    return (
-      <>
-        <div className="mb-6">{isTopPos ? outMediaNodes : paragraphNodes}</div>
-        {isTopPos ? paragraphNodes : outMediaNodes}
-      </>
-    );
+  if (mediaNodes?.length && paragraphNodes?.length) {
+    const outMediaNodes = wrapMediaNodes(mediaNodes, sectionClassNames);
+    if (mediaPosition === "bottom" || mediaPosition === "top") {
+      const isTopPos = mediaPosition === "top";
+      return (
+        <>
+          <div className="mb-6">
+            {isTopPos ? outMediaNodes : paragraphNodes}
+          </div>
+          {isTopPos ? paragraphNodes : outMediaNodes}
+        </>
+      );
+    } else {
+      const isLeftPos = mediaPosition === "left";
+      return (
+        <div className="flex items-center">
+          <div
+            className={twClsx(
+              "basis-1/2 shrink-0",
+              isLeftPos ? "order-1 mr-4" : "order-2 ml-4",
+              sectionClassNames?.mediaContainer
+            )}
+          >
+            {outMediaNodes}
+          </div>
+          <div
+            className={twClsx(
+              isLeftPos ? "order-2" : "order-1",
+              sectionClassNames?.paragraphsContainer
+            )}
+          >
+            {paragraphNodes}
+          </div>
+        </div>
+      );
+    }
   } else {
-    const isLeftPos = mediaPosition === "left";
-    return (
-      <div className="flex items-center">
-        <div
-          className={twClsx(
-            "basis-1/2 shrink-0",
-            isLeftPos ? "order-1 mr-4" : "order-2 ml-4",
-            sectionClassNames?.mediaContainer
-          )}
-        >
-          {outMediaNodes}
-        </div>
-        <div
-          className={twClsx(
-            isLeftPos ? "order-2" : "order-1",
-            sectionClassNames?.paragraphsContainer
-          )}
-        >
-          {paragraphNodes}
-        </div>
-      </div>
-    );
+    if (mediaNodes?.length) {
+      return wrapMediaNodes(mediaNodes, sectionClassNames);
+    }
+    return paragraphNodes;
   }
 }
 
@@ -196,16 +216,16 @@ const ContentArticleSection = memo(
     const sectionClassNames = inClassNames || classNames?.section;
 
     if (!content) {
-      const paragraphNodes = paragraphs.map((par) =>
+      const paragraphNodes = paragraphs?.map((par) =>
         renderParagraph({
           content: par,
           className: twClsx(
-            "text-gray-600 font-title text-sm mb-2",
+            "text-gray-600 font-title text-sm mb-3 leading-normal last:mb-0",
             sectionClassNames?.paragraph
           ),
         })
       );
-      const mediaElementsNodes = mediaElements.map(
+      const mediaElementsNodes = mediaElements?.map(
         ({ type, src, srcset, label, dimensions }) =>
           renderMediaElement({
             type,
@@ -260,8 +280,11 @@ const ContentArticle = memo(
               right={right}
               fillColor={tailwindConfig.theme.extend.colors.red.primary}
               classNames={{
-                text: "text-red-primary",
-                rightContainer: "text-white",
+                text: "text-red-primary text-center",
+                rightContainer:
+                  "text-white text-sm lg:text-2xl block lg:inline-block",
+                leftContainer: "block lg:inline-block",
+                root: "text-md lg:text-2xl block lg:inline-block",
               }}
             />
           </header>

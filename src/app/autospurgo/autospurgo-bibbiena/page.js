@@ -1,3 +1,3 @@
-import { baseProps, withBaseProps } from "../page";
+import { withBaseProps } from "../page";
 
-export default withBaseProps({ ...baseProps });
+export default withBaseProps({ title: "Autospurgo Bibbiena" });

@@ -144,7 +144,7 @@ function ContactSection({
           <p className={twClsx("mb-6 text-sm lg:text-md", classNames?.content)}>
             {content}
           </p>
-          <aside className={twClsx(isHorizVariant && "grid grid-cols-2 gap-4")}>
+          <aside className="grid grid-cols-2 gap-4">
             {images.map(({ src, alt }) => (
               <img
                 src={src}
@@ -168,7 +168,7 @@ function ContactSection({
             root: twClsx(
               "border border-gray-400 shadow-sm rounded-lg p-4 py-6"
             ),
-            title: "text-sm lg:text-md"
+            title: "text-sm lg:text-md",
           }}
         />
       </div>

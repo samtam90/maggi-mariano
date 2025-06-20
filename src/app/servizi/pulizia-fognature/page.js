@@ -1,0 +1,203 @@
+import { withConditionalRendering } from "@/misc/functions";
+import dynamic from "next/dynamic";
+import { onContactFormSubmit } from "@/misc/server";
+import { memo } from "react";
+import appConfig from "../../../../app.config";
+
+const imgDims = { width: 1024, height: 1024 };
+
+export function getProps({ title, mobile }) {
+  return {
+    sections: {
+      mainContent: {
+        title: {
+          left: title,
+          right: "Maggi Mariano Servizi Ecologici",
+        },
+        sections: [
+          {
+            paragraphs: [
+              `Ci occupiamo di ${title}, anche con interventi programmati e fissati nel tempo.`,
+              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l’apparato fognario e di scarico di abitazioni, condomini, aziende ed uffici.",
+              "Purtroppo questo è un argomento che troppo spesso non viene preso nella giusta considerazione, nella maggioranza dei casi ci ricordiamo di effettuare la Pulizia fognature solo quando si presentano problemi, a volte anche gravi, alla struttura fognaria.",
+              "Anche per la pulizia fognature condominiali va prestata la stessa attenzione, anzi proprio in questi casi è fondamentale programmare anticipatamente gli interventi da effettuare durante il corso di tutto l’anno.",
+              "Tutte le operazioni sulle fognatore o fosse biologiche condominiali sono sempre più complesse e impegnative rispetto a quelle che effettuate in una normale abitazione a causa di questo una manutanzione periodica e programmata, una accurata pulizia fognature condominiali garantiscono il buon funzionamento degli scarichi ed evitano spiacevoli problematiche a tutti i condomini.",
+            ],
+            classNames: { root: "mb-8" },
+          },
+          {
+            paragraphs: [
+              `Maggi Mariano Servizi Ecologici srl è l’azienda leader per ${title}, spurgo fosse biologiche e spurgo pozzi neri`,
+              "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, pozzi neri, fognature e fosse biologiche.",
+              `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
+              "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
+              "Siamo in grado di fornire il servizio di spurgo pozzi neri e di pulizia delle fognature ad un prezzo tra i più vantaggiosi sul mercato.",
+            ],
+            mediaElements: [
+              {
+                type: "image",
+                dimensions: imgDims,
+                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature.jpg",
+                label: `${title} 1`,
+              },
+            ],
+            classNames: { root: "mb-8" },
+            mediaPosition: mobile ? "bottom" : "right",
+          },
+          {
+            paragraphs: [
+              "Ci siamo dotati da tempo di un parco mezzi estremamente vario e tecnologicamente avanzato.",
+              `Con i nostri mezzi possiamo effettuare la ${title} anche in ambienti difficilmente raggiungibili con i normali mezzi come abitazioni in centri storici o in località montane difficili da raggiungere.`,
+              `Tutti i nostri operatori sono preparati e qualificati per effettuare la ${title} in maniera professionale senza arrecare nessun disagio alla nostra clientela.`,
+            ],
+            mediaPosition: mobile ? "bottom" : "left",
+            mediaElements: [
+              {
+                type: "image",
+                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature-2.jpg",
+                label: `${title} 2`,
+                dimensions: imgDims,
+              },
+            ],
+            classNames: { mediaGrid: "lg:grid-cols-3" },
+          },
+        ],
+      },
+      locations: {
+        items: [
+          {
+            label: "Anghiari",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].anghiari,
+          },
+          {
+            label: "Arezzo",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].arezzo,
+          },
+          {
+            label: "Badia Tedalda",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "badia-tedalda"
+            ],
+          },
+          {
+            label: "Bibbiena",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].bibbiena,
+          },
+          {
+            label: "Bucine",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].bucine,
+          },
+          {
+            label: "Capolona",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].capolona,
+          },
+          {
+            label: "Caprese Michelangelo",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "caprese-michelangelo"
+            ],
+          },
+          {
+            label: "Castel Focognano",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "castel-focognano"
+            ],
+          },
+          {
+            label: "Castel San Niccolò",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "castel-san-niccolo"
+            ],
+          },
+          {
+            label: "Castelfranco Piandiscò",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "castelfranco-piandisco"
+            ],
+          },
+          {
+            label: "Castiglion Fibocchi",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "castiglion-fibocchi"
+            ],
+          },
+          {
+            label: "Castiglion Fiorentino",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "castiglion-fiorentino"
+            ],
+          },
+          {
+            label: "Cavriglia",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].cavriglia,
+          },
+          {
+            label: "Chitignano",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].chitignano,
+          },
+        ],
+        title: (
+          <span>
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
+            tutti i comuni della provincia di arezzo
+          </span>
+        ),
+      },
+      contacts: {
+        preTitle: "Per ogni tua problematica ed urgenza riguardante",
+        title,
+        phoneNumbers: [
+          {
+            label: "Tel.: 0575/520447",
+            href: "tel:0575520447",
+          },
+          {
+            label: "Cell.: 334 3889878",
+            href: "tel:3343889878",
+          },
+        ],
+        content:
+          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
+        images: [
+          {
+            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
+            alt: "Image1",
+          },
+          {
+            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
+            alt: "Image2",
+          },
+        ],
+        formTitle:
+          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
+        variant: "horizontal",
+        imageDimensions: { width: 650, height: 850 },
+      },
+    },
+  };
+}
+
+export const ConditionalPage = withConditionalRendering({
+  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
+  Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
+});
+
+export function Page({ searchParams, title }) {
+  const mobile = searchParams?.viewport === "mobile";
+  const props = getProps({ title, mobile });
+  return (
+    <ConditionalPage
+      {...props}
+      searchParams={searchParams}
+      onContactFormSubmit={onContactFormSubmit}
+    />
+  );
+}
+
+export function withBaseProps({ title }) {
+  return memo(async ({ searchParams }) => (
+    <Page searchParams={searchParams} title={title} />
+  ));
+}
+
+export default withBaseProps({ title: "Pulizia fognature" });

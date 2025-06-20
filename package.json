@@ -11,7 +11,7 @@
     "test:e2e:silent": "jest ./src/__e2e__ --runInBand --silent"
   },
   "dependencies": {
-    "@italwebcom/tailwind-components": "^1.15.6",
+    "@italwebcom/tailwind-components": "^1.15.7",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",

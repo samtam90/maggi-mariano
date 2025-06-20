@@ -16,7 +16,6 @@ import ContactSection, {
   PhoneNumber,
   Image,
 } from "../../components/ContactSection";
-import { ContactFormData } from "../../components/ContactForm";
 import testIDs from "../../misc/testIDs";
 import ContentArticle, {
   SectionProps as ContentArticleSectionData,
@@ -42,8 +41,8 @@ import tailwindConfig from "../../../tailwind.config";
  * }} MainContentSectionData
  *
  * @typedef {{
- *    contacts: ContactSectionData,
- *    locations: LocationsGridData,
+ *    contacts?: ContactSectionData,
+ *    locations?: LocationsGridData,
  *    mainContent: MainContentSectionData
  * }} SectionsData
  */
@@ -76,7 +75,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
         }}
         titleHeadingElements={{ article: "h1", section: "h2" }}
         classNames={{
-          root: "py-12 max-w-6xl mx-auto",
+          root: "py-4 lg:py-12 px-4 lg:px-0 max-w-6xl mx-auto",
           section: {
             paragraph: "mb-4",
           },
@@ -98,19 +97,22 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
           )
         )}
       </ContentArticle>
-      <ContactSection
-        {...contactsSectionData}
-        ids={testIDs.contactForm}
-        variant={mobile ? "vertical" : "horizontal"}
-        classNames={{
-          contentWrapper: "max-w-6xl",
-        }}
-        onFormSubmit={onContactFormSubmit}
-      />
-      {renderLocationsGrid({
-        ...locationsSectionData,
-        classNames: { root: "py-24" },
-      })}
+      {contactsSectionData && (
+        <ContactSection
+          {...contactsSectionData}
+          ids={testIDs.contactForm}
+          variant={mobile ? "vertical" : "horizontal"}
+          classNames={{
+            contentWrapper: "max-w-6xl",
+          }}
+          onFormSubmit={onContactFormSubmit}
+        />
+      )}
+      {locationsSectionData &&
+        renderLocationsGrid({
+          ...locationsSectionData,
+          classNames: { root: "py-8 lg:py-24 px-4 lg:px-0" },
+        })}
       {renderTitleSection(appConfig.data.mainTitle)}
       <section key="services">
         {renderServicesNavGrid({
