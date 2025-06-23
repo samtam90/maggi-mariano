@@ -73,7 +73,51 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
       <div className="sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />
       </div>
-      
+      <ContentArticle
+        title={{
+          ...mainContentSectionData.title,
+          fillColor: tailwindConfig.theme.extend.colors.red.primary,
+        }}
+        titleHeadingElements={{ article: "h1", section: "h2" }}
+        classNames={{
+          root: "py-4 lg:py-12 px-4 lg:px-0 max-w-6xl mx-auto",
+          section: {
+            paragraph: "mb-4",
+          },
+        }}
+      >
+        {mainContentSectionData.sections?.map(
+          (
+            { title, paragraphs, mediaElements, mediaPosition, classNames },
+            index
+          ) => (
+            <ContentArticle.Section
+              key={title ? `${title}-${index}` : index}
+              title={title}
+              paragraphs={paragraphs}
+              mediaElements={mediaElements}
+              mediaPosition={mediaPosition || "right"}
+              classNames={classNames}
+            />
+          )
+        )}
+      </ContentArticle>
+      {contactsSectionData && (
+        <ContactSection
+          {...contactsSectionData}
+          ids={testIDs.contactForm}
+          variant={mobile ? "vertical" : "horizontal"}
+          classNames={{
+            contentWrapper: "max-w-6xl",
+          }}
+          onFormSubmit={onContactFormSubmit}
+        />
+      )}
+      {locationsSectionData &&
+        renderLocationsGrid({
+          ...locationsSectionData,
+          classNames: { root: "py-8 lg:py-24 px-4 lg:px-0" },
+        })}
       {renderTitleSection(appConfig.data.mainTitle)}
       <section key="services">
         {renderServicesNavGrid({
