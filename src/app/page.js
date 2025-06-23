@@ -1,5 +1,6 @@
 import React from "react";
 import { withConditionalRendering } from "@/misc/functions";
+import appConfig from "../../app.config";
 
 const props = {
   sections: {
@@ -14,7 +15,7 @@ const props = {
         "https://www.maggi-mariano.it/wp-content/uploads/2022/05/home-1.jpg",
       link: {
         label: "Scopri di più",
-        href: "https://www.maggi-mariano.it",
+        href: appConfig.links.servizi["videoispezioni-telecamera-robot"],
       },
     },
     description: {
@@ -70,7 +71,7 @@ const props = {
         dimensions: { width: 700, height: 300 },
       },
       link: {
-        href: "https://www.maggi-mariano.it/frantoio-mobile-inerti/",
+        href: appConfig.links.servizi["frantoio-mobile-inerti"].root,
         label: "Ulteriori informazioni sul frantoio mobile",
       },
       title: { left: "New: ", right: "FRANTOIO MOBILE DI INERTI" },

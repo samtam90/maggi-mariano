@@ -2,7 +2,7 @@ import { twJoin, twMerge, ClassNameValue } from "tailwind-merge";
 import React, { ReactNode, ComponentType, memo, Suspense } from "react";
 import appConfig from "../../../app.config";
 import dynamic from "next/dynamic";
-import Splash from "@/components/Splash";
+import Splash from "../../components/Splash";
 
 /**
  * @typedef {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} HeaderComponent

@@ -55,6 +55,9 @@ const links = {
     "centrifugazione-o-disidratazione-fanghi":
       "/servizi/centrifugazione-o-disidratazione-fanghi",
     "escavatore-a-risucchio": "/servizi/escavatore-a-risucchio",
+    "frantoio-mobile-inerti": {
+      root: "/servizi/frantoio-mobile-inerti",
+    },
     "noleggio-bagni-chimici": {
       root: "/servizi/noleggio-bagni-chimici",
       anghiari:
@@ -408,7 +411,7 @@ const mainTitleData = {
   imageSrc:
     "https://www.maggi-mariano.it/wp-content/uploads/2022/05/ecologia.jpg",
   button: {
-    href: "https://www.maggi-mariano.it",
+    href: links.contatti,
     label: "Per info o preventivi contattaci",
   },
 };
@@ -420,7 +423,7 @@ const servicesNavGridData = [
     subtitle: "Materiali ferrosi",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ferrosi-200-1.png",
-    href: "https://www.google.it",
+    href: links.servizi["recupero-materiali-ferrosi"],
   },
   {
     id: "service-2",
@@ -428,7 +431,7 @@ const servicesNavGridData = [
     subtitle: "Fosse biologiche",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fosse-200-1.png",
-    href: "https://www.google.it",
+    href: links.servizi["spurgo-fosse-biologiche"].root,
   },
   {
     id: "service-3",
@@ -436,7 +439,7 @@ const servicesNavGridData = [
     subtitle: "Bagni chimici",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bagni-200-1.png",
-    href: "https://www.google.it",
+    href: links.servizi["noleggio-bagni-chimici"].root,
   },
   {
     id: "service-4",
@@ -444,71 +447,71 @@ const servicesNavGridData = [
     subtitle: "Acqua potabile",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-200-2.png",
-    href: "https://www.google.it",
+    href: links.servizi["trasporto-acqua"].root,
   },
   {
     id: "service-5",
-    title: "Recupero",
-    subtitle: "Materiali ferrosi",
+    title: "Videoispezioni",
+    subtitle: "con telecamera robot",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ferrosi-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ispezioni-200-1.png",
+    href: links.servizi["videoispezioni-telecamera-robot"],
   },
   {
     id: "service-6",
-    title: "Spurgo",
-    subtitle: "Fosse biologiche",
+    title: "Noleggio",
+    subtitle: "container e cassoni",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fosse-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/cassoni-scarrabili-200-1.png",
+    href: links.servizi["noleggio-container-e-cassoni"],
   },
   {
     id: "service-7",
-    title: "Noleggio",
-    subtitle: "Bagni chimici",
+    title: "Escavatore",
+    subtitle: "a risucchio",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bagni-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/risucchio-200-1.png",
+    href: links.servizi["escavatore-a-risucchio"],
   },
   {
     id: "service-8",
     title: "Trasporto",
-    subtitle: "Acqua potabile",
+    subtitle: "rifiuti",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-200-2.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bonifiche-200-1.png",
+    href: links.servizi["trasporto-rifiuti"].root,
   },
   {
     id: "service-9",
-    title: "Recupero",
-    subtitle: "Materiali ferrosi",
+    title: "Container",
+    subtitle: "rifiuti speciali",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ferrosi-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-200-1.png",
+    href: links.servizi["noleggio-container-e-cassoni"],
   },
   {
     id: "service-10",
-    title: "Spurgo",
-    subtitle: "Fosse biologiche",
+    title: "Centrifugazione",
+    subtitle: "fanghi",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fosse-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fanghi-200-1.png",
+    href: links.servizi["centrifugazione-o-disidratazione-fanghi"],
   },
   {
     id: "service-11",
-    title: "Noleggio",
-    subtitle: "Bagni chimici",
+    title: "Frantoio mobile",
+    subtitle: "inerti",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bagni-200-1.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/09/frantoio-200.png",
+    href: links.servizi["frantoio-mobile-inerti"].root,
   },
   {
     id: "service-12",
-    title: "Trasporto",
-    subtitle: "Acqua potabile",
+    title: "Spurgo",
+    subtitle: "fognature",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-200-2.png",
-    href: "https://www.google.it",
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/08/disotturazione-fognature-200.png",
+    href: links.servizi["pulizia-fognature"].root,
   },
 ];
 
