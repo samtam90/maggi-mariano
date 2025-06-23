@@ -80,13 +80,15 @@ export function withConditionalRendering(Components) {
   return memo(async (props) => {
     const { searchParams } = props;
     return (
-      <Suspense fallback={renderSplashScreen()}>
-        {searchParams?.viewport === "mobile" ? (
-          <Components.Mobile {...props} />
-        ) : (
-          <Components.Desktop {...props} />
-        )}
-      </Suspense>
+      <div>
+        <Suspense fallback={renderSplashScreen()}>
+          {searchParams?.viewport === "mobile" ? (
+            <Components.Mobile {...props} />
+          ) : (
+            <Components.Desktop {...props} />
+          )}
+        </Suspense>
+      </div>
     );
   });
 }

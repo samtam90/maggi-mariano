@@ -107,6 +107,30 @@ const links = {
       cavriglia: "/servizi/pulizia-fognature/pulizia-fognature-cavriglia",
       chitignano: "/servizi/pulizia-fognature/pulizia-fognature-chitignano",
     },
+    "spurgo-fosse-biologiche": {
+      root: "/servizi/spurgo-fosse-biologiche",
+      anghiari: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-anghiari",
+      arezzo: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-arezzo",
+      "badia-tedalda":
+        "/spurgo-fosse-biologiche/servizi/spurgo-fosse-biologiche-badia-tedalda",
+      bibbiena: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bibbiena",
+      bucine: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bucine",
+      capolona: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-capolona",
+      "caprese-michelangelo":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-caprese-michelangelo",
+      "castel-focognano":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castel-focognano",
+      "castel-san-niccolo":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castel-san-niccolo",
+      "castelfranco-piandisco":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castelfranco-piandisco",
+      "castiglion-fibocchi":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castiglion-fibocchi",
+      "castiglion-fiorentino":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castiglion-fiorentino",
+      cavriglia: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cavriglia",
+      chitignano: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-chitignano",
+    }
   },
 };
 
@@ -230,6 +254,31 @@ const navBarSections = {
         links.servizi["pulizia-fognature"].cavriglia,
       "Pulizia fognature Chitignano":
         links.servizi["pulizia-fognature"].chitignano,
+    },
+    "Spurgo fosse biologiche": {
+      "Spurgo fosse biologiche Anghiari": links.servizi["spurgo-fosse-biologiche"].anghiari,
+      "Spurgo fosse biologiche Arezzo": links.servizi["spurgo-fosse-biologiche"].arezzo,
+      "Spurgo fosse biologiche Badia Tedalda":
+        links.servizi["spurgo-fosse-biologiche"]["badia-tedalda"],
+      "Spurgo fosse biologiche Bibbiena": links.servizi["spurgo-fosse-biologiche"].bibbiena,
+      "Spurgo fosse biologiche Bucine": links.servizi["spurgo-fosse-biologiche"].bucine,
+      "Spurgo fosse biologiche Capolona": links.servizi["spurgo-fosse-biologiche"].capolona,
+      "Spurgo fosse biologiche Caprese Michelangelo":
+        links.servizi["spurgo-fosse-biologiche"]["caprese-michelangelo"],
+      "Spurgo fosse biologiche Castel Focognano":
+        links.servizi["spurgo-fosse-biologiche"]["castel-focognano"],
+      "Spurgo fosse biologiche Castel Niccolò":
+        links.servizi["spurgo-fosse-biologiche"]["castel-san-niccolo"],
+      "Spurgo fosse biologiche Castelfranco Piandiscò":
+        links.servizi["spurgo-fosse-biologiche"]["castelfranco-piandisco"],
+      "Spurgo fosse biologiche Castiglion Fibocchi":
+        links.servizi["spurgo-fosse-biologiche"]["castiglion-fibocchi"],
+      "Spurgo fosse biologiche Castiglion Fiorentino":
+        links.servizi["spurgo-fosse-biologiche"]["castiglion-fiorentino"],
+      "Spurgo fosse biologiche Cavriglia":
+        links.servizi["spurgo-fosse-biologiche"].cavriglia,
+      "Spurgo fosse biologiche Chitignano":
+        links.servizi["spurgo-fosse-biologiche"].chitignano,
     },
   },
   Documenti: baseUrl,

@@ -17,27 +17,25 @@ export function getProps({ title, mobile }) {
         sections: [
           {
             paragraphs: [
-              `Ci occupiamo di ${title}, anche con interventi programmati e fissati nel tempo.`,
-              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l’apparato fognario e di scarico di abitazioni, condomini, aziende ed uffici.",
-              "Purtroppo questo è un argomento che troppo spesso non viene preso nella giusta considerazione, nella maggioranza dei casi ci ricordiamo di effettuare la Pulizia fognature solo quando si presentano problemi, a volte anche gravi, alla struttura fognaria.",
-              "Anche per la pulizia fognature condominiali va prestata la stessa attenzione, anzi proprio in questi casi è fondamentale programmare anticipatamente gli interventi da effettuare durante il corso di tutto l’anno.",
-              "Tutte le operazioni sulle fognatore o fosse biologiche condominiali sono sempre più complesse e impegnative rispetto a quelle che effettuate in una normale abitazione a causa di questo una manutanzione periodica e programmata, una accurata pulizia fognature condominiali garantiscono il buon funzionamento degli scarichi ed evitano spiacevoli problematiche a tutti i condomini.",
+              `Se stai cercando un'azienda specializzata nello ${title} allora la MAGGI MARIANO SERVIZI ECOLOGICI è la ditta che fa per te. Contattaci subito e ti chiariremo ogni dubbio.`,
+              `Lo ${title} non è in effetti un argomento che siamo soliti trattare nella vita di tutti i giorni, anzi! Preferiremmo certamente non dovercene occupare (chi vuole interessarsi di liquami!). Quando però è necessario farlo, è bene avere le idee chiare!`,
+              "Spurgare una fognatura, una fossa biologica o un pozzo nero è un lavoro particolare e delicato, per questo è necessario affidarsi ad un’azienda seria e certificata come la Maggi Mariano Servizi Ecologici!",
             ],
             classNames: { root: "mb-8" },
           },
           {
             paragraphs: [
-              `Maggi Mariano Servizi Ecologici srl è l’azienda leader per ${title}, spurgo fosse biologiche e spurgo pozzi neri`,
-              "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, pozzi neri, fognature e fosse biologiche.",
+              `Maggi Mariano Servizi Ecologici srl è l’azienda leader per ${title}, spurgo pozzi neri e fognature.`,
+              "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, dai pozzi neri alle fognature e fosse biologiche.",
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
               "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
-              "Siamo in grado di fornire il servizio di spurgo pozzi neri e di pulizia delle fognature ad un prezzo tra i più vantaggiosi sul mercato.",
+              "Siamo in grado di fornire il servizio di spurgo fosse biologiche ad un prezzo tra i più ventaggiosi sul mercato.",
             ],
             mediaElements: [
               {
                 type: "image",
                 dimensions: imgDims,
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature.jpg",
+                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/botti-12-1024x682.jpg",
                 label: `${title} 1`,
               },
             ],
@@ -47,14 +45,14 @@ export function getProps({ title, mobile }) {
           {
             paragraphs: [
               "Ci siamo dotati da tempo di un parco mezzi estremamente vario e tecnologicamente avanzato.",
-              `Con i nostri mezzi possiamo effettuare la ${title} anche in ambienti difficilmente raggiungibili con i normali mezzi come abitazioni in centri storici o in località montane difficili da raggiungere.`,
-              `Tutti i nostri operatori sono preparati e qualificati per effettuare la ${title} in maniera professionale senza arrecare nessun disagio alla nostra clientela.`,
+              `Siamo in grado di effettuare lo ${title} anche in ambienti difficilmente raggiungibili con i normali mezzi come abitazioni in centri storici o in località montane difficili da raggiungere.`,
+              `Tutti i nostri operatori sono preparati e qualificati per effettuare lo ${title} in maniera professionale senza arrecare nessun disagio alla nostra clientela.`,
             ],
             mediaPosition: mobile ? "bottom" : "left",
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature-2.jpg",
+                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/mezzi-29-1024x682.jpg",
                 label: `${title} 2`,
                 dimensions: imgDims,
               },
@@ -67,73 +65,73 @@ export function getProps({ title, mobile }) {
         items: [
           {
             label: "Anghiari",
-            href: appConfig.links.servizi["pulizia-fognature"].anghiari,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].anghiari,
           },
           {
             label: "Arezzo",
-            href: appConfig.links.servizi["pulizia-fognature"].arezzo,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].arezzo,
           },
           {
             label: "Badia Tedalda",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "badia-tedalda"
             ],
           },
           {
             label: "Bibbiena",
-            href: appConfig.links.servizi["pulizia-fognature"].bibbiena,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].bibbiena,
           },
           {
             label: "Bucine",
-            href: appConfig.links.servizi["pulizia-fognature"].bucine,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].bucine,
           },
           {
             label: "Capolona",
-            href: appConfig.links.servizi["pulizia-fognature"].capolona,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].capolona,
           },
           {
             label: "Caprese Michelangelo",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "caprese-michelangelo"
             ],
           },
           {
             label: "Castel Focognano",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "castel-focognano"
             ],
           },
           {
             label: "Castel San Niccolò",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "castel-san-niccolo"
             ],
           },
           {
             label: "Castelfranco Piandiscò",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "castelfranco-piandisco"
             ],
           },
           {
             label: "Castiglion Fibocchi",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "castiglion-fibocchi"
             ],
           },
           {
             label: "Castiglion Fiorentino",
-            href: appConfig.links.servizi["pulizia-fognature"][
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
               "castiglion-fiorentino"
             ],
           },
           {
             label: "Cavriglia",
-            href: appConfig.links.servizi["pulizia-fognature"].cavriglia,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].cavriglia,
           },
           {
             label: "Chitignano",
-            href: appConfig.links.servizi["pulizia-fognature"].chitignano,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].chitignano,
           },
         ],
         title: (
@@ -200,4 +198,4 @@ export function withBaseProps({ title }) {
   ));
 }
 
-export default withBaseProps({ title: "Pulizia fognature" });
+export default withBaseProps({ title: "Spurgo fosse biologiche" });
