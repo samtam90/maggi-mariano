@@ -39,6 +39,32 @@ function getMaxWidthClassName(maxWidth) {
   return null;
 }
 
+export function InnerNavBarItem({ href, icon, title, label, classNames }) {
+  return (
+    <Link href={href} className="flex group items-center">
+      <div
+        className={twClsx(
+          "transition-colors group-hover:text-white text-yellow-primary text-lg",
+          classNames?.icon
+        )}
+      >
+        {icon}
+      </div>
+      <div className="ml-2 text-xs lg:text-sm text-white">
+        <p className={twClsx("font-titleBold", classNames?.title)}>{title}</p>
+        <p
+          className={twClsx(
+            "font-title group-hover:underline",
+            classNames?.label
+          )}
+        >
+          {label}
+        </p>
+      </div>
+    </Link>
+  );
+}
+
 /**
  * @typedef {{
  *    root?: string,
@@ -84,29 +110,13 @@ const NavBarItem = memo(
       <li
         className={twClsx(isHorizontalVariant ? "flex-grow shrink-0" : "mb-4")}
       >
-        <Link href={href} className="flex group items-center">
-          <div
-            className={twClsx(
-              "transition-colors group-hover:text-white text-yellow-primary text-lg",
-              itemClassNames?.icon
-            )}
-          >
-            {icon}
-          </div>
-          <div className="ml-2 text-xs lg:text-sm text-white">
-            <p className={twClsx("font-titleBold", itemClassNames?.title)}>
-              {title}
-            </p>
-            <p
-              className={twClsx(
-                "font-title group-hover:underline",
-                itemClassNames?.label
-              )}
-            >
-              {label}
-            </p>
-          </div>
-        </Link>
+        <InnerNavBarItem
+          classNames={itemClassNames}
+          title={title}
+          label={label}
+          href={href}
+          icon={icon}
+        />
       </li>
     );
   }

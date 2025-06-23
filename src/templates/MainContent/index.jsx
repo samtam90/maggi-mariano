@@ -1,17 +1,7 @@
 "use client";
 
 import React, { memo } from "react";
-import {
-  renderMaps,
-  renderPageFooter,
-  renderServicesNavGrid,
-  renderTitleSection,
-  renderTopNavBar,
-  LocationsGridData,
-  renderLocationsGrid,
-} from "../auxiliary";
-import appConfig from "../../../app.config";
-import Header from "../../components/Header";
+import { LocationsGridData, renderLocationsGrid } from "../auxiliary";
 import ContactSection, {
   PhoneNumber,
   Image,
@@ -22,6 +12,8 @@ import ContentArticle, {
   SectionClassNames,
 } from "../../components/ContentArticle";
 import tailwindConfig from "../../../tailwind.config";
+import { ContactFormData } from "../../components/ContactForm";
+import AuxTemplate from "../auxiliary/AuxTemplate";
 
 /**
  * @typedef {{
@@ -48,7 +40,11 @@ import tailwindConfig from "../../../tailwind.config";
  */
 
 /**
- * @param {{mobile: boolean, sections: SectionsData}} param0
+ * @param {{
+ *    mobile: boolean,
+ *    sections: SectionsData,
+ *    onContactFormSubmit: (data: ContactFormData) => void
+ * }} param0
  * @returns
  */
 function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
@@ -59,15 +55,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
   } = sections;
 
   return (
-    <main>
-      {renderTopNavBar({
-        items: appConfig.data.topNavBar.items,
-        maxWidth: "6xl",
-        className: "hidden md:block",
-      })}
-      <div className="sticky top-0 z-top bg-white shadow-md">
-        <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />
-      </div>
+    <AuxTemplate mobile={mobile}>
       <ContentArticle
         title={{
           ...mainContentSectionData.title,
@@ -113,28 +101,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
           ...locationsSectionData,
           classNames: { root: "py-8 lg:py-24 px-4 lg:px-0" },
         })}
-      {renderTitleSection(appConfig.data.mainTitle)}
-      <section key="services">
-        {renderServicesNavGrid({
-          ...appConfig.data.servicesGrid,
-          className: "max-w-6xl",
-        })}
-      </section>
-      {renderMaps({
-        data: appConfig.data.maps,
-        dimensions: { width: "100%", height: "300" },
-        classNames: {
-          root: "px-4 lg:max-w-6xl lg:px-0 mx-auto mt-4 lg:mt-0",
-          map: "pb-8 lg:pb-0",
-        },
-      })}
-      {renderPageFooter({
-        logo: appConfig.data.footer.logo,
-        sections: appConfig.data.footer.sections,
-        contentMaxWidth: "6xl",
-        variant: mobile ? "vertical" : "horizontal",
-      })}
-    </main>
+    </AuxTemplate>
   );
 }
 

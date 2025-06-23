@@ -29,7 +29,7 @@ const TopBackdrop = memo(() => (
   </svg>
 ));
 
-function getFormSubmitLabel(status) {
+export function getFormSubmitLabel(status) {
   return status === "success" ? "Success" : "Submit";
 }
 

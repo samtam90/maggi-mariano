@@ -57,6 +57,8 @@ const links = {
     "escavatore-a-risucchio": "/servizi/escavatore-a-risucchio",
     "frantoio-mobile-inerti": {
       root: "/servizi/frantoio-mobile-inerti",
+      arezzo: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-arezzo",
+      siena: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-siena",
     },
     "noleggio-bagni-chimici": {
       root: "/servizi/noleggio-bagni-chimici",
@@ -251,10 +253,10 @@ const navBarSections = {
   },
   Servizi: {
     "Frantoio mobile inerti": {
-      "Frantoio mobile inerti Siena":
-        "https://www.maggi-mariano.it/frantoio-mobile-inerti/frantoio-mobile-inerti-siena/",
       "Frantoio mobile inerti Arezzo":
-        "https://www.maggi-mariano.it/frantoio-mobile-inerti/frantoio-mobile-inerti-arezzo/",
+        links.servizi["frantoio-mobile-inerti"].arezzo,
+      "Frantoio mobile inerti Siena":
+        links.servizi["frantoio-mobile-inerti"].siena,
     },
     "Centrifugazione o disidratazione fanghi":
       links.servizi["centrifugazione-o-disidratazione-fanghi"],

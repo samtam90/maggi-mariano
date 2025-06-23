@@ -1,6 +1,64 @@
+import Icons from "@/components/Icons";
 import { withConditionalRendering } from "@/misc/functions";
+import { onContactFormSubmit } from "@/misc/server";
 
-const props = {};
+const props = {
+  formTitle: "Usa il modulo sottostante per contattarci",
+  title: {
+    left: "I nostri contatti",
+    right: "Maggi mariano servizi ecologici",
+  },
+  items: [
+    {
+      title: "sede poppi",
+      subtitle: "Via Aretina 16, 52014 Ponte a Poppi - (AR)",
+      href: "https://www.google.it",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "sede arezzo",
+      subtitle: "SS679, 52100 Arezzo (AR)",
+      href: "https://www.google.it",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "assistenza clienti",
+      subtitle: "+39 0575 520447",
+      href: "tel:+390575520447",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "rifiuti liquidi",
+      subtitle: "+39 334 3889878",
+      href: "tel:+393343889878",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "rifiuti solidi",
+      subtitle: "+39 335 1377089",
+      href: "tel:+393351377089",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "fax",
+      subtitle: "+39 0575 527949",
+      href: "tel:+390575527949",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "email",
+      subtitle: "serviziecologici@maggimariano.it",
+      href: "mailto:serviziecologici@maggimariano.it",
+      icon: <Icons.Phone />,
+    },
+    {
+      title: "P.I. e C.F.",
+      subtitle: "01731060511",
+      href: "https://www.google.it",
+      icon: <Icons.Phone />,
+    },
+  ],
+};
 
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/Contacts/alt/mobile"),
@@ -8,5 +66,11 @@ export const ConditionalPage = withConditionalRendering({
 });
 
 export default function Page({ searchParams }) {
-  return <ConditionalPage searchParams={searchParams} {...props} />;
+  return (
+    <ConditionalPage
+      searchParams={searchParams}
+      onContactFormSubmit={onContactFormSubmit}
+      {...props}
+    />
+  );
 }
