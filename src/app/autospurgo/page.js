@@ -285,9 +285,7 @@ export function getProps({ title, mobile }) {
 }
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile"), {
-    suspense,
-  }),
+  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
   Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
 });
 
