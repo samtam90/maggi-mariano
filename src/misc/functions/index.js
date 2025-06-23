@@ -1,6 +1,6 @@
 import { twJoin, twMerge, ClassNameValue } from "tailwind-merge";
 import React, { ReactNode, ComponentType, memo, Suspense } from "react";
-import { renderSplashScreen } from "../../components/Splash";
+import appConfig from "../../../app.config";
 
 /**
  * @typedef {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} HeaderComponent
@@ -81,7 +81,17 @@ export function withConditionalRendering(Components) {
     const { searchParams } = props;
     return (
       <div>
-        <Suspense fallback={renderSplashScreen()}>
+        <Suspense
+          fallback={
+            <div className="h-screen flex items-center justify-center">
+              <img
+                alt={appConfig.misc.title}
+                src={appConfig.misc.logoSrc}
+                className="object-contain inline-block"
+              />
+            </div>
+          }
+        >
           {searchParams?.viewport === "mobile" ? (
             <Components.Mobile {...props} />
           ) : (

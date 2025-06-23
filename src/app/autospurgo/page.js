@@ -285,7 +285,17 @@ export function getProps({ title, mobile }) {
 }
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
+  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile"), {
+    loading: () => (
+      <div className="h-screen flex items-center justify-center">
+        <img
+          alt={appConfig.misc.title}
+          src={appConfig.misc.logoSrc}
+          className="object-contain inline-block"
+        />
+      </div>
+    ),
+  }),
   Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
 });
 
