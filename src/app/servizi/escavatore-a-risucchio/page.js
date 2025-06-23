@@ -1,7 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
-import dynamic from "next/dynamic";
 
-const imgDims = { width: 1024, height: 1024 };
 const props = {
   sections: {
     mainContent: {
@@ -54,8 +52,8 @@ const props = {
 };
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
-  Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
+  Mobile: import("@/templates/MainContent/alt/mobile"),
+  Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
 export default function Page({ searchParams }) {

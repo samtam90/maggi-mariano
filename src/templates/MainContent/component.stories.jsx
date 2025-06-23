@@ -1,7 +1,6 @@
 import React from "react";
 import MainContentTemplate from ".";
 import AppThemeProvider from "../../components/AppThemeProvider";
-import Link from "next/link";
 
 export default {
   title: "Templates/MainContent",
@@ -13,8 +12,6 @@ const T = (args) => (
     <MainContentTemplate {...args} />
   </AppThemeProvider>
 );
-
-const imgDim = window.innerWidth * 0.5;
 
 export const Base = T.bind({});
 Base.args = {
@@ -38,8 +35,8 @@ Base.args = {
               Garantiamo{" "}
               <span className="text-gray-700 font-titleBold">
                 risposte ideali per disostruire , svuotare e liberare
-              </span> qualsiasi impianto, dai{" "}
-              alle fognature e fosse biologiche.
+              </span>{" "}
+              qualsiasi impianto, dai alle fognature e fosse biologiche.
             </span>,
             "Offriamo il servizio di Autospurgo Anghiari con professionalità e in modo programmato!",
             "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",

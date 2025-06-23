@@ -1,6 +1,5 @@
 import React from "react";
 import { withConditionalRendering } from "@/misc/functions";
-import dynamic from "next/dynamic";
 
 const props = {
   sections: {
@@ -107,8 +106,8 @@ const props = {
 };
 
 const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/Home/alt/mobile")),
-  Desktop: dynamic(() => import("@/templates/Home/alt/desktop")),
+  Mobile: import("@/templates/Home/alt/mobile"),
+  Desktop: import("@/templates/Home/alt/desktop"),
 });
 
 export default function Page({ searchParams }) {

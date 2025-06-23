@@ -49,6 +49,8 @@ const links = {
     talla: "/autospurgo/autospurgo-talla",
     "terranuova-bracciolini": "/autospurgo/autospurgo-terranuova-bracciolini",
   },
+  contatti: "/contatti",
+  "documenti-e-autorizzazioni": "/documenti-e-autorizzazioni",
   servizi: {
     "centrifugazione-o-disidratazione-fanghi":
       "/servizi/centrifugazione-o-disidratazione-fanghi",
@@ -107,15 +109,19 @@ const links = {
       cavriglia: "/servizi/pulizia-fognature/pulizia-fognature-cavriglia",
       chitignano: "/servizi/pulizia-fognature/pulizia-fognature-chitignano",
     },
+    "recupero-materiali-ferrosi": "/servizi/recupero-materiali-ferrosi",
     "spurgo-fosse-biologiche": {
       root: "/servizi/spurgo-fosse-biologiche",
-      anghiari: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-anghiari",
+      anghiari:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-anghiari",
       arezzo: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-arezzo",
       "badia-tedalda":
         "/spurgo-fosse-biologiche/servizi/spurgo-fosse-biologiche-badia-tedalda",
-      bibbiena: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bibbiena",
+      bibbiena:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bibbiena",
       bucine: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bucine",
-      capolona: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-capolona",
+      capolona:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-capolona",
       "caprese-michelangelo":
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-caprese-michelangelo",
       "castel-focognano":
@@ -128,10 +134,62 @@ const links = {
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castiglion-fibocchi",
       "castiglion-fiorentino":
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-castiglion-fiorentino",
-      cavriglia: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cavriglia",
-      chitignano: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-chitignano",
-    }
+      cavriglia:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cavriglia",
+      chitignano:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-chitignano",
+    },
+    "trasporto-acqua": {
+      root: "/servizi/trasporto-acqua",
+      anghiari: "/servizi/trasporto-acqua/trasporto-acqua-anghiari",
+      arezzo: "/servizi/trasporto-acqua/trasporto-acqua-arezzo",
+      "badia-tedalda": "/trasporto-acqua/servizi/trasporto-acqua-badia-tedalda",
+      bibbiena: "/servizi/trasporto-acqua/trasporto-acqua-bibbiena",
+      bucine: "/servizi/trasporto-acqua/trasporto-acqua-bucine",
+      capolona: "/servizi/trasporto-acqua/trasporto-acqua-capolona",
+      "caprese-michelangelo":
+        "/servizi/trasporto-acqua/trasporto-acqua-caprese-michelangelo",
+      "castel-focognano":
+        "/servizi/trasporto-acqua/trasporto-acqua-castel-focognano",
+      "castel-san-niccolo":
+        "/servizi/trasporto-acqua/trasporto-acqua-castel-san-niccolo",
+      "castelfranco-piandisco":
+        "/servizi/trasporto-acqua/trasporto-acqua-castelfranco-piandisco",
+      "castiglion-fibocchi":
+        "/servizi/trasporto-acqua/trasporto-acqua-castiglion-fibocchi",
+      "castiglion-fiorentino":
+        "/servizi/trasporto-acqua/trasporto-acqua-castiglion-fiorentino",
+      cavriglia: "/servizi/trasporto-acqua/trasporto-acqua-cavriglia",
+      chitignano: "/servizi/trasporto-acqua/trasporto-acqua-chitignano",
+    },
+    "trasporto-rifiuti": {
+      root: "/servizi/trasporto-rifiuti",
+      anghiari: "/servizi/trasporto-rifiuti/trasporto-rifiuti-anghiari",
+      arezzo: "/servizi/trasporto-rifiuti/trasporto-rifiuti-arezzo",
+      "badia-tedalda":
+        "/trasporto-rifiuti/servizi/trasporto-rifiuti-badia-tedalda",
+      bibbiena: "/servizi/trasporto-rifiuti/trasporto-rifiuti-bibbiena",
+      bucine: "/servizi/trasporto-rifiuti/trasporto-rifiuti-bucine",
+      capolona: "/servizi/trasporto-rifiuti/trasporto-rifiuti-capolona",
+      "caprese-michelangelo":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-caprese-michelangelo",
+      "castel-focognano":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-castel-focognano",
+      "castel-san-niccolo":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-castel-san-niccolo",
+      "castelfranco-piandisco":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-castelfranco-piandisco",
+      "castiglion-fibocchi":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-castiglion-fibocchi",
+      "castiglion-fiorentino":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-castiglion-fiorentino",
+      cavriglia: "/servizi/trasporto-rifiuti/trasporto-rifiuti-cavriglia",
+      chitignano: "/servizi/trasporto-rifiuti/trasporto-rifiuti-chitignano",
+    },
+    "videoispezioni-telecamera-robot":
+      "/servizi/videoispezioni-con-telecamera-robot",
   },
+  videogallery: "/videogallery",
 };
 
 const navBarSections = {
@@ -255,14 +313,20 @@ const navBarSections = {
       "Pulizia fognature Chitignano":
         links.servizi["pulizia-fognature"].chitignano,
     },
+    "Recupero materiali ferrosi": links.servizi["recupero-materiali-ferrosi"],
     "Spurgo fosse biologiche": {
-      "Spurgo fosse biologiche Anghiari": links.servizi["spurgo-fosse-biologiche"].anghiari,
-      "Spurgo fosse biologiche Arezzo": links.servizi["spurgo-fosse-biologiche"].arezzo,
+      "Spurgo fosse biologiche Anghiari":
+        links.servizi["spurgo-fosse-biologiche"].anghiari,
+      "Spurgo fosse biologiche Arezzo":
+        links.servizi["spurgo-fosse-biologiche"].arezzo,
       "Spurgo fosse biologiche Badia Tedalda":
         links.servizi["spurgo-fosse-biologiche"]["badia-tedalda"],
-      "Spurgo fosse biologiche Bibbiena": links.servizi["spurgo-fosse-biologiche"].bibbiena,
-      "Spurgo fosse biologiche Bucine": links.servizi["spurgo-fosse-biologiche"].bucine,
-      "Spurgo fosse biologiche Capolona": links.servizi["spurgo-fosse-biologiche"].capolona,
+      "Spurgo fosse biologiche Bibbiena":
+        links.servizi["spurgo-fosse-biologiche"].bibbiena,
+      "Spurgo fosse biologiche Bucine":
+        links.servizi["spurgo-fosse-biologiche"].bucine,
+      "Spurgo fosse biologiche Capolona":
+        links.servizi["spurgo-fosse-biologiche"].capolona,
       "Spurgo fosse biologiche Caprese Michelangelo":
         links.servizi["spurgo-fosse-biologiche"]["caprese-michelangelo"],
       "Spurgo fosse biologiche Castel Focognano":
@@ -280,10 +344,60 @@ const navBarSections = {
       "Spurgo fosse biologiche Chitignano":
         links.servizi["spurgo-fosse-biologiche"].chitignano,
     },
+    "Trasporto acqua": {
+      "Trasporto acqua Anghiari": links.servizi["trasporto-acqua"].anghiari,
+      "Trasporto acqua Arezzo": links.servizi["trasporto-acqua"].arezzo,
+      "Trasporto acqua Badia Tedalda":
+        links.servizi["trasporto-acqua"]["badia-tedalda"],
+      "Trasporto acqua Bibbiena": links.servizi["trasporto-acqua"].bibbiena,
+      "Trasporto acqua Bucine": links.servizi["trasporto-acqua"].bucine,
+      "Trasporto acqua Capolona": links.servizi["trasporto-acqua"].capolona,
+      "Trasporto acqua Caprese Michelangelo":
+        links.servizi["trasporto-acqua"]["caprese-michelangelo"],
+      "Trasporto acqua Castel Focognano":
+        links.servizi["trasporto-acqua"]["castel-focognano"],
+      "Trasporto acqua Castel Niccolò":
+        links.servizi["trasporto-acqua"]["castel-san-niccolo"],
+      "Trasporto acqua Castelfranco Piandiscò":
+        links.servizi["trasporto-acqua"]["castelfranco-piandisco"],
+      "Trasporto acqua Castiglion Fibocchi":
+        links.servizi["trasporto-acqua"]["castiglion-fibocchi"],
+      "Trasporto acqua Castiglion Fiorentino":
+        links.servizi["trasporto-acqua"]["castiglion-fiorentino"],
+      "Trasporto acqua Cavriglia": links.servizi["trasporto-acqua"].cavriglia,
+      "Trasporto acqua Chitignano": links.servizi["trasporto-acqua"].chitignano,
+    },
+    "Trasporto rifiuti": {
+      "Trasporto rifiuti Anghiari": links.servizi["trasporto-rifiuti"].anghiari,
+      "Trasporto rifiuti Arezzo": links.servizi["trasporto-rifiuti"].arezzo,
+      "Trasporto rifiuti Badia Tedalda":
+        links.servizi["trasporto-rifiuti"]["badia-tedalda"],
+      "Trasporto rifiuti Bibbiena": links.servizi["trasporto-rifiuti"].bibbiena,
+      "Trasporto rifiuti Bucine": links.servizi["trasporto-rifiuti"].bucine,
+      "Trasporto rifiuti Capolona": links.servizi["trasporto-rifiuti"].capolona,
+      "Trasporto rifiuti Caprese Michelangelo":
+        links.servizi["trasporto-rifiuti"]["caprese-michelangelo"],
+      "Trasporto rifiuti Castel Focognano":
+        links.servizi["trasporto-rifiuti"]["castel-focognano"],
+      "Trasporto rifiuti Castel Niccolò":
+        links.servizi["trasporto-rifiuti"]["castel-san-niccolo"],
+      "Trasporto rifiuti Castelfranco Piandiscò":
+        links.servizi["trasporto-rifiuti"]["castelfranco-piandisco"],
+      "Trasporto rifiuti Castiglion Fibocchi":
+        links.servizi["trasporto-rifiuti"]["castiglion-fibocchi"],
+      "Trasporto rifiuti Castiglion Fiorentino":
+        links.servizi["trasporto-rifiuti"]["castiglion-fiorentino"],
+      "Trasporto rifiuti Cavriglia":
+        links.servizi["trasporto-rifiuti"].cavriglia,
+      "Trasporto rifiuti Chitignano":
+        links.servizi["trasporto-rifiuti"].chitignano,
+    },
+    "Videoispezioni con telecamera robot":
+      links.servizi["videoispezioni-telecamera-robot"],
   },
-  Documenti: baseUrl,
-  Videogallery: baseUrl,
-  Contatti: baseUrl,
+  Documenti: links["documenti-e-autorizzazioni"],
+  Videogallery: links.videogallery,
+  Contatti: links.contatti,
 };
 
 const mainTitleData = {

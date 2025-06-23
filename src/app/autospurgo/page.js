@@ -1,5 +1,4 @@
 import { withConditionalRendering } from "@/misc/functions";
-import dynamic from "next/dynamic";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../app.config";
@@ -285,18 +284,8 @@ export function getProps({ title, mobile }) {
 }
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile"), {
-    loading: () => (
-      <div className="h-screen flex items-center justify-center">
-        <img
-          alt={appConfig.misc.title}
-          src={appConfig.misc.logoSrc}
-          className="object-contain inline-block"
-        />
-      </div>
-    ),
-  }),
-  Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
+  Mobile: import("@/templates/MainContent/alt/mobile"),
+  Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
 export async function Page({ searchParams, title }) {

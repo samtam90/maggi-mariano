@@ -1,5 +1,4 @@
 import { withConditionalRendering } from "@/misc/functions";
-import dynamic from "next/dynamic";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
@@ -178,8 +177,8 @@ export function getProps({ title, mobile }) {
 }
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
-  Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
+  Mobile: import("@/templates/MainContent/alt/mobile"),
+  Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
 export function Page({ searchParams, title }) {

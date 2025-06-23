@@ -1,6 +1,8 @@
 import { twJoin, twMerge, ClassNameValue } from "tailwind-merge";
 import React, { ReactNode, ComponentType, memo, Suspense } from "react";
 import appConfig from "../../../app.config";
+import dynamic from "next/dynamic";
+import Splash from "@/components/Splash";
 
 /**
  * @typedef {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} HeaderComponent
@@ -73,10 +75,17 @@ export function renderHeader(component, content, props) {
 
 /**
  * @template {T}
- * @param {{Mobile: ComponentType<T>, Desktop: ComponentType<T>}} Components
+ * @param {{Mobile: ComponentType<T>, Desktop: ComponentType<T>}} InComponents
  * @returns
  */
-export function withConditionalRendering(Components) {
+export function withConditionalRendering(InComponents) {
+  const splash = (
+    <Splash alt={appConfig.misc.title} src={appConfig.misc.logoSrc} />
+  );
+  const Components = {
+    Mobile: dynamic(() => InComponents.Mobile, { loading: () => splash }),
+    Desktop: dynamic(() => InComponents.Desktop, { loading: () => splash }),
+  };
   return memo(async (props) => {
     const { searchParams } = props;
     return (
