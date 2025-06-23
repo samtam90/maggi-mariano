@@ -193,7 +193,7 @@ const links = {
 };
 
 const navBarSections = {
-  Home: baseUrl,
+  Home: "/",
   Autospurgo: {
     "Autospurgo Anghiari": links.autospurgo.anghiari,
     "Autospurgo Arezzo": links.autospurgo.arezzo,
