@@ -285,11 +285,13 @@ export function getProps({ title, mobile }) {
 }
 
 export const ConditionalPage = withConditionalRendering({
-  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile")),
+  Mobile: dynamic(() => import("@/templates/MainContent/alt/mobile"), {
+    suspense,
+  }),
   Desktop: dynamic(() => import("@/templates/MainContent/alt/desktop")),
 });
 
-export function Page({ searchParams, title }) {
+export async function Page({ searchParams, title }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile });
   return (
