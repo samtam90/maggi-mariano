@@ -74,9 +74,7 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Badia Tedalda",
-            href: appConfig.links.servizi["pulizia-fognature"][
-              "badia-tedalda"
-            ],
+            href: appConfig.links.servizi["pulizia-fognature"]["badia-tedalda"],
           },
           {
             label: "Bibbiena",
@@ -133,6 +131,141 @@ export function getProps({ title, mobile }) {
           {
             label: "Chitignano",
             href: appConfig.links.servizi["pulizia-fognature"].chitignano,
+          },
+          {
+            label: "Chiusi della Verna",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "chiusi-della-verna"
+            ],
+          },
+          {
+            label: "Civitella in Valdichiana",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "civitella-in-valdichiana"
+            ],
+          },
+          {
+            label: "Cortona",
+            href: appConfig.links.servizi["pulizia-fognature"].cortona,
+          },
+          {
+            label: "Foiano della Chiana",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "foiano-della-chiana"
+            ],
+          },
+          {
+            label: "Laterina",
+            href: appConfig.links.servizi["pulizia-fognature"].laterina,
+          },
+          {
+            label: "Loro Ciuffenna",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "loro-ciuffenna"
+            ],
+          },
+          {
+            label: "Lucignano",
+            href: appConfig.links.servizi["pulizia-fognature"].lucignano,
+          },
+          {
+            label: "Marciano della Chiana",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "marciano-della-chiana"
+            ],
+          },
+          {
+            label: "Monte San Savino",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "monte-san-savino"
+            ],
+          },
+          {
+            label: "Montemignaio",
+            href: appConfig.links.servizi["pulizia-fognature"]
+              .montemignaio,
+          },
+          {
+            label: "Monterchi",
+            href: appConfig.links.servizi["pulizia-fognature"].monterchi,
+          },
+          {
+            label: "Montevarchi",
+            href: appConfig.links.servizi["pulizia-fognature"].montevarchi,
+          },
+          {
+            label: "Ortignano Raggiolo",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "ortignano-raggiolo"
+            ],
+          },
+          {
+            label: "Pergine Valdarno",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "pergine-valdarno"
+            ],
+          },
+          {
+            label: "Pieve al Toppo",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "pieve-al-toppo"
+            ],
+          },
+          {
+            label: "Pieve Santo Stefano",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "pieve-santo-stefano"
+            ],
+          },
+          {
+            label: "Poppi",
+            href: appConfig.links.servizi["pulizia-fognature"].poppi,
+          },
+          {
+            label: "Pratovecchio Stia",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "pratovecchio-stia"
+            ],
+          },
+          {
+            label: "Rassina",
+            href: appConfig.links.servizi["pulizia-fognature"].rassina,
+          },
+          {
+            label: "Rigutino",
+            href: appConfig.links.servizi["pulizia-fognature"].rigutino,
+          },
+          {
+            label: "San Giovanni Valdarno",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "san-giovanni-valdarno"
+            ],
+          },
+          {
+            label: "Sansepolcro",
+            href: appConfig.links.servizi["pulizia-fognature"].sansepolcro,
+          },
+          {
+            label: "Sestino",
+            href: appConfig.links.servizi["pulizia-fognature"].sestino,
+          },
+          {
+            label: "Soci",
+            href: appConfig.links.servizi["pulizia-fognature"].soci,
+          },
+          {
+            label: "Subbiano",
+            href: appConfig.links.servizi["pulizia-fognature"].subbiano,
+          },
+          {
+            label: "Talla",
+            href: appConfig.links.servizi["pulizia-fognature"].talla,
+          },
+          {
+            label: "Terranuova Bracciolini",
+            href: appConfig.links.servizi["pulizia-fognature"][
+              "terranuova-bracciolini"
+            ],
           },
         ],
         title: (

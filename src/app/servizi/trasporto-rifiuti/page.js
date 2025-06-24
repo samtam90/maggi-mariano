@@ -112,6 +112,140 @@ export function getProps({ title, mobile }) {
             label: "Chitignano",
             href: appConfig.links.servizi["trasporto-rifiuti"].chitignano,
           },
+          {
+            label: "Chiusi della Verna",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "chiusi-della-verna"
+            ],
+          },
+          {
+            label: "Civitella in Valdichiana",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "civitella-in-valdichiana"
+            ],
+          },
+          {
+            label: "Cortona",
+            href: appConfig.links.servizi["trasporto-rifiuti"].cortona,
+          },
+          {
+            label: "Foiano della Chiana",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "foiano-della-chiana"
+            ],
+          },
+          {
+            label: "Laterina",
+            href: appConfig.links.servizi["trasporto-rifiuti"].laterina,
+          },
+          {
+            label: "Loro Ciuffenna",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "loro-ciuffenna"
+            ],
+          },
+          {
+            label: "Lucignano",
+            href: appConfig.links.servizi["trasporto-rifiuti"].lucignano,
+          },
+          {
+            label: "Marciano della Chiana",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "marciano-della-chiana"
+            ],
+          },
+          {
+            label: "Monte San Savino",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "monte-san-savino"
+            ],
+          },
+          {
+            label: "Montemignaio",
+            href: appConfig.links.servizi["trasporto-rifiuti"].montemignaio,
+          },
+          {
+            label: "Monterchi",
+            href: appConfig.links.servizi["trasporto-rifiuti"].monterchi,
+          },
+          {
+            label: "Montevarchi",
+            href: appConfig.links.servizi["trasporto-rifiuti"].montevarchi,
+          },
+          {
+            label: "Ortignano Raggiolo",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "ortignano-raggiolo"
+            ],
+          },
+          {
+            label: "Pergine Valdarno",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "pergine-valdarno"
+            ],
+          },
+          {
+            label: "Pieve al Toppo",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "pieve-al-toppo"
+            ],
+          },
+          {
+            label: "Pieve Santo Stefano",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "pieve-santo-stefano"
+            ],
+          },
+          {
+            label: "Poppi",
+            href: appConfig.links.servizi["trasporto-rifiuti"].poppi,
+          },
+          {
+            label: "Pratovecchio Stia",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "pratovecchio-stia"
+            ],
+          },
+          {
+            label: "Rassina",
+            href: appConfig.links.servizi["trasporto-rifiuti"].rassina,
+          },
+          {
+            label: "Rigutino",
+            href: appConfig.links.servizi["trasporto-rifiuti"].rigutino,
+          },
+          {
+            label: "San Giovanni Valdarno",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "san-giovanni-valdarno"
+            ],
+          },
+          {
+            label: "Sansepolcro",
+            href: appConfig.links.servizi["trasporto-rifiuti"].sansepolcro,
+          },
+          {
+            label: "Sestino",
+            href: appConfig.links.servizi["trasporto-rifiuti"].sestino,
+          },
+          {
+            label: "Soci",
+            href: appConfig.links.servizi["trasporto-rifiuti"].soci,
+          },
+          {
+            label: "Subbiano",
+            href: appConfig.links.servizi["trasporto-rifiuti"].subbiano,
+          },
+          {
+            label: "Talla",
+            href: appConfig.links.servizi["trasporto-rifiuti"].talla,
+          },
+          {
+            label: "Terranuova Bracciolini",
+            href: appConfig.links.servizi["trasporto-rifiuti"][
+              "terranuova-bracciolini"
+            ],
+          },
         ],
         title: (
           <span>

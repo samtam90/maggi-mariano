@@ -143,6 +143,114 @@ export function getProps({ title, mobile }) {
             label: "Chitignano",
             href: appConfig.links.servizi["noleggio-bagni-chimici"].chitignano,
           },
+          {
+            label: "Chiusi della Verna",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["chiusi-della-verna"],
+          },
+          {
+            label: "Civitella in Valdichiana",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["civitella-in-valdichiana"],
+          },
+          {
+            label: "Cortona",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].cortona,
+          },
+          {
+            label: "Foiano della Chiana",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["foiano-della-chiana"],
+          },
+          {
+            label: "Laterina",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].laterina,
+          },
+          {
+            label: "Loro Ciuffenna",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["loro-ciuffenna"],
+          },
+          {
+            label: "Lucignano",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].lucignano,
+          },
+          {
+            label: "Marciano della Chiana",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["marciano-della-chiana"],
+          },
+          {
+            label: "Monte San Savino",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["monte-san-savino"],
+          },
+          {
+            label: "Montemignaio",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].montemignaio,
+          },
+          {
+            label: "Monterchi",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].monterchi,
+          },
+          {
+            label: "Montevarchi",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].montevarchi,
+          },
+          {
+            label: "Ortignano Raggiolo",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["ortignano-raggiolo"],
+          },
+          {
+            label: "Pergine Valdarno",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pergine-valdarno"],
+          },
+          {
+            label: "Pieve al Toppo",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pieve-al-toppo"],
+          },
+          {
+            label: "Pieve Santo Stefano",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pieve-santo-stefano"],
+          },
+          {
+            label: "Poppi",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].poppi,
+          },
+          {
+            label: "Pratovecchio Stia",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pratovecchio-stia"],
+          },
+          {
+            label: "Rassina",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].rassina,
+          },
+          {
+            label: "Rigutino",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].rigutino,
+          },
+          {
+            label: "San Giovanni Valdarno",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["san-giovanni-valdarno"],
+          },
+          {
+            label: "Sansepolcro",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].sansepolcro,
+          },
+          {
+            label: "Sestino",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].sestino,
+          },
+          {
+            label: "Soci",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].soci,
+          },
+          {
+            label: "Subbiano",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].subbiano,
+          },
+          {
+            label: "Talla",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"].talla,
+          },
+          {
+            label: "Terranuova Bracciolini",
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]["terranuova-bracciolini"],
+          },
         ],
         title: (
           <span>

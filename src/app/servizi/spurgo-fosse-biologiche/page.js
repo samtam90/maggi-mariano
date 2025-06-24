@@ -132,6 +132,140 @@ export function getProps({ title, mobile }) {
             label: "Chitignano",
             href: appConfig.links.servizi["spurgo-fosse-biologiche"].chitignano,
           },
+          {
+            label: "Chiusi della Verna",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "chiusi-della-verna"
+            ],
+          },
+          {
+            label: "Civitella in Valdichiana",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "civitella-in-valdichiana"
+            ],
+          },
+          {
+            label: "Cortona",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].cortona,
+          },
+          {
+            label: "Foiano della Chiana",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "foiano-della-chiana"
+            ],
+          },
+          {
+            label: "Laterina",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].laterina,
+          },
+          {
+            label: "Loro Ciuffenna",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "loro-ciuffenna"
+            ],
+          },
+          {
+            label: "Lucignano",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].lucignano,
+          },
+          {
+            label: "Marciano della Chiana",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "marciano-della-chiana"
+            ],
+          },
+          {
+            label: "Monte San Savino",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "monte-san-savino"
+            ],
+          },
+          {
+            label: "Montemignaio",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].montemignaio,
+          },
+          {
+            label: "Monterchi",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].monterchi,
+          },
+          {
+            label: "Montevarchi",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].montevarchi,
+          },
+          {
+            label: "Ortignano Raggiolo",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "ortignano-raggiolo"
+            ],
+          },
+          {
+            label: "Pergine Valdarno",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "pergine-valdarno"
+            ],
+          },
+          {
+            label: "Pieve al Toppo",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "pieve-al-toppo"
+            ],
+          },
+          {
+            label: "Pieve Santo Stefano",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "pieve-santo-stefano"
+            ],
+          },
+          {
+            label: "Poppi",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].poppi,
+          },
+          {
+            label: "Pratovecchio Stia",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "pratovecchio-stia"
+            ],
+          },
+          {
+            label: "Rassina",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].rassina,
+          },
+          {
+            label: "Rigutino",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].rigutino,
+          },
+          {
+            label: "San Giovanni Valdarno",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "san-giovanni-valdarno"
+            ],
+          },
+          {
+            label: "Sansepolcro",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].sansepolcro,
+          },
+          {
+            label: "Sestino",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].sestino,
+          },
+          {
+            label: "Soci",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].soci,
+          },
+          {
+            label: "Subbiano",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].subbiano,
+          },
+          {
+            label: "Talla",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"].talla,
+          },
+          {
+            label: "Terranuova Bracciolini",
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"][
+              "terranuova-bracciolini"
+            ],
+          },
         ],
         title: (
           <span>

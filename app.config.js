@@ -76,7 +76,7 @@ const links = {
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-anghiari",
       arezzo: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-arezzo",
       "badia-tedalda":
-        "/noleggio-bagni-chimici/servizi/noleggio-bagni-chimici-badia-tedalda",
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-badia-tedalda",
       bibbiena:
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-bibbiena",
       bucine: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-bucine",
@@ -98,6 +98,54 @@ const links = {
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-cavriglia",
       chitignano:
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-chitignano",
+      "chiusi-della-verna":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-chiusi-della-verna",
+      "civitella-in-valdichiana":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-civitella-in-valdichiana",
+      cortona: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-cortona",
+      "foiano-della-chiana":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-foiano-della-chiana",
+      laterina:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-laterina",
+      "loro-ciuffenna":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-loro-ciuffenna",
+      lucignano:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-lucignano",
+      "marciano-della-chiana":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-marciano-della-chiana",
+      "monte-san-savino":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-monte-san-savino",
+      montemignaio:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-montemignaio",
+      monterchi:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-monterchi",
+      montevarchi:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-montevarchi",
+      "ortignano-raggiolo":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-ortignano-raggiolo",
+      "pergine-valdarno":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-pergine-valdarno",
+      "pieve-al-toppo":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-pieve-al-toppo",
+      "pieve-santo-stefano":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-pieve-santo-stefano",
+      poppi: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-poppi",
+      "pratovecchio-stia":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-pratovecchio-stia",
+      rassina: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-rassina",
+      rigutino:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-rigutino",
+      "san-giovanni-valdarno":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-san-giovanni-valdarno",
+      sansepolcro:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-sansepolcro",
+      sestino: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-sestino",
+      soci: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-soci",
+      subbiano:
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-subbiano",
+      talla: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-talla",
+      "terranuova-bracciolini":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-terranuova-bracciolini",
     },
     "noleggio-container-e-cassoni": "/servizi/noleggio-container-e-cassoni",
     "pulizia-fognature": {
@@ -105,7 +153,7 @@ const links = {
       anghiari: "/servizi/pulizia-fognature/pulizia-fognature-anghiari",
       arezzo: "/servizi/pulizia-fognature/pulizia-fognature-arezzo",
       "badia-tedalda":
-        "/pulizia-fognature/servizi/pulizia-fognature-badia-tedalda",
+        "/servizi/pulizia-fognature/pulizia-fognature-badia-tedalda",
       bibbiena: "/servizi/pulizia-fognature/pulizia-fognature-bibbiena",
       bucine: "/servizi/pulizia-fognature/pulizia-fognature-bucine",
       capolona: "/servizi/pulizia-fognature/pulizia-fognature-capolona",
@@ -123,6 +171,46 @@ const links = {
         "/servizi/pulizia-fognature/pulizia-fognature-castiglion-fiorentino",
       cavriglia: "/servizi/pulizia-fognature/pulizia-fognature-cavriglia",
       chitignano: "/servizi/pulizia-fognature/pulizia-fognature-chitignano",
+      "chiusi-della-verna":
+        "/servizi/pulizia-fognature/pulizia-fognature-chiusi-della-verna",
+      "civitella-in-valdichiana":
+        "/servizi/pulizia-fognature/pulizia-fognature-civitella-in-valdichiana",
+      cortona: "/pulizia-fognature/servizi/pulizia-fognature-cortona",
+      "foiano-della-chiana":
+        "/servizi/pulizia-fognature/pulizia-fognature-foiano-della-chiana",
+      laterina: "/servizi/pulizia-fognature/pulizia-fognature-laterina",
+      "loro-ciuffenna":
+        "/servizi/pulizia-fognature/pulizia-fognature-loro-ciuffenna",
+      lucignano: "/servizi/pulizia-fognature/pulizia-fognature-lucignano",
+      "marciano-della-chiana":
+        "/servizi/pulizia-fognature/pulizia-fognature-marciano-della-chiana",
+      "monte-san-savino":
+        "/servizi/pulizia-fognature/pulizia-fognature-monte-san-savino",
+      montemignaio: "/servizi/pulizia-fognature/pulizia-fognature-montemignaio",
+      monterchi: "/servizi/pulizia-fognature/pulizia-fognature-monterchi",
+      montevarchi: "/servizi/pulizia-fognature/pulizia-fognature-montevarchi",
+      "ortignano-raggiolo":
+        "/servizi/pulizia-fognature/pulizia-fognature-ortignano-raggiolo",
+      "pergine-valdarno":
+        "/servizi/pulizia-fognature/pulizia-fognature-pergine-valdarno",
+      "pieve-al-toppo":
+        "/servizi/pulizia-fognature/pulizia-fognature-pieve-al-toppo",
+      "pieve-santo-stefano":
+        "/servizi/pulizia-fognature/pulizia-fognature-pieve-santo-stefano",
+      poppi: "/servizi/pulizia-fognature/pulizia-fognature-poppi",
+      "pratovecchio-stia":
+        "/servizi/pulizia-fognature/pulizia-fognature-pratovecchio-stia",
+      rassina: "/servizi/pulizia-fognature/pulizia-fognature-rassina",
+      rigutino: "/servizi/pulizia-fognature/pulizia-fognature-rigutino",
+      "san-giovanni-valdarno":
+        "/servizi/pulizia-fognature/pulizia-fognature-san-giovanni-valdarno",
+      sansepolcro: "/servizi/pulizia-fognature/pulizia-fognature-sansepolcro",
+      sestino: "/servizi/pulizia-fognature/pulizia-fognature-sestino",
+      soci: "/servizi/pulizia-fognature/pulizia-fognature-soci",
+      subbiano: "/servizi/pulizia-fognature/pulizia-fognature-subbiano",
+      talla: "/servizi/pulizia-fognature/pulizia-fognature-talla",
+      "terranuova-bracciolini":
+        "/servizi/pulizia-fognature/pulizia-fognature-terranuova-bracciolini",
     },
     "recupero-materiali-ferrosi": "/servizi/recupero-materiali-ferrosi",
     "spurgo-fosse-biologiche": {
@@ -131,7 +219,7 @@ const links = {
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-anghiari",
       arezzo: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-arezzo",
       "badia-tedalda":
-        "/spurgo-fosse-biologiche/servizi/spurgo-fosse-biologiche-badia-tedalda",
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-badia-tedalda",
       bibbiena:
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bibbiena",
       bucine: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-bucine",
@@ -153,12 +241,63 @@ const links = {
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cavriglia",
       chitignano:
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-chitignano",
+      "chiusi-della-verna":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-chiusi-della-verna",
+      "civitella-in-valdichiana":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-civitella-in-valdichiana",
+      cortona:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cortona",
+      "foiano-della-chiana":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-foiano-della-chiana",
+      laterina:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-laterina",
+      "loro-ciuffenna":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-loro-ciuffenna",
+      lucignano:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-lucignano",
+      "marciano-della-chiana":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-marciano-della-chiana",
+      "monte-san-savino":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-monte-san-savino",
+      montemignaio:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-montemignaio",
+      monterchi:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-monterchi",
+      montevarchi:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-montevarchi",
+      "ortignano-raggiolo":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-ortignano-raggiolo",
+      "pergine-valdarno":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-pergine-valdarno",
+      "pieve-al-toppo":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-pieve-al-toppo",
+      "pieve-santo-stefano":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-pieve-santo-stefano",
+      poppi: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-poppi",
+      "pratovecchio-stia":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-pratovecchio-stia",
+      rassina:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-rassina",
+      rigutino:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-rigutino",
+      "san-giovanni-valdarno":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-san-giovanni-valdarno",
+      sansepolcro:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-sansepolcro",
+      sestino:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-sestino",
+      soci: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-soci",
+      subbiano:
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-subbiano",
+      talla: "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-talla",
+      "terranuova-bracciolini":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-terranuova-bracciolini",
     },
     "trasporto-acqua": {
       root: "/servizi/trasporto-acqua",
       anghiari: "/servizi/trasporto-acqua/trasporto-acqua-anghiari",
       arezzo: "/servizi/trasporto-acqua/trasporto-acqua-arezzo",
-      "badia-tedalda": "/trasporto-acqua/servizi/trasporto-acqua-badia-tedalda",
+      "badia-tedalda": "/servizi/trasporto-acqua/trasporto-acqua-badia-tedalda",
       bibbiena: "/servizi/trasporto-acqua/trasporto-acqua-bibbiena",
       bucine: "/servizi/trasporto-acqua/trasporto-acqua-bucine",
       capolona: "/servizi/trasporto-acqua/trasporto-acqua-capolona",
@@ -176,6 +315,46 @@ const links = {
         "/servizi/trasporto-acqua/trasporto-acqua-castiglion-fiorentino",
       cavriglia: "/servizi/trasporto-acqua/trasporto-acqua-cavriglia",
       chitignano: "/servizi/trasporto-acqua/trasporto-acqua-chitignano",
+      "chiusi-della-verna":
+        "/servizi/trasporto-acqua/trasporto-acqua-chiusi-della-verna",
+      "civitella-in-valdichiana":
+        "/servizi/trasporto-acqua/trasporto-acqua-civitella-in-valdichiana",
+      cortona: "/servizi/trasporto-acqua/trasporto-acqua-cortona",
+      "foiano-della-chiana":
+        "/servizi/trasporto-acqua/trasporto-acqua-foiano-della-chiana",
+      laterina: "/servizi/trasporto-acqua/trasporto-acqua-laterina",
+      "loro-ciuffenna":
+        "/servizi/trasporto-acqua/trasporto-acqua-loro-ciuffenna",
+      lucignano: "/servizi/trasporto-acqua/trasporto-acqua-lucignano",
+      "marciano-della-chiana":
+        "/servizi/trasporto-acqua/trasporto-acqua-marciano-della-chiana",
+      "monte-san-savino":
+        "/servizi/trasporto-acqua/trasporto-acqua-monte-san-savino",
+      montemignaio: "/servizi/trasporto-acqua/trasporto-acqua-montemignaio",
+      monterchi: "/servizi/trasporto-acqua/trasporto-acqua-monterchi",
+      montevarchi: "/servizi/trasporto-acqua/trasporto-acqua-montevarchi",
+      "ortignano-raggiolo":
+        "/servizi/trasporto-acqua/trasporto-acqua-ortignano-raggiolo",
+      "pergine-valdarno":
+        "/servizi/trasporto-acqua/trasporto-acqua-pergine-valdarno",
+      "pieve-al-toppo":
+        "/servizi/trasporto-acqua/trasporto-acqua-pieve-al-toppo",
+      "pieve-santo-stefano":
+        "/servizi/trasporto-acqua/trasporto-acqua-pieve-santo-stefano",
+      poppi: "/servizi/trasporto-acqua/trasporto-acqua-poppi",
+      "pratovecchio-stia":
+        "/servizi/trasporto-acqua/trasporto-acqua-pratovecchio-stia",
+      rassina: "/servizi/trasporto-acqua/trasporto-acqua-rassina",
+      rigutino: "/servizi/trasporto-acqua/trasporto-acqua-rigutino",
+      "san-giovanni-valdarno":
+        "/servizi/trasporto-acqua/trasporto-acqua-san-giovanni-valdarno",
+      sansepolcro: "/servizi/trasporto-acqua/trasporto-acqua-sansepolcro",
+      sestino: "/servizi/trasporto-acqua/trasporto-acqua-sestino",
+      soci: "/servizi/trasporto-acqua/trasporto-acqua-soci",
+      subbiano: "/servizi/trasporto-acqua/trasporto-acqua-subbiano",
+      talla: "/servizi/trasporto-acqua/trasporto-acqua-talla",
+      "terranuova-bracciolini":
+        "/servizi/trasporto-acqua/trasporto-acqua-terranuova-bracciolini",
     },
     "trasporto-rifiuti": {
       root: "/servizi/trasporto-rifiuti",
@@ -200,6 +379,46 @@ const links = {
         "/servizi/trasporto-rifiuti/trasporto-rifiuti-castiglion-fiorentino",
       cavriglia: "/servizi/trasporto-rifiuti/trasporto-rifiuti-cavriglia",
       chitignano: "/servizi/trasporto-rifiuti/trasporto-rifiuti-chitignano",
+      "chiusi-della-verna":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-chiusi-della-verna",
+      "civitella-in-valdichiana":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-civitella-in-valdichiana",
+      cortona: "/servizi/trasporto-rifiuti/trasporto-rifiuti-cortona",
+      "foiano-della-chiana":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-foiano-della-chiana",
+      laterina: "/servizi/trasporto-rifiuti/trasporto-rifiuti-laterina",
+      "loro-ciuffenna":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-loro-ciuffenna",
+      lucignano: "/servizi/trasporto-rifiuti/trasporto-rifiuti-lucignano",
+      "marciano-della-chiana":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-marciano-della-chiana",
+      "monte-san-savino":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-monte-san-savino",
+      montemignaio: "/servizi/trasporto-rifiuti/trasporto-rifiuti-montemignaio",
+      monterchi: "/servizi/trasporto-rifiuti/trasporto-rifiuti-monterchi",
+      montevarchi: "/servizi/trasporto-rifiuti/trasporto-rifiuti-montevarchi",
+      "ortignano-raggiolo":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-ortignano-raggiolo",
+      "pergine-valdarno":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-pergine-valdarno",
+      "pieve-al-toppo":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-pieve-al-toppo",
+      "pieve-santo-stefano":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-pieve-santo-stefano",
+      poppi: "/servizi/trasporto-rifiuti/trasporto-rifiuti-poppi",
+      "pratovecchio-stia":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-pratovecchio-stia",
+      rassina: "/servizi/trasporto-rifiuti/trasporto-rifiuti-rassina",
+      rigutino: "/servizi/trasporto-rifiuti/trasporto-rifiuti-rigutino",
+      "san-giovanni-valdarno":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-san-giovanni-valdarno",
+      sansepolcro: "/servizi/trasporto-rifiuti/trasporto-rifiuti-sansepolcro",
+      sestino: "/servizi/trasporto-rifiuti/trasporto-rifiuti-sestino",
+      soci: "/servizi/trasporto-rifiuti/trasporto-rifiuti-soci",
+      subbiano: "/servizi/trasporto-rifiuti/trasporto-rifiuti-subbiano",
+      talla: "/servizi/trasporto-rifiuti/trasporto-rifiuti-talla",
+      "terranuova-bracciolini":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-terranuova-bracciolini",
     },
     "videoispezioni-telecamera-robot":
       "/servizi/videoispezioni-con-telecamera-robot",
@@ -316,6 +535,60 @@ const navBarSections = {
         links.servizi["noleggio-bagni-chimici"].cavriglia,
       "Noleggio bagni chimici Chitignano":
         links.servizi["noleggio-bagni-chimici"].chitignano,
+      "Noleggio bagni chimici Chiusi della Verna":
+        links.servizi["noleggio-bagni-chimici"]["chiusi-della-verna"],
+      "Noleggio bagni chimici Civitella in Valdichiana":
+        links.servizi["noleggio-bagni-chimici"]["civitella-in-valdichiana"],
+      "Noleggio bagni chimici Cortona":
+        links.servizi["noleggio-bagni-chimici"].cortona,
+      "Noleggio bagni chimici Foiano della Chiana":
+        links.servizi["noleggio-bagni-chimici"]["foiano-della-chiana"],
+      "Noleggio bagni chimici Laterina":
+        links.servizi["noleggio-bagni-chimici"].laterina,
+      "Noleggio bagni chimici Loro Ciuffenna":
+        links.servizi["noleggio-bagni-chimici"]["loro-ciuffenna"],
+      "Noleggio bagni chimici Lucignano":
+        links.servizi["noleggio-bagni-chimici"].lucignano,
+      "Noleggio bagni chimici Marciano della Chiana":
+        links.servizi["noleggio-bagni-chimici"]["marciano-della-chiana"],
+      "Noleggio bagni chimici Monte San Savino":
+        links.servizi["noleggio-bagni-chimici"]["monte-san-savino"],
+      "Noleggio bagni chimici Montemignaio":
+        links.servizi["noleggio-bagni-chimici"].montemignaio,
+      "Noleggio bagni chimici Monterchi":
+        links.servizi["noleggio-bagni-chimici"].monterchi,
+      "Noleggio bagni chimici Montevarchi":
+        links.servizi["noleggio-bagni-chimici"].montevarchi,
+      "Noleggio bagni chimici Ortignano Raggiolo":
+        links.servizi["noleggio-bagni-chimici"]["ortignano-raggiolo"],
+      "Noleggio bagni chimici Pergine Valdarno":
+        links.servizi["noleggio-bagni-chimici"]["pergine-valdarno"],
+      "Noleggio bagni chimici Pieve al Toppo":
+        links.servizi["noleggio-bagni-chimici"]["pieve-al-toppo"],
+      "Noleggio bagni chimici Pieve Santo Stefano":
+        links.servizi["noleggio-bagni-chimici"]["pieve-santo-stefano"],
+      "Noleggio bagni chimici Poppi":
+        links.servizi["noleggio-bagni-chimici"].poppi,
+      "Noleggio bagni chimici Pratovecchio Stia":
+        links.servizi["noleggio-bagni-chimici"]["pratovecchio-stia"],
+      "Noleggio bagni chimici Rassina":
+        links.servizi["noleggio-bagni-chimici"].rassina,
+      "Noleggio bagni chimici Rigutino":
+        links.servizi["noleggio-bagni-chimici"].rigutino,
+      "Noleggio bagni chimici San Giovanni Valdarno":
+        links.servizi["noleggio-bagni-chimici"]["san-giovanni-valdarno"],
+      "Noleggio bagni chimici Sansepolcro":
+        links.servizi["noleggio-bagni-chimici"]["sansepolcro"],
+      "Noleggio bagni chimici Sestino":
+        links.servizi["noleggio-bagni-chimici"]["sestino"],
+      "Noleggio bagni chimici Soci":
+        links.servizi["noleggio-bagni-chimici"]["soci"],
+      "Noleggio bagni chimici Subbiano":
+        links.servizi["noleggio-bagni-chimici"]["subbiano"],
+      "Noleggio bagni chimici Talla":
+        links.servizi["noleggio-bagni-chimici"]["talla"],
+      "Noleggio bagni chimici Terranuova Bracciolini":
+        links.servizi["noleggio-bagni-chimici"]["terranuova-bracciolini"],
     },
     "Noleggio container e cassoni":
       links.servizi["noleggio-container-e-cassoni"],
@@ -343,6 +616,53 @@ const navBarSections = {
         links.servizi["pulizia-fognature"].cavriglia,
       "Pulizia fognature Chitignano":
         links.servizi["pulizia-fognature"].chitignano,
+      "Pulizia fognature Chiusi della Verna":
+        links.servizi["pulizia-fognature"]["chiusi-della-verna"],
+      "Pulizia fognature Civitella in Valdichiana":
+        links.servizi["pulizia-fognature"]["civitella-in-valdichiana"],
+      "Pulizia fognature Cortona": links.servizi["pulizia-fognature"].cortona,
+      "Pulizia fognature Foiano della Chiana":
+        links.servizi["pulizia-fognature"]["foiano-della-chiana"],
+      "Pulizia fognature Laterina": links.servizi["pulizia-fognature"].laterina,
+      "Pulizia fognature Loro Ciuffenna":
+        links.servizi["pulizia-fognature"]["loro-ciuffenna"],
+      "Pulizia fognature Lucignano":
+        links.servizi["pulizia-fognature"].lucignano,
+      "Pulizia fognature Marciano della Chiana":
+        links.servizi["pulizia-fognature"]["marciano-della-chiana"],
+      "Pulizia fognature Monte San Savino":
+        links.servizi["pulizia-fognature"]["monte-san-savino"],
+      "Pulizia fognature Montemignaio":
+        links.servizi["pulizia-fognature"].montemignaio,
+      "Pulizia fognature Monterchi":
+        links.servizi["pulizia-fognature"].monterchi,
+      "Pulizia fognature Montevarchi":
+        links.servizi["pulizia-fognature"].montevarchi,
+      "Pulizia fognature Ortignano Raggiolo":
+        links.servizi["pulizia-fognature"]["ortignano-raggiolo"],
+      "Pulizia fognature Pergine Valdarno":
+        links.servizi["pulizia-fognature"]["pergine-valdarno"],
+      "Pulizia fognature Pieve al Toppo":
+        links.servizi["pulizia-fognature"]["pieve-al-toppo"],
+      "Pulizia fognature Pieve Santo Stefano":
+        links.servizi["pulizia-fognature"]["pieve-santo-stefano"],
+      "Pulizia fognature Poppi": links.servizi["pulizia-fognature"].poppi,
+      "Pulizia fognature Pratovecchio Stia":
+        links.servizi["pulizia-fognature"]["pratovecchio-stia"],
+      "Pulizia fognature Rassina": links.servizi["pulizia-fognature"].rassina,
+      "Pulizia fognature Rigutino": links.servizi["pulizia-fognature"].rigutino,
+      "Pulizia fognature San Giovanni Valdarno":
+        links.servizi["pulizia-fognature"]["san-giovanni-valdarno"],
+      "Pulizia fognature Sansepolcro":
+        links.servizi["pulizia-fognature"]["sansepolcro"],
+      "Pulizia fognature Sestino":
+        links.servizi["pulizia-fognature"]["sestino"],
+      "Pulizia fognature Soci": links.servizi["pulizia-fognature"]["soci"],
+      "Pulizia fognature Subbiano":
+        links.servizi["pulizia-fognature"]["subbiano"],
+      "Pulizia fognature Talla": links.servizi["pulizia-fognature"]["talla"],
+      "Pulizia fognature Terranuova Bracciolini":
+        links.servizi["pulizia-fognature"]["terranuova-bracciolini"],
     },
     "Recupero materiali ferrosi": links.servizi["recupero-materiali-ferrosi"],
     "Spurgo fosse biologiche": {
@@ -374,6 +694,60 @@ const navBarSections = {
         links.servizi["spurgo-fosse-biologiche"].cavriglia,
       "Spurgo fosse biologiche Chitignano":
         links.servizi["spurgo-fosse-biologiche"].chitignano,
+      "Spurgo fosse biologiche Chiusi della Verna":
+        links.servizi["spurgo-fosse-biologiche"]["chiusi-della-verna"],
+      "Spurgo fosse biologiche Civitella in Valdichiana":
+        links.servizi["spurgo-fosse-biologiche"]["civitella-in-valdichiana"],
+      "Spurgo fosse biologiche Cortona":
+        links.servizi["spurgo-fosse-biologiche"].cortona,
+      "Spurgo fosse biologiche Foiano della Chiana":
+        links.servizi["spurgo-fosse-biologiche"]["foiano-della-chiana"],
+      "Spurgo fosse biologiche Laterina":
+        links.servizi["spurgo-fosse-biologiche"].laterina,
+      "Spurgo fosse biologiche Loro Ciuffenna":
+        links.servizi["spurgo-fosse-biologiche"]["loro-ciuffenna"],
+      "Spurgo fosse biologiche Lucignano":
+        links.servizi["spurgo-fosse-biologiche"].lucignano,
+      "Spurgo fosse biologiche Marciano della Chiana":
+        links.servizi["spurgo-fosse-biologiche"]["marciano-della-chiana"],
+      "Spurgo fosse biologiche Monte San Savino":
+        links.servizi["spurgo-fosse-biologiche"]["monte-san-savino"],
+      "Spurgo fosse biologiche Montemignaio":
+        links.servizi["spurgo-fosse-biologiche"].montemignaio,
+      "Spurgo fosse biologiche Monterchi":
+        links.servizi["spurgo-fosse-biologiche"].monterchi,
+      "Spurgo fosse biologiche Montevarchi":
+        links.servizi["spurgo-fosse-biologiche"].montevarchi,
+      "Spurgo fosse biologiche Ortignano Raggiolo":
+        links.servizi["spurgo-fosse-biologiche"]["ortignano-raggiolo"],
+      "Spurgo fosse biologiche Pergine Valdarno":
+        links.servizi["spurgo-fosse-biologiche"]["pergine-valdarno"],
+      "Spurgo fosse biologiche Pieve al Toppo":
+        links.servizi["spurgo-fosse-biologiche"]["pieve-al-toppo"],
+      "Spurgo fosse biologiche Pieve Santo Stefano":
+        links.servizi["spurgo-fosse-biologiche"]["pieve-santo-stefano"],
+      "Spurgo fosse biologiche Poppi":
+        links.servizi["spurgo-fosse-biologiche"].poppi,
+      "Spurgo fosse biologiche Pratovecchio Stia":
+        links.servizi["spurgo-fosse-biologiche"]["pratovecchio-stia"],
+      "Spurgo fosse biologiche Rassina":
+        links.servizi["spurgo-fosse-biologiche"].rassina,
+      "Spurgo fosse biologiche Rigutino":
+        links.servizi["spurgo-fosse-biologiche"].rigutino,
+      "Spurgo fosse biologiche San Giovanni Valdarno":
+        links.servizi["spurgo-fosse-biologiche"]["san-giovanni-valdarno"],
+      "Spurgo fosse biologiche Sansepolcro":
+        links.servizi["spurgo-fosse-biologiche"]["sansepolcro"],
+      "Spurgo fosse biologiche Sestino":
+        links.servizi["spurgo-fosse-biologiche"]["sestino"],
+      "Spurgo fosse biologiche Soci":
+        links.servizi["spurgo-fosse-biologiche"]["soci"],
+      "Spurgo fosse biologiche Subbiano":
+        links.servizi["spurgo-fosse-biologiche"]["subbiano"],
+      "Spurgo fosse biologiche Talla":
+        links.servizi["spurgo-fosse-biologiche"]["talla"],
+      "Spurgo fosse biologiche Terranuova Bracciolini":
+        links.servizi["spurgo-fosse-biologiche"]["terranuova-bracciolini"],
     },
     "Trasporto acqua": {
       "Trasporto acqua Anghiari": links.servizi["trasporto-acqua"].anghiari,
@@ -397,6 +771,49 @@ const navBarSections = {
         links.servizi["trasporto-acqua"]["castiglion-fiorentino"],
       "Trasporto acqua Cavriglia": links.servizi["trasporto-acqua"].cavriglia,
       "Trasporto acqua Chitignano": links.servizi["trasporto-acqua"].chitignano,
+      "Trasporto acqua Chiusi della Verna":
+        links.servizi["trasporto-acqua"]["chiusi-della-verna"],
+      "Trasporto acqua Civitella in Valdichiana":
+        links.servizi["trasporto-acqua"]["civitella-in-valdichiana"],
+      "Trasporto acqua Cortona": links.servizi["trasporto-acqua"].cortona,
+      "Trasporto acqua Foiano della Chiana":
+        links.servizi["trasporto-acqua"]["foiano-della-chiana"],
+      "Trasporto acqua Laterina": links.servizi["trasporto-acqua"].laterina,
+      "Trasporto acqua Loro Ciuffenna":
+        links.servizi["trasporto-acqua"]["loro-ciuffenna"],
+      "Trasporto acqua Lucignano": links.servizi["trasporto-acqua"].lucignano,
+      "Trasporto acqua Marciano della Chiana":
+        links.servizi["trasporto-acqua"]["marciano-della-chiana"],
+      "Trasporto acqua Monte San Savino":
+        links.servizi["trasporto-acqua"]["monte-san-savino"],
+      "Trasporto acqua Montemignaio":
+        links.servizi["trasporto-acqua"].montemignaio,
+      "Trasporto acqua Monterchi": links.servizi["trasporto-acqua"].monterchi,
+      "Trasporto acqua Montevarchi":
+        links.servizi["trasporto-acqua"].montevarchi,
+      "Trasporto acqua Ortignano Raggiolo":
+        links.servizi["trasporto-acqua"]["ortignano-raggiolo"],
+      "Trasporto acqua Pergine Valdarno":
+        links.servizi["trasporto-acqua"]["pergine-valdarno"],
+      "Trasporto acqua Pieve al Toppo":
+        links.servizi["trasporto-acqua"]["pieve-al-toppo"],
+      "Trasporto acqua Pieve Santo Stefano":
+        links.servizi["trasporto-acqua"]["pieve-santo-stefano"],
+      "Trasporto acqua Poppi": links.servizi["trasporto-acqua"].poppi,
+      "Trasporto acqua Pratovecchio Stia":
+        links.servizi["trasporto-acqua"]["pratovecchio-stia"],
+      "Trasporto acqua Rassina": links.servizi["trasporto-acqua"].rassina,
+      "Trasporto acqua Rigutino": links.servizi["trasporto-acqua"].rigutino,
+      "Trasporto acqua San Giovanni Valdarno":
+        links.servizi["trasporto-acqua"]["san-giovanni-valdarno"],
+      "Trasporto acqua Sansepolcro":
+        links.servizi["trasporto-acqua"]["sansepolcro"],
+      "Trasporto acqua Sestino": links.servizi["trasporto-acqua"]["sestino"],
+      "Trasporto acqua Soci": links.servizi["trasporto-acqua"]["soci"],
+      "Trasporto acqua Subbiano": links.servizi["trasporto-acqua"]["subbiano"],
+      "Trasporto acqua Talla": links.servizi["trasporto-acqua"]["talla"],
+      "Trasporto acqua Terranuova Bracciolini":
+        links.servizi["trasporto-acqua"]["terranuova-bracciolini"],
     },
     "Trasporto rifiuti": {
       "Trasporto rifiuti Anghiari": links.servizi["trasporto-rifiuti"].anghiari,
@@ -422,6 +839,49 @@ const navBarSections = {
         links.servizi["trasporto-rifiuti"].cavriglia,
       "Trasporto rifiuti Chitignano":
         links.servizi["trasporto-rifiuti"].chitignano,
+      "Trasporto rifiuti Chiusi della Verna":
+        links.servizi["trasporto-rifiuti"]["chiusi-della-verna"],
+      "Trasporto rifiuti Civitella in Valdichiana":
+        links.servizi["trasporto-rifiuti"]["civitella-in-valdichiana"],
+      "Trasporto rifiuti Cortona": links.servizi["trasporto-rifiuti"].cortona,
+      "Trasporto rifiuti Foiano della Chiana":
+        links.servizi["trasporto-rifiuti"]["foiano-della-chiana"],
+      "Trasporto rifiuti Laterina": links.servizi["trasporto-rifiuti"].laterina,
+      "Trasporto rifiuti Loro Ciuffenna":
+        links.servizi["trasporto-rifiuti"]["loro-ciuffenna"],
+      "Trasporto rifiuti Lucignano": links.servizi["trasporto-rifiuti"].lucignano,
+      "Trasporto rifiuti Marciano della Chiana":
+        links.servizi["trasporto-rifiuti"]["marciano-della-chiana"],
+      "Trasporto rifiuti Monte San Savino":
+        links.servizi["trasporto-rifiuti"]["monte-san-savino"],
+      "Trasporto rifiuti Montemignaio":
+        links.servizi["trasporto-rifiuti"].montemignaio,
+      "Trasporto rifiuti Monterchi": links.servizi["trasporto-rifiuti"].monterchi,
+      "Trasporto rifiuti Montevarchi":
+        links.servizi["trasporto-rifiuti"].montevarchi,
+      "Trasporto rifiuti Ortignano Raggiolo":
+        links.servizi["trasporto-rifiuti"]["ortignano-raggiolo"],
+      "Trasporto rifiuti Pergine Valdarno":
+        links.servizi["trasporto-rifiuti"]["pergine-valdarno"],
+      "Trasporto rifiuti Pieve al Toppo":
+        links.servizi["trasporto-rifiuti"]["pieve-al-toppo"],
+      "Trasporto rifiuti Pieve Santo Stefano":
+        links.servizi["trasporto-rifiuti"]["pieve-santo-stefano"],
+      "Trasporto rifiuti Poppi": links.servizi["trasporto-rifiuti"].poppi,
+      "Trasporto rifiuti Pratovecchio Stia":
+        links.servizi["trasporto-rifiuti"]["pratovecchio-stia"],
+      "Trasporto rifiuti Rassina": links.servizi["trasporto-rifiuti"].rassina,
+      "Trasporto rifiuti Rigutino": links.servizi["trasporto-rifiuti"].rigutino,
+      "Trasporto rifiuti San Giovanni Valdarno":
+        links.servizi["trasporto-rifiuti"]["san-giovanni-valdarno"],
+      "Trasporto rifiuti Sansepolcro":
+        links.servizi["trasporto-rifiuti"]["sansepolcro"],
+      "Trasporto rifiuti Sestino": links.servizi["trasporto-rifiuti"]["sestino"],
+      "Trasporto rifiuti Soci": links.servizi["trasporto-rifiuti"]["soci"],
+      "Trasporto rifiuti Subbiano": links.servizi["trasporto-rifiuti"]["subbiano"],
+      "Trasporto rifiuti Talla": links.servizi["trasporto-rifiuti"]["talla"],
+      "Trasporto rifiuti Terranuova Bracciolini":
+        links.servizi["trasporto-rifiuti"]["terranuova-bracciolini"],
     },
     "Videoispezioni con telecamera robot":
       links.servizi["videoispezioni-telecamera-robot"],

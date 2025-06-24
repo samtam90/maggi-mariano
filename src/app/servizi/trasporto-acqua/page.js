@@ -135,6 +135,136 @@ export function getProps({ title, mobile }) {
             label: "Chitignano",
             href: appConfig.links.servizi["trasporto-acqua"].chitignano,
           },
+          {
+            label: "Chiusi della Verna",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "chiusi-della-verna"
+            ],
+          },
+          {
+            label: "Civitella in Valdichiana",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "civitella-in-valdichiana"
+            ],
+          },
+          {
+            label: "Cortona",
+            href: appConfig.links.servizi["trasporto-acqua"].cortona,
+          },
+          {
+            label: "Foiano della Chiana",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "foiano-della-chiana"
+            ],
+          },
+          {
+            label: "Laterina",
+            href: appConfig.links.servizi["trasporto-acqua"].laterina,
+          },
+          {
+            label: "Loro Ciuffenna",
+            href: appConfig.links.servizi["trasporto-acqua"]["loro-ciuffenna"],
+          },
+          {
+            label: "Lucignano",
+            href: appConfig.links.servizi["trasporto-acqua"].lucignano,
+          },
+          {
+            label: "Marciano della Chiana",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "marciano-della-chiana"
+            ],
+          },
+          {
+            label: "Monte San Savino",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "monte-san-savino"
+            ],
+          },
+          {
+            label: "Montemignaio",
+            href: appConfig.links.servizi["trasporto-acqua"].montemignaio,
+          },
+          {
+            label: "Monterchi",
+            href: appConfig.links.servizi["trasporto-acqua"].monterchi,
+          },
+          {
+            label: "Montevarchi",
+            href: appConfig.links.servizi["trasporto-acqua"].montevarchi,
+          },
+          {
+            label: "Ortignano Raggiolo",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "ortignano-raggiolo"
+            ],
+          },
+          {
+            label: "Pergine Valdarno",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "pergine-valdarno"
+            ],
+          },
+          {
+            label: "Pieve al Toppo",
+            href: appConfig.links.servizi["trasporto-acqua"]["pieve-al-toppo"],
+          },
+          {
+            label: "Pieve Santo Stefano",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "pieve-santo-stefano"
+            ],
+          },
+          {
+            label: "Poppi",
+            href: appConfig.links.servizi["trasporto-acqua"].poppi,
+          },
+          {
+            label: "Pratovecchio Stia",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "pratovecchio-stia"
+            ],
+          },
+          {
+            label: "Rassina",
+            href: appConfig.links.servizi["trasporto-acqua"].rassina,
+          },
+          {
+            label: "Rigutino",
+            href: appConfig.links.servizi["trasporto-acqua"].rigutino,
+          },
+          {
+            label: "San Giovanni Valdarno",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "san-giovanni-valdarno"
+            ],
+          },
+          {
+            label: "Sansepolcro",
+            href: appConfig.links.servizi["trasporto-acqua"].sansepolcro,
+          },
+          {
+            label: "Sestino",
+            href: appConfig.links.servizi["trasporto-acqua"].sestino,
+          },
+          {
+            label: "Soci",
+            href: appConfig.links.servizi["trasporto-acqua"].soci,
+          },
+          {
+            label: "Subbiano",
+            href: appConfig.links.servizi["trasporto-acqua"].subbiano,
+          },
+          {
+            label: "Talla",
+            href: appConfig.links.servizi["trasporto-acqua"].talla,
+          },
+          {
+            label: "Terranuova Bracciolini",
+            href: appConfig.links.servizi["trasporto-acqua"][
+              "terranuova-bracciolini"
+            ],
+          },
         ],
         title: (
           <span>
