@@ -2,11 +2,17 @@ import { twClsx } from "../../misc/functions";
 import Link from "next/link";
 import React from "react";
 
-export default function LinkButton({ href, label, className, classNames }) {
+export default function LinkButton({
+  href,
+  label,
+  className,
+  classNames,
+  target,
+}) {
   return (
     <Link
       href={href}
-      target="_blank"
+      target={target}
       className={twClsx(
         "block text-center lg:hover:opacity-75 lg:transition-opacity",
         className || classNames?.root
