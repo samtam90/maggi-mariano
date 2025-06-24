@@ -116,7 +116,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
       {locationsSectionData &&
         renderLocationsGrid({
           ...locationsSectionData,
-          classNames: { root: "py-8 lg:py-24 px-4 lg:px-0" },
+          classNames: { root: "py-8 lg:py-16 px-4 lg:px-0" },
         })}
       {renderTitleSection(appConfig.data.mainTitle)}
       <section key="services">

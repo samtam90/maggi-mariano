@@ -8,7 +8,8 @@ import Link from "next/link";
  *    title?: string,
  *    item?: string,
  *    root?: string,
- *    contentContainer?: string
+ *    collection?: string,
+ *    contentContainer?: string,
  * }} ClassNames
  *
  * @param {{
@@ -38,13 +39,21 @@ function LocationsGrid({ items, classNames, title, titleHeadingElement }) {
           })}
         </header>
         <nav>
-          <ul className="grid grid-cols-2 lg:grid-cols-8 gap-4">
+          <ul
+            className={twClsx(
+              "grid grid-cols-2 lg:grid-cols-8 gap-4",
+              classNames?.collection
+            )}
+          >
             {items.map(({ label, href }) => (
               <li key={label}>
                 <Link
                   href={href}
                   aria-label={label}
-                  className="text-sm text-center block lg:hover:underline"
+                  className={twClsx(
+                    "text-sm text-center block lg:hover:underline",
+                    classNames?.item
+                  )}
                 >
                   {label}
                 </Link>

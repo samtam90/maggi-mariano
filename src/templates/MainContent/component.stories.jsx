@@ -5,6 +5,12 @@ import AppThemeProvider from "../../components/AppThemeProvider";
 export default {
   title: "Templates/MainContent",
   component: MainContentTemplate,
+  argTypes: {
+    onContactFormSubmit: {
+      action: "onContactFormSubmit",
+      table: { disable: true },
+    },
+  },
 };
 
 const T = (args) => (

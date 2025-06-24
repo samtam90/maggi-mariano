@@ -58,6 +58,16 @@ const links = {
     "frantoio-mobile-inerti": {
       root: "/servizi/frantoio-mobile-inerti",
       arezzo: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-arezzo",
+      firenze: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-firenze",
+      grosseto:
+        "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-grosseto",
+      livorno: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-livorno",
+      lucca: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-lucca",
+      "massa-carrara":
+        "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-massa-carrara",
+      pisa: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-pisa",
+      pistoia: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-pistoia",
+      prato: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-prato",
       siena: "/servizi/frantoio-mobile-inerti/frantoio-mobile-inerti-siena",
     },
     "noleggio-bagni-chimici": {
@@ -255,6 +265,22 @@ const navBarSections = {
     "Frantoio mobile inerti": {
       "Frantoio mobile inerti Arezzo":
         links.servizi["frantoio-mobile-inerti"].arezzo,
+      "Frantoio mobile inerti Firenze":
+        links.servizi["frantoio-mobile-inerti"].firenze,
+      "Frantoio mobile inerti Grosseto":
+        links.servizi["frantoio-mobile-inerti"].grosseto,
+      "Frantoio mobile inerti Livorno":
+        links.servizi["frantoio-mobile-inerti"].livorno,
+      "Frantoio mobile inerti Lucca":
+        links.servizi["frantoio-mobile-inerti"].lucca,
+      "Frantoio mobile inerti Massa Carrara":
+        links.servizi["frantoio-mobile-inerti"]["massa-carrara"],
+      "Frantoio mobile inerti Pisa":
+        links.servizi["frantoio-mobile-inerti"].pisa,
+      "Frantoio mobile inerti Pistoia":
+        links.servizi["frantoio-mobile-inerti"].pistoia,
+      "Frantoio mobile inerti Prato":
+        links.servizi["frantoio-mobile-inerti"].prato,
       "Frantoio mobile inerti Siena":
         links.servizi["frantoio-mobile-inerti"].siena,
     },

@@ -9,7 +9,7 @@ import {
 } from "..";
 import appConfig from "../../../../app.config";
 
-export default function AuxTemplate({ mobile, children }) {
+export default function AuxTemplate({ mobile, children, className }) {
   return (
     <main>
       {renderTopNavBar({
@@ -20,10 +20,7 @@ export default function AuxTemplate({ mobile, children }) {
       <div className="sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />
       </div>
-      <section
-        key="main-content"
-        className="max-w-6xl mx-auto px-4 lg:px-0 py-6 lg:py-12"
-      >
+      <section key="main-content" className={className}>
         {children}
       </section>
       {renderTitleSection(appConfig.data.mainTitle)}

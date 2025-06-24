@@ -206,7 +206,7 @@ export function renderServicesNavGrid({
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
-            <Link href={href} target="_blank" className="block">
+            <Link href={href} className="block">
               {content}
             </Link>
           )}

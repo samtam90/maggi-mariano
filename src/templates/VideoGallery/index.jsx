@@ -27,7 +27,10 @@ function getLoadingAttribute({ loading, mobile }) {
  */
 function VideoGalleryTemplate({ mobile, videos, title }) {
   return (
-    <AuxTemplate mobile={mobile}>
+    <AuxTemplate
+      mobile={mobile}
+      className="max-w-6xl mx-auto px-4 lg:px-0 py-6 lg:py-12"
+    >
       <BorderedColoredText
         left={title.left}
         right={title.right}
