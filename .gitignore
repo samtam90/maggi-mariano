@@ -36,3 +36,4 @@ next-env.d.ts
 
 *storybook.log
 .script/push.bat
+.script/create-templated-pages/.data/out

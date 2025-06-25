@@ -1,3 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({ title: "Trasporto acqua Bucine" });
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Bucine",
+});
+export default withBaseProps({ title: "Trasporto rifiuti Bucine" });

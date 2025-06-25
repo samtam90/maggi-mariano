@@ -2,6 +2,7 @@ import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
+import { getMetadata } from "../frantoio-mobile-inerti/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -284,6 +285,7 @@ export function getProps({ title, mobile }) {
   };
 }
 
+export const metadata = getMetadata({ title: "Trasporto rifiuti" });
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

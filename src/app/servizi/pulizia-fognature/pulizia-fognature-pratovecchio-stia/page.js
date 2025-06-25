@@ -1,5 +1,5 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Pulizia fognature Pratovecchio Stia",
-});
+export const metadata = getMetadata({ title: "Pulizia fognature Pratovecchio Stia" });
+export default withBaseProps({ title: "Pulizia fognature Pratovecchio Stia" });

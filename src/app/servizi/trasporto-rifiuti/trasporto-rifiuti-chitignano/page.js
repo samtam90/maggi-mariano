@@ -1,3 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({ title: "Trasporto acqua Chitignano" });
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Chitignano",
+});
+export default withBaseProps({ title: "Trasporto rifiuti Chitignano" });

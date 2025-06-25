@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
+export const metadata = getMetadata({
   title: "Trasporto acqua Castel Focognano",
 });
+export default withBaseProps({ title: "Trasporto acqua Castel Focognano" });

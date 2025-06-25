@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Spurgo fosse biologiche Loro Ciuffenna",
+export const metadata = getMetadata({
+  title: "Spurgo fosse biologiche Loro ciuffenna",
 });
+export default withBaseProps({ title: "Spurgo fosse biologiche Loro ciuffenna" });

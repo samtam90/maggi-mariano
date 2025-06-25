@@ -139,10 +139,18 @@ export function getProps({ title }) {
   };
 }
 
+export function getMetadata({ title }) {
+  return {
+    title: `${title} - Maggi Mariano Servizi Ecologici`,
+  };
+}
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/AltMainContent/alt/mobile"),
   Desktop: import("@/templates/AltMainContent/alt/desktop"),
 });
+
+export const metadata = getMetadata({ title: "Frantoio mobile inerti" });
 
 export function Page({ searchParams, title }) {
   const mobile = searchParams?.viewport === "mobile";

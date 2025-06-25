@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Noleggio bagni chimici Loro Ciuffenna",
+export const metadata = getMetadata({
+  title: "Noleggio bagni chimici Loro ciuffenna",
 });
+export default withBaseProps({ title: "Noleggio bagni chimici Loro ciuffenna" });

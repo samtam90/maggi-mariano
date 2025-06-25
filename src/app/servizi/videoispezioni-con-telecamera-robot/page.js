@@ -109,6 +109,11 @@ export function getProps({ mobile }) {
   };
 }
 
+export const metadata = {
+  title:
+    "Videoispezioni con telecamera robot - Maggi Mariano Servizi Ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

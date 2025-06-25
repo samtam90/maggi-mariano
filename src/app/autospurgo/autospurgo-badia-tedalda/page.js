@@ -1,5 +1,5 @@
+import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps(
-  { title: "Autospurgo Badia Tedalda" }
-);
+export const metadata = getMetadata({ title: "Autospurgo Badia Tedalda" });
+export default withBaseProps({ title: "Autospurgo Badia Tedalda" });

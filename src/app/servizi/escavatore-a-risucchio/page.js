@@ -51,6 +51,10 @@ const props = {
   },
 };
 
+export const metadata = {
+  title: "Escavatore a risucchio - Maggi Mariano Servizi Ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Trasporto acqua Civitella in Val di Chiana",
+export const metadata = getMetadata({
+  title: "Trasporto acqua Civitella in Valdichiana",
 });
+export default withBaseProps({ title: "Trasporto acqua Civitella in Valdichiana" });

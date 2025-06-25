@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
+export const metadata = getMetadata({
   title: "Trasporto acqua Ortignano Raggiolo",
 });
+export default withBaseProps({ title: "Trasporto acqua Ortignano Raggiolo" });

@@ -1,5 +1,5 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Pulizia fognature Pergine Valdarno",
-});
+export const metadata = getMetadata({ title: "Pulizia fognature Pergine Valdarno" });
+export default withBaseProps({ title: "Pulizia fognature Pergine Valdarno" });

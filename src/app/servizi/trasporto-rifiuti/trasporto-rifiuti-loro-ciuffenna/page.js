@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Trasporto rifiuti Loro Ciuffenna",
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Loro ciuffenna",
 });
+export default withBaseProps({ title: "Trasporto rifiuti Loro ciuffenna" });

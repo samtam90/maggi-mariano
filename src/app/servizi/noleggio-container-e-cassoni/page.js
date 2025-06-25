@@ -64,6 +64,10 @@ function getProps({ mobile }) {
   };
 }
 
+export const metadata = {
+  title: "Noleggio container e cassoni - Maggi Mariano Servizi Ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

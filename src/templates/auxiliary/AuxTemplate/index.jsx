@@ -17,7 +17,7 @@ export default function AuxTemplate({ mobile, children, className }) {
         maxWidth: "6xl",
         className: "hidden md:block",
       })}
-      <div className="sticky top-0 z-top bg-white shadow-md">
+      <div className="lg:sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />
       </div>
       <section key="main-content" className={className}>
@@ -28,6 +28,7 @@ export default function AuxTemplate({ mobile, children, className }) {
         {renderServicesNavGrid({
           ...appConfig.data.servicesGrid,
           className: "max-w-6xl",
+          disableFlipCard: mobile,
         })}
       </section>
       {renderMaps({

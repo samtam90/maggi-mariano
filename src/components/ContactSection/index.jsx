@@ -144,7 +144,12 @@ function ContactSection({
           <p className={twClsx("mb-6 text-sm lg:text-md", classNames?.content)}>
             {content}
           </p>
-          <aside className="grid grid-cols-2 gap-4">
+          <aside
+            className={twClsx(
+              "grid grid-cols-2 gap-4",
+              classNames?.imageContainer
+            )}
+          >
             {images.map(({ src, alt }) => (
               <img
                 src={src}

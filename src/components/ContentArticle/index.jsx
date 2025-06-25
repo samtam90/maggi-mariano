@@ -282,9 +282,9 @@ const ContentArticle = memo(
               classNames={{
                 text: "text-red-primary text-center",
                 rightContainer:
-                  "text-white text-sm lg:text-2xl block lg:inline-block",
-                leftContainer: "block lg:inline-block",
-                root: "text-md lg:text-2xl block lg:inline-block",
+                  "text-sm lg:text-lg block inline-flex items-center",
+                leftContainer: "block",
+                root: "text-md lg:text-2xl block lg:inline-flex",
               }}
             />
           </header>

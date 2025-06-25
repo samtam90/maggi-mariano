@@ -1,3 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({ title: "Trasporto acqua Capolona" });
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Capolona",
+});
+export default withBaseProps({ title: "Trasporto rifiuti Capolona" });

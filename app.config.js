@@ -849,14 +849,16 @@ const navBarSections = {
       "Trasporto rifiuti Laterina": links.servizi["trasporto-rifiuti"].laterina,
       "Trasporto rifiuti Loro Ciuffenna":
         links.servizi["trasporto-rifiuti"]["loro-ciuffenna"],
-      "Trasporto rifiuti Lucignano": links.servizi["trasporto-rifiuti"].lucignano,
+      "Trasporto rifiuti Lucignano":
+        links.servizi["trasporto-rifiuti"].lucignano,
       "Trasporto rifiuti Marciano della Chiana":
         links.servizi["trasporto-rifiuti"]["marciano-della-chiana"],
       "Trasporto rifiuti Monte San Savino":
         links.servizi["trasporto-rifiuti"]["monte-san-savino"],
       "Trasporto rifiuti Montemignaio":
         links.servizi["trasporto-rifiuti"].montemignaio,
-      "Trasporto rifiuti Monterchi": links.servizi["trasporto-rifiuti"].monterchi,
+      "Trasporto rifiuti Monterchi":
+        links.servizi["trasporto-rifiuti"].monterchi,
       "Trasporto rifiuti Montevarchi":
         links.servizi["trasporto-rifiuti"].montevarchi,
       "Trasporto rifiuti Ortignano Raggiolo":
@@ -876,9 +878,11 @@ const navBarSections = {
         links.servizi["trasporto-rifiuti"]["san-giovanni-valdarno"],
       "Trasporto rifiuti Sansepolcro":
         links.servizi["trasporto-rifiuti"]["sansepolcro"],
-      "Trasporto rifiuti Sestino": links.servizi["trasporto-rifiuti"]["sestino"],
+      "Trasporto rifiuti Sestino":
+        links.servizi["trasporto-rifiuti"]["sestino"],
       "Trasporto rifiuti Soci": links.servizi["trasporto-rifiuti"]["soci"],
-      "Trasporto rifiuti Subbiano": links.servizi["trasporto-rifiuti"]["subbiano"],
+      "Trasporto rifiuti Subbiano":
+        links.servizi["trasporto-rifiuti"]["subbiano"],
       "Trasporto rifiuti Talla": links.servizi["trasporto-rifiuti"]["talla"],
       "Trasporto rifiuti Terranuova Bracciolini":
         links.servizi["trasporto-rifiuti"]["terranuova-bracciolini"],
@@ -1212,6 +1216,8 @@ module.exports = {
       height: 64,
     },
     title: "Maggi Mariano",
+    iconSrc:
+      "https://www.maggi-mariano.it/wp-content/uploads/2022/05/favico-150x150.png",
     logoSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
   },

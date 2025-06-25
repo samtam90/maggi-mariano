@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
+export const metadata = getMetadata({
   title: "Trasporto acqua Marciano della Chiana",
 });
+export default withBaseProps({ title: "Trasporto acqua Marciano della Chiana" });

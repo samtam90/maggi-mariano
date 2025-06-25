@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Trasporto acqua Castiglion Fiorentino",
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Castiglion Fiorentino",
 });
+export default withBaseProps({ title: "Trasporto rifiuti Castiglion Fiorentino" });

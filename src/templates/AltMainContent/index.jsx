@@ -1,4 +1,4 @@
-import React, { memo, ReactNode, useMemo } from "react";
+import React, { memo, ReactNode, useMemo, useRef } from "react";
 import AuxTemplate from "../auxiliary/AuxTemplate";
 import { renderLocationsGrid, LocationsGridData } from "../auxiliary";
 import { ContactSectionData } from "../MainContent";
@@ -9,6 +9,9 @@ import { Image } from "../../misc";
 import { twClsx } from "../../misc/functions";
 import SpecialText from "../../components/SpecialText";
 import tailwindConfig from "../../../tailwind.config";
+import { hooks } from "@italwebcom/tailwind-components";
+
+const { useScrollVisibility } = hooks;
 
 /**
  * @typedef {string | ReactNode} Paragraph
@@ -169,7 +172,7 @@ function renderMiddleSection({ title, preTitle, paragraphs, classNames }) {
       />
       <div
         className={twClsx(
-          "max-w-6xl mx-auto px-4 lg:px-0 py-12 lg:py-16",
+          "max-w-6xl mx-auto px-4 lg:px-0 py-8 lg:py-16",
           classNames?.root
         )}
       >
@@ -183,7 +186,7 @@ function renderMiddleSection({ title, preTitle, paragraphs, classNames }) {
             {title}
           </h2>
         </header>
-        <ul className="list-disc">
+        <ul className="list-disc ml-6 lg:ml-0">
           {paragraphs.map((par, index) => (
             <li className="mb-2" key={index}>
               {renderParagraph({
@@ -260,16 +263,16 @@ function renderBottomSection({
   return (
     <section
       key="bottom"
-      className="max-w-6xl mx-auto px-4 lg:px-0 py-12 lg:py-16"
+      className="max-w-6xl mx-auto px-4 lg:px-0 py-8 lg:py-16"
     >
       <header className="mb-4">
-        <h2 className="text-xl lg:text-3xl font-title text-gray-700 text-center">
-          {title.left}
+        <h2 className="text-2xl lg:text-3xl font-title text-gray-700 text-center">
+          <span className="text-xl lg:text-3xl">{title.left}</span>
           <SpecialText.Circled
             component="span"
             active={circledActive}
             stroke={tailwindConfig.theme.extend.colors.green.primary}
-            className="font-titleBold p-2 lg:p-3 ml-2 lg:ml-4"
+            className="font-titleBold p-2 lg:p-3 ml-2 lg:ml-4 mt-3 lg:mt-0"
           >
             {title.right}
           </SpecialText.Circled>
@@ -289,8 +292,14 @@ function renderBottomSection({
               key: index,
               classNames: {
                 root: "mt-8",
-                title: twClsx("text-right", classNames?.item?.title),
-                content: twClsx("text-right", classNames?.item?.content),
+                title: twClsx(
+                  "text-center lg:text-right",
+                  classNames?.item?.title
+                ),
+                content: twClsx(
+                  "text-center lg:text-right",
+                  classNames?.item?.content
+                ),
               },
             })
           )}
@@ -301,7 +310,7 @@ function renderBottomSection({
             alt={image.alt}
             width={image.dimensions?.width}
             height={image.dimensions?.height}
-            className="max-w-full object-contain px-4 pl-8"
+            className="max-w-full object-contain lg:px-4 lg:pl-8 my-8 lg:my-0"
           />
         </div>
         <div className="basis-2/7 shrink-0">
@@ -312,8 +321,14 @@ function renderBottomSection({
               key: index,
               classNames: {
                 root: "mt-8",
-                title: classNames?.item?.title,
-                content: classNames?.item?.content,
+                title: twClsx(
+                  "text-center lg:text-left",
+                  classNames?.item?.title
+                ),
+                content: twClsx(
+                  "text-center lg:text-left",
+                  classNames?.item?.content
+                ),
               },
             })
           )}
@@ -341,17 +356,24 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
     middle: middleSectionData,
     bottom: bottomSectionData,
   } = sections;
+
+  const bottomElRef = useRef();
+  const circledActive = useScrollVisibility(bottomElRef, false);
+
   return (
     <AuxTemplate mobile={mobile}>
       {renderTopSection({ ...topSectionData, activeUnderline: true })}
       {renderMiddleSection({ ...middleSectionData })}
-      {renderBottomSection({ ...bottomSectionData, circledActive: true })}
+      <div ref={(r) => (bottomElRef.current = r)}>
+        {renderBottomSection({ ...bottomSectionData, circledActive })}
+      </div>
       <ContactSection
         {...contactsData}
         ids={testIDs.contactForm}
         variant={mobile ? "vertical" : "horizontal"}
         classNames={{
           contentWrapper: "max-w-6xl",
+          imageContainer: "block lg:mt-12"
         }}
         onFormSubmit={onContactFormSubmit}
       />

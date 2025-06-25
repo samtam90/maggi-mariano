@@ -2,6 +2,7 @@ import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
+import { getMetadata } from "../frantoio-mobile-inerti/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -145,11 +146,15 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Chiusi della Verna",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["chiusi-della-verna"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "chiusi-della-verna"
+            ],
           },
           {
             label: "Civitella in Valdichiana",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["civitella-in-valdichiana"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "civitella-in-valdichiana"
+            ],
           },
           {
             label: "Cortona",
@@ -157,7 +162,9 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Foiano della Chiana",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["foiano-della-chiana"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "foiano-della-chiana"
+            ],
           },
           {
             label: "Laterina",
@@ -165,7 +172,9 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Loro Ciuffenna",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["loro-ciuffenna"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "loro-ciuffenna"
+            ],
           },
           {
             label: "Lucignano",
@@ -173,15 +182,20 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Marciano della Chiana",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["marciano-della-chiana"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "marciano-della-chiana"
+            ],
           },
           {
             label: "Monte San Savino",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["monte-san-savino"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "monte-san-savino"
+            ],
           },
           {
             label: "Montemignaio",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"].montemignaio,
+            href: appConfig.links.servizi["noleggio-bagni-chimici"]
+              .montemignaio,
           },
           {
             label: "Monterchi",
@@ -193,19 +207,27 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Ortignano Raggiolo",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["ortignano-raggiolo"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "ortignano-raggiolo"
+            ],
           },
           {
             label: "Pergine Valdarno",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pergine-valdarno"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "pergine-valdarno"
+            ],
           },
           {
             label: "Pieve al Toppo",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pieve-al-toppo"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "pieve-al-toppo"
+            ],
           },
           {
             label: "Pieve Santo Stefano",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pieve-santo-stefano"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "pieve-santo-stefano"
+            ],
           },
           {
             label: "Poppi",
@@ -213,7 +235,9 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Pratovecchio Stia",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["pratovecchio-stia"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "pratovecchio-stia"
+            ],
           },
           {
             label: "Rassina",
@@ -225,7 +249,9 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "San Giovanni Valdarno",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["san-giovanni-valdarno"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "san-giovanni-valdarno"
+            ],
           },
           {
             label: "Sansepolcro",
@@ -249,7 +275,9 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Terranuova Bracciolini",
-            href: appConfig.links.servizi["noleggio-bagni-chimici"]["terranuova-bracciolini"],
+            href: appConfig.links.servizi["noleggio-bagni-chimici"][
+              "terranuova-bracciolini"
+            ],
           },
         ],
         title: (
@@ -291,6 +319,7 @@ export function getProps({ title, mobile }) {
   };
 }
 
+export const metadata = getMetadata({ title: "Noleggio bagni chimici" });
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

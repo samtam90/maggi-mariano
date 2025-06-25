@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Spurgo fosse biologiche Civitella in Val di Chiana",
+export const metadata = getMetadata({
+  title: "Spurgo fosse biologiche Civitella in Valdichiana",
 });
+export default withBaseProps({ title: "Spurgo fosse biologiche Civitella in Valdichiana" });

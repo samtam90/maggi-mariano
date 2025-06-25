@@ -2,6 +2,7 @@ import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
+import { getMetadata } from "../frantoio-mobile-inerti/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -182,7 +183,8 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Montemignaio",
-            href: appConfig.links.servizi["spurgo-fosse-biologiche"].montemignaio,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"]
+              .montemignaio,
           },
           {
             label: "Monterchi",
@@ -190,7 +192,8 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Montevarchi",
-            href: appConfig.links.servizi["spurgo-fosse-biologiche"].montevarchi,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"]
+              .montevarchi,
           },
           {
             label: "Ortignano Raggiolo",
@@ -242,7 +245,8 @@ export function getProps({ title, mobile }) {
           },
           {
             label: "Sansepolcro",
-            href: appConfig.links.servizi["spurgo-fosse-biologiche"].sansepolcro,
+            href: appConfig.links.servizi["spurgo-fosse-biologiche"]
+              .sansepolcro,
           },
           {
             label: "Sestino",
@@ -308,6 +312,7 @@ export function getProps({ title, mobile }) {
   };
 }
 
+export const metadata = getMetadata({ title: "Spurgo fosse biologiche" });
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

@@ -266,13 +266,16 @@ function HomeTemplate({ sections, mobile }) {
         maxWidth: "8xl",
         className: "hidden md:block",
       })}
-      <div className="sticky top-0 z-top bg-white shadow-md">
+      <div className="lg:sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} />
       </div>
       {renderTopSection(topSectionData)}
       {renderTitleSection(appConfig.data.mainTitle)}
       <section key="services">
-        {renderServicesNavGrid(appConfig.data.servicesGrid)}
+        {renderServicesNavGrid({
+          ...appConfig.data.servicesGrid,
+          disableFlipCard: mobile,
+        })}
       </section>
       {renderDescriptionSection(processedDescriptionSectionData, mobile)}
       <DescriptionDivider

@@ -70,7 +70,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
         maxWidth: "6xl",
         className: "hidden md:block",
       })}
-      <div className="sticky top-0 z-top bg-white shadow-md">
+      <div className="lg:sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />
       </div>
       <ContentArticle
@@ -123,6 +123,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
         {renderServicesNavGrid({
           ...appConfig.data.servicesGrid,
           className: "max-w-6xl",
+          disableFlipCard: mobile,
         })}
       </section>
       {renderMaps({

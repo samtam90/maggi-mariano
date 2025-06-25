@@ -1,5 +1,7 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
-export default withBaseProps({
-  title: "Trasporto acqua Caprese Michelangelo",
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Caprese Michelangelo",
 });
+export default withBaseProps({ title: "Trasporto rifiuti Caprese Michelangelo" });

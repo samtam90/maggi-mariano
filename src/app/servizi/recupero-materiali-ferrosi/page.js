@@ -53,6 +53,10 @@ function getProps({ mobile }) {
   };
 }
 
+export const metadata = {
+  title: "Recupero materiali ferrosi - Maggi Mariano Servizi Ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

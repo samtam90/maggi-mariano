@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode } from "react";
+import React, { ReactNode, useCallback } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import Link from "next/link";
 import tailwindConfig from "../../../tailwind.config";
@@ -173,7 +173,9 @@ export function renderMaps({ data, dimensions, classNames }) {
  * @param {{
  *    data: ServiceData[],
  *    decorationImageUrl?: string,
- *    backgroundImageUrl?: string
+ *    backgroundImageUrl?: string,
+ *    className?: string,
+ *    disableFlipCard?: boolean
  * }} param0
  * @returns
  */
@@ -182,7 +184,38 @@ export function renderServicesNavGrid({
   decorationImageUrl,
   backgroundImageUrl,
   className,
+  disableFlipCard,
 }) {
+  const renderItemInnerContent = useCallback(
+    (content, { title, subtitle }) =>
+      disableFlipCard ? (
+        content
+      ) : (
+        <FlipCard
+          front={content}
+          back={
+            <div className="h-full w-full bg-green-primary flex flex-col items-center justify-center text-white font-titleBold">
+              <div className="mb-4">
+                <h3 className="text-md lg:text-lg uppercase text-center">
+                  {title}
+                </h3>
+                <p className="font-title uppercase text-xs lg:text-sm text-center">
+                  {subtitle}
+                </p>
+              </div>
+              <div
+                role="button"
+                className="border border-white rounded-lg py-2 px-4 rounded-lg text-sm text-center lg:hover:opacity-75 transition-opacity"
+              >
+                Scopri di più
+              </div>
+            </div>
+          }
+        />
+      ),
+    [disableFlipCard]
+  );
+
   return (
     <div
       className="bg-cover relative"
@@ -198,10 +231,11 @@ export function renderServicesNavGrid({
         <BorderedColoredText
           left="I nostri"
           right="servizi"
-          fillColor={tailwindConfig.theme.extend.colors.yellow.default}
           classNames={{
-            root: "mb-8 flex justify-center lg:block",
+            root: "mb-8 flex lg:inline-flex justify-center border-yellow-default",
             text: "text-xl lg:text-3xl",
+            rightContainer: "bg-yellow-default",
+            leftContainer: "bg-transparent",
           }}
         />
         <NavButtonsGrid
@@ -216,17 +250,12 @@ export function renderServicesNavGrid({
               container: "text-center px-2 py-2 lg:py-4 lg:px-6",
               innerContainer: "p-2 py-4 lg:p-6",
               subtitle: "text-xs lg:text-sm",
-              title: "whitespace-nowrap"
+              title: "whitespace-nowrap",
             },
             root: "grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6",
           }}
           disableHighlight
-          renderItemInnerContent={(content) => (
-            <FlipCard
-              front={content}
-              back={<div className="h-full w-full bg-green-primary" />}
-            />
-          )}
+          renderItemInnerContent={renderItemInnerContent}
         >
           {data.map(({ id, title, subtitle, iconSrc, href }) => (
             <NavButtonsGrid.Item
