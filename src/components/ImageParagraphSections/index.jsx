@@ -86,8 +86,8 @@ export function renderParagraphs(paragraphs, className, capitalizedClassName) {
       <SpecialText.Capitalized
         component="p"
         classNames={{
-          root: twClsx(className, "mb-4 text-sm lg:text-md"),
-          first: capitalizedClassName,
+          root: twClsx(className, "mb-4 text-sm lg:text-md leading-normal"),
+          first: twClsx(capitalizedClassName, "relative lg:top-1"),
         }}
         key="capitalized"
       >

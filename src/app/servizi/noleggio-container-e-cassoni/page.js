@@ -7,8 +7,8 @@ function getProps({ mobile }) {
     sections: {
       mainContent: {
         title: {
-          left: "Noleggio",
-          right: "Container e cassoni",
+          left: "Noleggio container e cassoni",
+          right: "Maggi Mariano Servizi Ecologici",
         },
         sections: [
           {

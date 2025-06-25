@@ -146,6 +146,10 @@ export function getProps({ title, mobile }) {
             href: appConfig.links.autospurgo.cortona,
           },
           {
+            label: "Figline Valdarno",
+            href: appConfig.links.autospurgo["figline-valdarno"],
+          },
+          {
             label: "Foiano della Chiana",
             href: appConfig.links.autospurgo["foiano-della-chiana"],
           },
@@ -245,7 +249,7 @@ export function getProps({ title, mobile }) {
         title: (
           <span>
             Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutti i comuni della provincia di arezzo
+            tutti i luoghi e comuni della provincia di arezzo:
           </span>
         ),
       },

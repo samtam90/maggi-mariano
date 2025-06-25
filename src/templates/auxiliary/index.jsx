@@ -21,6 +21,25 @@ const { NavButtonsGrid, BgImageSection } = components.sections;
 
 function getIcon(iconName) {
   switch (iconName) {
+    case "beaker":
+      return <Icons.Beaker />;
+    case "trash":
+      return <Icons.Trash />;
+    case "truck":
+      return <Icons.Truck />;
+    case "document-text":
+      return <Icons.DocumentText />;
+    case "envelope":
+      return <Icons.Envelope />;
+    case "at":
+      return <Icons.At />;
+    case "mobile-phone":
+      return <Icons.MobilePhone />;
+    case "pencil":
+      return <Icons.PencilSquare />;
+    case "map":
+    case "map-pin":
+      return <Icons.MapPin className="text-xl" />;
     default:
       return <Icons.Phone />;
   }
@@ -70,6 +89,11 @@ export function renderPageFooter({
         section: {
           additionalContent: "mt-6",
           root: "mb-6 last:mb-0 lg:mb-0 flex flex-col items-center lg:block basis-1/4",
+          navBar: {
+            item: {
+              label: "text-sm",
+            },
+          },
         },
       }}
     >

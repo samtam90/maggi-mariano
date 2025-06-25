@@ -44,6 +44,7 @@ function Header({
           input: "",
         },
       }}
+      disableSearch
       classNames={{
         contentWrapper: twClsx(
           "max-w-8xl mx-auto pt-4 lg:pb-4",

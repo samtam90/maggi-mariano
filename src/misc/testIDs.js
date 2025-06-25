@@ -1,13 +1,17 @@
 /**
  * @type {{
  *   contactForm: {
- *     input: (inputId: string) => string
+ *     form: {
+ *        input: (inputId: string) => string
+ *     }
  *   }
  * }}
  */
 const testIDs = {
   contactForm: {
-    input: (inputId) => `contact-form-input-${inputId}`,
+    form: {
+      input: (inputId) => `contact-form-input-${inputId}`
+    },
   },
 };
 

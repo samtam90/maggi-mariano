@@ -13,13 +13,13 @@ const props = {
       title: "sede poppi",
       subtitle: "Via Aretina 16, 52014 Ponte a Poppi - (AR)",
       href: "https://www.google.it",
-      icon: <Icons.Phone />,
+      icon: <Icons.MapPin className="text-xl" />,
     },
     {
       title: "sede arezzo",
       subtitle: "SS679, 52100 Arezzo (AR)",
       href: "https://www.google.it",
-      icon: <Icons.Phone />,
+      icon: <Icons.MapPin className="text-xl" />,
     },
     {
       title: "assistenza clienti",
@@ -31,13 +31,13 @@ const props = {
       title: "rifiuti liquidi",
       subtitle: "+39 334 3889878",
       href: "tel:+393343889878",
-      icon: <Icons.Phone />,
+      icon: <Icons.MobilePhone />,
     },
     {
       title: "rifiuti solidi",
       subtitle: "+39 335 1377089",
       href: "tel:+393351377089",
-      icon: <Icons.Phone />,
+      icon: <Icons.MobilePhone />,
     },
     {
       title: "fax",
@@ -49,13 +49,13 @@ const props = {
       title: "email",
       subtitle: "serviziecologici@maggimariano.it",
       href: "mailto:serviziecologici@maggimariano.it",
-      icon: <Icons.Phone />,
+      icon: <Icons.Envelope />,
     },
     {
       title: "P.I. e C.F.",
       subtitle: "01731060511",
       href: "https://www.google.it",
-      icon: <Icons.Phone />,
+      icon: <Icons.PencilSquare />,
     },
   ],
 };

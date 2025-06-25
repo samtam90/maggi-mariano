@@ -46,7 +46,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        content: "Roboto",
+        content: "Montserrat",
         title: "Montserrat",
         titleBold: "MontserratBold",
       },

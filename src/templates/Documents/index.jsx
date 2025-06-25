@@ -29,7 +29,7 @@ function DocumentsTemplate({ mobile, documents, title }) {
         classNames={{
           text: "text-red-primary text-center",
           rightContainer:
-            "text-white text-sm lg:text-2xl block lg:inline-block",
+            "text-white text-sm lg:text-lg block lg:inline-block",
           leftContainer: "block lg:inline-block",
           root: "text-md lg:text-2xl block lg:inline-block mb-12",
         }}

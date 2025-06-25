@@ -2,7 +2,10 @@ import { withConditionalRendering } from "@/misc/functions";
 
 const dims = { width: 640, height: 380 };
 const props = {
-  title: { left: "La nostra", right: "Videogallery" },
+  title: {
+    left: "La nostra videogallery",
+    right: "Maggi Mariano Servizi Ecologici",
+  },
   videos: [
     {
       src: "https://www.youtube.com/embed/opa5Ytppm4Q?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Fwww.maggi-mariano.it&widgetid=1&forigin=https%3A%2F%2Fwww.maggi-mariano.it%2Fvideogallery%2F&aoriginsup=1&gporigin=https%3A%2F%2Fwww.maggi-mariano.it%2Fcontatti%2F&vf=6",

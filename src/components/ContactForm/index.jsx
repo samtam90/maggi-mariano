@@ -43,6 +43,19 @@ const DEFAULT_VALIDATION_PATTERNS = {
 const STATUS = { pending: "pending", error: "error", success: "success" };
 const FIELDS = ["name", "surname", "email", "title", "content", "privacy"];
 
+function getAutoComplete(field) {
+  switch (field) {
+    case "name":
+      return "given-name";
+    case "surname":
+      return "family-name";
+    case "email":
+      return "email";
+    default:
+      return null;
+  }
+}
+
 /**
  * @returns
  * @param {ContactFormField} field
@@ -143,6 +156,7 @@ function SubmitButton({ label, className, disabled }) {
  *   id: string,
  *   name: string,
  *   type: "text" | "email",
+ *   autoComplete?: string,
  *   classNames?: {
  *      root?: string,
  *      label?: string,
@@ -163,6 +177,7 @@ function Input({
   error,
   checkbox,
   textarea,
+  autoComplete,
 }) {
   const labelNode = (
     <label
@@ -196,6 +211,7 @@ function Input({
         name={name}
         className={inputClassName}
         required
+        autoComplete={autoComplete}
       />
     );
   }
@@ -319,6 +335,7 @@ function ContactForm({
           error={state.errors?.[field]}
           checkbox={field === "privacy"}
           textarea={field === "content"}
+          autoComplete={getAutoComplete(field)}
         />
       ))}
       <SubmitButton

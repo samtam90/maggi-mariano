@@ -5,12 +5,9 @@ import { components } from "@italwebcom/tailwind-components";
 import { getFormSubmitLabel } from "../../components/ContactSection";
 import tailwindConfig from "../../../tailwind.config";
 import { InnerNavBarItem } from "../../components/NavBar";
+import testIDs from "../../misc/testIDs";
 
 const { BorderedColoredText } = components;
-
-function ContactItem({ title, subtitle, icon, href }) {
-  return;
-}
 
 /**
  * @typedef {{
@@ -35,7 +32,6 @@ function ContactsTemplate({
   formTitle,
   onContactFormSubmit,
 }) {
-  //TODO: render
   return (
     <AuxTemplate
       mobile={mobile}
@@ -77,11 +73,15 @@ function ContactsTemplate({
             ))}
           </ul>
         </section>
-        <section key="contact-form" className="basis-3/5 shrink-0">
+        <section
+          key="contact-form"
+          className="basis-3/5 shrink-0 lg:ml-4 border rounded-lg border-gray-400 p-4 lg:p-6 shadow-md"
+        >
           <ContactForm
             onSubmit={onContactFormSubmit}
             title={formTitle}
             getSubmitLabel={getFormSubmitLabel}
+            ids={testIDs.contactForm.form}
           />
         </section>
       </div>

@@ -7,8 +7,8 @@ function getProps({ mobile }) {
     sections: {
       mainContent: {
         title: {
-          left: "Centrifugazione o disidratazione",
-          right: "Fanghi",
+          left: "Centrifugazione o disidratazione fanghi",
+          right: "Maggi Mariano Servizi Ecologici",
         },
         sections: [
           {

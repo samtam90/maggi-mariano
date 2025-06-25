@@ -4,8 +4,8 @@ const props = {
   sections: {
     mainContent: {
       title: {
-        left: "Escavatore",
-        right: "a risucchio",
+        left: "Escavatore a risucchio",
+        right: "Maggi Mariano Servizi Ecologici",
       },
       sections: [
         {

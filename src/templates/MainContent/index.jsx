@@ -15,6 +15,7 @@ import Header from "../../components/Header";
 import ContactSection, {
   PhoneNumber,
   Image,
+  ClassNames as ContactSectionClassNames,
 } from "../../components/ContactSection";
 import testIDs from "../../misc/testIDs";
 import ContentArticle, {
@@ -52,11 +53,19 @@ import { ContactFormData } from "../../components/ContactForm";
  * @param {{
  *    mobile: boolean,
  *    sections: SectionsData,
- *    onContactFormSubmit: (data: ContactFormData) => void
+ *    onContactFormSubmit: (data: ContactFormData) => void,
+ *    classNames?: {
+ *      contactsSection?: ContactSectionClassNames
+ *    }
  * }} param0
  * @returns
  */
-function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
+function MainContentTemplate({
+  mobile,
+  sections,
+  onContactFormSubmit,
+  classNames,
+}) {
   const {
     contacts: contactsSectionData,
     locations: locationsSectionData,
@@ -109,6 +118,7 @@ function MainContentTemplate({ mobile, sections, onContactFormSubmit }) {
           variant={mobile ? "vertical" : "horizontal"}
           classNames={{
             contentWrapper: "max-w-6xl",
+            ...classNames?.contactsSection,
           }}
           onFormSubmit={onContactFormSubmit}
         />

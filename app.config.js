@@ -24,6 +24,7 @@ const links = {
     "civitella-in-valdichiana":
       "/autospurgo/autospurgo-civitella-in-valdichiana",
     cortona: "/autospurgo/autospurgo-cortona",
+    "figline-valdarno": "/autospurgo/autospurgo-figline-valdarno",
     "foiano-della-chiana": "/autospurgo/autospurgo-foiano-della-chiana",
     laterina: "/autospurgo/autospurgo-laterina",
     "loro-ciuffenna": "/autospurgo/autospurgo-loro-ciuffenna",
@@ -103,6 +104,8 @@ const links = {
       "civitella-in-valdichiana":
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-civitella-in-valdichiana",
       cortona: "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-cortona",
+      "figline-valdarno":
+        "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-figline-valdarno",
       "foiano-della-chiana":
         "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici-foiano-della-chiana",
       laterina:
@@ -176,6 +179,8 @@ const links = {
       "civitella-in-valdichiana":
         "/servizi/pulizia-fognature/pulizia-fognature-civitella-in-valdichiana",
       cortona: "/pulizia-fognature/servizi/pulizia-fognature-cortona",
+      "figline-valdarno":
+        "/servizi/pulizia-fognature/pulizia-fognature-figline-valdarno",
       "foiano-della-chiana":
         "/servizi/pulizia-fognature/pulizia-fognature-foiano-della-chiana",
       laterina: "/servizi/pulizia-fognature/pulizia-fognature-laterina",
@@ -247,6 +252,8 @@ const links = {
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-civitella-in-valdichiana",
       cortona:
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-cortona",
+      "figline-valdarno":
+        "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-figline-valdarno",
       "foiano-della-chiana":
         "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche-foiano-della-chiana",
       laterina:
@@ -320,6 +327,8 @@ const links = {
       "civitella-in-valdichiana":
         "/servizi/trasporto-acqua/trasporto-acqua-civitella-in-valdichiana",
       cortona: "/servizi/trasporto-acqua/trasporto-acqua-cortona",
+      "figline-valdarno":
+        "/servizi/trasporto-acqua/trasporto-acqua-figline-valdarno",
       "foiano-della-chiana":
         "/servizi/trasporto-acqua/trasporto-acqua-foiano-della-chiana",
       laterina: "/servizi/trasporto-acqua/trasporto-acqua-laterina",
@@ -384,6 +393,8 @@ const links = {
       "civitella-in-valdichiana":
         "/servizi/trasporto-rifiuti/trasporto-rifiuti-civitella-in-valdichiana",
       cortona: "/servizi/trasporto-rifiuti/trasporto-rifiuti-cortona",
+      "figline-valdarno":
+        "/servizi/trasporto-rifiuti/trasporto-rifiuti-figline-valdarno",
       "foiano-della-chiana":
         "/servizi/trasporto-rifiuti/trasporto-rifiuti-foiano-della-chiana",
       laterina: "/servizi/trasporto-rifiuti/trasporto-rifiuti-laterina",
@@ -424,6 +435,10 @@ const links = {
       "/servizi/videoispezioni-con-telecamera-robot",
   },
   videogallery: "/videogallery",
+  privacy: {
+    "privacy-policy": "/privacy/privacy-policy",
+    "cookie-policy": "/privacy/cookie-policy",
+  },
 };
 
 const navBarSections = {
@@ -452,6 +467,7 @@ const navBarSections = {
     "Autospurgo Civitella in Valdichiana":
       links.autospurgo["civitella-in-valdichiana"],
     "Autospurgo Cortona": links.autospurgo.cortona,
+    "Autospurgo Figline Valdarno": links.autospurgo["figline-valdarno"],
     "Autospurgo Foiano della Chiana": links.autospurgo["foiano-della-chiana"],
     "Autospurgo Laterina": links.autospurgo.laterina,
     "Autospurgo Loro Ciuffenna": links.autospurgo["loro-ciuffenna"],
@@ -541,6 +557,8 @@ const navBarSections = {
         links.servizi["noleggio-bagni-chimici"]["civitella-in-valdichiana"],
       "Noleggio bagni chimici Cortona":
         links.servizi["noleggio-bagni-chimici"].cortona,
+      "Noleggio bagni chimici Figline Valdarno":
+        links.servizi["noleggio-bagni-chimici"]["figline-valdarno"],
       "Noleggio bagni chimici Foiano della Chiana":
         links.servizi["noleggio-bagni-chimici"]["foiano-della-chiana"],
       "Noleggio bagni chimici Laterina":
@@ -621,6 +639,8 @@ const navBarSections = {
       "Pulizia fognature Civitella in Valdichiana":
         links.servizi["pulizia-fognature"]["civitella-in-valdichiana"],
       "Pulizia fognature Cortona": links.servizi["pulizia-fognature"].cortona,
+      "Pulizia fognature Figline Valdarno":
+        links.servizi["pulizia-fognature"]["figline-valdarno"],
       "Pulizia fognature Foiano della Chiana":
         links.servizi["pulizia-fognature"]["foiano-della-chiana"],
       "Pulizia fognature Laterina": links.servizi["pulizia-fognature"].laterina,
@@ -700,6 +720,8 @@ const navBarSections = {
         links.servizi["spurgo-fosse-biologiche"]["civitella-in-valdichiana"],
       "Spurgo fosse biologiche Cortona":
         links.servizi["spurgo-fosse-biologiche"].cortona,
+      "Spurgo fosse biologiche Figline Valdarno":
+        links.servizi["spurgo-fosse-biologiche"]["figline-valdarno"],
       "Spurgo fosse biologiche Foiano della Chiana":
         links.servizi["spurgo-fosse-biologiche"]["foiano-della-chiana"],
       "Spurgo fosse biologiche Laterina":
@@ -778,6 +800,8 @@ const navBarSections = {
       "Trasporto acqua Cortona": links.servizi["trasporto-acqua"].cortona,
       "Trasporto acqua Foiano della Chiana":
         links.servizi["trasporto-acqua"]["foiano-della-chiana"],
+      "Trasporto acqua Figline Valdarno":
+        links.servizi["trasporto-acqua"]["figline-valdarno"],
       "Trasporto acqua Laterina": links.servizi["trasporto-acqua"].laterina,
       "Trasporto acqua Loro Ciuffenna":
         links.servizi["trasporto-acqua"]["loro-ciuffenna"],
@@ -846,6 +870,8 @@ const navBarSections = {
       "Trasporto rifiuti Cortona": links.servizi["trasporto-rifiuti"].cortona,
       "Trasporto rifiuti Foiano della Chiana":
         links.servizi["trasporto-rifiuti"]["foiano-della-chiana"],
+      "Trasporto rifiuti Figline Valdarno":
+        links.servizi["trasporto-rifiuti"]["figline-valdarno"],
       "Trasporto rifiuti Laterina": links.servizi["trasporto-rifiuti"].laterina,
       "Trasporto rifiuti Loro Ciuffenna":
         links.servizi["trasporto-rifiuti"]["loro-ciuffenna"],
@@ -1023,7 +1049,7 @@ const topNavBarData = {
         href: "mailto:serviziecologici@maggimariano.it",
         label: "serviziecologici@maggimariano.it",
       },
-      icon: "phone",
+      icon: "envelope",
     },
     {
       title: "Rifiuti Liquidi",
@@ -1031,15 +1057,15 @@ const topNavBarData = {
         href: "tel:+393343889878",
         label: "Cell.: +39 334 3889878",
       },
-      icon: "phone",
+      icon: "mobile-phone",
     },
     {
       title: "Rifiuti Solidi",
       link: {
-        href: "tel:+393343889878",
-        label: "Cell.: +39 334 3889878",
+        href: "tel:+393351377089",
+        label: "Cell.: +39 335 1377089",
       },
-      icon: "phone",
+      icon: "mobile-phone",
     },
   ],
 };
@@ -1052,30 +1078,30 @@ const footerData = {
   },
   sections: [
     {
-      title: "Le nostre sedi",
+      title: "Servizi Ecologici",
       navItems: [
         {
-          title: "Via Aretina, 16",
-          icon: "phone",
+          title: "Sede Poppi",
+          icon: "map",
           link: {
-            label: "52014 Ponte a Poppi (AR)",
+            label: "Via Aretina 16, Ponte a Poppi (AR)",
             href: "https://www.google.it",
           },
         },
         {
-          title: "Loc. San Giuliano snc",
-          icon: "phone",
+          title: "Sede Arezzo",
+          icon: "map",
           link: {
-            label: "52100 Arezzo (AR)",
+            label: "Loc. San Giuliano, Arezzo (AR)",
             href: "https://www.google.it",
           },
         },
         {
-          title: "Loc. San Giuliano snc",
-          icon: "phone",
+          title: "P. IVA e C.F.",
+          icon: "pencil",
           link: {
-            label: "52100 Arezzo (AR)",
-            href: "https://www.google.it",
+            label: "01731060511",
+            href: baseUrl,
           },
         },
       ],
@@ -1088,60 +1114,39 @@ const footerData = {
           icon: "phone",
           link: {
             label: "+39 0575 520447",
-            href: "https://www.google.it",
+            href: "tel:+390575520447",
           },
         },
         {
           title: "Rifiuti liquidi",
-          icon: "phone",
+          icon: "mobile-phone",
           link: {
-            label: "+39 0575 520447",
-            href: "https://www.google.it",
+            label: "+39 334 3889878",
+            href: "tel: +393343889878",
           },
         },
         {
           title: "Rifiuti solidi",
-          icon: "phone",
+          icon: "mobile-phone",
           link: {
-            label: "+39 0575 520447",
-            href: "https://www.google.it",
+            label: "+39 335 1377089",
+            href: "tel:+393351377089",
           },
         },
         {
           title: "Fax",
           icon: "phone",
           link: {
-            label: "+39 0575 520447",
-            href: "https://www.google.it",
+            label: "+39 0575 527949",
+            href: "tel:+390575527949",
           },
         },
         {
           title: "Email",
-          icon: "phone",
+          icon: "envelope",
           link: {
-            label: "+39 0575 520447",
-            href: "https://www.google.it",
-          },
-        },
-      ],
-    },
-    {
-      title: "Privacy",
-      navItems: [
-        {
-          title: "Via Aretina, 16",
-          icon: "phone",
-          link: {
-            label: "52014 Ponte a Poppi (AR)",
-            href: "https://www.google.it",
-          },
-        },
-        {
-          title: "Via Aretina, 16",
-          icon: "phone",
-          link: {
-            label: "52014 Ponte a Poppi (AR)",
-            href: "https://www.google.it",
+            label: "serviziecologici@maggimariano.it",
+            href: "mailto:serviziecologici@maggimariano.it",
           },
         },
       ],
@@ -1150,19 +1155,64 @@ const footerData = {
       title: "Servizi",
       navItems: [
         {
-          title: "Via Aretina, 16",
-          icon: "phone",
+          title: "Autospurgo",
+          icon: "trash",
           link: {
-            label: "52014 Ponte a Poppi (AR)",
-            href: "https://www.google.it",
+            label: "impianti e fognature",
+            href: links.autospurgo.root,
           },
         },
         {
-          title: "Via Aretina, 16",
-          icon: "phone",
+          title: "Frantoio mobile",
+          icon: "truck",
           link: {
-            label: "52014 Ponte a Poppi (AR)",
-            href: "https://www.google.it",
+            label: "Frantoio mobile inerti",
+            href: links.servizi["frantoio-mobile-inerti"].root,
+          },
+        },
+        {
+          title: "Noleggio bagni chimici",
+          icon: "beaker",
+          link: {
+            label: "Noleggio bagni chimici",
+            href: links.servizi["noleggio-bagni-chimici"].root,
+          },
+        },
+        {
+          title: "Trasporto acqua",
+          icon: "truck",
+          link: {
+            label: "Trasporto acqua",
+            href: links.servizi["trasporto-acqua"].root,
+          },
+        },
+        {
+          title: "Trasporto rifiuti",
+          icon: "truck",
+          link: {
+            label: "Trasporto rifiuti",
+            href: links.servizi["trasporto-rifiuti"].root,
+          },
+        },
+      ],
+    },
+    {
+      title: "Privacy",
+      navItems: [
+        {
+          title: "Privacy Policy",
+          icon: "document-text",
+          link: {
+            label: "La nostra privacy Policy",
+            href: links.privacy["privacy-policy"],
+          },
+        },
+        {
+          title: "Cookie Policy",
+          icon: "document-text",
+          link: {
+            label: "La nostra cookie Policy",
+            href: links.privacy["cookie-policy"],
           },
         },
       ],
@@ -1216,6 +1266,8 @@ module.exports = {
       height: 64,
     },
     title: "Maggi Mariano",
+    extendedTitle: "Maggi Mariano Servizi Ecologici",
+    email: "serviziecologici@maggimariano.it",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/05/favico-150x150.png",
     logoSrc:

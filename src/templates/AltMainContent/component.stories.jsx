@@ -91,7 +91,7 @@ Base.args = {
       title: (
         <span>
           Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-          tutti i comuni della provincia di arezzo
+          tutti i luoghi e comuni della provincia di arezzo:
         </span>
       ),
     },

@@ -5,8 +5,8 @@ function getProps({ mobile }) {
     sections: {
       mainContent: {
         title: {
-          left: "Recupero",
-          right: "materiali ferrosi",
+          left: "Recupero materiali ferrosi",
+          right: "Maggi Mariano Servizi Ecologici",
         },
         sections: [
           {
