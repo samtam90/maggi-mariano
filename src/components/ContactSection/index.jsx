@@ -30,7 +30,9 @@ const TopBackdrop = memo(() => (
 ));
 
 export function getFormSubmitLabel(status) {
-  return status === "success" ? "Success" : "Submit";
+  return status === "success"
+    ? "Richiesta inviata con successo"
+    : "Invia richiesta";
 }
 
 /**

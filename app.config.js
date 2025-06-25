@@ -1273,5 +1273,18 @@ module.exports = {
     logoSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
   },
+  server: {
+    mail: {
+      host: "smtps.aruba.it",
+      port: 465,
+      secure: true,
+      auth: {
+        user: "postmaster@maggi-mariano.it",
+        pass: "Mariano1960!!",
+      },
+      senderMail: "postmaster@maggi-mariano.it",
+      adminMails: ["samuele.tamburi@gmail.com"],
+    },
+  },
   links,
 };
