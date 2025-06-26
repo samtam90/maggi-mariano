@@ -1,11 +1,11 @@
 import React, { memo } from "react";
 import SpecialText from "../SpecialText";
-import { Image, Paragraph } from "../../misc";
+import { Paragraph } from "../../misc";
 import { twClsx } from "../../misc/functions";
 import tailwindConfig from "../../../tailwind.config";
-import Link from "next/link";
 import { renderParagraphs } from "../ImageParagraphSections";
 import LinkButton from "../LinkButton";
+import Image, { ImageProps } from "../Image";
 
 /**
  * @typedef {{
@@ -22,7 +22,7 @@ import LinkButton from "../LinkButton";
  * }} ClassNames
  *
  * @typedef {{
- *   image: Image,
+ *   image: ImageProps,
  *   paragraphs: Paragraph[],
  *   link: {
  *      label: string,
@@ -82,11 +82,11 @@ function HighlightedContentSection({
           )}
         </div>
         <div className="flex flex-col items-center">
-          <img
+          <Image
             src={image.src}
             alt={image.alt}
-            width={image.dimensions.width}
-            height={image.dimensions.height}
+            sources={image?.sources}
+            dimensions={image.dimensions}
             className={twClsx(
               "mb-4 max-w-full object-contain",
               classNames?.image

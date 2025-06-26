@@ -24,6 +24,12 @@ Base.args = {
       image: {
         src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ALBO-AUTOTRASPORTATORI-pdf-214x300-1.jpg",
         dimensions: imgDims,
+        sources: [
+          {
+            type: "image/jpeg",
+            srcset: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ALBO-AUTOTRASPORTATORI-pdf-214x300-1.jpg",
+          },
+        ],
       },
       label: "ALBO AUTOTRASPORTATORI",
       href: "https://www.maggi-mariano.it/documenti/ALBO-AUTOTRASPORTATORI.pdf",

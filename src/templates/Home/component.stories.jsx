@@ -26,6 +26,7 @@ Base.args = {
       subtitle: "con telecamera robot",
       imageSrc:
         "https://www.maggi-mariano.it/wp-content/uploads/2022/05/home-1.jpg",
+      link: { label: "Lol", href: "https://www.google.it" },
     },
     description: {
       headerImages: [

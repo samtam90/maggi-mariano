@@ -36,7 +36,7 @@ module.exports = {
         },
         red: {
           primary: "#F0353A",
-          opaqueTitle: "rgb(255, 0, 0, 0.9)",
+          opaqueTitle: "rgb(255, 0, 0, 0.95)",
         },
         yellow: {
           primary: "#F8C100",

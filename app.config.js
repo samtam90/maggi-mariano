@@ -1,6 +1,6 @@
 const { default: Link } = require("next/link");
 
-const baseUrl = "https://www.maggi-mariano.it";
+const baseUrl = "https://new.maggi-mariano.it";
 
 const links = {
   autospurgo: {
@@ -941,96 +941,210 @@ const servicesNavGridData = [
     id: "service-1",
     title: "Recupero",
     subtitle: "Materiali ferrosi",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ferrosi-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/recupero-materiali-ferrosi.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/recupero-materiali-ferrosi.png",
+      },
+    ],
     href: links.servizi["recupero-materiali-ferrosi"],
   },
   {
     id: "service-2",
     title: "Spurgo",
     subtitle: "Fosse biologiche",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fosse-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/spurgo-fosse-biologiche.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/spurgo-fosse-biologiche.png",
+      },
+    ],
     href: links.servizi["spurgo-fosse-biologiche"].root,
   },
   {
     id: "service-3",
     title: "Noleggio",
     subtitle: "Bagni chimici",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bagni-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/noleggio-bagni.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/noleggio-bagni.png",
+      },
+    ],
     href: links.servizi["noleggio-bagni-chimici"].root,
   },
   {
     id: "service-4",
     title: "Trasporto",
     subtitle: "Acqua potabile",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-200-2.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/trasporto-acqua-potabile.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/trasporto-acqua-potabile.png",
+      },
+    ],
     href: links.servizi["trasporto-acqua"].root,
   },
   {
     id: "service-5",
     title: "Videoispezioni",
     subtitle: "con telecamera robot",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/ispezioni-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/videoispezioni-telecamera-robot.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/videoispezioni-telecamera-robot.png",
+      },
+    ],
     href: links.servizi["videoispezioni-telecamera-robot"],
   },
   {
     id: "service-6",
     title: "Noleggio",
     subtitle: "container e cassoni",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/cassoni-scarrabili-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/noleggio-container-cassoni.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/noleggio-container-cassoni.png",
+      },
+    ],
     href: links.servizi["noleggio-container-e-cassoni"],
   },
   {
     id: "service-7",
     title: "Escavatore",
     subtitle: "a risucchio",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/risucchio-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/escavatore-risucchio.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/escavatore-risucchio.png",
+      },
+    ],
     href: links.servizi["escavatore-a-risucchio"],
   },
   {
     id: "service-8",
     title: "Trasporto",
     subtitle: "rifiuti",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/bonifiche-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/trasporto-rifiuti.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/trasporto-rifiuti.png",
+      },
+    ],
     href: links.servizi["trasporto-rifiuti"].root,
   },
   {
     id: "service-9",
     title: "Container",
     subtitle: "rifiuti speciali",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/container-rifiuti-speciali.webp",
+      },
+      {
+        type: "image/png",
+        srcset:
+          "https://new.maggi-mariano.it/images/services/container-rifiuti-speciali.png",
+      },
+    ],
     href: links.servizi["noleggio-container-e-cassoni"],
   },
   {
     id: "service-10",
     title: "Centrifugazione",
     subtitle: "fanghi",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/06/fanghi-200-1.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset: `${baseUrl}/images/services/centrifugazione-fanghi.webp`,
+      },
+      {
+        type: "image/png",
+        srcset: `${baseUrl}/images/services/centrifugazione-fanghi.png`,
+      },
+    ],
     href: links.servizi["centrifugazione-o-disidratazione-fanghi"],
   },
   {
     id: "service-11",
     title: "Frantoio mobile",
     subtitle: "inerti",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/09/frantoio-200.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset: `${baseUrl}/images/services/frantoio-mobile-inerti.webp`,
+      },
+      {
+        type: "image/png",
+        srcset: `${baseUrl}/images/services/frantoio-mobile-inerti.png`,
+      },
+    ],
     href: links.servizi["frantoio-mobile-inerti"].root,
   },
   {
     id: "service-12",
     title: "Spurgo",
     subtitle: "fognature",
-    iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/08/disotturazione-fognature-200.png",
+    iconSources: [
+      {
+        type: "image/webp",
+        srcset: `${baseUrl}/images/services/spurgo-fognature.webp`,
+      },
+      {
+        type: "image/png",
+        srcset: `${baseUrl}/images/services/spurgo-fognature.png`,
+      },
+    ],
     href: links.servizi["pulizia-fognature"].root,
   },
 ];
@@ -1212,7 +1326,7 @@ module.exports = {
           title: "Uso dei cookie & Web Storage API",
           paragraphs: [
             "I siti Web possono memorizzare o recuperare informazioni sotto forma di cookie e/o dati nelle API di storage del browser. Questi dati possono essere relativi ad informazioni statistiche anonime, valori associati a terze parti, informazioni sull'utente, le tue preferenze o dispositivi utilizzati per consentire un'esperienza web personalizzata o per migliorare l'esperienza di utilizzo del sito.",
-            <span>
+            /*<span>
               Ti invitiamo a consultare la nostra{" "}
               <Link
                 target="_blank"
@@ -1222,7 +1336,7 @@ module.exports = {
                 privacy policy a questo link
               </Link>
               .
-            </span>,
+            </span>,*/
           ],
         },
       ],
@@ -1291,8 +1405,7 @@ module.exports = {
     email: "serviziecologici@maggimariano.it",
     iconSrc:
       "https://www.maggi-mariano.it/wp-content/uploads/2022/05/favico-150x150.png",
-    logoSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
+    logoSrc: `${baseUrl}/images/logo.png`,
   },
   server: {
     mail: {

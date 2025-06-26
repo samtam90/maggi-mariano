@@ -3,12 +3,12 @@ import tailwindConfig from "../../../tailwind.config";
 import Link from "next/link";
 import AuxTemplate from "../auxiliary/AuxTemplate";
 import { components } from "@italwebcom/tailwind-components";
+import Image, { ImageProps } from "../../components/Image";
 
 const { BorderedColoredText } = components;
 
 /**
- * @typedef {{src: string, dimensions?: {width: number, height: number}}} Image
- * @typedef {{image: Image, href: string, label: string}} Document
+ * @typedef {{image: ImageProps, href: string, label: string}} Document
  * @param {{
  *    mobile: boolean,
  *    documents: Document[],
@@ -28,8 +28,7 @@ function DocumentsTemplate({ mobile, documents, title }) {
         fillColor={tailwindConfig.theme.extend.colors.red.primary}
         classNames={{
           text: "text-red-primary text-center",
-          rightContainer:
-            "text-white text-sm lg:text-lg block lg:inline-block",
+          rightContainer: "text-white text-sm lg:text-lg block lg:inline-block",
           leftContainer: "block lg:inline-block",
           root: "text-md lg:text-2xl block lg:inline-block mb-12",
         }}
@@ -41,12 +40,11 @@ function DocumentsTemplate({ mobile, documents, title }) {
               {label}
             </h3>
             <Link href={href} target="_blank">
-              <img
+              <Image
                 src={image.src}
-                width={image.dimensions?.width}
-                height={image.dimensions?.height}
+                dimensions={image.dimensions}
                 alt={label}
-                className="object-contain max-w-full"
+                sources={image?.sources}
               />
             </Link>
           </li>

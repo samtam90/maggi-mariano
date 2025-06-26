@@ -1,18 +1,11 @@
 "use client";
 
-import React, {
-  ReactNode,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { ReactNode, useCallback, useContext } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import Link from "next/link";
 import Icons from "../../components/Icons";
 import NavBar, { InnerNavBarItem } from "../../components/NavBar";
 import PageFooter from "../../components/PageFooter";
-import EmbeddedMap from "../../components/EmbeddedMap";
 import { twClsx } from "../../misc/functions";
 import LinkButton from "../../components/LinkButton";
 import LocationsGrid, {
@@ -23,6 +16,7 @@ import { HeaderComponent } from "../../misc/functions";
 import { links } from "../../../app.config";
 import Context from "../../components/privacy/PrivacySettingsPanelWrapper/context";
 import EmbeddedMapsWrapper from "./EmbeddedMapsWrapper";
+import Image from "../../components/Image";
 
 const { BorderedColoredText, FlipCard } = components;
 const { NavButtonsGrid, BgImageSection } = components.sections;
@@ -306,17 +300,17 @@ export function renderServicesNavGrid({
           disableHighlight
           renderItemInnerContent={renderItemInnerContent}
         >
-          {data.map(({ id, title, subtitle, iconSrc, href }) => (
+          {data.map(({ id, title, subtitle, iconSources, href }) => (
             <NavButtonsGrid.Item
               key={id}
               id={id}
               title={title}
               subtitle={subtitle}
               icon={
-                <img
-                  src={iconSrc}
+                <Image
+                  sources={iconSources}
                   alt={`${title} ${subtitle}`}
-                  className="h-12 w-12 object-contain"
+                  classNames={{ picture: "h-12 w-12 block", image: "w-full" }}
                 />
               }
               href={href}

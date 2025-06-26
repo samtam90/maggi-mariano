@@ -1,11 +1,12 @@
 import { twClsx } from "../../misc/functions";
 import React, { memo } from "react";
 import SpecialText from "../SpecialText";
-import { Image, Paragraph } from "../../misc";
+import { Paragraph } from "../../misc";
+import Image, { ImageProps } from "../Image";
 
 /**
  * @typedef {{
- *  image: Image,
+ *  image: ImageProps,
  *  paragraphs?: Paragraph[],
  *  imagePosition?: "start" | "end"
  * }} DataItem
@@ -24,8 +25,8 @@ import { Image, Paragraph } from "../../misc";
  */
 
 /**
- * @param {Image | Image[]}
- * @returns {Image[]}
+ * @param {ImageProps | ImageProps[]}
+ * @returns {ImageProps[]}
  */
 function procImgs(imgs) {
   if (!(imgs instanceof Array)) {
@@ -38,14 +39,16 @@ function procImgs(imgs) {
  * @param {Image & {className: string}} param0
  * @returns
  */
-function renderImage({ src, alt, dimensions, className }) {
+function renderImage({ src, alt, dimensions, sources, className, classNames }) {
   return (
-    <img
+    <Image
       src={src}
+      sources={sources}
       alt={alt}
       width={dimensions.width}
       height={dimensions.height}
       className={className}
+      classNames={classNames}
       key={alt}
     />
   );
@@ -105,7 +108,7 @@ export function renderParagraphs(paragraphs, className, capitalizedClassName) {
 
 /**
  * @param {{
- *  headerImages?: Image[],
+ *  headerImages?: ImageProps[],
  *  items?: DataItem[],
  *  classNames?: ClassNames,
  *  variant?: "horizontal" | "vertical"
@@ -126,11 +129,12 @@ function ImageParagraphSections({
           classNames?.header?.root
         )}
       >
-        {procImgs(headerImages).map(({ src, alt, dimensions }) =>
+        {procImgs(headerImages).map(({ src, alt, dimensions, sources }) =>
           renderImage({
             src,
             alt,
             dimensions,
+            sources,
             className: twClsx(
               "block max-w-full object-contain mb-6",
               classNames?.header?.image
@@ -142,13 +146,16 @@ function ImageParagraphSections({
         const isImgStartPos = imagePosition === "start";
         const imageNode = renderImage({
           ...image,
-          className: twClsx(
-            "object-contain",
-            isImgStartPos ? "order-1" : "order-2",
-            !isVertVariant && "basis-1/2 shrink-0",
-            isVertVariant && (isImgStartPos ? "mb-4" : "mt-4"),
-            classNames?.item?.image
-          ),
+          classNames: {
+            picture: twClsx(
+              "object-contain",
+              isImgStartPos ? "order-1" : "order-2",
+              !isVertVariant && "basis-1/2 shrink-0",
+              isVertVariant && (isImgStartPos ? "mb-4" : "mt-4"),
+              classNames?.item?.image
+            ),
+            image: "w-full",
+          },
         });
         const parsNodes = renderParagraphs(
           paragraphs,

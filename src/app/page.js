@@ -21,14 +21,32 @@ const props = {
     description: {
       headerImages: [
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi-white.png",
           alt: "Maggi 1",
           dimensions: { width: 300, height: 110 },
+          sources: [
+            {
+              type: "image/webp",
+              srcset: `${appConfig.data.baseUrl}/images/home/logo-white.webp`,
+            },
+            {
+              type: "image/png",
+              srcset: `${appConfig.data.baseUrl}/images/home/logo-white.png`,
+            },
+          ],
         },
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/eco.png",
           alt: "Maggi 2",
           dimensions: { width: 85, height: 105 },
+          sources: [
+            {
+              type: "image/webp",
+              srcset: `${appConfig.data.baseUrl}/images/home/eco.webp`,
+            },
+            {
+              type: "image/png",
+              srcset: `${appConfig.data.baseUrl}/images/home/eco.png`,
+            },
+          ],
         },
       ],
       items: [
@@ -40,8 +58,17 @@ const props = {
             "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell'ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
           ],
           image: {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
             alt: "Servizio 1",
+            sources: [
+              {
+                type: "image/webp",
+                srcset: `${appConfig.data.baseUrl}/images/home/desc-1.webp`,
+              },
+              {
+                type: "image/jpeg",
+                srcset: `${appConfig.data.baseUrl}/images/home/desc-1.jpg`,
+              },
+            ],
           },
           imagePosition: "end",
         },
@@ -50,8 +77,17 @@ const props = {
             "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici srl garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
           ],
           image: {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
             alt: "Servizio 2",
+            sources: [
+              {
+                type: "image/webp",
+                srcset: `${appConfig.data.baseUrl}/images/home/desc-2.webp`,
+              },
+              {
+                type: "image/jpeg",
+                srcset: `${appConfig.data.baseUrl}/images/home/desc-2.jpg`,
+              },
+            ],
           },
           imagePosition: "start",
         },
@@ -66,9 +102,18 @@ const props = {
         "La capacità di produzione massima dell'impianto mobile è pari a 70 t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo recuperare:",
       ],
       image: {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
         alt: "Image",
         dimensions: { width: 700, height: 300 },
+        sources: [
+          {
+            type: "image/webp",
+            srcset: `${appConfig.data.baseUrl}/images/home/frantoio.webp`,
+          },
+          {
+            type: "image/jpeg",
+            srcset: `${appConfig.data.baseUrl}/images/home/frantoio.jpg`,
+          },
+        ],
       },
       link: {
         href: appConfig.links.servizi["frantoio-mobile-inerti"].root,
