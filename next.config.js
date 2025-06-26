@@ -4,9 +4,9 @@ const nextConfig = {
   experimental: {
     serverActions: {
       allowedOrigins: [
-        "https://new.maggi-mariano.it",
-        "http://localhost:3000",
-        "http://localhost:3001",
+        "new.maggi-mariano.it",
+        "localhost:3000",
+        "localhost:3001",
       ],
     },
   },
