@@ -203,6 +203,13 @@ function renderFeedbackSection({ title, items, autoScrollTimeoutMs }) {
           dotSelectionVariant="color"
           dotColor="white"
           autoScrollTimeoutMs={autoScrollTimeoutMs || 5000}
+          labels={{
+            arrows: {
+              prev: "Elemento precedente",
+              next: "Elemento successivo",
+            },
+            dot: (index) => `Elemento ${index}`,
+          }}
         >
           {items.map(({ title, stars, subtitle, content }, index) => (
             <Carousel.Item key={index} index={index} id={index}>

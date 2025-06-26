@@ -59,10 +59,11 @@ function Header({
               !nested ? "uppercase" : "bg-gray-50 text-xs lg:text-sm",
               isNestedContentOpen && "text-white bg-green-primary"
             ),
-            label: "font-title"
+            label: "font-title",
           }),
         },
       }}
+      menuButtonLabel="Apri menù"
     />
   );
 }
