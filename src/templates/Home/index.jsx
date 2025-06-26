@@ -99,7 +99,7 @@ function renderTopSection(sectionData) {
       <BgImageSection
         title={title}
         content={subtitle}
-        imageUrl={imageSrc}
+        //imageUrl={imageSrc}
         classNames={{
           root: "py-12 lg:py-24 lg:max-w-8xl mx-auto px-6 lg:px-0",
           title:
@@ -107,6 +107,7 @@ function renderTopSection(sectionData) {
           content:
             "text-white text-lg lg:text-2xl font-titleBold uppercase text-center lg:text-left",
           backdrop: "opacity-45",
+          background: "bg-camera"
         }}
         renderInnerContent={(content) => (
           <FadeIn

@@ -171,7 +171,7 @@ export function renderTitleSection(sectionData) {
         preTitle={preTitle}
         title={title}
         content={subtitle}
-        imageUrl={imageSrc}
+        //imageUrl={imageSrc}
         classNames={{
           root: "py-16 lg:ml-12 lg:py-32 lg:max-w-5xl lg:mx-auto flex flex-col items-center",
           preTitle:
@@ -180,7 +180,7 @@ export function renderTitleSection(sectionData) {
             "text-2xl lg:text-5xl text-yellow-primary font-title uppercase border border-yellow-primary leading-normal mb-8 px-2",
           content:
             "text-sm lg:text-xl text-white font-title uppercase text-center self-stretch",
-          background: "bg-fixed",
+          background: "bg-fixed bg-title",
           backdrop: "opacity-65",
         }}
         bottomContent={

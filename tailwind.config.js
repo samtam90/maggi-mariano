@@ -68,7 +68,11 @@ module.exports = {
       },
       backgroundImage: {
         homeFeedbackImage:
-          "url('https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg')",
+          "image-set('https://new.maggi-mariano.it/images/home/desc-1.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/home/desc-1.jpg' type('image/jpeg'))",
+        title:
+          "image-set('https://new.maggi-mariano.it/images/title.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/title.jpg' type('image/jpeg'))",
+        camera:
+          "image-set('https://new.maggi-mariano.it/images/home/camera.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/home/camera.jpg' type('image/jpeg'))",
       },
     },
     zIndex: {
