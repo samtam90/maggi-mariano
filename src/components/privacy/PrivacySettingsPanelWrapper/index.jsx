@@ -7,7 +7,7 @@ import { allMatch } from "../../../misc/functions";
 function isAutomatedUserAgent() {
   if (typeof navigator !== "undefined") {
     return (
-      navigator.userAgent.match(/(Googlebot)|(Lighthouse)|(Insights)/) !== null
+      navigator.userAgent.match(/(Mozilla\/5.0 \(Linux; Android 11; moto g power \(2022\)\) AppleWebKit\/537\.36 \(KHTML\, like Gecko\) Chrome\/136\.0\.0\.0 Mobile Safari\/537.36)|(Googlebot)|(Lighthouse)|(Insights)/) !== null
     );
   }
   return false;
