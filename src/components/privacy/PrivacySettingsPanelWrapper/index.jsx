@@ -4,6 +4,13 @@ import React, { memo, useCallback, useEffect, useState } from "react";
 import Context from "./context";
 import { allMatch } from "../../../misc/functions";
 
+function isGoogleBot() {
+  if (typeof navigator !== "undefined") {
+    return navigator.userAgent.indexOf("Googlebot") !== -1;
+  }
+  return false;
+}
+
 /**
  * @typedef {{
  *    setItem: (name: string, value: any) => void,
@@ -122,7 +129,7 @@ function PrivacySettingsWrapper({
           alt: appConfig.misc.title,
         }}
         onChange={onChange}
-        open={state.open}
+        open={state.open && !isGoogleBot()}
         defaultValues={state.values}
         variant={mobile ? "drawer" : "dialog"}
       />
