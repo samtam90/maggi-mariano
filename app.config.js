@@ -1285,6 +1285,7 @@ module.exports = {
       width: 175,
       height: 64,
     },
+    url: "www.maggi-mariano.it",
     title: "Maggi Mariano",
     extendedTitle: "Maggi Mariano Servizi Ecologici",
     email: "serviziecologici@maggimariano.it",

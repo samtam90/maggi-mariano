@@ -16,13 +16,11 @@ export async function onContactFormSubmit({
   content,
 }) {
   const transport = nodemailer.createTransport(appConfig.server.mail);
-
   const out = await transport.sendMail({
     from: appConfig.server.mail.senderMail,
     to: appConfig.server.mail.adminMails.join(", "),
-    subject: "Nuova richiesta dal sito",
+    subject: `Nuova richiesta dal sito ${appConfig.misc.title} (${appConfig.misc.url})`,
     text: `E' stata ricevuta una nuova richiesta da "${name} ${surname} (${email})" con i seguenti dati:\n\nOggetto: ${title}\nContenuto: ${content}`,
   });
-
   console.log(out);
 }
