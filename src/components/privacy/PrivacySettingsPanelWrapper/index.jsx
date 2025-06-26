@@ -4,9 +4,11 @@ import React, { memo, useCallback, useEffect, useState } from "react";
 import Context from "./context";
 import { allMatch } from "../../../misc/functions";
 
-function isGoogleBot() {
+function isAutomatedUserAgent() {
   if (typeof navigator !== "undefined") {
-    return navigator.userAgent.indexOf("Googlebot") !== -1;
+    return (
+      navigator.userAgent.match(/(Googlebot)|(Lighthouse)|(Insights)/) !== null
+    );
   }
   return false;
 }
@@ -129,7 +131,7 @@ function PrivacySettingsWrapper({
           alt: appConfig.misc.title,
         }}
         onChange={onChange}
-        open={state.open && !isGoogleBot()}
+        open={state.open && !isAutomatedUserAgent()}
         defaultValues={state.values}
         variant={mobile ? "drawer" : "dialog"}
       />
