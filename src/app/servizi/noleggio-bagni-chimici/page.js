@@ -3,6 +3,7 @@ import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -18,7 +19,11 @@ export function getProps({ title, mobile }) {
           {
             paragraphs: [
               `${title}, wc chimici per cantieri stradali, cantieri edili, manifestazioni, fiere, feste e sagre. Tasporto direttamente in loco, installazione, manutenzione, pulizia e recupero al termine del servizio.`,
-              "Oltre ai bagni chimici classici, abbiamo anche bagni chimici per disabili appositamente progettati per essere fruiti da persone che utilizzano ausili come carrozzine o deambulatori.",
+              <HighlightedText>
+                Oltre ai bagni chimici classici, abbiamo anche bagni chimici per
+                disabili appositamente progettati per essere fruiti da persone
+                che utilizzano ausili come carrozzine o deambulatori.
+              </HighlightedText>,
               "Questi wc, oltre a dimemsioni maggiori della porta e degli spazi interni, vengono equipaggiati con accessori appositamente progettati, come lavandini e doccette, che possono essere facilmente utilizzati da persone con deficit motori. Allo stesso modo, il posizionamento in loco dei bagni chimici per disabili verrà studiato per agevolarne l’utilizzo e per garantire la massima accessibilità.",
             ],
             mediaElements: [
@@ -34,7 +39,13 @@ export function getProps({ title, mobile }) {
           },
           {
             paragraphs: [
-              "Il principale utilizzo dei wc chimici è all’interno di aerei, treni, camper, roulotte e campeggio, tuttavia il bagno chimico viene spessissimo installato presso cantieri edili o stradali, festival musicali, manifestazioni pubbliche e abitazioni temporaneamente  non collegate alla fognatura.",
+              <HighlightedText>
+                Il principale utilizzo dei wc chimici è all'interno di aerei,
+                treni, camper, roulotte e campeggio, tuttavia il bagno chimico
+                viene spessissimo installato presso cantieri edili o stradali,
+                festival musicali, manifestazioni pubbliche e abitazioni
+                temporaneamente non collegate alla fognatura.
+              </HighlightedText>,
               "Il bagno chimico è un apparecchio sanitario che utilizza agenti chimici per disinfettare il vaso, ad esempio questo è estremamente utile in tutti quei casi in cui non sia possibile far defluire il contenuto del wc verso il sistema fognario.",
               "Gli agenti chimici utilizzati, oltre ai profumi, sono principalmente idrossido di sodio e formaldeide (metanale), rispettivamente con azione caustica e disinfettante, tuttavia talvolta la formaldeide è sostituita con agenti meno irritanti per le vie aeree dell’apparato respiratorio.",
               "Trasportiamo acqua potabile per il riempimento di cisterne e piscine per privati, alberghi, ristoranti, comunità e agriturismi.",
@@ -43,7 +54,11 @@ export function getProps({ title, mobile }) {
           },
           {
             paragraphs: [
-              `Il ${title} è la formula migliore per garantire le ideali condizioni di igiene in ambienti di lavoro come cantieri edili o stradali, feste paesane, concerti e manifestazioni pubbliche.`,
+              <HighlightedText>
+                Il {title} è la formula migliore per garantire le ideali
+                condizioni di igiene in ambienti di lavoro come cantieri edili o
+                stradali, feste paesane, concerti e manifestazioni pubbliche.
+              </HighlightedText>,
               "La nostra azienda si occupa del trasporto in loco dei wc chimici a noleggio, del loro posizionamento, della pulizia e disinfezione periodica e programmata.",
               "Al termine del noleggio wc chimici provvediamo al loro ritiro, tutti i wc chimici a noleggio vengono sanificati con appositi, ispezionati per garantirne il funzionamento futuro.",
             ],

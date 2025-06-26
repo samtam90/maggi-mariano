@@ -1,4 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -13,9 +14,30 @@ function getProps({ mobile }) {
         sections: [
           {
             paragraphs: [
-              "Maggi Mariano Servizi Ecologici srl offre una vasta gamma di container scarrabili a noleggio.",
-              " container possono essere utilizzati per la raccolta di rifiuti solidi speciali, pericolosi e non pericolosi, dai calcinacci, ai fanghi, al materiale ferroso, agli imballaggi. Abbiamo container di varie dimensioni, scoperti e coperti.",
-              "Quando il container raggiunge la massima capienza prevista, Maggi Mariano Servizi Ecologici srl interviene per la rimozione e la sostituzione del dispositivo, il cui cotenuto viene smaltito secondo le modalità previste per legge.",
+              <HighlightedText>
+                Maggi Mariano Servizi Ecologici srl offre una vasta gamma di
+                container scarrabili a noleggio.
+              </HighlightedText>,
+              <span>
+                I container possono essere utilizzati per la{" "}
+                <HighlightedText>
+                  raccolta di rifiuti solidi speciali, pericolosi e non
+                  pericolosi
+                </HighlightedText>
+                , dai calcinacci, ai fanghi, al materiale ferroso, agli
+                imballaggi. Abbiamo container di varie dimensioni, scoperti e
+                coperti.
+              </span>,
+              <span>
+                Quando il container raggiunge la massima capienza prevista,
+                Maggi Mariano Servizi Ecologici SRL interviene per{" "}
+                <HighlightedText>
+                  la rimozione e la sostituzione del dispositivo, il cui
+                  contenuto viene smaltito secondo le modalità previste per
+                  legge
+                </HighlightedText>
+                .
+              </span>,
             ],
             mediaElements: [
               {

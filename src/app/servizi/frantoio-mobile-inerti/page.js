@@ -2,6 +2,7 @@ import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import { links } from "../../../../app.config";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 
 export function getProps({ title }) {
   return {
@@ -15,22 +16,50 @@ export function getProps({ title }) {
           alt: "Frantumatore mobile",
         },
         paragraphs: [
-          "Se hai una impresa edile, di costruzioni, se ti occupi di ristrutturazioni allora sicuramente anche tu devi affrontarte il problema quotidiano che si presente alle imprese come la tua: SMALTIMENTO DELLE MACERIE, TRASPORTO DELLE STESSE IN CAVA, COSTI DA SOSTENERE",
-          "Pensa a tutti i vantaggi che possono esserci nell'effettuare la selezione e il trattamento degli scarti di lavorazione edilizia dirrettamente nel luogo dove vengono prodotti e magari, se il materiale lo permette, il vantaggio di poterli riutilizzare in successive fasi di lavorazione.",
+          <span>
+            Se hai una impresa edile, di costruzioni, se ti occupi di
+            ristrutturazioni allora sicuramente anche tu devi affrontarte il
+            problema quotidiano che si presente alle imprese come la tua: &nbsp;
+            <HighlightedText>
+              smaltimento delle macerie, trasporto delle stesse in cava, costi
+              da sostenere.
+            </HighlightedText>
+          </span>,
+          <HighlightedText>
+            Pensa a tutti i vantaggi che possono esserci nell'effettuare la
+            selezione e il trattamento degli scarti di lavorazione edilizia
+            dirrettamente nel luogo dove vengono prodotti e magari, se il
+            materiale lo permette, il vantaggio di poterli riutilizzare in
+            successive fasi di lavorazione.
+          </HighlightedText>,
           "Tutto questo comporterebbe sicuramente un guadagno sia in termini di tempo impiegato ma anche un guadagno diretto in termini economici: risparmio nel non dover trasportare il materiale in cava, risparmio, laddove possibile, nel poterlo riutilizzare immediatamente senza acquistarne altro.",
         ],
       },
       middle: {
-        preTitle:
-          "Recentemente abbiamo inserito nel nostro parco macchine un FRANTOIO MOBILE DI INERTI, questo strumento permette il trattamento dei rifiuti di produzione di materiali compositi a  base di cemento, mattoni, mattonelle, ceramiche, rifiuti generati dalle attività di demolizione, miscele bituminose e molti altri.",
+        preTitle: (
+          <HighlightedText>
+            Recentemente abbiamo inserito nel nostro parco macchine un FRANTOIO
+            MOBILE DI INERTI, questo strumento permette il trattamento dei
+            rifiuti di produzione di materiali compositi a base di cemento,
+            mattoni, mattonelle, ceramiche, rifiuti generati dalle attività di
+            demolizione, miscele bituminose e molti altri.
+          </HighlightedText>
+        ),
         title: `Come è fatto il ${title}`,
         paragraphs: [
-          "La macchina è dotata di un’ampia tramoggia di carico, di un frantoio a mascelle e di un nastro trasportatore che conduce il materiale nel percorso di trattamento fino all’ottenimento di frazioni inerti a granulometria idonea e selezionata.",
-          "L’impianto mobile è inoltre dotato di un nastro magnetico deferrizzatore per l’estrazione e lo scarico laterale delle frazioni metalliche presenti nei rifiuti oggetto di recupero.",
+          "La macchina è dotata di un'ampia tramoggia di carico, di un frantoio a mascelle e di un nastro trasportatore che conduce il materiale nel percorso di trattamento fino all'ottenimento di frazioni inerti a granulometria idonea e selezionata.",
+          "L'impianto mobile è inoltre dotato di un nastro magnetico deferrizzatore per l'estrazione e lo scarico laterale delle frazioni metalliche presenti nei rifiuti oggetto di recupero.",
           "Il vaglio è alimentato da motore diesel.",
-          "L’operatore tramite pala gommata provvede all’alimentazione del vaglio scaricando i rifiuti da vagliare nella tramoggia di alimentazione della macchina.",
+          "L'operatore tramite pala gommata provvede all'alimentazione del vaglio scaricando i rifiuti da vagliare nella tramoggia di alimentazione della macchina.",
           "Il vaglio provvede quindi a selezionare i rifiuti in n. 3 frazioni granulometriche desiderate.",
           "Suddette frazioni vengono depositate in cumuli distinti lateralmente (ovvero lato destro e sinistro) e posteriormente al vaglio.",
+          <span>
+            La capacità di produzione massima dell'impianto mobile è pari a 70
+            t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
+            all'anno si ha che l'impianto mobile potrebbe teoricamente al
+            massimo recuperare: <br /> • &nbsp; giornalmente: 560 t/g; <br />•
+            &nbsp; annualmente: 123.200 t/anno.
+          </span>,
         ],
       },
       bottom: {
@@ -52,7 +81,7 @@ export function getProps({ title }) {
           {
             title: "Rispetto dell'ambiente",
             content:
-              "Recuperare i materiali riciclabili deve essere l’obiettivo principe di tutte le aziende, specialmente nel settore delle costruzioni e ristrutturazioni. Oltre al risparmio per le aziende stesse questo porta enormi vantaggi all’ambiente!",
+              "Recuperare i materiali riciclabili deve essere l'obiettivo principe di tutte le aziende, specialmente nel settore delle costruzioni e ristrutturazioni. Oltre al risparmio per le aziende stesse questo porta enormi vantaggi all'ambiente!",
           },
           {
             title: "Assistenza tecnica",

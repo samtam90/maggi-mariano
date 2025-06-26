@@ -1,7 +1,8 @@
 import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../app.config";
+import appConfig, { links } from "../../../app.config";
+import Link from "next/link";
 
 export function getProps({ title, mobile }) {
   return {
@@ -14,7 +15,7 @@ export function getProps({ title, mobile }) {
         sections: [
           {
             paragraphs: [
-              <span className="text-gray-700 font-titleBold">
+              <span className="text-gray-600 font-titleBold">
                 Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
                 i migliori macchinare e le migliori tecnologie che ci permettono
                 di garantire interventi tempestivi, poco invasivi e soprattutto
@@ -22,10 +23,24 @@ export function getProps({ title, mobile }) {
               </span>,
               <span>
                 Garantiamo{" "}
-                <span className="text-gray-700 font-titleBold">
-                  risposte ideali per disostruire , svuotare e liberare
+                <span className="text-gray-600 font-titleBold">
+                  risposte ideali per disostruire, svuotare e liberare
                 </span>{" "}
-                qualsiasi impianto, dai alle fognature e fosse biologiche.
+                qualsiasi impianto, dai pozzi neri alle{" "}
+                <Link
+                  href={links.servizi["pulizia-fognature"].root}
+                  className="font-titleBold underline text-green-dark"
+                >
+                  fognature
+                </Link>{" "}
+                e{" "}
+                <Link
+                  href={links.servizi["spurgo-fosse-biologiche"].root}
+                  className="font-titleBold underline text-green-dark"
+                >
+                  fosse biologiche
+                </Link>
+                .
               </span>,
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
               "E' possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
@@ -44,7 +59,16 @@ export function getProps({ title, mobile }) {
               "Ci siamo dotati da tempo di un parco mezzi estremamente vario e tecnologicamente avanzato.",
               `Siamo in grado di effettuare il ${title} anche in ambienti difficilmente raggiungibili con i normali mezzi come abitazioni in centri storici o in località montane difficili da raggiungere.`,
               "Effettuiamo anche la stasatura e disotturazione di tubature, fosse biologiche, scarichi fognari e la pulizia di tombini.",
-              "Trasportiamo acqua potabile per il riempimento di cisterne e piscine per privati, alberghi, ristoranti, comunità e agriturismi.",
+              <span>
+                <Link
+                  href={links.servizi["trasporto-acqua"].root}
+                  className="font-titleBold underline text-green-dark"
+                >
+                  Trasportiamo acqua potabile
+                </Link>{" "}
+                per il riempimento di cisterne e piscine per privati, alberghi,
+                ristoranti, comunità e agriturismi.
+              </span>,
             ],
             mediaElements: [
               {
@@ -266,8 +290,21 @@ export function getProps({ title, mobile }) {
             href: "tel:3343889878",
           },
         ],
-        content:
-          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
+        content: (
+          <span className="leading-normal">
+            La nostra azienda è dotata di{" "}
+            <Link
+              href={links.servizi["videoispezioni-telecamera-robot"]}
+              className="font-titleBold underline text-green-dark"
+            >
+              VIDEOCAMERA ROBOTIZZATA
+            </Link>{" "}
+            per ispezionare le fognature, scarichi e fosse biologiche
+            difficilmente raggiungibili con altri mezzi, permettendoci di
+            risolvere ogni problematica inerente lo Autospurgo Anghiari dei
+            nostri clienti in tempi brevi.
+          </span>
+        ),
         images: [
           {
             src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",

@@ -1,6 +1,7 @@
 import React from "react";
 import { withConditionalRendering } from "@/misc/functions";
-import appConfig from "../../app.config";
+import appConfig, { links } from "../../app.config";
+import Link from "next/link";
 
 const props = {
   sections: {
@@ -53,8 +54,56 @@ const props = {
         {
           paragraphs: [
             "Da oltre quarant'anni, la nostra azienda opera nel settore dei servizi ecologici, mettendo a disposizione delle industrie, dei privati e degli enti un valido supporto nella gestione dei rifiuti speciali e pericolosi.",
-            "Grazie alla nostra vasta esperienza, siamo in grado di offrire servizi di alta qualità, che comprendono il ritiro, il trasporto e lo smaltimento o il recupero dei rifiuti, nonché lo svuotamento e lo spurgo di fosse biologiche, la stasatura delle condotte, le videoispezioni e la disidratazione dei fanghi di depurazione civili e industriali.",
-            "Inoltre, offriamo anche il noleggio di bagni chimici per eventi e manifestazioni, la raccolta di ferro e metalli in genere, il trasporto dell'acqua e molti altri servizi, sempre nel rispetto dell'ambiente.",
+            <span>
+              Grazie alla nostra vasta esperienza, siamo in grado di offrire
+              servizi di alta qualità, che comprendono il ritiro,{" "}
+              <Link
+                href={links.servizi["trasporto-rifiuti"].root}
+                className="font-titleBold underline"
+              >
+                il trasporto e lo smaltimento o il recupero dei rifiuti
+              </Link>
+              , nonché{" "}
+              <Link
+                href={links.servizi["spurgo-fosse-biologiche"].root}
+                className="font-titleBold underline"
+              >
+                lo svuotamento e lo spurgo di fosse biologiche
+              </Link>
+              , la stasatura delle condotte,{" "}
+              <Link
+                href={links.servizi["videoispezioni-telecamera-robot"]}
+                className="font-titleBold underline"
+              >
+                le videoispezioni
+              </Link>{" "}
+              e{" "}
+              <Link
+                href={links.servizi["centrifugazione-o-disidratazione-fanghi"]}
+                className="font-titleBold underline"
+              >
+                la disidratazione dei fanghi di depurazione
+              </Link>{" "}
+              civili e industriali.
+            </span>,
+            <span>
+              Inoltre, offriamo anche il{" "}
+              <Link
+                href={links.servizi["noleggio-bagni-chimici"].root}
+                className="font-titleBold underline"
+              >
+                noleggio di bagni chimici
+              </Link>{" "}
+              per eventi e manifestazioni, la raccolta di ferro e metalli in
+              genere,{" "}
+              <Link
+                href={links.servizi["trasporto-acqua"].root}
+                className="font-titleBold underline"
+              >
+                il trasporto dell'acqua
+              </Link>{" "}
+              e molti altri servizi, sempre nel rispetto dell'ambiente.
+            </span>,
             "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell'ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
           ],
           image: {
@@ -99,7 +148,14 @@ const props = {
         "La macchina è dotata di un'ampia tramoggia di carico, di un frantoio a mascelle e di un nastro trasportatore che conduce il materiale nel percorso di trattamento fino all'ottenimento di frazioni inerti a granulometria idonea e selezionata.",
         "L'impianto mobile è inoltre dotato di un nastro magnetico deferrizzatore per l'estrazione e lo scarico laterale delle frazioni metalliche presenti nei rifiuti oggetto di recupero.",
         "Il vaglio è alimentato da motore diesel. L'operatore tramite pala gommata provvede all'alimentazione del vaglio scaricando i rifiuti da vagliare nella tramoggia di alimentazione della macchina. Il vaglio provvede quindi a selezionare i rifiuti in n. 3 frazioni granulometriche desiderate. Suddette frazioni vengono depositate in cumuli distinti lateralmente (ovvero lato destro e sinistro) e posteriormente al vaglio.",
-        "La capacità di produzione massima dell'impianto mobile è pari a 70 t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo recuperare:",
+        <span>
+          La capacità di produzione massima dell'impianto mobile è pari a 70
+          t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
+          all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo
+          recuperare: <br />
+          <br /> • &nbsp; giornalmente: 560 t/g; <br />• &nbsp; annualmente:
+          123.200 t/anno.
+        </span>,
       ],
       image: {
         alt: "Image",
@@ -127,21 +183,18 @@ const props = {
       items: [
         {
           title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
           stars: { total: 5, filled: 5 },
           content:
             "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
         },
         {
           title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
           stars: { total: 5, filled: 5 },
           content:
             "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
         },
         {
           title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
           stars: { total: 5, filled: 5 },
           content:
             "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",

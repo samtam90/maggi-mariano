@@ -110,7 +110,14 @@ function MainContentTemplate({
         >
           {mainContentSectionData.sections?.map(
             (
-              { title, paragraphs, mediaElements, mediaPosition, classNames },
+              {
+                title,
+                paragraphs,
+                mediaElements,
+                mediaPosition,
+                classNames,
+                content,
+              },
               index
             ) => (
               <ContentArticle.Section
@@ -120,6 +127,7 @@ function MainContentTemplate({
                 mediaElements={mediaElements}
                 mediaPosition={mediaPosition || "right"}
                 classNames={classNames}
+                content={content}
               />
             )
           )}

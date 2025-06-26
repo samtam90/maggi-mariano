@@ -2,6 +2,10 @@ import { withConditionalRendering } from "@/misc/functions";
 
 const imgDims = { width: 1024, height: 1024 };
 
+export function HighlightedText({ children }) {
+  return <span className="text-gray-500 font-titleBold">{children}</span>;
+}
+
 function getProps({ mobile }) {
   return {
     sections: {
@@ -13,9 +17,35 @@ function getProps({ mobile }) {
         sections: [
           {
             paragraphs: [
-              "La Maggi Mariano Servizi Ecologici srl dispone di unità mobili di centrifugazione di ultima generazione, autorizzate al trattamento dei fanghi civili ed industriali completamente autonome.",
-              "Ogni unità è costituita da una centrifuga mobile ad asse orizzontale, gruppo elettrogeno silenziato, stazione per la preparazione a ciclo continuo di poliettrolita in emulsione liquida, misuratore di portata e di concentrazione, trituratore e furgone allestito con officina d’appoggio.",
-              "Mettiamo anche a disposizione dei nostri clienti adeguati container per lo stoccaggio dei fanghi disidratati e effettuiamo anche il loro eventuale smaltimento.",
+              <span>
+                La Maggi Mariano Servizi Ecologici SRL dispone di{" "}
+                <HighlightedText>
+                  unità mobili di centrifugazione di ultima generazione
+                </HighlightedText>
+                , autorizzate al{" "}
+                <HighlightedText>
+                  trattamento dei fanghi civili ed industriali
+                </HighlightedText>{" "}
+                completamente autonome.
+              </span>,
+              <span>
+                Ogni unità è costituita da una centrifuga mobile ad asse
+                orizzontale, gruppo elettrogeno silenziato,{" "}
+                <HighlightedText>
+                  stazione per la preparazione a ciclo continuo
+                </HighlightedText>{" "}
+                di poliettrolita in emulsione liquida,{" "}
+                <HighlightedText>
+                  misuratore di portata e di concentrazione
+                </HighlightedText>{" "}
+                , trituratore e furgone allestito con officina d'appoggio.
+              </span>,
+              <span>
+                Mettiamo anche a disposizione dei nostri clienti{" "}
+                <HighlightedText>adeguati container</HighlightedText> per lo
+                stoccaggio dei fanghi disidratati e effettuiamo anche il loro
+                eventuale smaltimento.
+              </span>,
             ],
             mediaElements: [
               {

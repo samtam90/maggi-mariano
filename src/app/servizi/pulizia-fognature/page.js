@@ -3,6 +3,7 @@ import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -18,19 +19,25 @@ export function getProps({ title, mobile }) {
           {
             paragraphs: [
               `Ci occupiamo di ${title}, anche con interventi programmati e fissati nel tempo.`,
-              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l’apparato fognario e di scarico di abitazioni, condomini, aziende ed uffici.",
-              "Purtroppo questo è un argomento che troppo spesso non viene preso nella giusta considerazione, nella maggioranza dei casi ci ricordiamo di effettuare la Pulizia fognature solo quando si presentano problemi, a volte anche gravi, alla struttura fognaria.",
-              "Anche per la pulizia fognature condominiali va prestata la stessa attenzione, anzi proprio in questi casi è fondamentale programmare anticipatamente gli interventi da effettuare durante il corso di tutto l’anno.",
+              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l'apparato fognario e di scarico di abitazioni, condomini, aziende ed uffici.",
+              <HighlightedText>
+                Purtroppo questo è un argomento che troppo spesso non viene
+                preso nella giusta considerazione, nella maggioranza dei casi ci
+                ricordiamo di effettuare la Pulizia fognature solo quando si
+                presentano problemi, a volte anche gravi, alla struttura
+                fognaria.
+              </HighlightedText>,
+              "Anche per la pulizia fognature condominiali va prestata la stessa attenzione, anzi proprio in questi casi è fondamentale programmare anticipatamente gli interventi da effettuare durante il corso di tutto l'anno.",
               "Tutte le operazioni sulle fognatore o fosse biologiche condominiali sono sempre più complesse e impegnative rispetto a quelle che effettuate in una normale abitazione a causa di questo una manutanzione periodica e programmata, una accurata pulizia fognature condominiali garantiscono il buon funzionamento degli scarichi ed evitano spiacevoli problematiche a tutti i condomini.",
             ],
             classNames: { root: "mb-8" },
           },
           {
             paragraphs: [
-              `Maggi Mariano Servizi Ecologici srl è l’azienda leader per ${title}, spurgo fosse biologiche e spurgo pozzi neri`,
+              `Maggi Mariano Servizi Ecologici srl è l'azienda leader per ${title}, spurgo fosse biologiche e spurgo pozzi neri`,
               "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, pozzi neri, fognature e fosse biologiche.",
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
-              "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
+              "E' possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
               "Siamo in grado di fornire il servizio di spurgo pozzi neri e di pulizia delle fognature ad un prezzo tra i più vantaggiosi sul mercato.",
             ],
             mediaElements: [
