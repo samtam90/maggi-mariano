@@ -66,13 +66,19 @@ module.exports = {
         "1/2": "50%",
         "3/5": "66.66666667%",
       },
-      backgroundImage: {
+      /*backgroundImage: {
         homeFeedbackImage:
           "image-set('https://new.maggi-mariano.it/images/home/desc-1.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/home/desc-1.jpg' type('image/jpeg'))",
         title:
           "image-set('https://new.maggi-mariano.it/images/title.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/title.jpg' type('image/jpeg'))",
         camera:
           "image-set('https://new.maggi-mariano.it/images/home/camera.webp' type('image/webp'), 'https://new.maggi-mariano.it/images/home/camera.jpg' type('image/jpeg'))",
+      },*/
+      backgroundImage: {
+        homeFeedbackImage:
+          "url('https://new.maggi-mariano.it/images/home/desc-1.jpg')",
+        title: "url('https://new.maggi-mariano.it/images/title.jpg')",
+        camera: "url('https://new.maggi-mariano.it/images/home/camera.jpg')",
       },
     },
     zIndex: {

@@ -20,7 +20,7 @@ function SectionTitle({ children }) {
 
 function SectionParagraph({ children }) {
   return (
-    <p className="font-title text-sm text-gray-500 mb-1 last:mb-0">
+    <p className="font-title text-xs md:text-sm text-gray-500 mb-1 last:mb-0">
       {children}
     </p>
   );
@@ -219,6 +219,7 @@ function PrivacySettingsPanel(
             classNames?.subtitle
           ),
         }}
+        contentMaxHeight="75vh"
         footer={
           <div className="flex items-center justify-end">
             <button
@@ -254,7 +255,7 @@ function PrivacySettingsPanel(
             <section className="mb-6" key={id}>
               <SectionTitle>{name}</SectionTitle>
               <SectionParagraph>{description}</SectionParagraph>
-              <div role="radiogroup" className="flex items-center justify-end">
+              <div role="radiogroup" className="flex items-center justify-end mt-4">
                 <Radio
                   checked={values[id] === "accepted"}
                   label="Abilitati"
@@ -290,7 +291,6 @@ function PrivacySettingsPanel(
     return (
       <Modal
         open={open}
-        className={twClsx("", classNames?.modal)}
         noBackdropDismissal
       >
         {content}
@@ -300,7 +300,6 @@ function PrivacySettingsPanel(
     return (
       <Drawer
         open={open}
-        className={twClsx("max-h-[75vh]", classNames?.modal)}
         noBackdropDismissal
       >
         {content}
