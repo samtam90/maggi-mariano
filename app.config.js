@@ -944,13 +944,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/recupero-materiali-ferrosi.webp",
+        srcset: `${baseUrl}/images/services/recupero-materiali-ferrosi.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/recupero-materiali-ferrosi.png",
+        srcset: `${baseUrl}/images/services/recupero-materiali-ferrosi.png`,
       },
     ],
     href: links.servizi["recupero-materiali-ferrosi"],
@@ -962,13 +960,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/spurgo-fosse-biologiche.webp",
+        srcset: `${baseUrl}/images/services/spurgo-fosse-biologiche.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/spurgo-fosse-biologiche.png",
+        srcset: `${baseUrl}/images/services/spurgo-fosse-biologiche.png`,
       },
     ],
     href: links.servizi["spurgo-fosse-biologiche"].root,
@@ -980,13 +976,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/noleggio-bagni.webp",
+        srcset: `${baseUrl}/images/services/noleggio-bagni.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/noleggio-bagni.png",
+        srcset: `${baseUrl}/images/services/noleggio-bagni.png`,
       },
     ],
     href: links.servizi["noleggio-bagni-chimici"].root,
@@ -998,13 +992,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/trasporto-acqua-potabile.webp",
+        srcset: `${baseUrl}/images/services/trasporto-acqua-potabile.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/trasporto-acqua-potabile.png",
+        srcset: `${baseUrl}/images/services/trasporto-acqua-potabile.png`,
       },
     ],
     href: links.servizi["trasporto-acqua"].root,
@@ -1016,13 +1008,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/videoispezioni-telecamera-robot.webp",
+        srcset: `${baseUrl}/images/services/videoispezioni-telecamera-robot.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/videoispezioni-telecamera-robot.png",
+        srcset: `${baseUrl}/images/services/videoispezioni-telecamera-robot.png`,
       },
     ],
     href: links.servizi["videoispezioni-telecamera-robot"],
@@ -1034,13 +1024,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/noleggio-container-cassoni.webp",
+        srcset: `${baseUrl}/images/services/noleggio-container-cassoni.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/noleggio-container-cassoni.png",
+        srcset: `${baseUrl}/images/services/noleggio-container-cassoni.png`,
       },
     ],
     href: links.servizi["noleggio-container-e-cassoni"],
@@ -1052,13 +1040,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/escavatore-risucchio.webp",
+        srcset: `${baseUrl}/images/services/escavatore-risucchio.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/escavatore-risucchio.png",
+        srcset: `${baseUrl}/images/services/escavatore-risucchio.png`,
       },
     ],
     href: links.servizi["escavatore-a-risucchio"],
@@ -1070,13 +1056,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/trasporto-rifiuti.webp",
+        srcset: `${baseUrl}/images/services/trasporto-rifiuti.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/trasporto-rifiuti.png",
+        srcset: `${baseUrl}/images/services/trasporto-rifiuti.png`,
       },
     ],
     href: links.servizi["trasporto-rifiuti"].root,
@@ -1088,13 +1072,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/container-rifiuti-speciali.webp",
+        srcset: `${baseUrl}/images/services/container-rifiuti-speciali.webp`,
       },
       {
         type: "image/png",
-        srcset:
-          "https://new.maggi-mariano.it/images/services/container-rifiuti-speciali.png",
+        srcset: `${baseUrl}/images/services/container-rifiuti-speciali.png`,
       },
     ],
     href: links.servizi["noleggio-container-e-cassoni"],
