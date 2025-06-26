@@ -1,10 +1,16 @@
-/*const million = require("million/compiler")
+const million = require("million/compiler");
 
-const nextConfig = {};
+const nextConfig = {
+  experimental: {
+    serverActions: {
+      allowedOrigins: [
+        "https://new.maggi-mariano.it",
+        "http://localhost:3000",
+        "http://localhost:3001",
+      ],
+    },
+  },
+};
 const millionConfig = { auto: true };
 
-export default million.next(nextConfig, millionConfig);
-*/
-
-const nextConfig = {};
-module.exports = nextConfig;
+module.exports = million.next(nextConfig, millionConfig);
