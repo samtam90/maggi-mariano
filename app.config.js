@@ -1,3 +1,5 @@
+const { default: Link } = require("next/link");
+
 const baseUrl = "https://www.maggi-mariano.it";
 
 const links = {
@@ -1196,33 +1198,51 @@ const footerData = {
         },
       ],
     },
-    {
-      title: "Privacy",
-      navItems: [
-        {
-          title: "Privacy Policy",
-          icon: "document-text",
-          link: {
-            label: "La nostra privacy Policy",
-            href: links.privacy["privacy-policy"],
-          },
-        },
-        {
-          title: "Cookie Policy",
-          icon: "document-text",
-          link: {
-            label: "La nostra cookie Policy",
-            href: links.privacy["cookie-policy"],
-          },
-        },
-      ],
-    },
   ],
 };
 
 module.exports = {
   data: {
     baseUrl,
+    privacy: {
+      title: "Impostazioni privacy",
+      subtitle: "Maggi Mariano Servizi Ecologici",
+      sections: [
+        {
+          title: "Uso dei cookie & Web Storage API",
+          paragraphs: [
+            "I siti Web possono memorizzare o recuperare informazioni sotto forma di cookie e/o dati nelle API di storage del browser. Questi dati possono essere relativi ad informazioni statistiche anonime, valori associati a terze parti, informazioni sull'utente, le tue preferenze o dispositivi utilizzati per consentire un'esperienza web personalizzata o per migliorare l'esperienza di utilizzo del sito.",
+            <span>
+              Ti invitiamo a consultare la nostra{" "}
+              <Link
+                target="_blank"
+                href={links.privacy["privacy-policy"]}
+                className="underline text-blue-600"
+              >
+                privacy policy a questo link
+              </Link>
+              .
+            </span>,
+          ],
+        },
+      ],
+      settings: [
+        {
+          id: "essential_cookies",
+          name: "Dati essenziali",
+          description:
+            "Questi dati, memorizzati nella local storage API del tuo browser, sono strettamente necessari e devono essere sempre attivati per garantire le funzionalità di base del sito e memorizzare le tue preferenze.",
+          disabled: true,
+          default: "accepted",
+        },
+        {
+          id: "third_party_cookies",
+          name: "Cookie di terze parti",
+          description:
+            "Questo sito può consentire ad entità terze (e.g. Google) di memorizzare nel tuo browser dei cookie. Se disabilitati, alcune funzionalità (ad esempio le mappe di Google Maps) non saranno disponibili.",
+        },
+      ],
+    },
     maps: [
       {
         title: {

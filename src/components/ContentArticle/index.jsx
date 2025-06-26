@@ -117,6 +117,7 @@ function assembleSectionContent(
               isLeftPos ? "order-1 mr-4" : "order-2 ml-4",
               sectionClassNames?.mediaContainer
             )}
+            key="media"
           >
             {outMediaNodes}
           </div>
@@ -125,6 +126,7 @@ function assembleSectionContent(
               isLeftPos ? "order-2" : "order-1",
               sectionClassNames?.paragraphsContainer
             )}
+            key="paragraphs"
           >
             {paragraphNodes}
           </div>
@@ -146,11 +148,12 @@ function assembleSectionContent(
  *    testID?: string
  * }}
  */
-function renderParagraph({ content, className, testID }) {
+function renderParagraph({ content, className, testID, key }) {
   return (
     <p
       className={twClsx("font-title text-sm lg:text-md", className)}
       data-testid={testID}
+      key={key || testID}
     >
       {content}
     </p>
@@ -216,13 +219,14 @@ const ContentArticleSection = memo(
     const sectionClassNames = inClassNames || classNames?.section;
 
     if (!content) {
-      const paragraphNodes = paragraphs?.map((par) =>
+      const paragraphNodes = paragraphs?.map((par, index) =>
         renderParagraph({
           content: par,
           className: twClsx(
             "text-gray-600 font-title text-sm mb-3 leading-normal last:mb-0",
             sectionClassNames?.paragraph
           ),
+          key: index,
         })
       );
       const mediaElementsNodes = mediaElements?.map(

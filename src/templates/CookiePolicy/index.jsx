@@ -5,7 +5,11 @@ import AuxTemplate from "../auxiliary/AuxTemplate";
 
 function CookiePolicyTemplate({ mobile }) {
   return (
-    <AuxTemplate mobile={mobile}>
+    <AuxTemplate
+      mobile={mobile}
+      disableAdditionalContent
+      disablePrivacyManagement
+    >
       <CookiePolicy
         name={appConfig.misc.extendedTitle}
         email={appConfig.misc.email}

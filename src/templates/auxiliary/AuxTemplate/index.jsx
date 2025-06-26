@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Header from "../../../components/Header";
 import {
   renderMaps,
@@ -8,10 +8,18 @@ import {
   renderTopNavBar,
 } from "..";
 import appConfig from "../../../../app.config";
+import PrivacySettingsPanelWrapper from "../../../components/privacy/PrivacySettingsPanelWrapper";
+import { getLocalStorage } from "../../../misc/functions";
 
-export default function AuxTemplate({ mobile, children, className }) {
-  return (
-    <main>
+function AuxTemplate({
+  mobile,
+  children,
+  className,
+  disableAdditionalContent,
+  disablePrivacyManagement,
+}) {
+  let content = (
+    <>
       {renderTopNavBar({
         items: appConfig.data.topNavBar.items,
         maxWidth: "6xl",
@@ -23,28 +31,51 @@ export default function AuxTemplate({ mobile, children, className }) {
       <section key="main-content" className={className}>
         {children}
       </section>
-      {renderTitleSection(appConfig.data.mainTitle)}
-      <section key="services">
-        {renderServicesNavGrid({
-          ...appConfig.data.servicesGrid,
-          className: "max-w-6xl",
-          disableFlipCard: mobile,
-        })}
-      </section>
-      {renderMaps({
-        data: appConfig.data.maps,
-        dimensions: { width: "100%", height: "300" },
-        classNames: {
-          root: "px-4 lg:max-w-6xl lg:px-0 mx-auto mt-4 lg:mt-0",
-          map: "pb-8 lg:pb-0",
-        },
-      })}
+      {!disableAdditionalContent && (
+        <>
+          {renderTitleSection(appConfig.data.mainTitle)}
+          <section key="services">
+            {renderServicesNavGrid({
+              ...appConfig.data.servicesGrid,
+              className: "max-w-6xl",
+              disableFlipCard: mobile,
+            })}
+          </section>
+          {renderMaps({
+            data: appConfig.data.maps,
+            dimensions: { width: "100%", height: 300 },
+            classNames: {
+              root: "px-4 lg:max-w-6xl lg:px-0 mx-auto mt-4 lg:mt-0",
+              map: "pb-8 lg:pb-0",
+            },
+          })}
+        </>
+      )}
       {renderPageFooter({
         logo: appConfig.data.footer.logo,
         sections: appConfig.data.footer.sections,
         contentMaxWidth: "6xl",
         variant: mobile ? "vertical" : "horizontal",
+        disablePrivacyManagement,
       })}
-    </main>
+    </>
   );
+
+  if (!disableAdditionalContent) {
+    content = (
+      <PrivacySettingsPanelWrapper
+        mobile={mobile}
+        settings={appConfig.data.privacy.settings}
+        sections={appConfig.data.privacy.sections}
+        title={appConfig.data.privacy.title}
+        subtitle={appConfig.data.privacy.subtitle}
+        storage={getLocalStorage()}
+      >
+        {content}
+      </PrivacySettingsPanelWrapper>
+    );
+  }
+  return <main>{content}</main>;
 }
+
+export default memo(AuxTemplate);

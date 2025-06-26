@@ -3,7 +3,6 @@
 import React, { memo, useRef } from "react";
 import Header from "../../components/Header";
 import {
-  AdditionalProps,
   renderServicesNavGrid,
   renderTopNavBar,
   renderPageFooter,
@@ -20,6 +19,8 @@ import tailwindConfig from "../../../tailwind.config";
 import HighlightedContentSection from "../../components/HighlightedContentSection";
 import FeedbackCard from "../../components/FeedbackCard";
 import LinkButton from "../../components/LinkButton";
+import PrivacySettingsPanelWrapper from "../../components/privacy/PrivacySettingsPanelWrapper";
+import { getLocalStorage } from "../../misc/functions";
 
 const { useScrollVisibility } = hooks;
 const { Carousel } = components;
@@ -261,51 +262,60 @@ function HomeTemplate({ sections, mobile }) {
 
   return (
     <main>
-      {renderTopNavBar({
-        items: appConfig.data.topNavBar.items,
-        maxWidth: "8xl",
-        className: "hidden md:block",
-      })}
-      <div className="lg:sticky top-0 z-top bg-white shadow-md">
-        <Header mobile={mobile} />
-      </div>
-      {renderTopSection(topSectionData)}
-      {renderTitleSection(appConfig.data.mainTitle)}
-      <section key="services">
-        {renderServicesNavGrid({
-          ...appConfig.data.servicesGrid,
-          disableFlipCard: mobile,
-        })}
-      </section>
-      {renderDescriptionSection(processedDescriptionSectionData, mobile)}
-      <DescriptionDivider
-        fill={tailwindConfig.theme.extend.colors.green.dark}
-      />
-      <div
-        ref={(r) => (highlightedElWrapperRef.current = r)}
-        className="max-w-8xl mx-auto pb-8 px-4 lg:px-0"
+      <PrivacySettingsPanelWrapper
+        mobile={mobile}
+        settings={appConfig.data.privacy.settings}
+        sections={appConfig.data.privacy.sections}
+        title={appConfig.data.privacy.title}
+        subtitle={appConfig.data.privacy.subtitle}
+        storage={getLocalStorage()}
       >
-        {renderHighlightedContentData(
-          highlightedContentData,
-          mobile,
-          highlightedUnderlineActive
-        )}
-      </div>
-      {renderFeedbackSection(feedbackContentData)}
-      {renderMaps({
-        data: appConfig.data.maps,
-        dimensions: { width: "100%", height: "300" },
-        classNames: {
-          root: "px-4 lg:max-w-8xl lg:px-0 mx-auto mt-4 lg:mt-0",
-          map: "pb-8 lg:pb-0",
-        },
-      })}
-      {renderPageFooter({
-        logo: appConfig.data.footer.logo,
-        sections: appConfig.data.footer.sections,
-        contentMaxWidth: "8xl",
-        variant: mobile ? "vertical" : "horizontal",
-      })}
+        {renderTopNavBar({
+          items: appConfig.data.topNavBar.items,
+          maxWidth: "8xl",
+          className: "hidden md:block",
+        })}
+        <div className="lg:sticky top-0 z-top bg-white shadow-md">
+          <Header mobile={mobile} />
+        </div>
+        {renderTopSection(topSectionData)}
+        {renderTitleSection(appConfig.data.mainTitle)}
+        <section key="services">
+          {renderServicesNavGrid({
+            ...appConfig.data.servicesGrid,
+            disableFlipCard: mobile,
+          })}
+        </section>
+        {renderDescriptionSection(processedDescriptionSectionData, mobile)}
+        <DescriptionDivider
+          fill={tailwindConfig.theme.extend.colors.green.dark}
+        />
+        <div
+          ref={(r) => (highlightedElWrapperRef.current = r)}
+          className="max-w-8xl mx-auto pb-8 px-4 lg:px-0"
+        >
+          {renderHighlightedContentData(
+            highlightedContentData,
+            mobile,
+            highlightedUnderlineActive
+          )}
+        </div>
+        {renderFeedbackSection(feedbackContentData)}
+        {renderMaps({
+          data: appConfig.data.maps,
+          dimensions: { width: "100%", height: 300 },
+          classNames: {
+            root: "px-4 lg:max-w-8xl lg:px-0 mx-auto mt-4 lg:mt-0",
+            map: "pb-8 lg:pb-0",
+          },
+        })}
+        {renderPageFooter({
+          logo: appConfig.data.footer.logo,
+          sections: appConfig.data.footer.sections,
+          contentMaxWidth: "8xl",
+          variant: mobile ? "vertical" : "horizontal",
+        })}
+      </PrivacySettingsPanelWrapper>
     </main>
   );
 }

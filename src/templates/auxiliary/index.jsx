@@ -1,11 +1,16 @@
 "use client";
 
-import React, { ReactNode, useCallback } from "react";
+import React, {
+  ReactNode,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { components } from "@italwebcom/tailwind-components";
 import Link from "next/link";
-import tailwindConfig from "../../../tailwind.config";
 import Icons from "../../components/Icons";
-import NavBar from "../../components/NavBar";
+import NavBar, { InnerNavBarItem } from "../../components/NavBar";
 import PageFooter from "../../components/PageFooter";
 import EmbeddedMap from "../../components/EmbeddedMap";
 import { twClsx } from "../../misc/functions";
@@ -15,6 +20,9 @@ import LocationsGrid, {
   ClassNames as LocationsGridClassNames,
 } from "../../components/LocationsGrid";
 import { HeaderComponent } from "../../misc/functions";
+import { links } from "../../../app.config";
+import Context from "../../components/privacy/PrivacySettingsPanelWrapper/context";
+import EmbeddedMapsWrapper from "./EmbeddedMapsWrapper";
 
 const { BorderedColoredText, FlipCard } = components;
 const { NavButtonsGrid, BgImageSection } = components.sections;
@@ -71,12 +79,26 @@ export function renderTopNavBar({ items, maxWidth, className }) {
   );
 }
 
+function PageFooterPrivacyButton() {
+  const { setOpen } = useContext(Context);
+  return (
+    <InnerNavBarItem
+      icon={<Icons.PencilSquare />}
+      title="Settaggi privacy"
+      label="Modifica impostazioni"
+      classNames={{ label: "text-sm", root: "cursor-pointer -mt-6 lg:-mt-2" }}
+      onClick={() => setOpen(true)}
+    />
+  );
+}
+
 export function renderPageFooter({
   sections,
   logo,
   contentMaxWidth,
   variant,
   titleHeadingElement,
+  disablePrivacyManagement,
 }) {
   return (
     <PageFooter
@@ -105,6 +127,30 @@ export function renderPageFooter({
           key={`${title}-${index}`}
         />
       ))}
+      <PageFooter.Section
+        title="Privacy"
+        navItems={[
+          {
+            title: "Privacy Policy",
+            icon: getIcon("document-text"),
+            link: {
+              label: "La nostra privacy Policy",
+              href: links.privacy["privacy-policy"],
+            },
+          },
+          {
+            title: "Cookie Policy",
+            icon: getIcon("document-text"),
+            link: {
+              label: "La nostra cookie Policy",
+              href: links.privacy["cookie-policy"],
+            },
+          },
+        ]}
+        additionalContent={
+          !disablePrivacyManagement && <PageFooterPrivacyButton />
+        }
+      />
     </PageFooter>
   );
 }
@@ -155,34 +201,13 @@ export function renderTitleSection(sectionData) {
   );
 }
 
-/**
- * @typedef {{title: string, subtitle: string, src: string}} MapData
- * @param {{
- *    data: MapData[],
- *    dimensions: {width: number, height: number},
- *    classNames?: {root: string, map: string}
- * }} param0
- * @returns
- */
 export function renderMaps({ data, dimensions, classNames }) {
   return (
-    <div
-      className={twClsx(
-        "grid grid-cols-1 lg:grid-cols-2 gap-4 py-4 lg:py-8 lg:gap-8",
-        classNames?.root
-      )}
-    >
-      {data.map(({ title, subtitle, src }, index) => (
-        <EmbeddedMap
-          title={title}
-          subtitle={subtitle}
-          src={src}
-          key={`${title}-${index}`}
-          dimensions={dimensions}
-          classNames={{ map: classNames?.map }}
-        />
-      ))}
-    </div>
+    <EmbeddedMapsWrapper
+      data={data}
+      dimensions={dimensions}
+      classNames={classNames}
+    />
   );
 }
 

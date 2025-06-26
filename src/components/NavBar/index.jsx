@@ -39,9 +39,20 @@ function getMaxWidthClassName(maxWidth) {
   return null;
 }
 
-export function InnerNavBarItem({ href, icon, title, label, classNames }) {
-  return (
-    <Link href={href} className="flex group items-center">
+export function InnerNavBarItem({
+  href,
+  icon,
+  title,
+  label,
+  classNames,
+  onClick,
+}) {
+  const innerContent = (
+    <div
+      className={twClsx("flex group items-center", classNames?.root)}
+      role={onClick ? "button" : "presentation"}
+      onClick={onClick}
+    >
       <div
         className={twClsx(
           "transition-colors group-hover:text-white text-yellow-primary text-lg",
@@ -61,8 +72,12 @@ export function InnerNavBarItem({ href, icon, title, label, classNames }) {
           {label}
         </p>
       </div>
-    </Link>
+    </div>
   );
+  if (href) {
+    return <Link href={href}>{innerContent}</Link>;
+  }
+  return innerContent;
 }
 
 /**

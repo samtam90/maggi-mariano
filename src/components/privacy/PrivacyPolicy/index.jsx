@@ -44,9 +44,9 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
             rispondere alle tue richieste.
           </li>
           <li>
-            • <i>Informazioni di navigazione:</i> indirizzo IP, dati di
-            navigazione, cookie. Questi dati ci aiutano a migliorare la tua
-            esperienza sul nostro sito web e a fornire contenuti personalizzati.
+            • <i>Informazioni di navigazione:</i> indirizzo IP e dati di
+            navigazione. Questi dati ci aiutano a migliorare la tua esperienza
+            sul nostro sito web e a fornire contenuti personalizzati.
           </li>
         </ul>
       </Section>
@@ -81,8 +81,8 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
               Personalizzare la tua esperienza sul nostro sito web{" "}
               <GDPRArticle>(Art. 6(1)(a) GDPR)</GDPRArticle>
             </i>
-            : utilizziamo i cookie per offrirti contenuti e promozioni su misura
-            per te.
+            : utilizziamo i cookie per offrirti contenuti e promozioni su
+            misura per te.
           </li>
           <li className="mb-1">
             •{" "}
@@ -119,7 +119,7 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
           >
             cookie & storage policy
           </a>{" "}
-          a riguardo
+          a riguardo.
         </p>
       </Section>
       <Section
@@ -137,17 +137,17 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
         key="sharing"
         className={classNames?.sectionHeader}
       >
-        <p>
+        <p className="mb-2">
           Non condividiamo i tuoi dati personali con terze parti, salvo nei
           seguenti casi:
         </p>
         <ul>
           <li className="mb-1">
-            Quando è necessario per elaborare le tue richieste. Questi fornitori
-            sono soggetti a obblighi di riservatezza e sicurezza.
+            • Quando è necessario per elaborare le tue richieste. Questi
+            fornitori sono soggetti a obblighi di riservatezza e sicurezza.
           </li>
           <li>
-            Quando richiesto dalla legge o dalle autorità competenti. Possiamo
+            • Quando richiesto dalla legge o dalle autorità competenti. Possiamo
             divulgare i tuoi dati per rispettare gli obblighi legali.
           </li>
         </ul>
@@ -172,8 +172,8 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
         <p>
           Se desideri eliminare i tuoi dati, puoi farlo contattandoci
           all'indirizzo email: <Mail>{email}</Mail>. In questo caso, tutti i
-          tuoi dati personali saranno rimossi dainostri sistemi entro un periodo
-          massimo di 30 giorni, salvo eventuali obblighi legali che ci
+          tuoi dati personali saranno rimossi dai nostri sistemi entro un
+          periodo massimo di 30 giorni, salvo eventuali obblighi legali che ci
           richiedano di conservare alcuni dati per un periodo più lungo.
         </p>
       </Section>

@@ -22,7 +22,8 @@ function makeLabel(title, subtitle) {
  *      titleHeadingElement?: HeaderComponent,
  *      dimensions: {width: number, height: number},
  *      label?: string,
- *      loading?: "eager" | "lazy"
+ *      loading?: "eager" | "lazy",
+ *      disabled?: boolean
  * }} param0
  */
 function EmbeddedMap({
@@ -34,6 +35,8 @@ function EmbeddedMap({
   dimensions,
   label,
   loading = "lazy",
+  disabled,
+  disabledMessage,
 }) {
   label = label || makeLabel(title, subtitle);
   return (
@@ -47,15 +50,27 @@ function EmbeddedMap({
           root: twClsx("mb-6", classNames?.title?.root),
         }}
       />
-      <iframe
-        src={src}
-        width={dimensions.width}
-        height={dimensions.height}
-        className={twClsx("max-w-full", classNames?.map)}
-        aria-label={label}
-        title={label}
-        loading={loading}
-      />
+      {disabled ? (
+        <div
+          style={dimensions}
+          role="presentation"
+          className="max-w-full border rounded-lg border-gray-400 flex items-center justify-center"
+        >
+          <p className="text-sm text-center text-gray-600 font-title">
+            {disabledMessage}
+          </p>
+        </div>
+      ) : (
+        <iframe
+          src={src}
+          width={dimensions.width}
+          height={dimensions.height}
+          className={twClsx("max-w-full", classNames?.map)}
+          aria-label={label}
+          title={label}
+          loading={loading}
+        />
+      )}
     </section>
   );
 }

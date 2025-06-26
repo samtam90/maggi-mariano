@@ -112,6 +112,7 @@ function ContactSection({
                 "text-center mb-3 uppercase text-sm lg:text-lg",
                 classNames?.preTitle
               )}
+              key="pre-title"
             >
               {preTitle}
             </p>
@@ -127,6 +128,7 @@ function ContactSection({
               "font-titleBold text-center mb-2 lg:mb-1 uppercase",
               classNames?.phoneNumbersTitle
             )}
+            key="phone-numbers-title"
           >
             Puoi contattarci ai numeri
           </p>
@@ -138,6 +140,7 @@ function ContactSection({
                   "font-titleBold text-red-primary text-lg lg:text-2xl hover:underline mb-1 lg:mr-3 lg:mb-0 last:mb-0 last:mr-0",
                   classNames?.phoneNumber
                 )}
+                key={phoneNumber.href}
               >
                 {phoneNumber.label}
               </Link>
@@ -162,6 +165,7 @@ function ContactSection({
                   "max-w-full object-cover",
                   !isHorizVariant && "mb-3"
                 )}
+                key={alt}
               />
             ))}
           </aside>

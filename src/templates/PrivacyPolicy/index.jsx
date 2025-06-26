@@ -5,7 +5,11 @@ import AuxTemplate from "../auxiliary/AuxTemplate";
 
 function PrivacyPolicyTemplate({ mobile }) {
   return (
-    <AuxTemplate mobile={mobile}>
+    <AuxTemplate
+      mobile={mobile}
+      disableAdditionalContent
+      disablePrivacyManagement
+    >
       <PrivacyPolicy
         name={appConfig.misc.extendedTitle}
         email={appConfig.misc.email}

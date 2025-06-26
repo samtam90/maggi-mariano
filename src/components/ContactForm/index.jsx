@@ -356,6 +356,7 @@ function ContactForm({
           label={labels?.[field] || DEFAULT_LABELS[field]}
           id={ids?.input(field)}
           name={field}
+          key={field}
           type={getInputType(field)}
           classNames={{
             ...classNames?.input,

@@ -10,6 +10,23 @@ import Splash from "../../components/Splash";
  */
 
 /**
+ * @template {T}
+ * @param {Array<T>} arr
+ * @param {(element: T) => boolean} predicate
+ */
+export function allMatch(arr, predicate) {
+  return arr.map((el) => predicate(el)).reduce((a, b) => a && b);
+}
+
+export function getLocalStorage() {
+  /* window is undefined during ssr */
+  if (typeof window !== "undefined") {
+    return window.localStorage;
+  }
+  return null;
+}
+
+/**
  * @param  {...ClassNameValue} classNames
  * @returns
  */

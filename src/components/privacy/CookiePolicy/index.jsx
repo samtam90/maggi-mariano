@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import { twClsx } from "../../../misc/functions";
 import { Section, GDPRArticle } from "../auxiliary";
+import Link from "next/link";
 
 function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
   return (
@@ -55,7 +56,7 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
         </p>
         <ul className="mt-1">
           <li className="mb-1">
-            • <i>cookies:</i> sono stringhe testuali associate ad un dominio ed
+            • <i>cookie:</i> sono stringhe testuali associate ad un dominio ed
             aventi durata permanente o limitata nel tempo.
           </li>
           <li className="mb-1">
@@ -77,12 +78,23 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
         </p>
         <ul className="mt-1">
           <li className="mb-1">
-            • <i>Cookie di autenticazione Keycloak:</i> L'applicazione usa un
-            server Keycloak basato su protocollo OAuth 2.0 per l'autenticazione
-            degli utenti registrati. Tale server memorizza un cookie usato per
-            identificare gli utenti al momento dell'emissione dei corrispondenti
-            token di autenticazione JWT. Il cookie è memorizzato nel browser ed
-            ha durata di sessione.
+            • <i>Dati nella local storage API:</i> Questi dati sono usati per
+            memorizzare le tue preferenze relative all'abilitazione di cookie e
+            per garantire il corretto funzionamento del sito.
+          </li>
+          <li className="mb-1">
+            • <i>Cookie di terze parti di Google:</i> Questi cookie sono
+            memorizzati, qualora tu decida di abilitare i cookie di terze
+            parti, al momento dell'embedding delle mappe di Google Maps nelle
+            pagine del sito. Ti invitiamo a consultare{" "}
+            <a
+              href="https://policies.google.com/technologies/cookies?hl=it-IT"
+              hrefLang="it"
+              className="text-blue-600 lg:hover:underline"
+            >
+              questa pagina
+            </a>{" "}
+            per ulteriori dettagli sull'uso dei cookie da parte di Google.
           </li>
         </ul>
       </Section>
@@ -96,17 +108,10 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
           <li className="mb-1">
             •{" "}
             <i>
-              Autenticazione <GDPRArticle>(Art. 6(1)(b) GDPR)</GDPRArticle>
-            </i>
-            : tokens di autenticazione e cookies Keycloak.
-          </li>
-          <li className="mb-1">
-            •{" "}
-            <i>
               Personalizzazione ed ottimizzazione{" "}
               <GDPRArticle>(Art. 6(1)(a) GDPR)</GDPRArticle>
             </i>
-            : cookies Keycloak e metadati HATEOAS.
+            : dati nella local storage e cookie di terze parti.
           </li>
         </ul>
       </Section>
@@ -116,7 +121,7 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
         className={classNames?.sectionHeader}
       >
         <p>
-          Puoi gestire e controllare i cookies e i dati memorizzati con Web
+          Puoi gestire e controllare i cookie e i dati memorizzati con Web
           Storage attraverso le impostazioni del tuo browser. Tieni presente che
           alcune funzionalità del nostro sito web potrebbero non funzionare
           correttamente senza i dati memorizzati.

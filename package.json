@@ -12,7 +12,7 @@
     "generate-service-pages": "node ./.script/create-templated-pages.js \"C:/proj/sites/maggi-mariano/.script/create-templated-pages\""
   },
   "dependencies": {
-    "@italwebcom/tailwind-components": "^1.15.9",
+    "@italwebcom/tailwind-components": "^1.15.10",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",
