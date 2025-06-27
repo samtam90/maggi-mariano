@@ -1,15 +1,7 @@
 {
-  "altPrefixes": [
-    "autospurgo",
-    "frantoio-mobile-inerti",
-    "noleggio-bagni-chimici",
-    "pulizia-fognature",
-    "spurgo-fosse-biologiche",
-    "trasporto-acqua",
-    "trasporto-rifiuti"
-  ],
   "prefixes": [
     "autospurgo",
+    "frantoio-mobile-inerti",
     "noleggio-bagni-chimici",
     "pulizia-fognature",
     "spurgo-fosse-biologiche",
