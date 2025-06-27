@@ -101,7 +101,7 @@ function renderTopSection(sectionData) {
         content={subtitle}
         //imageUrl={imageSrc}
         classNames={{
-          root: "py-12 lg:py-24 lg:max-w-8xl mx-auto px-6 lg:px-0",
+          root: "py-12 lg:py-24 lg:max-w-6xl mx-auto px-6 lg:px-0",
           title:
             "text-4xl lg:text-8xl text-red-opaqueTitle font-titleBold uppercase text-left red-title-stroke text-center lg:text-left",
           content:
@@ -280,7 +280,7 @@ function HomeTemplate({ sections, mobile }) {
       >
         {renderTopNavBar({
           items: appConfig.data.topNavBar.items,
-          maxWidth: "8xl",
+          maxWidth: "6xl",
           className: "hidden md:block",
         })}
         <div className="lg:sticky top-0 z-top bg-white shadow-md">
@@ -300,7 +300,7 @@ function HomeTemplate({ sections, mobile }) {
         />
         <div
           ref={(r) => (highlightedElWrapperRef.current = r)}
-          className="max-w-8xl mx-auto pb-8 px-4 lg:px-0"
+          className="max-w-6xl mx-auto pb-8 px-4 lg:px-0"
         >
           {renderHighlightedContentData(
             highlightedContentData,
@@ -313,14 +313,14 @@ function HomeTemplate({ sections, mobile }) {
           data: appConfig.data.maps,
           dimensions: { width: "100%", height: 300 },
           classNames: {
-            root: "px-4 lg:max-w-8xl lg:px-0 mx-auto mt-4 lg:mt-0",
+            root: "px-4 lg:max-w-6xl lg:px-0 mx-auto mt-4 lg:mt-0",
             map: "pb-8 lg:pb-0",
           },
         })}
         {renderPageFooter({
           logo: appConfig.data.footer.logo,
           sections: appConfig.data.footer.sections,
-          contentMaxWidth: "8xl",
+          contentMaxWidth: "6xl",
           variant: mobile ? "vertical" : "horizontal",
         })}
       </PrivacySettingsPanelWrapper>

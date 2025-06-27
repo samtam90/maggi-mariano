@@ -19,9 +19,15 @@ const { default: Link } = require("next/link");
 const province = require("./.data/province.json");
 const comuniArezzo = require("./.data/comuni/arezzo.json");
 const comuniFirenze = require("./.data/comuni/firenze.json");
+const comuniPerugia = require("./.data/comuni/perugia.json");
 
 const baseUrl = "https://new.maggi-mariano.it";
-const allLocations = [...province, ...comuniArezzo, ...comuniFirenze];
+const allLocations = [
+  ...province,
+  ...comuniArezzo,
+  ...comuniFirenze,
+  ...comuniPerugia,
+];
 
 const links = {
   autospurgo: makeLinks(
@@ -104,6 +110,11 @@ const navBarSections = {
       "Autospurgo",
       links.autospurgo
     ),
+    "Autospurgo Perugia": makeNavBarItems(
+      comuniPerugia,
+      "Autospurgo",
+      links.autospurgo
+    ),
   }),
   Servizi: {
     "Frantoio mobile inerti": makeNavBarItems(
@@ -118,6 +129,11 @@ const navBarSections = {
         ),
         "Frantoio mobile inerti Firenze": makeNavBarItems(
           comuniFirenze,
+          "Frantoio mobile inerti",
+          links.servizi["frantoio-mobile-inerti"]
+        ),
+        "Frantoio mobile inerti Perugia": makeNavBarItems(
+          comuniPerugia,
           "Frantoio mobile inerti",
           links.servizi["frantoio-mobile-inerti"]
         ),
@@ -141,6 +157,11 @@ const navBarSections = {
           "Noleggio bagni chimici",
           links.servizi["noleggio-bagni-chimici"]
         ),
+        "Noleggio bagni chimici Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Noleggio bagni chimici",
+          links.servizi["noleggio-bagni-chimici"]
+        ),
       }
     ),
     "Noleggio container e cassoni":
@@ -152,12 +173,17 @@ const navBarSections = {
       {
         "Pulizia fognature Arezzo": makeNavBarItems(
           comuniArezzo,
-          "Noleggio bagni chimici",
+          "Pulizia fognature",
           links.servizi["pulizia-fognature"]
         ),
         "Pulizia fognature Firenze": makeNavBarItems(
           comuniFirenze,
-          "Noleggio bagni chimici",
+          "Pulizia fognature",
+          links.servizi["pulizia-fognature"]
+        ),
+        "Pulizia fognature Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Pulizia fognature",
           links.servizi["pulizia-fognature"]
         ),
       }
@@ -170,12 +196,17 @@ const navBarSections = {
       {
         "Spurgo fosse biologiche Arezzo": makeNavBarItems(
           comuniArezzo,
-          "Noleggio bagni chimici",
+          "Spurgo fosse biologiche",
           links.servizi["spurgo-fosse-biologiche"]
         ),
         "Spurgo fosse biologiche Firenze": makeNavBarItems(
           comuniFirenze,
-          "Noleggio bagni chimici",
+          "Spurgo fosse biologiche",
+          links.servizi["spurgo-fosse-biologiche"]
+        ),
+        "Spurgo fosse biologiche Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Spurgo fosse biologiche",
           links.servizi["spurgo-fosse-biologiche"]
         ),
       }
@@ -187,12 +218,17 @@ const navBarSections = {
       {
         "Trasporto acqua Arezzo": makeNavBarItems(
           comuniArezzo,
-          "Noleggio bagni chimici",
+          "Trasporto acqua",
           links.servizi["trasporto-acqua"]
         ),
         "Trasporto acqua Firenze": makeNavBarItems(
           comuniFirenze,
-          "Noleggio bagni chimici",
+          "Trasporto acqua",
+          links.servizi["trasporto-acqua"]
+        ),
+        "Trasporto acqua Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Trasporto acqua",
           links.servizi["trasporto-acqua"]
         ),
       }
@@ -204,12 +240,17 @@ const navBarSections = {
       {
         "Trasporto rifiuti Arezzo": makeNavBarItems(
           comuniArezzo,
-          "Noleggio bagni chimici",
+          "Trasporto rifiuti",
           links.servizi["trasporto-rifiuti"]
         ),
         "Trasporto rifiuti Firenze": makeNavBarItems(
           comuniFirenze,
-          "Noleggio bagni chimici",
+          "Trasporto rifiuti",
+          links.servizi["trasporto-rifiuti"]
+        ),
+        "Trasporto rifiuti Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Trasporto rifiuti",
           links.servizi["trasporto-rifiuti"]
         ),
       }

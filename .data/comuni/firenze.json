@@ -1,4 +1,5 @@
 [
+  { "path": "firenze", "title": "Firenze" },
   { "path": "bagno-a-ripoli", "title": "Bagno a Ripoli" },
   { "path": "barberino-di-mugello", "title": "Barberino di Mugello" },
   { "path": "barberino-tavarnelle", "title": "Barberino Tavarnelle" },
@@ -13,7 +14,6 @@
   { "path": "empoli", "title": "Empoli" },
   { "path": "fiesole", "title": "Fiesole" },
   { "path": "figline-e-incisa-valdarno", "title": "Figline e Incisa Valdarno" },
-  { "path": "firenze", "title": "Firenze" },
   { "path": "firenzuola", "title": "Firenzuola" },
   { "path": "fucecchio", "title": "Fucecchio" },
   { "path": "gambassi-terme", "title": "Gambassi Terme" },

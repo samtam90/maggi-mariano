@@ -12,7 +12,8 @@
     "generate-service-pages": "node ./.script/create-templated-pages.js \"C:/proj/sites/maggi-mariano/.script/create-templated-pages\"",
     "format-provinces": "node ./.script/format-provinces.js \"C:/proj/sites/maggi-mariano/.script/format-provinces\"",
     "format-comuni-arezzo": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Arezzo\"",
-    "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\""
+    "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\"",
+    "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\""
   },
   "dependencies": {
     "@italwebcom/tailwind-components": "^1.15.14",

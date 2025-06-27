@@ -100,7 +100,7 @@ function ContactSection({
       <TopBackdrop />
       <div
         className={twClsx(
-          "font-title text-md lg:text-lg text-gray-600 max-w-8xl mx-auto p-4 pb-8 lg:px-0",
+          "font-title text-md lg:text-lg text-gray-600 max-w-6xl mx-auto p-4 pb-8 lg:px-0",
           isHorizVariant && "grid grid-cols-2 gap-8",
           classNames?.contentWrapper
         )}

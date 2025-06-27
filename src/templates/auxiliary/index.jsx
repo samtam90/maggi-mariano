@@ -267,7 +267,7 @@ export function renderServicesNavGrid({
       <div className="absolute inset-0 bg-green-primary opacity-50 z-0"></div>
       <div
         className={twClsx(
-          "max-w-8xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16",
+          "max-w-6xl mx-auto px-4 lg:px-0 relative z-10 py-8 lg:py-16",
           className
         )}
       >

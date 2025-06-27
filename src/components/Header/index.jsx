@@ -47,7 +47,7 @@ function Header({
       disableSearch
       classNames={{
         contentWrapper: twClsx(
-          "max-w-8xl mx-auto pt-4 lg:pb-4",
+          "max-w-6xl mx-auto pt-4 lg:pb-4",
           classNames?.contentWrapper
         ),
         root: "shadow-md",
