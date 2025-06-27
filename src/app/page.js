@@ -2,6 +2,7 @@ import React from "react";
 import { withConditionalRendering } from "@/misc/functions";
 import appConfig, { links } from "../../app.config";
 import Link from "next/link";
+import { HighlightedText } from "./servizi/centrifugazione-o-disidratazione-fanghi/page";
 
 const props = {
   sections: {
@@ -123,7 +124,7 @@ const props = {
         },
         {
           paragraphs: [
-            "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici srl garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
+            "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici SRL garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
           ],
           image: {
             alt: "Servizio 2",
@@ -152,9 +153,9 @@ const props = {
           La capacità di produzione massima dell'impianto mobile è pari a 70
           t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
           all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo
-          recuperare: <br />
-          <br /> • &nbsp; giornalmente: 560 t/g; <br />• &nbsp; annualmente:
-          123.200 t/anno.
+          recuperare: <br /> <br /> 
+          • &nbsp; <HighlightedText>giornalmente</HighlightedText>: 560 t/g; <br />
+          • &nbsp; <HighlightedText>annualmente</HighlightedText>: 123.200 t/anno.
         </span>,
       ],
       image: {

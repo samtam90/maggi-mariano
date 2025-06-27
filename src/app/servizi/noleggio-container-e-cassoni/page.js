@@ -15,7 +15,7 @@ function getProps({ mobile }) {
           {
             paragraphs: [
               <HighlightedText>
-                Maggi Mariano Servizi Ecologici srl offre una vasta gamma di
+                Maggi Mariano Servizi Ecologici SRL offre una vasta gamma di
                 container scarrabili a noleggio.
               </HighlightedText>,
               <span>

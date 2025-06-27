@@ -3,7 +3,7 @@ import { withConditionalRendering } from "@/misc/functions";
 const imgDims = { width: 1024, height: 1024 };
 
 export function HighlightedText({ children }) {
-  return <span className="text-gray-500 font-titleBold">{children}</span>;
+  return <b className="text-gray-600 font-title">{children}</b>;
 }
 
 function getProps({ mobile }) {

@@ -4,6 +4,7 @@ import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
+import { getContactStuff } from "../pulizia-fognature/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -26,7 +27,7 @@ export function getProps({ title, mobile, locationsData }) {
           },
           {
             paragraphs: [
-              `Maggi Mariano Servizi Ecologici srl è l’azienda leader per ${title}, spurgo pozzi neri e fognature.`,
+              `Maggi Mariano Servizi Ecologici SRL è l’azienda leader per ${title}, spurgo pozzi neri e fognature.`,
               "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, dai pozzi neri alle fognature e fosse biologiche.",
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
               "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
@@ -74,36 +75,7 @@ export function getProps({ title, mobile, locationsData }) {
           </span>
         ),
       },
-      contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
-        title,
-        phoneNumbers: [
-          {
-            label: "Tel.: 0575/520447",
-            href: "tel:0575520447",
-          },
-          {
-            label: "Cell.: 334 3889878",
-            href: "tel:3343889878",
-          },
-        ],
-        content:
-          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
-        images: [
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
-            alt: "Image1",
-          },
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
-            alt: "Image2",
-          },
-        ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-        variant: "horizontal",
-        imageDimensions: { width: 650, height: 850 },
-      },
+      contacts: getContactStuff({ title }),
     },
   };
 }

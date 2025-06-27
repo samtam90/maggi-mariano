@@ -7,13 +7,31 @@ function isDisabled() {
   return localStorage.getItem("third_party_cookies") !== "accepted";
 }
 
-function useDisabledMgmt() {
+export function useDisabledMgmt() {
   const { open } = useContext(Context);
   const [disabled, setDisabled] = useState(true);
   useEffect(() => {
     setDisabled(isDisabled());
   }, [open]);
   return disabled;
+}
+
+export function DisabledMessage({ setOpen, message }) {
+  return (
+    <p className="px-8 lg:px-0 lg:max-w-[75%] inline-block text-sm text-center text-gray-600 font-title">
+      {message} <br />
+      <br />
+      Per visualizzare il contenuto devi{" "}
+      <button
+        type="button"
+        className="text-blue-400 underline text-sm"
+        onClick={() => setOpen(true)}
+      >
+        abilitare i cookie di terze parti nelle impostazioni
+      </button>
+      .
+    </p>
+  );
 }
 
 /**
@@ -45,20 +63,10 @@ function EmbeddedMapsWrapper({ data, dimensions, classNames }) {
           classNames={{ map: classNames?.map }}
           disabled={disabled}
           disabledMessage={
-            <span className="px-8 lg:max-w-[75%] inline-block">
-              La mappa di Google Maps non è visualizzabile perchè i cookie di
-              terze parti, inclusi quelli di Google, sono disattivati. <br />
-              <br />
-              Se vuoi vederla devi{" "}
-              <button
-                type="button"
-                className="text-blue-400 underline text-sm"
-                onClick={() => setOpen(true)}
-              >
-                abilitare i cookie nelle impostazioni
-              </button>
-              .
-            </span>
+            <DisabledMessage
+              message="La mappa di Google Maps non è visibile perchè i cookie di terze parti, inclusi quelli di Google, sono disattivati."
+              setOpen={setOpen}
+            />
           }
         />
       ))}

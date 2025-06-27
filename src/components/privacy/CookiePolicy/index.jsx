@@ -78,23 +78,39 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
         </p>
         <ul className="mt-1">
           <li className="mb-1">
-            • <i>Dati nella local storage API:</i> Questi dati sono usati per
+            • <i className="mr-1">Dati nella local storage API:</i> questi dati sono usati per
             memorizzare le tue preferenze relative all'abilitazione di cookie e
             per garantire il corretto funzionamento del sito.
           </li>
           <li className="mb-1">
-            • <i>Cookie di terze parti di Google:</i> Questi cookie sono
-            memorizzati, qualora tu decida di abilitare i cookie di terze
-            parti, al momento dell'embedding delle mappe di Google Maps nelle
-            pagine del sito. Ti invitiamo a consultare{" "}
+            • <i className="mr-1">Cookie di terze parti di Google:</i> questi cookie sono
+            memorizzati, qualora tu decida di abilitare i cookie di terze parti,
+            al momento dell'embedding delle mappe di Google Maps nelle pagine
+            del sito. Ti invitiamo a consultare{" "}
             <a
               href="https://policies.google.com/technologies/cookies?hl=it-IT"
               hrefLang="it"
               className="text-blue-600 lg:hover:underline"
+              target="_blank"
             >
               questa pagina
             </a>{" "}
             per ulteriori dettagli sull'uso dei cookie da parte di Google.
+          </li>
+          <li className="mb-1">
+            • <i className="mr-1">Cookie di terze parti di Youtube:</i> questi cookie sono
+            memorizzati, qualora tu decida di abilitare i cookie di terze parti,
+            al momento dell'embedding dei video di Youtube nella sezione
+            videogallery del sito. Ti invitiamo a consultare{" "}
+            <a
+              href="https://www.youtube.com/intl/ALL_it/howyoutubeworks/our-commitments/protecting-user-data/"
+              hrefLang="it"
+              className="text-blue-600 lg:hover:underline"
+              target="_blank"
+            >
+              questa pagina
+            </a>{" "}
+            per ulteriori dettagli sull'uso dei cookie da parte di Youtube.
           </li>
         </ul>
       </Section>

@@ -23,7 +23,7 @@ function AuxTemplate({
       {renderTopNavBar({
         items: appConfig.data.topNavBar.items,
         maxWidth: "6xl",
-        className: "hidden md:block",
+        mobile,
       })}
       <div className="lg:sticky top-0 z-top bg-white shadow-md">
         <Header mobile={mobile} classNames={{ contentWrapper: "max-w-6xl" }} />

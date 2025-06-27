@@ -675,7 +675,7 @@ module.exports = {
           id: "third_party_cookies",
           name: "Cookie di terze parti",
           description:
-            "Questo sito può consentire ad entità terze (e.g. Google) di memorizzare nel tuo browser dei cookie. Se disabilitati, alcune funzionalità (ad esempio le mappe di Google Maps) non saranno disponibili.",
+            "Questo sito può consentire ad entità terze (e.g. Google) di memorizzare nel tuo browser dei cookie. Se disabilitati, alcune funzionalità (ad esempio le mappe di Google Maps e i video di Youtube) non saranno disponibili.",
         },
       ],
     },

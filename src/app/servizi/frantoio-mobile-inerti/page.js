@@ -58,8 +58,9 @@ export function getProps({ title, locationsData }) {
             La capacità di produzione massima dell'impianto mobile è pari a 70
             t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
             all'anno si ha che l'impianto mobile potrebbe teoricamente al
-            massimo recuperare: <br /> • &nbsp; giornalmente: 560 t/g; <br />•
-            &nbsp; annualmente: 123.200 t/anno.
+            massimo recuperare: <br /> 
+            • &nbsp; giornalmente: 560 t/g; <br />
+            • &nbsp; annualmente: 123.200 t/anno.
           </span>,
         ],
       },

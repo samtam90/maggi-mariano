@@ -41,7 +41,7 @@ function LocationsGrid({ items, classNames, title, titleHeadingElement }) {
         <nav>
           <ul
             className={twClsx(
-              "grid grid-cols-4 lg:grid-cols-8 gap-4",
+              "grid grid-cols-3 lg:grid-cols-8 gap-4",
               classNames?.collection
             )}
           >

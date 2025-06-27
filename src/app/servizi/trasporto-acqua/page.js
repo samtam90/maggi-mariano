@@ -4,6 +4,8 @@ import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
+import { getContactStuff } from "../pulizia-fognature/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -18,10 +20,31 @@ export function getProps({ title, mobile, locationsData }) {
         sections: [
           {
             paragraphs: [
-              `Quando hai bisogno di una azienda che effettua il ${title}, sia acqua potabile che acqua per irrigazione o il trasporto acqua per piscine allora chiamaci e ti forniremo tutte le informazioni`,
+              <HighlightedText>
+                Quando hai bisogno di una azienda che effettua il {title}, sia
+                acqua potabile che acqua per irrigazione o il trasporto acqua
+                per piscine, allora chiamaci e ti forniremo tutte le
+                informazioni.
+              </HighlightedText>,
               `La nostra azienda è specializzata nel ${title}, potabile o per il riempimento di piscine, cisterne, depositi, strutture ricettive come agriturismi, albeghi e impianti sportivi.`,
-              "I nostri automezzi, di diverse dimensioni e portata, possono raggiungere la vostra piscina o cisterna in qualsiasi località fra le province coperte dal servizio, risolvendo le vostre necessità in modo pratico e immediato.",
-              "Il nostro servizio soddisfa qualunque esigenza legata alle dimensioni e alla capacità della vostra piscina o cisterna, permettendovi di superare i problemi relativi all’approvvigionamento dalla rete idrica locale, spesso regolato da restrittive ordinanze comunali.",
+              <span>
+                <HighlightedText>
+                  I nostri automezzi, di diverse dimensioni e portata, possono
+                  raggiungere la vostra piscina o cisterna in qualsiasi località
+                  fra le province coperte dal servizio
+                </HighlightedText>
+                , risolvendo le vostre necessità in modo pratico e immediato.
+              </span>,
+              <span>
+                Il nostro servizio di {title}{" "}
+                <HighlightedText>
+                  soddisfa qualunque esigenza legata alle dimensioni e alla
+                  capacità della vostra piscina o cisterna
+                </HighlightedText>
+                , permettendovi di superare i problemi relativi
+                all'approvvigionamento dalla rete idrica locale, spesso regolato
+                da restrittive ordinanze comunali.
+              </span>,
             ],
             mediaElements: [
               {
@@ -38,9 +61,29 @@ export function getProps({ title, mobile, locationsData }) {
           {
             paragraphs: [
               `In stagioni particolarmente calde e con elevata siccità, il nostro servizio di ${title} permettere di risolvere ed ovviare i problemi che possono derivare dalla mancanza di approvvigionamento tramite la rete idrica.`,
-              "Esistono realtà locali, piccoli comuni o frazioni che durante il periodo estivo o in particolari periodi dell'anno, hanno grosse difficoltà nel garantire una adeguata fornitura di acqua potabile ai cittadini. La nostra azienda tramite il trasporto acqua potabile in cisterne permette rifornire i depositi e garantire una fornitura costante di acqua alle abitazioni o alle attività commerciali presenti.",
+              <span>
+                Esistono realtà locali, piccoli comuni o frazioni che durante il
+                periodo estivo o in particolari periodi dell'anno, hanno grosse
+                difficoltà nel garantire una adeguata fornitura di acqua
+                potabile ai cittadini.{" "}
+                <HighlightedText>
+                  La nostra azienda tramite il trasporto acqua potabile in
+                  cisterne permette rifornire i depositi e garantire una
+                  fornitura costante di acqua alle abitazioni o alle attività
+                  commerciali presenti.
+                </HighlightedText>
+              </span>,
               `Il ${title} viene spesso utilizzato per il riempimento delle piscine delle attività turistiche, degli albergi e anche delle abitazioni private. In particolari periodi dell’anno molti comuni vietano e sanzionano l’uso dell’acqua della rete idrica locale per questo utilizzo.`,
-              `Spesso i pozzi presenti nelle strutture non riescono a garantire un quantitativo adeguato di acqua per il riempimento di una piscina di media o grande dimensione, di conseguenza il ${title} in cisterne risulta essere la soluzione più veloce e spesso anche più economica.`,
+              <span>
+                Spesso i pozzi presenti nelle strutture non riescono a garantire
+                un quantitativo adeguato di acqua per il riempimento di una
+                piscina di media o grande dimensione, di conseguenza{" "}
+                <HighlightedText>
+                  il {title} in cisterne risulta essere la soluzione più veloce
+                  e spesso anche più economica.
+                </HighlightedText>
+                .
+              </span>,
             ],
             mediaPosition: "bottom",
             mediaElements: [
@@ -79,32 +122,7 @@ export function getProps({ title, mobile, locationsData }) {
           </span>
         ),
       },
-      contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
-        title,
-        phoneNumbers: [
-          {
-            label: "Tel.: 0575/520447",
-            href: "tel:0575520447",
-          },
-          {
-            label: "Cell.: 334 3889878",
-            href: "tel:3343889878",
-          },
-        ],
-        content:
-          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
-        images: [
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/acqua.jpg",
-            alt: title,
-          },
-        ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-        variant: "horizontal",
-        imageDimensions: { width: 650, height: 850 },
-      },
+      contacts: getContactStuff({title}),
     },
   };
 }

@@ -16,6 +16,7 @@ const imgDim = window.innerWidth * 0.5;
 
 export const Base = T.bind({});
 Base.args = {
+  mobile: false,
   sections: {
     top: {
       title: (
@@ -58,7 +59,7 @@ Base.args = {
         },
         {
           paragraphs: [
-            "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici srl garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
+            "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici SRL garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
           ],
           image: {
             src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",

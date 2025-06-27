@@ -56,9 +56,7 @@ function EmbeddedMap({
           role="presentation"
           className="max-w-full border rounded-lg border-gray-400 flex items-center justify-center"
         >
-          <p className="text-sm text-center text-gray-600 font-title">
-            {disabledMessage}
-          </p>
+          {disabledMessage}
         </div>
       ) : (
         <iframe

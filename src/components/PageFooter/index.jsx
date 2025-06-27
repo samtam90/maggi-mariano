@@ -60,11 +60,11 @@ const PageFooterSection = memo(
       >
         {renderHeader(titleHeadingElement || "h5", title, {
           className: twClsx(
-            "mb-3 font-titleBold text-xs lg:text-sm text-white uppercase",
+            "mb-3 font-titleBold text-xs lg:text-sm self-stretch text-center lg:text-left text-white uppercase",
             classNames?.section?.title
           ),
         })}
-        <div className="h-[1px] bg-white mb-4 w-1/2"></div>
+        <div className="h-[1px] bg-white mb-4 w-full lg:w-1/2"></div>
         <NavBar
           variant="vertical"
           disableNavElement

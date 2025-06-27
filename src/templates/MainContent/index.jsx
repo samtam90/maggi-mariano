@@ -87,7 +87,7 @@ function MainContentTemplate({
         {renderTopNavBar({
           items: appConfig.data.topNavBar.items,
           maxWidth: "6xl",
-          className: "hidden md:block",
+          mobile,
         })}
         <div className="lg:sticky top-0 z-top bg-white shadow-md">
           <Header
@@ -148,7 +148,7 @@ function MainContentTemplate({
         {locationsSectionData &&
           renderLocationsGrid({
             ...locationsSectionData,
-            classNames: { root: "py-8 lg:py-16 px-4 lg:px-0" },
+            classNames: { root: "py-8 lg:py-16 px-4 lg:px-0", item: "text-sm" },
           })}
         <section key="services">
           {renderServicesNavGrid({

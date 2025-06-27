@@ -124,7 +124,7 @@ function renderTopSection({
         classNames?.root
       )}
     >
-      <header className="font-titleBold text-4xl lg:text-5xl text-center uppercase mb-8 lg:mb-12">
+      <header className="font-titleBold text-2xl lg:text-4xl text-center uppercase mb-8 lg:mb-12">
         <h2 className={twClsx("text-green-primary", classNames?.title)}>
           <SpecialText.Underlined
             component="span"
@@ -135,7 +135,7 @@ function renderTopSection({
             {title}
           </SpecialText.Underlined>
         </h2>
-        <p className={twClsx("text-red-primary mt-4", classNames?.subtitle)}>
+        <p className={twClsx("text-red-primary mt-2 text-xl lg:text-3xl", classNames?.subtitle)}>
           {subtitle}
         </p>
       </header>
@@ -186,7 +186,7 @@ function renderMiddleSection({ title, preTitle, paragraphs, classNames }) {
             {title}
           </h2>
         </header>
-        <ul className="list-disc ml-6 lg:ml-0">
+        <ul className="list-disc ml-6 lg:ml-4">
           {paragraphs.map((par, index) => (
             <li className="mb-2" key={index}>
               {renderParagraph({
@@ -358,7 +358,7 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
   } = sections;
 
   const bottomElRef = useRef();
-  const circledActive = useScrollVisibility(bottomElRef, false);
+  const circledActive = useScrollVisibility(bottomElRef, true);
 
   return (
     <AuxTemplate mobile={mobile}>
@@ -381,7 +381,6 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
         ...locationsData,
         classNames: {
           root: "py-8 lg:py-16 px-4 lg:px-0",
-          collection: "lg:grid-cols-5",
           item: "text-sm",
         },
       })}

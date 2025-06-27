@@ -11,7 +11,7 @@ function getProps({ mobile }) {
         sections: [
           {
             paragraphs: [
-              "Maggi Mariano Servizi Ecologici srl è autorizzata al recupero dei materiali ferrosi, metalli in genere",
+              "Maggi Mariano Servizi Ecologici SRL è autorizzata al recupero dei materiali ferrosi, metalli in genere",
               "L’azienda dispone di camion ribaltabili, scarrabili, caricatori su strada e movimentazione interna su piazzali.",
               "Grazie alla pressa idraulica i materiali possono essere compattati direttamente in loco riducendo al minimo l’ingombro dei materiali da recuperare e facilitandone il trasporto per lo smaltimento adeguato.",
             ],

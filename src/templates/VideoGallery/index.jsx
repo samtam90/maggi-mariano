@@ -1,7 +1,12 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import tailwindConfig from "../../../tailwind.config";
 import AuxTemplate from "../auxiliary/AuxTemplate";
+import {
+  DisabledMessage,
+  useDisabledMgmt,
+} from "../auxiliary/EmbeddedMapsWrapper";
+import Context from "../../components/privacy/PrivacySettingsPanelWrapper/context";
 
 const { BorderedColoredText } = components;
 
@@ -10,6 +15,35 @@ function getLoadingAttribute({ loading, mobile }) {
     return loading(mobile);
   }
   return loading;
+}
+
+function Video({ src, dimensions, label, loading }) {
+  const disabled = useDisabledMgmt();
+  const { setOpen } = useContext(Context);
+  if (disabled) {
+    return (
+      <div
+        style={dimensions}
+        role="presentation"
+        className="max-w-full border rounded-lg border-gray-400 flex items-center justify-center"
+      >
+        <DisabledMessage
+          setOpen={setOpen}
+          message="Il video non è visibile perchè i cookie di terze parti, inclusi quelli di Youtube, sono disattivati."
+        />
+      </div>
+    );
+  }
+  return (
+    <iframe
+      src={src}
+      title={label}
+      width={dimensions?.width}
+      height={dimensions?.height}
+      className="object-contain max-w-full"
+      loading={loading}
+    />
+  );
 }
 
 /**
@@ -45,12 +79,10 @@ function VideoGalleryTemplate({ mobile, videos, title }) {
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
         {videos.map(({ src, label, dimensions, loading }) => (
           <li key={label}>
-            <iframe
+            <Video
               src={src}
-              title={label}
-              width={dimensions?.width}
-              height={dimensions?.height}
-              className="object-contain max-w-full"
+              label={label}
+              dimensions={dimensions}
               loading={getLoadingAttribute({ loading, mobile })}
             />
           </li>

@@ -1,5 +1,6 @@
 import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
+import { getContactStuff } from "../pulizia-fognature/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -14,7 +15,7 @@ export function getProps({ mobile }) {
         sections: [
           {
             paragraphs: [
-              "Maggi Mariano Servizi Ecologici srl si è dotata da tempo di un modernissimo robot con telecamera per effettuare videoispezioni in ambienti o tubature altrimenti difficili da raggiungere.",
+              "Maggi Mariano Servizi Ecologici SRL si è dotata da tempo di un modernissimo robot con telecamera per effettuare videoispezioni in ambienti o tubature altrimenti difficili da raggiungere.",
               "Il robot teleguidato permette la registrazione delle immagini che possono essere studiate successivamente per risolvere le problematiche più difficili.",
               "Le configurazioni possibili del macchinario sono molteplici per adattarlo e tutte le situazioni, terreni e ambienti.",
             ],
@@ -75,36 +76,9 @@ export function getProps({ mobile }) {
           },
         ],
       },
-      contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
-        title: "Videoispezioni con telecamera robot",
-        phoneNumbers: [
-          {
-            label: "Tel.: 0575/520447",
-            href: "tel:0575520447",
-          },
-          {
-            label: "Cell.: 334 3889878",
-            href: "tel:3343889878",
-          },
-        ],
-        content:
-          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
-        images: [
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
-            alt: "Image1",
-          },
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
-            alt: "Image2",
-          },
-        ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-        variant: "horizontal",
-        imageDimensions: { width: 650, height: 850 },
-      },
+      contacts: getContactStuff({
+        title: "Videoispezioni telecamera robot",
+      }),
     },
   };
 }

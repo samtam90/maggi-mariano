@@ -4,6 +4,8 @@ import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
+import { getContactStuff } from "../pulizia-fognature/page";
+import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -18,9 +20,27 @@ export function getProps({ title, mobile, locationsData }) {
         sections: [
           {
             paragraphs: [
-              `L'azienda MAGGI MARIANO SERVIZI ECOLOGICI effettua il servizio di ${title} con una esperienza e professionalità che tutti i nostri clienti ci riconoscono da sempre.`,
-              "Operiamo nel settore da anni e nel tempo ci siamo attrezzati con i migliori macchinare e le migliori tecnologie che ci permettono di garantire interventi tempestivi, poco invasivi e soprattutto a prezzi estremamente concorrenziali.",
-              `Offriamo il servizio di TRASPORTO RIFIUTI per le aziende, gli uffici ma anche per i privati.`,
+              <HighlightedText>
+                L'azienda Maggi Mariano Servizi Ecologici effettua il servizio
+                di {title} con una esperienza e professionalità che tutti i
+                nostri clienti ci riconoscono da sempre.
+              </HighlightedText>,
+              <span>
+                Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
+                <HighlightedText>
+                  i migliori macchinare e le migliori tecnologie
+                </HighlightedText>{" "}
+                che ci permettono di garantire interventi tempestivi, poco
+                invasivi e soprattutto{" "}
+                <HighlightedText>
+                  a prezzi estremamente concorrenziali
+                </HighlightedText>
+                .
+              </span>,
+              <span>
+                Offriamo il servizio di {title} per le aziende, gli uffici ma
+                anche per i privati.
+              </span>,
               "Se hai da smaltire quasiasi genere di rifiuto solido o liquido contattaci e ti offriremo la nostra consulenza, valuteremo insieme tutti gli aspetti dell’intevento richiesto e ti proporremo un preventivo che sarà sicuramente tra i più concorrenziali del mercato.",
             ],
             mediaElements: [
@@ -56,32 +76,7 @@ export function getProps({ title, mobile, locationsData }) {
           </span>
         ),
       },
-      contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
-        title,
-        phoneNumbers: [
-          {
-            label: "Tel.: 0575/520447",
-            href: "tel:0575520447",
-          },
-          {
-            label: "Cell.: 334 3889878",
-            href: "tel:3343889878",
-          },
-        ],
-        content:
-          "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
-        images: [
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/mezzi-29-scaled-1-1536x1022.jpg",
-            alt: title,
-          },
-        ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-        variant: "horizontal",
-        imageDimensions: { width: 650, height: 850 },
-      },
+      contacts: getContactStuff({ title }),
     },
   };
 }

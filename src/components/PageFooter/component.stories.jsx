@@ -49,7 +49,7 @@ Base.args = {
   },
   sections: [
     {
-      title: "Maggi Mariano Servizi Ecologici srl",
+      title: "Maggi Mariano Servizi Ecologici SRL",
       navItems: [
         {
           title: "Via Aretina, 16",

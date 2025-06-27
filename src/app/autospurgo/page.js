@@ -4,6 +4,7 @@ import { memo } from "react";
 import appConfig, { links } from "../../../app.config";
 import Link from "next/link";
 import province from "../../../.data/province.json";
+import { HighlightedText } from "../servizi/centrifugazione-o-disidratazione-fanghi/page";
 
 export function getProps({ title, mobile, locationsData }) {
   return {
@@ -57,9 +58,32 @@ export function getProps({ title, mobile, locationsData }) {
           },
           {
             paragraphs: [
-              "Ci siamo dotati da tempo di un parco mezzi estremamente vario e tecnologicamente avanzato.",
-              `Siamo in grado di effettuare il ${title} anche in ambienti difficilmente raggiungibili con i normali mezzi come abitazioni in centri storici o in località montane difficili da raggiungere.`,
-              "Effettuiamo anche la stasatura e disotturazione di tubature, fosse biologiche, scarichi fognari e la pulizia di tombini.",
+              <span>
+                Ci siamo dotati da tempo di un{" "}
+                <HighlightedText>
+                  parco mezzi estremamente vario e tecnologicamente avanzato
+                </HighlightedText>
+                .
+              </span>,
+              <span>
+                Siamo in grado di{" "}
+                <HighlightedText>
+                  effettuare {title} anche in ambienti difficilmente
+                  raggiungibili con i normali mezzi
+                </HighlightedText>{" "}
+                come abitazioni in centri storici o in località montane
+                difficili da raggiungere.
+              </span>,
+              <span>
+                Effettuiamo anche la stasatura e disotturazione di tubature,
+                <Link
+                  href={links.servizi["spurgo-fosse-biologiche"].root}
+                  className="font-titleBold underline text-green-dark ml-1"
+                >
+                  fosse biologiche
+                </Link>
+                , scarichi fognari e la pulizia di tombini.
+              </span>,
               <span>
                 <Link
                   href={links.servizi["trasporto-acqua"].root}

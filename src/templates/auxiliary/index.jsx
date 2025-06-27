@@ -54,14 +54,15 @@ function processFooterNavItems(navItems) {
   }));
 }
 
-export function renderTopNavBar({ items, maxWidth, className }) {
+export function renderTopNavBar({ items, maxWidth, className, mobile }) {
+  const actualItems = mobile ? items.slice(0, 2) : items;
   return (
     <NavBar
       variant="horizontal"
       maxWidth={maxWidth}
-      classNames={{ root: twClsx("py-4", className) }}
+      classNames={{ root: twClsx("p-4 lg:px-0", className) }}
     >
-      {items.map(({ title, link, icon }) => (
+      {actualItems.map(({ title, link, icon }) => (
         <NavBar.Item
           key={title}
           title={title}
@@ -104,7 +105,7 @@ export function renderPageFooter({
         root: "py-8",
         section: {
           additionalContent: "mt-6",
-          root: "mb-6 last:mb-0 lg:mb-0 flex flex-col items-center lg:block basis-1/4",
+          root: "mb-6 last:mb-0 lg:mb-0 flex flex-col items-start lg:items-center lg:block basis-1/4",
           navBar: {
             item: {
               label: "text-sm",
@@ -293,7 +294,7 @@ export function renderServicesNavGrid({
               container: "text-center px-2 py-2 lg:py-4 lg:px-6",
               innerContainer: "p-2 py-4 lg:p-6",
               subtitle: "text-xs lg:text-sm",
-              title: "whitespace-nowrap",
+              title: "lg:text-md",
             },
             root: "grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6",
           }}
