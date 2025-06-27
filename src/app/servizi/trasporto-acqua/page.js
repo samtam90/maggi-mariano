@@ -1,8 +1,9 @@
-import { withConditionalRendering } from "@/misc/functions";
+import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
+import province from "../../../../.data/province.json";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -67,210 +68,14 @@ export function getProps({ title, mobile }) {
         ],
       },
       locations: {
-        items: [
-          {
-            label: "Anghiari",
-            href: appConfig.links.servizi["trasporto-acqua"].anghiari,
-          },
-          {
-            label: "Arezzo",
-            href: appConfig.links.servizi["trasporto-acqua"].arezzo,
-          },
-          {
-            label: "Badia Tedalda",
-            href: appConfig.links.servizi["trasporto-acqua"]["badia-tedalda"],
-          },
-          {
-            label: "Bibbiena",
-            href: appConfig.links.servizi["trasporto-acqua"].bibbiena,
-          },
-          {
-            label: "Bucine",
-            href: appConfig.links.servizi["trasporto-acqua"].bucine,
-          },
-          {
-            label: "Capolona",
-            href: appConfig.links.servizi["trasporto-acqua"].capolona,
-          },
-          {
-            label: "Caprese Michelangelo",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "caprese-michelangelo"
-            ],
-          },
-          {
-            label: "Castel Focognano",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "castel-focognano"
-            ],
-          },
-          {
-            label: "Castel San Niccolò",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "castel-san-niccolo"
-            ],
-          },
-          {
-            label: "Castelfranco Piandiscò",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "castelfranco-piandisco"
-            ],
-          },
-          {
-            label: "Castiglion Fibocchi",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "castiglion-fibocchi"
-            ],
-          },
-          {
-            label: "Castiglion Fiorentino",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "castiglion-fiorentino"
-            ],
-          },
-          {
-            label: "Cavriglia",
-            href: appConfig.links.servizi["trasporto-acqua"].cavriglia,
-          },
-          {
-            label: "Chitignano",
-            href: appConfig.links.servizi["trasporto-acqua"].chitignano,
-          },
-          {
-            label: "Chiusi della Verna",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "chiusi-della-verna"
-            ],
-          },
-          {
-            label: "Civitella in Valdichiana",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "civitella-in-valdichiana"
-            ],
-          },
-          {
-            label: "Cortona",
-            href: appConfig.links.servizi["trasporto-acqua"].cortona,
-          },
-          {
-            label: "Foiano della Chiana",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "foiano-della-chiana"
-            ],
-          },
-          {
-            label: "Laterina",
-            href: appConfig.links.servizi["trasporto-acqua"].laterina,
-          },
-          {
-            label: "Loro Ciuffenna",
-            href: appConfig.links.servizi["trasporto-acqua"]["loro-ciuffenna"],
-          },
-          {
-            label: "Lucignano",
-            href: appConfig.links.servizi["trasporto-acqua"].lucignano,
-          },
-          {
-            label: "Marciano della Chiana",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "marciano-della-chiana"
-            ],
-          },
-          {
-            label: "Monte San Savino",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "monte-san-savino"
-            ],
-          },
-          {
-            label: "Montemignaio",
-            href: appConfig.links.servizi["trasporto-acqua"].montemignaio,
-          },
-          {
-            label: "Monterchi",
-            href: appConfig.links.servizi["trasporto-acqua"].monterchi,
-          },
-          {
-            label: "Montevarchi",
-            href: appConfig.links.servizi["trasporto-acqua"].montevarchi,
-          },
-          {
-            label: "Ortignano Raggiolo",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "ortignano-raggiolo"
-            ],
-          },
-          {
-            label: "Pergine Valdarno",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "pergine-valdarno"
-            ],
-          },
-          {
-            label: "Pieve al Toppo",
-            href: appConfig.links.servizi["trasporto-acqua"]["pieve-al-toppo"],
-          },
-          {
-            label: "Pieve Santo Stefano",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "pieve-santo-stefano"
-            ],
-          },
-          {
-            label: "Poppi",
-            href: appConfig.links.servizi["trasporto-acqua"].poppi,
-          },
-          {
-            label: "Pratovecchio Stia",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "pratovecchio-stia"
-            ],
-          },
-          {
-            label: "Rassina",
-            href: appConfig.links.servizi["trasporto-acqua"].rassina,
-          },
-          {
-            label: "Rigutino",
-            href: appConfig.links.servizi["trasporto-acqua"].rigutino,
-          },
-          {
-            label: "San Giovanni Valdarno",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "san-giovanni-valdarno"
-            ],
-          },
-          {
-            label: "Sansepolcro",
-            href: appConfig.links.servizi["trasporto-acqua"].sansepolcro,
-          },
-          {
-            label: "Sestino",
-            href: appConfig.links.servizi["trasporto-acqua"].sestino,
-          },
-          {
-            label: "Soci",
-            href: appConfig.links.servizi["trasporto-acqua"].soci,
-          },
-          {
-            label: "Subbiano",
-            href: appConfig.links.servizi["trasporto-acqua"].subbiano,
-          },
-          {
-            label: "Talla",
-            href: appConfig.links.servizi["trasporto-acqua"].talla,
-          },
-          {
-            label: "Terranuova Bracciolini",
-            href: appConfig.links.servizi["trasporto-acqua"][
-              "terranuova-bracciolini"
-            ],
-          },
-        ],
+        items: makeNavGridItems(
+          province,
+          appConfig.links.servizi["trasporto-acqua"]
+        ),
         title: (
           <span>
             Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutti i luoghi e comuni della provincia di arezzo:
+            tutte le province italiane:
           </span>
         ),
       },

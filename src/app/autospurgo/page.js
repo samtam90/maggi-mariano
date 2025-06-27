@@ -1,8 +1,9 @@
-import { withConditionalRendering } from "@/misc/functions";
+import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
 import appConfig, { links } from "../../../app.config";
 import Link from "next/link";
+import province from "../../../.data/province.json";
 
 export function getProps({ title, mobile }) {
   return {
@@ -88,192 +89,11 @@ export function getProps({ title, mobile }) {
         ],
       },
       locations: {
-        items: [
-          {
-            label: "Anghiari",
-            href: appConfig.links.autospurgo.anghiari,
-          },
-          {
-            label: "Arezzo",
-            href: appConfig.links.autospurgo.arezzo,
-          },
-          {
-            label: "Badia Prataglia",
-            href: appConfig.links.autospurgo["badia-prataglia"],
-          },
-          {
-            label: "Badia Tedalda",
-            href: appConfig.links.autospurgo["badia-tedalda"],
-          },
-          {
-            label: "Bibbiena",
-            href: appConfig.links.autospurgo.bibbiena,
-          },
-          {
-            label: "Bucine",
-            href: appConfig.links.autospurgo.bucine,
-          },
-          {
-            label: "Camucia",
-            href: appConfig.links.autospurgo.camucia,
-          },
-          {
-            label: "Capolona",
-            href: appConfig.links.autospurgo.capolona,
-          },
-          {
-            label: "Caprese Michelangelo",
-            href: appConfig.links.autospurgo["caprese-michelangelo"],
-          },
-          {
-            label: "Castel Focognano",
-            href: appConfig.links.autospurgo["castel-focognano"],
-          },
-          {
-            label: "Castel San Niccolò",
-            href: appConfig.links.autospurgo["castel-san-niccolo"],
-          },
-          {
-            label: "Castelfranco Piandiscò",
-            href: appConfig.links.autospurgo["castelfranco-piandisco"],
-          },
-          {
-            label: "Castiglion Fibocchi",
-            href: appConfig.links.autospurgo["castiglion-fibocchi"],
-          },
-          {
-            label: "Castiglion Fiorentino",
-            href: appConfig.links.autospurgo["castiglion-fiorentino"],
-          },
-          {
-            label: "Cavriglia",
-            href: appConfig.links.autospurgo.cavriglia,
-          },
-          {
-            label: "Cesa in Valdichiana",
-            href: appConfig.links.autospurgo["cesa-in-valdichiana"],
-          },
-          {
-            label: "Chitignano",
-            href: appConfig.links.autospurgo.chitignano,
-          },
-          {
-            label: "Chiusi della Verna",
-            href: appConfig.links.autospurgo["chiusi-della-verna"],
-          },
-          {
-            label: "Civitella in Valdichiana",
-            href: appConfig.links.autospurgo["civitella-in-valdichiana"],
-          },
-          {
-            label: "Cortona",
-            href: appConfig.links.autospurgo.cortona,
-          },
-          {
-            label: "Figline Valdarno",
-            href: appConfig.links.autospurgo["figline-valdarno"],
-          },
-          {
-            label: "Foiano della Chiana",
-            href: appConfig.links.autospurgo["foiano-della-chiana"],
-          },
-          {
-            label: "Laterina",
-            href: appConfig.links.autospurgo.laterina,
-          },
-          {
-            label: "Loro Ciuffenna",
-            href: appConfig.links.autospurgo["loro-ciuffenna"],
-          },
-          {
-            label: "Lucignano",
-            href: appConfig.links.autospurgo.lucignano,
-          },
-          {
-            label: "Marciano della Chiana",
-            href: appConfig.links.autospurgo["marciano-della-chiana"],
-          },
-          {
-            label: "Monte San Savino",
-            href: appConfig.links.autospurgo["monte-san-savino"],
-          },
-          {
-            label: "Montemignaio",
-            href: appConfig.links.autospurgo.montemignaio,
-          },
-          {
-            label: "Monterchi",
-            href: appConfig.links.autospurgo.monterchi,
-          },
-          {
-            label: "Montevarchi",
-            href: appConfig.links.autospurgo.montevarchi,
-          },
-          {
-            label: "Ortignano Raggiolo",
-            href: appConfig.links.autospurgo["ortignano-raggiolo"],
-          },
-          {
-            label: "Pergine Valdarno",
-            href: appConfig.links.autospurgo["pergine-valdarno"],
-          },
-          {
-            label: "Pieve al Toppo",
-            href: appConfig.links.autospurgo["pieve-al-toppo"],
-          },
-          {
-            label: "Pieve Santo Stefano",
-            href: appConfig.links.autospurgo["pieve-santo-stefano"],
-          },
-          {
-            label: "Poppi",
-            href: appConfig.links.autospurgo.poppi,
-          },
-          {
-            label: "Pratovecchio Stia",
-            href: appConfig.links.autospurgo["pratovecchio-stia"],
-          },
-          {
-            label: "Rassina",
-            href: appConfig.links.autospurgo.rassina,
-          },
-          {
-            label: "Rigutino",
-            href: appConfig.links.autospurgo.rigutino,
-          },
-          {
-            label: "San Giovanni Valdarno",
-            href: appConfig.links.autospurgo["san-giovanni-valdarno"],
-          },
-          {
-            label: "Sansepolcro",
-            href: appConfig.links.autospurgo.sansepolcro,
-          },
-          {
-            label: "Sestino",
-            href: appConfig.links.autospurgo.sestino,
-          },
-          {
-            label: "Soci",
-            href: appConfig.links.autospurgo.soci,
-          },
-          {
-            label: "Subbiano",
-            href: appConfig.links.autospurgo.subbiano,
-          },
-          {
-            label: "Talla",
-            href: appConfig.links.autospurgo.talla,
-          },
-          {
-            label: "Terranuova Bracciolini",
-            href: appConfig.links.autospurgo["terranuova-bracciolini"],
-          },
-        ],
+        items: makeNavGridItems(province, appConfig.links.autospurgo),
         title: (
           <span>
             Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutti i luoghi e comuni della provincia di arezzo:
+            tutte le province italiane:
           </span>
         ),
       },

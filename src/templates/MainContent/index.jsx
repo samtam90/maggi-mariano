@@ -144,12 +144,12 @@ function MainContentTemplate({
             onFormSubmit={onContactFormSubmit}
           />
         )}
+        {renderTitleSection(appConfig.data.mainTitle)}
         {locationsSectionData &&
           renderLocationsGrid({
             ...locationsSectionData,
             classNames: { root: "py-8 lg:py-16 px-4 lg:px-0" },
           })}
-        {renderTitleSection(appConfig.data.mainTitle)}
         <section key="services">
           {renderServicesNavGrid({
             ...appConfig.data.servicesGrid,

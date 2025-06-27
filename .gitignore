@@ -37,4 +37,6 @@ next-env.d.ts
 *storybook.log
 .script/push.bat
 .script/create-templated-pages/.data/out
+.script/format-provinces/.data/out
+.script/format-comuni/.data/out
 .img

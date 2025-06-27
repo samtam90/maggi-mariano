@@ -128,3 +128,12 @@ export function withConditionalRendering(InComponents) {
     );
   });
 }
+
+/**
+ * @typedef {{title: string, path: string}} DataItem
+ * @param {DataItem[]} data
+ * @param {Record<string, string>} links
+ */
+export function makeNavGridItems(data, links) {
+  return data.map(({ title, path }) => ({ label: title, href: links[path] }));
+}

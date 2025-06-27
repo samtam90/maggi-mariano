@@ -1,8 +1,9 @@
-import { withConditionalRendering } from "@/misc/functions";
+import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import { links } from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
+import province from "../../../../.data/province.json";
 
 export function getProps({ title }) {
   return {
@@ -96,49 +97,16 @@ export function getProps({ title }) {
         ],
       },
       locations: {
-        items: [
-          {
-            label: "Arezzo",
-            href: links.servizi["frantoio-mobile-inerti"].arezzo,
-          },
-          {
-            label: "Firenze",
-            href: links.servizi["frantoio-mobile-inerti"].arezzo,
-          },
-          {
-            label: "Grosseto",
-            href: links.servizi["frantoio-mobile-inerti"].grosseto,
-          },
-          {
-            label: "Livorno",
-            href: links.servizi["frantoio-mobile-inerti"].livorno,
-          },
-          {
-            label: "Lucca",
-            href: links.servizi["frantoio-mobile-inerti"].lucca,
-          },
-          {
-            label: "Massa Carrara",
-            href: links.servizi["frantoio-mobile-inerti"]["massa-carrara"],
-          },
-          {
-            label: "Pisa",
-            href: links.servizi["frantoio-mobile-inerti"].pisa,
-          },
-          {
-            label: "Pistoia",
-            href: links.servizi["frantoio-mobile-inerti"].pistoia,
-          },
-          {
-            label: "Prato",
-            href: links.servizi["frantoio-mobile-inerti"].prato,
-          },
-          {
-            label: "Siena",
-            href: links.servizi["frantoio-mobile-inerti"].siena,
-          },
-        ],
-        title: "Operiamo in tutti i comuni delle province della Toscana:",
+        items: makeNavGridItems(
+          province,
+          appConfig.links.servizi["frantoio-mobile-inerti"]
+        ),
+        title: (
+          <span>
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
+            tutte le province italiane:
+          </span>
+        ),
       },
       contacts: {
         preTitle: "Per ogni tua problematica ed urgenza riguardante",

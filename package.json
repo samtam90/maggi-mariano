@@ -9,7 +9,10 @@
     "storybook": "storybook dev -p 6006",
     "test:e2e": "jest ./src/__e2e__ --runInBand",
     "test:e2e:silent": "jest ./src/__e2e__ --runInBand --silent",
-    "generate-service-pages": "node ./.script/create-templated-pages.js \"C:/proj/sites/maggi-mariano/.script/create-templated-pages\""
+    "generate-service-pages": "node ./.script/create-templated-pages.js \"C:/proj/sites/maggi-mariano/.script/create-templated-pages\"",
+    "format-provinces": "node ./.script/format-provinces.js \"C:/proj/sites/maggi-mariano/.script/format-provinces\"",
+    "format-comuni-arezzo": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Arezzo\"",
+    "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\""
   },
   "dependencies": {
     "@italwebcom/tailwind-components": "^1.15.14",
