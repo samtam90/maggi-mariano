@@ -1,10 +1,11 @@
 import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import province from "../../../../.data/province.json";
+import Link from "next/link";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -22,8 +23,21 @@ export function getContactStuff({ title }) {
         href: "tel:3343889878",
       },
     ],
-    content:
-      "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
+    content: (
+      <span className="leading-normal">
+        La nostra azienda è dotata di{" "}
+        <Link
+          href={links.servizi["videoispezioni-telecamera-robot"]}
+          className="font-titleBold underline text-green-dark"
+        >
+          VIDEOCAMERA ROBOTIZZATA
+        </Link>{" "}
+        per ispezionare le fognature, scarichi e fosse biologiche difficilmente
+        raggiungibili con altri mezzi, permettendoci di risolvere ogni
+        problematica inerente il serivizio di {title} dei nostri clienti in
+        tempi brevi.
+      </span>
+    ),
     images: [
       {
         src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",

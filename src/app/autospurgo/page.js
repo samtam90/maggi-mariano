@@ -5,6 +5,7 @@ import appConfig, { links } from "../../../app.config";
 import Link from "next/link";
 import province from "../../../.data/province.json";
 import { HighlightedText } from "../servizi/centrifugazione-o-disidratazione-fanghi/page";
+import { getContactStuff } from "../servizi/pulizia-fognature/page";
 
 export function getProps({ title, mobile, locationsData }) {
   return {
@@ -121,49 +122,7 @@ export function getProps({ title, mobile, locationsData }) {
           </span>
         ),
       },
-      contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
-        title,
-        phoneNumbers: [
-          {
-            label: "Tel.: 0575/520447",
-            href: "tel:0575520447",
-          },
-          {
-            label: "Cell.: 334 3889878",
-            href: "tel:3343889878",
-          },
-        ],
-        content: (
-          <span className="leading-normal">
-            La nostra azienda è dotata di{" "}
-            <Link
-              href={links.servizi["videoispezioni-telecamera-robot"]}
-              className="font-titleBold underline text-green-dark"
-            >
-              VIDEOCAMERA ROBOTIZZATA
-            </Link>{" "}
-            per ispezionare le fognature, scarichi e fosse biologiche
-            difficilmente raggiungibili con altri mezzi, permettendoci di
-            risolvere ogni problematica inerente lo Autospurgo Anghiari dei
-            nostri clienti in tempi brevi.
-          </span>
-        ),
-        images: [
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
-            alt: "Image1",
-          },
-          {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
-            alt: "Image2",
-          },
-        ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-        variant: "horizontal",
-        imageDimensions: { width: 650, height: 850 },
-      },
+      contacts: getContactStuff({ title }),
     },
   };
 }
