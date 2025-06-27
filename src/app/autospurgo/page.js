@@ -5,7 +5,7 @@ import appConfig, { links } from "../../../app.config";
 import Link from "next/link";
 import province from "../../../.data/province.json";
 
-export function getProps({ title, mobile }) {
+export function getProps({ title, mobile, locationsData }) {
   return {
     sections: {
       mainContent: {
@@ -88,7 +88,7 @@ export function getProps({ title, mobile }) {
           },
         ],
       },
-      locations: {
+      locations: locationsData || {
         items: makeNavGridItems(province, appConfig.links.autospurgo),
         title: (
           <span>
@@ -149,9 +149,9 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export async function Page({ searchParams, title }) {
+export async function Page({ searchParams, title, locationsData }) {
   const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile });
+  const props = getProps({ title, mobile, locationsData });
   return (
     <ConditionalPage
       {...props}
@@ -161,9 +161,13 @@ export async function Page({ searchParams, title }) {
   );
 }
 
-export function withBaseProps({ title }) {
+export function withBaseProps({ title, locationsData }) {
   return memo(async ({ searchParams }) => (
-    <Page searchParams={searchParams} title={title} />
+    <Page
+      searchParams={searchParams}
+      title={title}
+      locationsData={locationsData}
+    />
   ));
 }
 

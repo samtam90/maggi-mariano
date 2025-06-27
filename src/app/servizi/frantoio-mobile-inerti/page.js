@@ -5,7 +5,7 @@ import appConfig, { links } from "../../../../app.config";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import province from "../../../../.data/province.json";
 
-export function getProps({ title }) {
+export function getProps({ title, locationsData }) {
   return {
     sections: {
       top: {
@@ -96,7 +96,7 @@ export function getProps({ title }) {
           },
         ],
       },
-      locations: {
+      locations: locationsData || {
         items: makeNavGridItems(
           province,
           appConfig.links.servizi["frantoio-mobile-inerti"]
@@ -149,9 +149,9 @@ export const ConditionalPage = withConditionalRendering({
 
 export const metadata = getMetadata({ title: "Frantoio mobile inerti" });
 
-export function Page({ searchParams, title }) {
+export function Page({ searchParams, title, locationsData }) {
   const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile });
+  const props = getProps({ title, mobile, locationsData });
   return (
     <ConditionalPage
       {...props}
@@ -161,9 +161,13 @@ export function Page({ searchParams, title }) {
   );
 }
 
-export function withBaseProps({ title }) {
+export function withBaseProps({ title, locationsData }) {
   return memo(async ({ searchParams }) => (
-    <Page searchParams={searchParams} title={title} />
+    <Page
+      searchParams={searchParams}
+      title={title}
+      locationsData={locationsData}
+    />
   ));
 }
 

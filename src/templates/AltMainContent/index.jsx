@@ -382,7 +382,7 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
         classNames: {
           root: "py-8 lg:py-16 px-4 lg:px-0",
           collection: "lg:grid-cols-5",
-          item: "lg:text-md",
+          item: "text-sm",
         },
       })}
     </AuxTemplate>

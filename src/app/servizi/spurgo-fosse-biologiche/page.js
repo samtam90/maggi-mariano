@@ -7,7 +7,7 @@ import province from "../../../../.data/province.json";
 
 const imgDims = { width: 1024, height: 1024 };
 
-export function getProps({ title, mobile }) {
+export function getProps({ title, mobile, locationsData }) {
   return {
     sections: {
       mainContent: {
@@ -62,7 +62,7 @@ export function getProps({ title, mobile }) {
           },
         ],
       },
-      locations: {
+      locations: locationsData || {
         items: makeNavGridItems(
           province,
           appConfig.links.servizi["spurgo-fosse-biologiche"]
@@ -114,9 +114,9 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export function Page({ searchParams, title }) {
+export function Page({ searchParams, title, locationsData }) {
   const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile });
+  const props = getProps({ title, mobile, locationsData });
   return (
     <ConditionalPage
       {...props}
@@ -126,9 +126,13 @@ export function Page({ searchParams, title }) {
   );
 }
 
-export function withBaseProps({ title }) {
+export function withBaseProps({ title, locationsData }) {
   return memo(async ({ searchParams }) => (
-    <Page searchParams={searchParams} title={title} />
+    <Page
+      searchParams={searchParams}
+      title={title}
+      locationsData={locationsData}
+    />
   ));
 }
 
