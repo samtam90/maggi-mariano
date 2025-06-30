@@ -39,6 +39,13 @@ function getMaxWidthClassName(maxWidth) {
   return null;
 }
 
+function processLabel(label, maxLen) {
+  if (label?.length > maxLen) {
+    return label.substring(0, maxLen) + "...";
+  }
+  return label;
+}
+
 export function InnerNavBarItem({
   href,
   icon,
@@ -105,7 +112,8 @@ export function InnerNavBarItem({
  *    variant?: "vertical" | "horizontal",
  *    disableNavElement?: boolean,
  *    classNames?: NavBarClassNames,
- *    maxWidth?: "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl"
+ *    maxWidth?: "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl",
+ *    labelMaxLength?: number
  * }} NavBarProps
  */
 
@@ -115,7 +123,7 @@ const NavBarItem = memo(
    * @param {NavBarItemProps} param0
    */
   ({ title, icon, link }) => {
-    const { classNames, variant } = useContext(C);
+    const { classNames, variant, labelMaxLength } = useContext(C);
     const { href, label } = link;
 
     const itemClassNames = classNames?.item;
@@ -128,7 +136,7 @@ const NavBarItem = memo(
         <InnerNavBarItem
           classNames={itemClassNames}
           title={title}
-          label={label}
+          label={processLabel(label, labelMaxLength)}
           href={href}
           icon={icon}
         />
@@ -142,7 +150,14 @@ const NavBar = memo(
    * @returns
    * @param {NavBarProps} param0
    */
-  ({ children, variant, disableNavElement, classNames, maxWidth = "xl" }) => {
+  ({
+    children,
+    variant,
+    disableNavElement,
+    classNames,
+    maxWidth = "xl",
+    labelMaxLength,
+  }) => {
     const isHorizontalVariant = variant === "horizontal";
     const maxWidthClassName = getMaxWidthClassName(maxWidth);
     const wrapperClassName = twClsx("bg-green-dark", classNames?.root);
@@ -160,7 +175,7 @@ const NavBar = memo(
     );
 
     return (
-      <C.Provider value={{ classNames, variant }}>
+      <C.Provider value={{ classNames, variant, labelMaxLength }}>
         {disableNavElement ? (
           <div className={wrapperClassName}>{out}</div>
         ) : (

@@ -60,7 +60,10 @@ export function renderTopNavBar({ items, maxWidth, className, mobile }) {
     <NavBar
       variant="horizontal"
       maxWidth={maxWidth}
-      classNames={{ root: twClsx("p-4 lg:px-0", className) }}
+      classNames={{
+        root: twClsx("p-4 lg:px-0", className),
+      }}
+      labelMaxLength={mobile ? 20 : undefined}
     >
       {actualItems.map(({ title, link, icon }) => (
         <NavBar.Item
