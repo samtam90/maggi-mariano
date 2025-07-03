@@ -6,7 +6,7 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import { twClsx } from "../../misc/functions";
+import { renderHeader, twClsx } from "../../misc/functions";
 import Link from "next/link";
 
 const C = createContext({});
@@ -53,7 +53,18 @@ export function InnerNavBarItem({
   label,
   classNames,
   onClick,
+  linkTarget,
+  titleHeadingElement,
 }) {
+  let titleNode;
+  const titleClassName = twClsx("font-titleBold", classNames?.title);
+  if (titleHeadingElement) {
+    titleNode = renderHeader(titleHeadingElement, title, {
+      className: titleClassName,
+    });
+  } else {
+    titleNode = <p className={titleClassName}>{title}</p>;
+  }
   const innerContent = (
     <div
       className={twClsx("flex group items-center", classNames?.root)}
@@ -69,7 +80,7 @@ export function InnerNavBarItem({
         {icon}
       </div>
       <div className="ml-2 text-xs lg:text-sm text-white">
-        <p className={twClsx("font-titleBold", classNames?.title)}>{title}</p>
+        {titleNode}
         <p
           className={twClsx(
             "font-title group-hover:underline",
@@ -82,7 +93,11 @@ export function InnerNavBarItem({
     </div>
   );
   if (href) {
-    return <Link href={href}>{innerContent}</Link>;
+    return (
+      <Link href={href} target={linkTarget}>
+        {innerContent}
+      </Link>
+    );
   }
   return innerContent;
 }
@@ -123,8 +138,9 @@ const NavBarItem = memo(
    * @param {NavBarItemProps} param0
    */
   ({ title, icon, link }) => {
-    const { classNames, variant, labelMaxLength } = useContext(C);
-    const { href, label } = link;
+    const { classNames, variant, labelMaxLength, titleHeadingElement } =
+      useContext(C);
+    const { href, label, target } = link;
 
     const itemClassNames = classNames?.item;
     const isHorizontalVariant = variant === "horizontal";
@@ -139,6 +155,8 @@ const NavBarItem = memo(
           label={processLabel(label, labelMaxLength)}
           href={href}
           icon={icon}
+          linkTarget={target}
+          titleHeadingElement={titleHeadingElement}
         />
       </li>
     );
@@ -157,6 +175,7 @@ const NavBar = memo(
     classNames,
     maxWidth = "xl",
     labelMaxLength,
+    titleHeadingElement,
   }) => {
     const isHorizontalVariant = variant === "horizontal";
     const maxWidthClassName = getMaxWidthClassName(maxWidth);
@@ -175,7 +194,9 @@ const NavBar = memo(
     );
 
     return (
-      <C.Provider value={{ classNames, variant, labelMaxLength }}>
+      <C.Provider
+        value={{ classNames, variant, labelMaxLength, titleHeadingElement }}
+      >
         {disableNavElement ? (
           <div className={wrapperClassName}>{out}</div>
         ) : (

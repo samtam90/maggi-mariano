@@ -125,17 +125,21 @@ function renderTopSection({
       )}
     >
       <header className="font-titleBold text-2xl lg:text-4xl text-center uppercase mb-8 lg:mb-12">
-        <h2 className={twClsx("text-green-primary", classNames?.title)}>
-          <SpecialText.Underlined
-            component="span"
-            double
-            fill={tailwindConfig.theme.extend.colors.red.primary}
-            active={activeUnderline}
-          >
-            {title}
-          </SpecialText.Underlined>
-        </h2>
-        <p className={twClsx("text-red-primary mt-2 text-xl lg:text-3xl", classNames?.subtitle)}>
+        <SpecialText.Underlined
+          component="h1"
+          double
+          fill={tailwindConfig.theme.extend.colors.red.primary}
+          active={activeUnderline}
+          className={twClsx("text-green-primary", classNames?.title)}
+        >
+          {title}
+        </SpecialText.Underlined>
+        <p
+          className={twClsx(
+            "text-red-primary mt-2 text-xl lg:text-3xl",
+            classNames?.subtitle
+          )}
+        >
           {subtitle}
         </p>
       </header>
@@ -373,7 +377,7 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
         variant={mobile ? "vertical" : "horizontal"}
         classNames={{
           contentWrapper: "max-w-6xl",
-          imageContainer: "block lg:mt-12"
+          imageContainer: "block lg:mt-12",
         }}
         onFormSubmit={onContactFormSubmit}
       />

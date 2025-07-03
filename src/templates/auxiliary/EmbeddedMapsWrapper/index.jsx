@@ -59,6 +59,7 @@ function EmbeddedMapsWrapper({ data, dimensions, classNames }) {
         <EmbeddedMap
           title={title}
           subtitle={subtitle}
+          titleHeadingElement="h3"
           src={src}
           key={`${title}-${index}`}
           dimensions={dimensions}

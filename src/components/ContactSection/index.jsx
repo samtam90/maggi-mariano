@@ -90,7 +90,7 @@ function ContactSection({
   onFormSubmit,
   classNames,
   variant = "horizontal",
-  titleHeadingElement,
+  titleHeadingElement = "h2",
   ids,
   imageDimensions,
 }) {

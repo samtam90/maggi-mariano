@@ -98,6 +98,7 @@ function renderTopSection(sectionData) {
       <BgImageSection
         title={title}
         content={subtitle}
+        headingElements={{ title: "h2" }}
         //imageUrl={imageSrc}
         classNames={{
           root: "py-12 lg:py-24 lg:max-w-6xl mx-auto px-6 lg:px-0",
@@ -190,9 +191,9 @@ function renderFeedbackSection({ title, items, autoScrollTimeoutMs }) {
       <div className="absolute inset-0 bg-green-primary opacity-25 z-0"></div>
       <div className="p-8 px-0 lg:px-12 rounded-lg shadow-md lg:max-w-6xl lg:mx-auto relative z-10 bg-green-dark">
         <header className="mb-6 lg:mb-8">
-          <h2 className="font-titleBold text-3xl lg:text-4xl text-center text-white uppercase">
+          <h3 className="font-titleBold text-3xl lg:text-4xl text-center text-white uppercase">
             {title}
-          </h2>
+          </h3>
         </header>
         <Carousel
           defaultSelected={1}
@@ -286,7 +287,10 @@ function HomeTemplate({ sections, mobile }) {
           <Header mobile={mobile} />
         </div>
         {renderTopSection(topSectionData)}
-        {renderTitleSection(appConfig.data.mainTitle)}
+        {renderTitleSection(appConfig.data.mainTitle, {
+          preTitle: "h1",
+          title: "h2",
+        })}
         <section key="services">
           {renderServicesNavGrid({
             ...appConfig.data.servicesGrid,

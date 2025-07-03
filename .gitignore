@@ -40,3 +40,5 @@ next-env.d.ts
 .script/format-provinces/.data/out
 .script/format-comuni/.data/out
 .img
+.data/out
+.bin/push.bat

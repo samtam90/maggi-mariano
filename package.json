@@ -9,14 +9,16 @@
     "storybook": "storybook dev -p 6006",
     "test:e2e": "jest ./src/__e2e__ --runInBand",
     "test:e2e:silent": "jest ./src/__e2e__ --runInBand --silent",
+    "push": "./.bin/push.bat",
     "generate-service-pages": "node ./.script/create-templated-pages.js \"C:/proj/sites/maggi-mariano/.script/create-templated-pages\"",
     "format-provinces": "node ./.script/format-provinces.js \"C:/proj/sites/maggi-mariano/.script/format-provinces\"",
     "format-comuni-arezzo": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Arezzo\"",
     "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\"",
-    "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\""
+    "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\"",
+    "generate-sitemap": "node ./.script/generate-sitemap.js \"C:/proj/sites/maggi-mariano/.data/out/sitemap.xml\" \"https://new.maggi-mariano.it\""
   },
   "dependencies": {
-    "@italwebcom/tailwind-components": "^1.16.6",
+    "@italwebcom/tailwind-components": "^1.16.16",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",
@@ -49,6 +51,7 @@
     "puppeteer": "21.6.1",
     "puppeteer-core": "21.6.1",
     "storybook": "^7.6.3",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.0",
+    "xmlbuilder": "^15.1.1"
   }
 }

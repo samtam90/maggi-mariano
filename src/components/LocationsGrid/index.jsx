@@ -19,7 +19,12 @@ import Link from "next/link";
  *    titleHeadingElement?: HeaderComponent
  * }} param0
  */
-function LocationsGrid({ items, classNames, title, titleHeadingElement }) {
+function LocationsGrid({
+  items,
+  classNames,
+  title,
+  titleHeadingElement = "h4",
+}) {
   return (
     <section
       className={twClsx(

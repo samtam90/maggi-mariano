@@ -64,6 +64,7 @@ export function renderTopNavBar({ items, maxWidth, className, mobile }) {
         root: twClsx("p-4 lg:px-0", className),
       }}
       labelMaxLength={mobile ? 20 : undefined}
+      titleHeadingElement="h4"
     >
       {actualItems.map(({ title, link, icon }) => (
         <NavBar.Item
@@ -166,7 +167,7 @@ export function renderPageFooter({
  * }} sectionData
  * @returns
  */
-export function renderTitleSection(sectionData) {
+export function renderTitleSection(sectionData, headingElements) {
   const { preTitle, title, subtitle, button, imageSrc } = sectionData;
   const { label, href } = button;
   return (
@@ -175,6 +176,7 @@ export function renderTitleSection(sectionData) {
         preTitle={preTitle}
         title={title}
         content={subtitle}
+        headingElements={headingElements || { preTitle: "h2", title: "h3" }}
         //imageUrl={imageSrc}
         classNames={{
           root: "py-16 lg:ml-12 lg:py-32 lg:max-w-5xl lg:mx-auto flex flex-col items-center",
@@ -232,6 +234,7 @@ export function renderServicesNavGrid({
   backgroundImageUrl,
   className,
   disableFlipCard,
+  titleHeadingElement = "h3",
 }) {
   const renderItemInnerContent = useCallback(
     (content, { title, subtitle }) =>
@@ -242,14 +245,15 @@ export function renderServicesNavGrid({
           front={content}
           back={
             <div className="h-full w-full bg-green-primary flex flex-col items-center justify-center text-white font-titleBold">
-              <div className="mb-4">
-                <h3 className="text-md lg:text-lg uppercase text-center">
+              <h3 className="mb-4">
+                <span className="text-md lg:text-lg uppercase text-center">
                   {title}
-                </h3>
-                <p className="font-title uppercase text-xs lg:text-sm text-center">
+                </span>
+                <br />
+                <span className="font-title uppercase text-xs lg:text-sm text-center">
                   {subtitle}
-                </p>
-              </div>
+                </span>
+              </h3>
               <div
                 role="button"
                 className="border border-white rounded-lg py-2 px-4 rounded-lg text-sm text-center lg:hover:opacity-75 transition-opacity"
@@ -284,6 +288,8 @@ export function renderServicesNavGrid({
             rightContainer: "bg-yellow-default",
             leftContainer: "bg-transparent",
           }}
+          heading
+          headingElement={titleHeadingElement}
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
@@ -303,6 +309,7 @@ export function renderServicesNavGrid({
           }}
           disableHighlight
           renderItemInnerContent={renderItemInnerContent}
+          headingComponent="h3"
         >
           {data.map(({ id, title, subtitle, iconSources, href }) => (
             <NavButtonsGrid.Item

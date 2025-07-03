@@ -32,14 +32,16 @@ function DocumentsTemplate({ mobile, documents, title }) {
           leftContainer: "block lg:inline-block",
           root: "text-md lg:text-2xl block lg:inline-block mb-12",
         }}
+        heading
+        headingElement="h1"
       />
       <ul className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16">
         {documents.map(({ image, href, label }) => (
           <li key={label}>
-            <h3 className="font-titleBold text-sm lg:text-md text-gray-700 mb-4 text-center">
-              {label}
-            </h3>
-            <Link href={href} target="_blank">
+            <Link href={href} target="_blank" className="group">
+              <h2 className="font-titleBold text-sm lg:text-md text-gray-700 mb-4 text-center group-hover:opacity-75 transition-opacity">
+                {label}
+              </h2>
               <Image
                 src={image.src}
                 dimensions={image.dimensions}

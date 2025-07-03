@@ -50,6 +50,7 @@ function HighlightedContentSection({
   variant = "horizontal",
   titleUnderlineActive = false,
   titleUnderlineColor = tailwindConfig.theme.extend.colors.red.primary,
+  titleHeadingElement = "h2",
 }) {
   const isHorizVariant = variant === "horizontal";
   return (
@@ -67,7 +68,7 @@ function HighlightedContentSection({
           active={titleUnderlineActive}
           double
           className={twClsx("text-green-dark", classNames?.title?.right)}
-          component="span"
+          component={titleHeadingElement}
           fill={titleUnderlineColor}
         >
           {title.right}

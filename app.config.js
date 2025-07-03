@@ -523,7 +523,8 @@ const footerData = {
           icon: "map",
           link: {
             label: "Via Aretina 16, Ponte a Poppi (AR)",
-            href: "https://www.google.it",
+            href: "https://www.google.com/maps?ll=43.723087,11.773815&z=14&t=m&hl=it&gl=US&mapclient=embed&cid=17598602611377354892",
+            target: "_blank",
           },
         },
         {
@@ -531,7 +532,8 @@ const footerData = {
           icon: "map",
           link: {
             label: "Loc. San Giuliano, Arezzo (AR)",
-            href: "https://www.google.it",
+            href: "https://www.google.com/maps?ll=43.453014,11.807869&z=14&t=m&hl=it&gl=US&mapclient=embed&cid=13949104776833428429",
+            target: "_blank",
           },
         },
         {
@@ -694,7 +696,7 @@ module.exports = {
           right: "Arezzo",
         },
         subtitle: "autospurgo aretino",
-        src: "https://maps.google.com/maps?q=Maggi%20Mariano%20Servizi%20Ecologici%20srl%2C%20Via%20Aretina%2C%2016%2C%2052014%20Poppi%20AR&t=m&z=14&output=embed&iwloc=near",
+        src: "https://maps.google.com/maps?q=Autospurgo%20Aretino%20Maggi%20Mariano%2C%20SS679%2C%2052100%20Arezzo%20AR&t=m&z=14&output=embed&iwloc=near",
       },
     ],
     footer: footerData,

@@ -13,8 +13,6 @@ const props = {
         </span>
       ),
       subtitle: "con telecamera robot",
-      imageSrc:
-        "https://www.maggi-mariano.it/wp-content/uploads/2022/05/home-1.jpg",
       link: {
         label: "Scopri di più",
         href: appConfig.links.servizi["videoispezioni-telecamera-robot"],
