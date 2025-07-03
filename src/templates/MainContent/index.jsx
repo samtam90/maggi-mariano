@@ -18,14 +18,17 @@ import ContactSection, {
   ClassNames as ContactSectionClassNames,
 } from "../../components/ContactSection";
 import testIDs from "../../misc/testIDs";
-import ContentArticle, {
-  SectionProps as ContentArticleSectionData,
-  SectionClassNames,
-} from "../../components/ContentArticle";
 import tailwindConfig from "../../../tailwind.config";
 import { ContactFormData } from "../../components/ContactForm";
 import PrivacySettingsPanelWrapper from "../../components/privacy/PrivacySettingsPanelWrapper";
 import { getLocalStorage } from "../../misc/functions";
+import {
+  components,
+  ArticleSectionContent as ContentArticleSectionData,
+  ArticleSectionClassNames as SectionClassNames,
+} from "@italwebcom/tailwind-components";
+
+const { ContentArticle } = components;
 
 /**
  * @typedef {{

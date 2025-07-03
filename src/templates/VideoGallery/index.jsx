@@ -1,4 +1,4 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import tailwindConfig from "../../../tailwind.config";
 import AuxTemplate from "../auxiliary/AuxTemplate";
@@ -6,9 +6,9 @@ import {
   DisabledMessage,
   useDisabledMgmt,
 } from "../auxiliary/EmbeddedMapsWrapper";
-import Context from "../../components/privacy/PrivacySettingsPanelWrapper/context";
 
 const { BorderedColoredText } = components;
+const { PrivacySettingsPanelWrapper } = components.privacy;
 
 function getLoadingAttribute({ loading, mobile }) {
   if (typeof loading === "function") {
@@ -19,7 +19,7 @@ function getLoadingAttribute({ loading, mobile }) {
 
 function Video({ src, dimensions, label, loading }) {
   const disabled = useDisabledMgmt();
-  const { setOpen } = useContext(Context);
+  const { setOpen } = PrivacySettingsPanelWrapper.useOpenManagement();
   if (disabled) {
     return (
       <div

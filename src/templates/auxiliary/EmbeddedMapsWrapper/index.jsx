@@ -1,14 +1,16 @@
-import React, { memo, useContext, useEffect, useState } from "react";
-import Context from "../../../components/privacy/PrivacySettingsPanelWrapper/context";
+import React, { memo, useEffect, useState } from "react";
 import EmbeddedMap from "../../../components/EmbeddedMap";
 import { twClsx } from "../../../misc/functions";
+import { components } from "@italwebcom/tailwind-components";
+
+const { PrivacySettingsPanelWrapper } = components.privacy;
 
 function isDisabled() {
   return localStorage.getItem("third_party_cookies") !== "accepted";
 }
 
 export function useDisabledMgmt() {
-  const { open } = useContext(Context);
+  const { open } = PrivacySettingsPanelWrapper.useOpenManagement();
   const [disabled, setDisabled] = useState(true);
   useEffect(() => {
     setDisabled(isDisabled());
@@ -45,7 +47,7 @@ export function DisabledMessage({ setOpen, message }) {
  */
 function EmbeddedMapsWrapper({ data, dimensions, classNames }) {
   const disabled = useDisabledMgmt();
-  const { setOpen } = useContext(Context);
+  const { setOpen } = PrivacySettingsPanelWrapper.useOpenManagement();
   return (
     <div
       className={twClsx(

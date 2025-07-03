@@ -16,7 +16,7 @@
     "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\""
   },
   "dependencies": {
-    "@italwebcom/tailwind-components": "^1.15.14",
+    "@italwebcom/tailwind-components": "^1.16.6",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
     "million": "^2.6.4",
@@ -25,7 +25,7 @@
     "react": "18",
     "react-dom": "18",
     "tailwind-merge": "^2.5.2",
-    "zod": "^3.25.64"
+    "zod": "^3.25.71"
   },
   "devDependencies": {
     "@italwebcom/logging-utils": "^0.1.3",

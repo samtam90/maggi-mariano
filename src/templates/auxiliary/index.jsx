@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useCallback, useContext } from "react";
+import React, { ReactNode, useCallback } from "react";
 import { components } from "@italwebcom/tailwind-components";
 import Link from "next/link";
 import Icons from "../../components/Icons";
@@ -14,12 +14,12 @@ import LocationsGrid, {
 } from "../../components/LocationsGrid";
 import { HeaderComponent } from "../../misc/functions";
 import { links } from "../../../app.config";
-import Context from "../../components/privacy/PrivacySettingsPanelWrapper/context";
 import EmbeddedMapsWrapper from "./EmbeddedMapsWrapper";
 import Image from "../../components/Image";
 
 const { BorderedColoredText, FlipCard } = components;
 const { NavButtonsGrid, BgImageSection } = components.sections;
+const { PrivacySettingsPanelWrapper } = components.privacy;
 
 function getIcon(iconName) {
   switch (iconName) {
@@ -78,7 +78,7 @@ export function renderTopNavBar({ items, maxWidth, className, mobile }) {
 }
 
 function PageFooterPrivacyButton() {
-  const { setOpen } = useContext(Context);
+  const { setOpen } = PrivacySettingsPanelWrapper.useOpenManagement();
   return (
     <InnerNavBarItem
       icon={<Icons.PencilSquare />}

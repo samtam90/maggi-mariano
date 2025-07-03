@@ -17,13 +17,12 @@ import ImageParagraphSections, {
 } from "../../components/ImageParagraphSections";
 import tailwindConfig from "../../../tailwind.config";
 import HighlightedContentSection from "../../components/HighlightedContentSection";
-import FeedbackCard from "../../components/FeedbackCard";
 import LinkButton from "../../components/LinkButton";
 import PrivacySettingsPanelWrapper from "../../components/privacy/PrivacySettingsPanelWrapper";
 import { getLocalStorage } from "../../misc/functions";
 
 const { useScrollVisibility } = hooks;
-const { Carousel } = components;
+const { Carousel, FeedbackCard } = components;
 const { FadeIn } = components.Animations;
 const { BgImageSection } = components.sections;
 
@@ -107,7 +106,7 @@ function renderTopSection(sectionData) {
           content:
             "text-white text-lg lg:text-2xl font-titleBold uppercase text-center lg:text-left",
           backdrop: "opacity-45",
-          background: "bg-camera"
+          background: "bg-camera",
         }}
         renderInnerContent={(content) => (
           <FadeIn
@@ -281,7 +280,7 @@ function HomeTemplate({ sections, mobile }) {
         {renderTopNavBar({
           items: appConfig.data.topNavBar.items,
           maxWidth: "6xl",
-          mobile
+          mobile,
         })}
         <div className="lg:sticky top-0 z-top bg-white shadow-md">
           <Header mobile={mobile} />
