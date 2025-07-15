@@ -245,12 +245,12 @@ export function renderServicesNavGrid({
           front={content}
           back={
             <div className="h-full w-full bg-green-primary flex flex-col items-center justify-center text-white font-titleBold">
-              <h3 className="mb-4">
-                <span className="text-md lg:text-lg uppercase text-center">
+              <h3 className="mb-4 text-center">
+                <span className="text-md lg:text-lg uppercase">
                   {title}
                 </span>
                 <br />
-                <span className="font-title uppercase text-xs lg:text-sm text-center">
+                <span className="font-title uppercase text-xs lg:text-sm">
                   {subtitle}
                 </span>
               </h3>

@@ -50,7 +50,7 @@ function Header({
           "max-w-6xl mx-auto pt-4 lg:pb-4",
           classNames?.contentWrapper
         ),
-        root: "shadow-md",
+        root: twClsx("shadow-md", classNames?.root),
         innerContentWrapper: "pb-4 lg:pb-0 px-4 lg:px-0",
         sections: {
           element: ({ isNestedContentOpen, nested }) => ({
@@ -64,6 +64,7 @@ function Header({
         },
       }}
       menuButtonLabel="Apri menù"
+      sectionsPopoverClearTimeoutMs={0}
     />
   );
 }

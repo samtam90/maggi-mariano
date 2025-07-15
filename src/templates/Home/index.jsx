@@ -283,9 +283,10 @@ function HomeTemplate({ sections, mobile }) {
           maxWidth: "6xl",
           mobile,
         })}
-        <div className="lg:sticky top-0 z-top bg-white shadow-md">
-          <Header mobile={mobile} />
-        </div>
+        <Header
+          mobile={mobile}
+          classNames={{ root: "lg:sticky top-0 z-top bg-white shadow-md" }}
+        />
         {renderTopSection(topSectionData)}
         {renderTitleSection(appConfig.data.mainTitle, {
           preTitle: "h1",
