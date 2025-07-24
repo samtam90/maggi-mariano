@@ -1,6 +1,7 @@
 import Icons from "@/components/Icons";
 import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
+import appConfig from "../../../app.config";
 
 const props = {
   formTitle: "Usa il modulo sottostante per contattarci",
@@ -12,13 +13,13 @@ const props = {
     {
       title: "sede poppi",
       subtitle: "Via Aretina 16, 52014 Ponte a Poppi - (AR)",
-      href: "https://www.google.it",
+      href: "https://maps.google.com/maps?q=Maggi%20Mariano%20Servizi%20Ecologici%20srl%2C%20Via%20Aretina%2C%2016%2C%2052014%20Poppi%20AR",
       icon: <Icons.MapPin className="text-xl" />,
     },
     {
       title: "sede arezzo",
       subtitle: "SS679, 52100 Arezzo (AR)",
-      href: "https://www.google.it",
+      href: "https://maps.google.com/maps?q=Autospurgo%20Aretino%20Maggi%20Mariano%2C%20SS679%2C%2052100%20Arezzo%20AR",
       icon: <Icons.MapPin className="text-xl" />,
     },
     {
@@ -54,7 +55,7 @@ const props = {
     {
       title: "P.I. e C.F.",
       subtitle: "01731060511",
-      href: "https://www.google.it",
+      href: "https://www.maggi-mariano.it",
       icon: <Icons.PencilSquare />,
     },
   ],
