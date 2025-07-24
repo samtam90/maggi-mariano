@@ -33,7 +33,7 @@ Base.args = {
           paragraphs: [
             <span className="text-gray-700 font-titleBold">
               Operiamo nel settore da anni e nel tempo ci siamo attrezzati con i
-              migliori macchinare e le migliori tecnologie che ci permettono di
+              migliori macchinari e le migliori tecnologie che ci permettono di
               garantire interventi tempestivi, poco invasivi e soprattutto a
               prezzi estremamente concorrenziali.
             </span>,
@@ -45,7 +45,7 @@ Base.args = {
               qualsiasi impianto, dai alle fognature e fosse biologiche.
             </span>,
             "Offriamo il servizio di Autospurgo Anghiari con professionalità e in modo programmato!",
-            "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
+            "E’ possibile stabilire a priori e programmare le nostre ispezioni e interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
           ],
           mediaElements: [
             {
@@ -91,7 +91,7 @@ Base.args = {
       ),
     },
     contacts: {
-      preTitle: "Per ogni tua problematica ed urgenza riguardante",
+      preTitle: "Per ogni tua problematica e urgenza riguardante",
       title: "Autospurgo Anghiari",
       phoneNumbers: [
         {

@@ -26,7 +26,7 @@ export function getProps({ title, mobile, locationsData }) {
                 per piscine, allora chiamaci e ti forniremo tutte le
                 informazioni.
               </HighlightedText>,
-              `La nostra azienda è specializzata nel ${title}, potabile o per il riempimento di piscine, cisterne, depositi, strutture ricettive come agriturismi, albeghi e impianti sportivi.`,
+              `La nostra azienda è specializzata nel ${title}, potabile o per il riempimento di piscine, cisterne, depositi, strutture ricettive come agriturismi, alberghi e impianti sportivi.`,
               <span>
                 <HighlightedText>
                   I nostri automezzi, di diverse dimensioni e portata, possono
@@ -60,7 +60,7 @@ export function getProps({ title, mobile, locationsData }) {
           },
           {
             paragraphs: [
-              `In stagioni particolarmente calde e con elevata siccità, il nostro servizio di ${title} permettere di risolvere ed ovviare i problemi che possono derivare dalla mancanza di approvvigionamento tramite la rete idrica.`,
+              `In stagioni particolarmente calde e con elevata siccità, il nostro servizio di ${title} permettere di risolvere e ovviare i problemi che possono derivare dalla mancanza di approvvigionamento tramite la rete idrica.`,
               <span>
                 Esistono realtà locali, piccoli comuni o frazioni che durante il
                 periodo estivo o in particolari periodi dell'anno, hanno grosse
@@ -73,7 +73,7 @@ export function getProps({ title, mobile, locationsData }) {
                   commerciali presenti.
                 </HighlightedText>
               </span>,
-              `Il ${title} viene spesso utilizzato per il riempimento delle piscine delle attività turistiche, degli albergi e anche delle abitazioni private. In particolari periodi dell’anno molti comuni vietano e sanzionano l’uso dell’acqua della rete idrica locale per questo utilizzo.`,
+              `Il ${title} viene spesso utilizzato per il riempimento delle piscine delle attività turistiche, degli alberghi e anche delle abitazioni private. In particolari periodi dell’anno molti comuni vietano e sanzionano l’uso dell’acqua della rete idrica locale per questo utilizzo.`,
               <span>
                 Spesso i pozzi presenti nelle strutture non riescono a garantire
                 un quantitativo adeguato di acqua per il riempimento di una

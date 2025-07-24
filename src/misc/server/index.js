@@ -20,7 +20,7 @@ export async function onContactFormSubmit({
     from: appConfig.server.mail.senderMail,
     to: appConfig.server.mail.adminMails.join(", "),
     subject: `Nuova richiesta dal sito ${appConfig.misc.title} (${appConfig.misc.url})`,
-    text: `E' stata ricevuta una nuova richiesta da "${name} ${surname} (${email})" con i seguenti dati:\n\nOggetto: ${title}\nContenuto: ${content}`,
+    text: `È stata ricevuta una nuova richiesta da "${name} ${surname} (${email})" con i seguenti dati:\n\nOggetto: ${title}\nContenuto: ${content}`,
   });
   console.log(out);
 }

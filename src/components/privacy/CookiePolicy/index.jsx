@@ -55,12 +55,12 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
         </p>
         <ul className="mt-1">
           <li className="mb-1">
-            • <i>cookie:</i> sono stringhe testuali associate ad un dominio ed
+            • <i>cookie:</i> sono stringhe testuali associate a un dominio ed
             aventi durata permanente o limitata nel tempo.
           </li>
           <li className="mb-1">
             • <i>web storage:</i> sono dati memorizzati mediante Web Storage
-            API, associati ad una origine ed aventi durata permanente{" "}
+            API, associati a una origine e aventi durata permanente{" "}
             <i>(local storage)</i> o limitata alla durata della sessione
             <i>(session storage)</i>.
           </li>
@@ -124,7 +124,7 @@ function CookiePolicy({ name, privacyPolicyHref, email, classNames }) {
           <li className="mb-1">
             •{" "}
             <i>
-              Personalizzazione ed ottimizzazione{" "}
+              Personalizzazione e ottimizzazione{" "}
               <GDPRArticle>(Art. 6(1)(a) GDPR)</GDPRArticle>
             </i>
             : dati nella local storage e cookie di terze parti.

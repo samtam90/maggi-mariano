@@ -13,10 +13,10 @@ const props = {
           title: "Funzionamento dell'escavatore a risucchio",
           paragraphs: [
             "Nel meccanismo dell'escavatore a risucchio è presente una ventola che genera una corrente d'aria fino a 44.000 mb/h e produce una sottopressione massima di 55.000 Pa. Il materiale viene dunque aspirato tramite la corrente d'aria.",
-            "Con questo mezzo possono essere aspirati tutti i tipi di materiali solidi fino ad una dimensione massima di 250 mm.",
+            "Con questo mezzo possono essere aspirati tutti i tipi di materiali solidi fino a una dimensione massima di 250 mm.",
             "La posizione del contenitore di raccolta dell'escavatore a risucchio fa si che gli assi del veicolo non vengano sollecitati.",
-            "L'aria che permette l'aspirazione del materiale passa poi in una camera separata dal contenitore di raccolta dove viene pulita, ed attraverso filtri vengono assorbite le polveri rimanenti.",
-            "L'aria pulita viene espulsa fuori dall'alto senza produrre forti rumori grazie ad un isolamento acustico.",
+            "L'aria che permette l'aspirazione del materiale passa poi in una camera separata dal contenitore di raccolta dove viene pulita, e attraverso filtri vengono assorbite le polveri rimanenti.",
+            "L'aria pulita viene espulsa fuori dall'alto senza produrre forti rumori grazie a un isolamento acustico.",
             "La pulizia dei filtri avviene invece tramite aria pneumatica.",
             "Durante il processo di scarico a ribalta viene svuotato sia il contenitore di raccolta che la camera separata da eventuali residui.",
             "Il materiale che viene aspirato si deposita nel cassone che ha una capacità di 8 m3.",

@@ -11,7 +11,7 @@ const imgDims = { width: 1024, height: 1024 };
 
 export function getContactStuff({ title }) {
   return {
-    preTitle: "Per ogni tua problematica ed urgenza riguardante",
+    preTitle: "Per ogni tua problematica e urgenza riguardante",
     title,
     phoneNumbers: [
       {
@@ -34,7 +34,7 @@ export function getContactStuff({ title }) {
         </Link>{" "}
         per ispezionare le fognature, scarichi e fosse biologiche difficilmente
         raggiungibili con altri mezzi, permettendoci di risolvere ogni
-        problematica inerente il serivizio di {title} dei nostri clienti in
+        problematica inerente il servizio di {title} dei nostri clienti in
         tempi brevi.
       </span>
     ),
@@ -63,7 +63,7 @@ export function getProps({ title, mobile, locationsData }) {
           {
             paragraphs: [
               `Ci occupiamo di ${title}, anche con interventi programmati e fissati nel tempo.`,
-              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l'apparato fognario e di scarico di abitazioni, condomini, aziende ed uffici.",
+              "Effettuare una periodica pulizia delle fognature è importante per garantire un buon funzionamento di tutto l'apparato fognario e di scarico di abitazioni, condomini, aziende e uffici.",
               <HighlightedText>
                 Purtroppo questo è un argomento che troppo spesso non viene
                 preso nella giusta considerazione, nella maggioranza dei casi ci
@@ -72,7 +72,7 @@ export function getProps({ title, mobile, locationsData }) {
                 fognaria.
               </HighlightedText>,
               "Anche per la pulizia fognature condominiali va prestata la stessa attenzione, anzi proprio in questi casi è fondamentale programmare anticipatamente gli interventi da effettuare durante il corso di tutto l'anno.",
-              "Tutte le operazioni sulle fognatore o fosse biologiche condominiali sono sempre più complesse e impegnative rispetto a quelle che effettuate in una normale abitazione a causa di questo una manutanzione periodica e programmata, una accurata pulizia fognature condominiali garantiscono il buon funzionamento degli scarichi ed evitano spiacevoli problematiche a tutti i condomini.",
+              "Tutte le operazioni sulle fognature o fosse biologiche condominiali sono sempre più complesse e impegnative rispetto a quelle che effettuate in una normale abitazione a causa di questo una manutenzione periodica e programmata, una accurata pulizia fognature condominiali garantiscono il buon funzionamento degli scarichi ed evitano spiacevoli problematiche a tutti i condomini.",
             ],
             classNames: { root: "mb-8" },
           },
@@ -81,8 +81,8 @@ export function getProps({ title, mobile, locationsData }) {
               `Maggi Mariano Servizi Ecologici SRL è l'azienda leader per ${title}, spurgo fosse biologiche e spurgo pozzi neri`,
               "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, pozzi neri, fognature e fosse biologiche.",
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
-              "E' possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
-              "Siamo in grado di fornire il servizio di spurgo pozzi neri e di pulizia delle fognature ad un prezzo tra i più vantaggiosi sul mercato.",
+              "È possibile stabilire a priori e programmare le nostre ispezioni e interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
+              "Siamo in grado di fornire il servizio di spurgo pozzi neri e di pulizia delle fognature a un prezzo tra i più vantaggiosi sul mercato.",
             ],
             mediaElements: [
               {

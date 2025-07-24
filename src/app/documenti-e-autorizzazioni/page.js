@@ -3,7 +3,7 @@ import { withConditionalRendering } from "@/misc/functions";
 const imgDims = { width: 512, height: 512 };
 const props = {
   title: {
-    left: "Documenti ed autorizzazioni",
+    left: "Documenti e autorizzazioni",
     right: "Maggi Mariano Servizi Ecologici",
   },
   documents: [

@@ -21,7 +21,7 @@ const T = (args) => (
 
 export const Base = T.bind({});
 Base.args = {
-  preTitle: "Per ogni tua problematica ed urgenza riguardante",
+  preTitle: "Per ogni tua problematica e urgenza riguardante",
   title: "Autospurgo Anghiari",
   phoneNumbers: [
     {

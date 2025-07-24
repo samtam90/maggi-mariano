@@ -32,8 +32,8 @@ Base.args = {
         alt: "Frantumatore mobile",
       },
       paragraphs: [
-        "Se hai una impresa edile, di costruzioni, se ti occupi di ristrutturazioni allora sicuramente anche tu devi affrontarte il problema quotidiano che si presente alle imprese come la tua: SMALTIMENTO DELLE MACERIE, TRASPORTO DELLE STESSE IN CAVA, COSTI DA SOSTENERE",
-        "Pensa a tutti i vantaggi che possono esserci nell'effettuare la selezione e il trattamento degli scarti di lavorazione edilizia dirrettamente nel luogo dove vengono prodotti e magari, se il materiale lo permette, il vantaggio di poterli riutilizzare in successive fasi di lavorazione.",
+        "Se hai una impresa edile, di costruzioni, se ti occupi di ristrutturazioni allora sicuramente anche tu devi affrontare il problema quotidiano che si presente alle imprese come la tua: SMALTIMENTO DELLE MACERIE, TRASPORTO DELLE STESSE IN CAVA, COSTI DA SOSTENERE",
+        "Pensa a tutti i vantaggi che possono esserci nell'effettuare la selezione e il trattamento degli scarti di lavorazione edilizia direttamente nel luogo dove vengono prodotti e magari, se il materiale lo permette, il vantaggio di poterli riutilizzare in successive fasi di lavorazione.",
         "Tutto questo comporterebbe sicuramente un guadagno sia in termini di tempo impiegato ma anche un guadagno diretto in termini economici: risparmio nel non dover trasportare il materiale in cava, risparmio, laddove possibile, nel poterlo riutilizzare immediatamente senza acquistarne altro.",
       ],
     },
@@ -96,7 +96,7 @@ Base.args = {
       ),
     },
     contacts: {
-      preTitle: "Per ogni tua problematica ed urgenza riguardante",
+      preTitle: "Per ogni tua problematica e urgenza riguardante",
       title: "Autospurgo Anghiari",
       phoneNumbers: [
         {

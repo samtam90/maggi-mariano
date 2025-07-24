@@ -21,17 +21,17 @@ export function getProps({ title, mobile, locationsData }) {
             paragraphs: [
               `Se stai cercando un'azienda specializzata nello ${title} allora la MAGGI MARIANO SERVIZI ECOLOGICI è la ditta che fa per te. Contattaci subito e ti chiariremo ogni dubbio.`,
               `Lo ${title} non è in effetti un argomento che siamo soliti trattare nella vita di tutti i giorni, anzi! Preferiremmo certamente non dovercene occupare (chi vuole interessarsi di liquami!). Quando però è necessario farlo, è bene avere le idee chiare!`,
-              "Spurgare una fognatura, una fossa biologica o un pozzo nero è un lavoro particolare e delicato, per questo è necessario affidarsi ad un’azienda seria e certificata come la Maggi Mariano Servizi Ecologici!",
+              "Spurgare una fognatura, una fossa biologica o un pozzo nero è un lavoro particolare e delicato, per questo è necessario affidarsi a un'azienda seria e certificata come la Maggi Mariano Servizi Ecologici!",
             ],
             classNames: { root: "mb-8" },
           },
           {
             paragraphs: [
-              `Maggi Mariano Servizi Ecologici SRL è l’azienda leader per ${title}, spurgo pozzi neri e fognature.`,
+              `Maggi Mariano Servizi Ecologici SRL è l'azienda leader per ${title}, spurgo pozzi neri e fognature.`,
               "Garantiamo risposte ideali per disostruire, svuotare e liberare qualsiasi impianto, dai pozzi neri alle fognature e fosse biologiche.",
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
-              "E’ possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l’anno evitando le urgenze e le problematiche che ne conseguono.",
-              "Siamo in grado di fornire il servizio di spurgo fosse biologiche ad un prezzo tra i più ventaggiosi sul mercato.",
+              "È possibile stabilire a priori e programmare le nostre ispezioni e interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
+              "Siamo in grado di fornire il servizio di spurgo fosse biologiche a un prezzo tra i più vantaggiosi sul mercato.",
             ],
             mediaElements: [
               {

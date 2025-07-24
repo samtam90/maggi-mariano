@@ -31,8 +31,8 @@ function getProps({ mobile }) {
           {
             paragraphs: [
               "Per la salvaguardia dell’ambiente che ci circonda è necessario che i rifiuti siano correttamente recuperati e riciclati.",
-              "Il ferro, sotto le sue varie forme e declinazioni, si presenta perfetto ad essere riciclato quasi all’infinito. Il riciclaggio rappresente una fonte economica importante per ogni paese industrializzato.",
-              "Ovviamente è fondamentale affidarsi ad aziende specializzate e certificate, che possono effettuare tutte le operazioni corrette e indispensabili al riciclaggio per evitare imaptti negativi all’ambiente.",
+              "Il ferro, sotto le sue varie forme e declinazioni, si presenta perfetto ad essere riciclato quasi all’infinito. Il riciclaggio rappresenta una fonte economica importante per ogni paese industrializzato.",
+              "Ovviamente è fondamentale affidarsi ad aziende specializzate e certificate, che possono effettuare tutte le operazioni corrette e indispensabili al riciclaggio per evitare impatti negativi all’ambiente.",
             ],
             mediaElements: [
               {

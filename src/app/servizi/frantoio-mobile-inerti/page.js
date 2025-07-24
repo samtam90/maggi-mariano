@@ -19,7 +19,7 @@ export function getProps({ title, locationsData }) {
         paragraphs: [
           <span>
             Se hai una impresa edile, di costruzioni, se ti occupi di
-            ristrutturazioni allora sicuramente anche tu devi affrontarte il
+            ristrutturazioni allora sicuramente anche tu devi affrontare il
             problema quotidiano che si presente alle imprese come la tua: &nbsp;
             <HighlightedText>
               smaltimento delle macerie, trasporto delle stesse in cava, costi
@@ -29,7 +29,7 @@ export function getProps({ title, locationsData }) {
           <HighlightedText>
             Pensa a tutti i vantaggi che possono esserci nell'effettuare la
             selezione e il trattamento degli scarti di lavorazione edilizia
-            dirrettamente nel luogo dove vengono prodotti e magari, se il
+            direttamente nel luogo dove vengono prodotti e magari, se il
             materiale lo permette, il vantaggio di poterli riutilizzare in
             successive fasi di lavorazione.
           </HighlightedText>,
@@ -110,7 +110,7 @@ export function getProps({ title, locationsData }) {
         ),
       },
       contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
+        preTitle: "Per ogni tua problematica e urgenza riguardante",
         title,
         phoneNumbers: [
           {

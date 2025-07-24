@@ -39,7 +39,7 @@ function PrivacyPolicy({ name, cookiePolicyHref, email, classNames }) {
         <p className="mb-1">Raccogliamo i seguenti tipi di informazioni:</p>
         <ul>
           <li className="mb-1">
-            • <i>Informazioni di contatto:</i> nome, cognome ed indirizzo email.
+            • <i>Informazioni di contatto:</i> nome, cognome e indirizzo email.
             Questi dati sono raccolti in caso di uso del form di contatto per
             rispondere alle tue richieste.
           </li>

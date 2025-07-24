@@ -28,7 +28,7 @@ export function getProps({ title, mobile, locationsData }) {
               <span>
                 Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
                 <HighlightedText>
-                  i migliori macchinare e le migliori tecnologie
+                  i migliori macchinari e le migliori tecnologie
                 </HighlightedText>{" "}
                 che ci permettono di garantire interventi tempestivi, poco
                 invasivi e soprattutto{" "}
@@ -41,7 +41,7 @@ export function getProps({ title, mobile, locationsData }) {
                 Offriamo il servizio di {title} per le aziende, gli uffici ma
                 anche per i privati.
               </span>,
-              "Se hai da smaltire quasiasi genere di rifiuto solido o liquido contattaci e ti offriremo la nostra consulenza, valuteremo insieme tutti gli aspetti dell’intevento richiesto e ti proporremo un preventivo che sarà sicuramente tra i più concorrenziali del mercato.",
+              "Se hai da smaltire qualsiasi genere di rifiuto solido o liquido contattaci e ti offriremo la nostra consulenza, valuteremo insieme tutti gli aspetti dell’intervento richiesto e ti proporremo un preventivo che sarà sicuramente tra i più concorrenziali del mercato.",
             ],
             mediaElements: [
               {
@@ -57,9 +57,9 @@ export function getProps({ title, mobile, locationsData }) {
           {
             paragraphs: [
               "Quando una azienda si trova nella necessità di smaltire i rifiuti o i prodotti di scarto derivanti dalle varie tipologie di lavorazioni aziendali, è importante che si rivolga ad aziende specializzate che offrono questo servizio con professionalità e competenza.",
-              "Spesso i rifiuti industriali possono contenere sostanze tossiche o nocive che vanno trasportate e smaltite in maniera adeguata ed in estrema sicurezza.",
+              "Spesso i rifiuti industriali possono contenere sostanze tossiche o nocive che vanno trasportate e smaltite in maniera adeguata e in estrema sicurezza.",
               `La nostra azienda è specializzata nel ${title} ed è in grado di provvedere al trasporto e allo smaltimento di tutti i generi di scarti e rifiuti sia solidi che liquidi.`,
-              "Siamo muniti di mezzi adeguati per ogni genere di intervento sia in ambito industriale che civile, possiamo raggiungere ed operare anche in ambienti difficili come centri storici, località montane o in situazioni di emergenza come quelle generate da alluvioni, terremoti e latri eventi naturali.",
+              "Siamo muniti di mezzi adeguati per ogni genere di intervento sia in ambito industriale che civile, possiamo raggiungere e operare anche in ambienti difficili come centri storici, località montane o in situazioni di emergenza come quelle generate da alluvioni, terremoti e latri eventi naturali.",
             ],
           },
         ],

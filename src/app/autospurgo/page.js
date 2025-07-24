@@ -20,7 +20,7 @@ export function getProps({ title, mobile, locationsData }) {
             paragraphs: [
               <span className="text-gray-600 font-titleBold">
                 Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
-                i migliori macchinare e le migliori tecnologie che ci permettono
+                i migliori macchinari e le migliori tecnologie che ci permettono
                 di garantire interventi tempestivi, poco invasivi e soprattutto
                 a prezzi estremamente concorrenziali.
               </span>,
@@ -46,7 +46,7 @@ export function getProps({ title, mobile, locationsData }) {
                 .
               </span>,
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
-              "E' possibile stabilire a priori e programmare le nostre ispezioni ed interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
+              "È possibile stabilire a priori e programmare le nostre ispezioni e interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
             ],
             mediaElements: [
               {
@@ -76,7 +76,7 @@ export function getProps({ title, mobile, locationsData }) {
                 difficili da raggiungere.
               </span>,
               <span>
-                Effettuiamo anche la stasatura e disotturazione di tubature,
+                Effettuiamo anche la stasatura e disotturazione di tubature, 
                 <Link
                   href={links.servizi["spurgo-fosse-biologiche"].root}
                   className="font-titleBold underline text-green-dark ml-1"

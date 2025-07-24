@@ -19,13 +19,13 @@ export function getProps({ title, mobile, locationsData }) {
         sections: [
           {
             paragraphs: [
-              `${title}, wc chimici per cantieri stradali, cantieri edili, manifestazioni, fiere, feste e sagre. Tasporto direttamente in loco, installazione, manutenzione, pulizia e recupero al termine del servizio.`,
+              `${title}, wc chimici per cantieri stradali, cantieri edili, manifestazioni, fiere, feste e sagre. Trasporto direttamente in loco, installazione, manutenzione, pulizia e recupero al termine del servizio.`,
               <HighlightedText>
                 Oltre ai bagni chimici classici, abbiamo anche bagni chimici per
                 disabili appositamente progettati per essere fruiti da persone
                 che utilizzano ausili come carrozzine o deambulatori.
               </HighlightedText>,
-              "Questi wc, oltre a dimemsioni maggiori della porta e degli spazi interni, vengono equipaggiati con accessori appositamente progettati, come lavandini e doccette, che possono essere facilmente utilizzati da persone con deficit motori. Allo stesso modo, il posizionamento in loco dei bagni chimici per disabili verrà studiato per agevolarne l’utilizzo e per garantire la massima accessibilità.",
+              "Questi wc, oltre a dimensioni maggiori della porta e degli spazi interni, vengono equipaggiati con accessori appositamente progettati, come lavandini e doccette, che possono essere facilmente utilizzati da persone con deficit motori. Allo stesso modo, il posizionamento in loco dei bagni chimici per disabili verrà studiato per agevolarne l’utilizzo e per garantire la massima accessibilità.",
             ],
             mediaElements: [
               {
@@ -101,7 +101,7 @@ export function getProps({ title, mobile, locationsData }) {
         ),
       },
       contacts: {
-        preTitle: "Per ogni tua problematica ed urgenza riguardante",
+        preTitle: "Per ogni tua problematica e urgenza riguardante",
         title,
         phoneNumbers: [
           {

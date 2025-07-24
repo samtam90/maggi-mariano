@@ -24,7 +24,7 @@ function getProps({ mobile }) {
                 </HighlightedText>
                 , autorizzate al{" "}
                 <HighlightedText>
-                  trattamento dei fanghi civili ed industriali
+                  trattamento dei fanghi civili e industriali
                 </HighlightedText>{" "}
                 completamente autonome.
               </span>,
@@ -43,7 +43,7 @@ function getProps({ mobile }) {
               <span>
                 Mettiamo anche a disposizione dei nostri clienti{" "}
                 <HighlightedText>adeguati container</HighlightedText> per lo
-                stoccaggio dei fanghi disidratati e effettuiamo anche il loro
+                stoccaggio dei fanghi disidratati ed effettuiamo anche il loro
                 eventuale smaltimento.
               </span>,
             ],
@@ -60,7 +60,7 @@ function getProps({ mobile }) {
             classNames: { root: "mb-8" },
           },
           {
-            title: "COSA E' LA DISIDRATAZIONE FANGHI",
+            title: "COSA È LA DISIDRATAZIONE FANGHI",
             paragraphs: [
               "La disidratazione o deacquificazione è un trattamento a cui vengono sottoposti i fanghi provenienti dalla linea fanghi di un impianti di depurazione o di potabilizzazione, al fine di ridurne il tenore di acqua e rendere più economiche e più facili le successive operazioni di trattamento e smaltimento – smaltimento diretto (ad esempio in agricoltura) o incenerimento.",
               "La deacquificazione può essere realizzata sia su un fango ancora grezzo che su uno stabilizzato. Dopo il trattamento il fango si presenta come un materiale di consistenza semisolida.",
