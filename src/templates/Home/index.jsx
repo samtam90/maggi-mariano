@@ -295,7 +295,7 @@ function HomeTemplate({ sections, mobile }) {
         <section key="services">
           {renderServicesNavGrid({
             ...appConfig.data.servicesGrid,
-            disableFlipCard: mobile,
+            flipCardButtonLabel: mobile ? "Caricamento" : "Scopri di più",
           })}
         </section>
         {renderDescriptionSection(processedDescriptionSectionData, mobile)}

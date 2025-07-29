@@ -1,20 +1,14 @@
 import { twClsx } from "../../misc/functions";
 import Link from "next/link";
-import React from "react";
+import React, { memo } from "react";
 
-export default function LinkButton({
-  href,
-  label,
-  className,
-  classNames,
-  target,
-}) {
+function LinkButton({ href, label, className, classNames, target }) {
   return (
     <Link
       href={href}
       target={target}
       className={twClsx(
-        "block text-center lg:hover:opacity-75 lg:transition-opacity",
+        "block text-center active:opacity-75 lg:hover:opacity-75 transition-opacity",
         className || classNames?.root
       )}
     >
@@ -29,3 +23,5 @@ export default function LinkButton({
     </Link>
   );
 }
+
+export default memo(LinkButton);

@@ -235,6 +235,7 @@ export function renderServicesNavGrid({
   className,
   disableFlipCard,
   titleHeadingElement = "h3",
+  flipCardButtonLabel = "Scopri di più",
 }) {
   const renderItemInnerContent = useCallback(
     (content, { title, subtitle }) =>
@@ -246,9 +247,7 @@ export function renderServicesNavGrid({
           back={
             <div className="h-full w-full bg-green-primary flex flex-col items-center justify-center text-white font-titleBold">
               <h3 className="mb-4 text-center">
-                <span className="text-md lg:text-lg uppercase">
-                  {title}
-                </span>
+                <span className="text-md lg:text-lg uppercase">{title}</span>
                 <br />
                 <span className="font-title uppercase text-xs lg:text-sm">
                   {subtitle}
@@ -258,7 +257,7 @@ export function renderServicesNavGrid({
                 role="button"
                 className="border border-white rounded-lg py-2 px-4 rounded-lg text-sm text-center lg:hover:opacity-75 transition-opacity"
               >
-                Scopri di più
+                {flipCardButtonLabel}
               </div>
             </div>
           }
@@ -302,10 +301,10 @@ export function renderServicesNavGrid({
             item: {
               container: "text-center px-2 py-2 lg:py-4 lg:px-6",
               innerContainer: "p-2 py-4 lg:p-6",
-              subtitle: "text-xs lg:text-sm",
-              title: "lg:text-md",
+              subtitle: "text-xs lg:text-sm leading-tight",
+              title: "text-sm lg:text-md",
             },
-            root: "grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6",
+            root: "grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6",
           }}
           disableHighlight
           renderItemInnerContent={renderItemInnerContent}

@@ -157,7 +157,7 @@ function MainContentTemplate({
           {renderServicesNavGrid({
             ...appConfig.data.servicesGrid,
             className: "max-w-6xl",
-            disableFlipCard: mobile,
+            flipCardButtonLabel: mobile ? "Caricamento" : "Scopri di più",
           })}
         </section>
         {renderMaps({
