@@ -55,6 +55,7 @@ export function InnerNavBarItem({
   onClick,
   linkTarget,
   titleHeadingElement,
+  prefetch,
 }) {
   let titleNode;
   const titleClassName = twClsx("font-titleBold", classNames?.title);
@@ -94,7 +95,7 @@ export function InnerNavBarItem({
   );
   if (href) {
     return (
-      <Link href={href} target={linkTarget}>
+      <Link href={href} target={linkTarget} prefetch={prefetch}>
         {innerContent}
       </Link>
     );
@@ -137,7 +138,7 @@ const NavBarItem = memo(
    * @returns
    * @param {NavBarItemProps} param0
    */
-  ({ title, icon, link }) => {
+  ({ title, icon, link, prefetch }) => {
     const { classNames, variant, labelMaxLength, titleHeadingElement } =
       useContext(C);
     const { href, label, target } = link;
@@ -156,6 +157,7 @@ const NavBarItem = memo(
           href={href}
           icon={icon}
           linkTarget={target}
+          prefetch={prefetch}
           titleHeadingElement={titleHeadingElement}
         />
       </li>

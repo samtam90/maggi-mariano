@@ -154,6 +154,7 @@ function renderDescriptionSection({ headerImages, items }, mobile) {
         root: "bg-green-dark pb-4 pt-8",
         item: { paragraph: "text-white lg:px-8", image: "px-4 lg:px-0" },
       }}
+      imageLoading="lazy"
     />
   );
 }

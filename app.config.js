@@ -66,6 +66,13 @@ const links = {
       "/servizi/pulizia-fognature/pulizia-fognature"
     ),
     "recupero-materiali-ferrosi": "/servizi/recupero-materiali-ferrosi",
+    "spurgo-pozzi-neri": makeLinks(
+      {
+        root: "/servizi/spurgo-pozzi-neri",
+      },
+      allLocations,
+      "/servizi/spurgo-pozzi-neri/spurgo-pozzi-neri"
+    ),
     "spurgo-fosse-biologiche": makeLinks(
       {
         root: "/servizi/spurgo-fosse-biologiche",
@@ -208,6 +215,28 @@ const navBarSections = {
           comuniPerugia,
           "Spurgo fosse biologiche",
           links.servizi["spurgo-fosse-biologiche"]
+        ),
+      }
+    ),
+    "Spurgo pozzi neri": makeNavBarItems(
+      province,
+      "Spurgo pozzi neri",
+      links.servizi["spurgo-pozzi-neri"],
+      {
+        "Spurgo pozzi neri Arezzo": makeNavBarItems(
+          comuniArezzo,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
+        ),
+        "Spurgo pozzi neri Firenze": makeNavBarItems(
+          comuniFirenze,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
+        ),
+        "Spurgo pozzi neri Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
         ),
       }
     ),

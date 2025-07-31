@@ -72,6 +72,7 @@ export function renderTopNavBar({ items, maxWidth, className, mobile }) {
           title={title}
           icon={getIcon(icon)}
           link={link}
+          prefetch={false}
         />
       ))}
     </NavBar>
@@ -292,7 +293,7 @@ export function renderServicesNavGrid({
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
-            <Link href={href} className="block">
+            <Link href={href} className="block" prefetch={false}>
               {content}
             </Link>
           )}
@@ -321,6 +322,7 @@ export function renderServicesNavGrid({
                   sources={iconSources}
                   alt={`${title} ${subtitle}`}
                   classNames={{ picture: "h-12 w-12 block", image: "w-full" }}
+                  loading="lazy"
                 />
               }
               href={href}

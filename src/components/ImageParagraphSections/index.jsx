@@ -39,7 +39,15 @@ function procImgs(imgs) {
  * @param {Image & {className: string}} param0
  * @returns
  */
-function renderImage({ src, alt, dimensions, sources, className, classNames }) {
+function renderImage({
+  src,
+  alt,
+  dimensions,
+  sources,
+  className,
+  classNames,
+  loading,
+}) {
   return (
     <Image
       src={src}
@@ -50,6 +58,7 @@ function renderImage({ src, alt, dimensions, sources, className, classNames }) {
       className={className}
       classNames={classNames}
       key={alt}
+      loading={loading}
     />
   );
 }
@@ -119,6 +128,7 @@ function ImageParagraphSections({
   items,
   classNames,
   variant = "horizontal",
+  imageLoading,
 }) {
   const isVertVariant = variant === "vertical";
   return (
@@ -139,6 +149,7 @@ function ImageParagraphSections({
               "block max-w-full object-contain mb-6",
               classNames?.header?.image
             ),
+            loading: imageLoading,
           })
         )}
       </header>
@@ -156,6 +167,7 @@ function ImageParagraphSections({
             ),
             image: "w-full",
           },
+          loading: imageLoading,
         });
         const parsNodes = renderParagraphs(
           paragraphs,
