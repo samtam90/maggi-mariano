@@ -92,6 +92,7 @@ function HighlightedContentSection({
               "mb-4 max-w-full object-contain",
               classNames?.image
             )}
+            loading="lazy"
           />
           <LinkButton
             href={link.href}
