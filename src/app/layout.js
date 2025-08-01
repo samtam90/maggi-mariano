@@ -1,6 +1,7 @@
 import Script from "next/script";
 import appConfig from "../../app.config";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import ReactDOM from "react-dom";
 import "./globals.css";
 
 const description =
@@ -20,12 +21,19 @@ export const metadata = {
       {
         width: 131,
         height: 48,
-        url: "https://www.maggi-mariano.it/immagini/misc/logo-maggi.png",
+        url: "https://www.maggi-mariano.it/immagini/logo.png",
         alt: "Maggi Mariano Servizi Ecologici",
       },
     ],
   },
 };
+
+function Preload() {
+  ReactDOM.preload("https://www.maggi-mariano.it/immagini/title.jpg", {
+    type: "image/jpeg",
+    as: "image",
+  });
+}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -43,6 +51,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Preload />
         <GoogleAnalytics gaId={appConfig.misc.googleAnalyticsId} />
       </head>
       <body>{children}</body>

@@ -733,7 +733,7 @@ module.exports = {
     header: {
       navBarSections,
       logo: {
-        src: "https://www.maggi-mariano.it/immagini/misc/logo-maggi.png",
+        src: "https://www.maggi-mariano.it/immagini/logo.png",
         alt: "Maggi Mariano",
       },
     },

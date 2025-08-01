@@ -101,7 +101,7 @@ function renderTopSection(sectionData) {
         headingElements={{ title: "h2" }}
         //imageUrl={imageSrc}
         classNames={{
-          root: "py-12 lg:py-24 lg:max-w-6xl mx-auto px-6 lg:px-0",
+          root: "py-8 lg:py-16 lg:max-w-6xl mx-auto px-6 lg:px-0",
           title:
             "text-4xl lg:text-8xl text-red-opaqueTitle font-titleBold uppercase text-left red-title-stroke text-center lg:text-left",
           content:
