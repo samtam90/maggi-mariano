@@ -151,9 +151,9 @@ const props = {
           La capacità di produzione massima dell'impianto mobile è pari a 70
           t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
           all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo
-          recuperare: <br /> <br /> 
-          • &nbsp; <HighlightedText>giornalmente</HighlightedText>: 560 t/g; <br />
-          • &nbsp; <HighlightedText>annualmente</HighlightedText>: 123.200 t/anno.
+          recuperare: <br /> <br />• &nbsp;{" "}
+          <HighlightedText>giornalmente</HighlightedText>: 560 t/g; <br />•
+          &nbsp; <HighlightedText>annualmente</HighlightedText>: 123.200 t/anno.
         </span>,
       ],
       image: {
@@ -187,16 +187,27 @@ const props = {
             "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
         },
         {
-          title: "Simone Soldani",
+          title: "Jessica Lepri",
           stars: { total: 5, filled: 5 },
-          content:
-            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+          content: "Professionali, veloci e corretti. Ottimo servizio.",
         },
         {
-          title: "Simone Soldani",
+          title: "Stefania Vestrucci",
           stars: { total: 5, filled: 5 },
           content:
-            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+            "Molto disponibili e precisi. Lavoro preciso e con meticolosità. Grazie.",
+        },
+        {
+          title: "Massimo Mazzoli",
+          stars: { total: 5, filled: 5 },
+          content:
+            "Nonostante che il mio giudizio che esprimerò ritengo che sia molto di parte essendo  amico  e  cliente fin da quando ero bambino della ditta  maggi mariano quando ho avuto bisogno per risolvere un problema, ho ricevuto sempre consigli ottimi lavoro molto professionale e prezzo meraviglioso.",
+        },
+        {
+          title: "Roberta Abbacuccio",
+          stars: { total: 5, filled: 4 },
+          content:
+            "Non sono un esperta del settore per valutare il servizio dal lato economico. Ma posso dare la mia considerazione per le tempistiche (sono venuti il giorno seguente valutando telefonicamente l'urgenza), assistenza successiva avuta telefonicamente. L'uomo addetto allo svuotamento è stato puntuale e molto preciso, ripulendo per bene la piazzetta dopo il lavoro.",
         },
       ],
     },

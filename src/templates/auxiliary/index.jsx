@@ -300,8 +300,8 @@ export function renderServicesNavGrid({
           decorationImageUrl={decorationImageUrl}
           classNames={{
             item: {
-              container: "text-center px-2 py-2 lg:py-4 lg:px-6",
-              innerContainer: "p-2 py-4 lg:p-6",
+              container: "text-center px-2 py-2",
+              innerContainer: "p-2 py-3 lg:p-4",
               subtitle: "text-xs lg:text-sm leading-tight",
               title: "text-sm lg:text-md",
             },

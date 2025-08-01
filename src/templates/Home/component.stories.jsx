@@ -94,24 +94,32 @@ Base.args = {
       items: [
         {
           title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
           stars: { total: 5, filled: 5 },
           content:
             "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
         },
         {
-          title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
+          title: "Jessica Lepri",
           stars: { total: 5, filled: 5 },
-          content:
-            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+          content: "Professionali, veloci e corretti. Ottimo servizio.",
         },
         {
-          title: "Simone Soldani",
-          subtitle: "I am a useless subtitle",
+          title: "Stefania Vestrucci",
           stars: { total: 5, filled: 5 },
           content:
-            "Sono rimasto colpito dalla tempestività della intervento  da parte dell azienda, e della professionalità  dell operatore.bisogno, li richiamerei sicuramente.",
+            "Molto disponibili e precisi. Lavoro preciso e con meticolosità. Grazie.",
+        },
+        {
+          title: "Massimo Mazzoli",
+          stars: { total: 5, filled: 5 },
+          content:
+            "Nonostante che il mio giudizio che esprimerò ritengo che sia molto di parte essendo  amico  e  cliente fin da quando ero bambino della ditta  maggi mariano quando ho avuto bisogno per risolvere un problema, ho ricevuto sempre consigli ottimi lavoro molto professionale e prezzo meraviglioso.",
+        },
+        {
+          title: "Roberta Abbacuccio",
+          stars: { total: 5, filled: 4 },
+          content:
+            "Non sono un esperta del settore per valutare il servizio dal lato economico. Ma posso dare la mia considerazione per le tempistiche (sono venuti il giorno seguente valutando telefonicamente l'urgenza), assistenza successiva avuta telefonicamente. L'uomo addetto allo svuotamento è stato puntuale e molto preciso, ripulendo per bene la piazzetta dopo il lavoro.",
         },
       ],
     },
