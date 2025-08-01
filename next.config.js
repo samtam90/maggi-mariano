@@ -5,6 +5,7 @@ const nextConfig = {
     serverActions: {
       allowedOrigins: [
         "new.maggi-mariano.it",
+        "www.maggi-mariano.it",
         "localhost:3000",
         "localhost:3001",
       ],

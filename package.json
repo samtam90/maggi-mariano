@@ -14,7 +14,7 @@
     "format-comuni-arezzo": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Arezzo\"",
     "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\"",
     "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\"",
-    "generate-sitemap": "node ./.script/generate-sitemap.js \"C:/proj/sites/maggi-mariano/.data/out/sitemap.xml\" \"https://new.maggi-mariano.it\""
+    "generate-sitemap": "node ./.script/generate-sitemap.js \"C:/proj/sites/maggi-mariano/.data/out/sitemap.xml\" \"https://www.maggi-mariano.it\""
   },
   "dependencies": {
     "@italwebcom/tailwind-components": "^1.19.22",

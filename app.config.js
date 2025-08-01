@@ -21,7 +21,7 @@ const comuniArezzo = require("./.data/comuni/arezzo.json");
 const comuniFirenze = require("./.data/comuni/firenze.json");
 const comuniPerugia = require("./.data/comuni/perugia.json");
 
-const baseUrl = "https://new.maggi-mariano.it";
+const baseUrl = "https://www.maggi-mariano.it";
 const allLocations = [
   ...province,
   ...comuniArezzo,
