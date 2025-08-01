@@ -297,8 +297,7 @@ const mainTitleData = {
   preTitle: "Maggi Mariano",
   subtitle:
     "Da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente",
-  imageSrc:
-    "https://www.maggi-mariano.it/immagini/misc/ecologia.jpg",
+  imageSrc: "https://www.maggi-mariano.it/immagini/misc/ecologia.jpg",
   button: {
     href: links.contatti,
     label: "Per info o preventivi contattaci",
@@ -756,9 +755,9 @@ module.exports = {
     title: "Maggi Mariano",
     extendedTitle: "Maggi Mariano Servizi Ecologici",
     email: "serviziecologici@maggimariano.it",
-    iconSrc:
-      "https://www.maggi-mariano.it/immagini/misc/favico-150x150.png",
+    iconSrc: "https://www.maggi-mariano.it/immagini/misc/favico-150x150.png",
     logoSrc: `${baseUrl}/immagini/logo.png`,
+    googleAnalyticsId: "G-H3DK0QSQQV",
   },
   server: {
     mail: {
