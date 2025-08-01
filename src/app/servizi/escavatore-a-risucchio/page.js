@@ -32,7 +32,7 @@ const props = {
             },
             {
               type: "image",
-              src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-2-1024x682.jpg",
+              src: "https://www.maggi-mariano.it/immagini/misc/acqua-2-1024x682.jpg",
               dimensions: { width: 1024, height: 1024 },
               label: "Escavatore a risucchio 2",
             },

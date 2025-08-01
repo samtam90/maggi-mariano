@@ -31,7 +31,7 @@ Base.args = {
     "La capacità di produzione massima dell'impianto mobile è pari a 70 t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo recuperare:",
   ],
   image: {
-    src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+    src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
     alt: "Image",
     dimensions: { width: 700, height: 300 },
   },

@@ -51,7 +51,7 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 label: "Image1",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature-1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/fognature-1.jpg",
                 dimensions: { width: 800, height: 550 },
               },
             ],
@@ -100,7 +100,7 @@ export function getProps({ title, mobile, locationsData }) {
               {
                 label: "Image2",
                 srcset:
-                  "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Maggi2.jpg",
+                  "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
                 dimensions: { width: 400, height: 300 },
               },
             ],

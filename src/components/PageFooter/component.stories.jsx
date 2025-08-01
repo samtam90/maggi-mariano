@@ -44,7 +44,7 @@ Base.args = {
   variant: "horizontal",
   contentMaxWidth: "6xl",
   logo: {
-    src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/img0001.png",
+    src: "https://www.maggi-mariano.it/immagini/misc/img0001.png",
     dimensions: { width: 175, height: 90 },
   },
   sections: [

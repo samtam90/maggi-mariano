@@ -37,37 +37,37 @@ export function getProps({ mobile }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/telecamera-2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/telecamera-2.jpg",
                 label: `Videoispezioni con telecamera robot 1`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/telecamera-1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/telecamera-1.jpg",
                 label: `Videoispezioni con telecamera robot 2`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/Telecamera-5-.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-5-.jpg",
                 label: `Videoispezioni con telecamera robot 3`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/Telecamera-14-.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-.jpg",
                 label: `Videoispezioni con telecamera robot 4`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/telecamera-3.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/telecamera-3.jpg",
                 label: `Videoispezioni con telecamera robot 5`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/telecamera-5.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/telecamera-5.jpg",
                 label: `Videoispezioni con telecamera robot 6`,
                 dimensions: imgDims,
               },

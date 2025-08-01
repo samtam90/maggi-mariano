@@ -298,7 +298,7 @@ const mainTitleData = {
   subtitle:
     "Da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente",
   imageSrc:
-    "https://www.maggi-mariano.it/wp-content/uploads/2022/05/ecologia.jpg",
+    "https://www.maggi-mariano.it/immagini/misc/ecologia.jpg",
   button: {
     href: links.contatti,
     label: "Per info o preventivi contattaci",
@@ -313,11 +313,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/recupero-materiali-ferrosi.webp`,
+        srcset: `${baseUrl}/immagini/servizi/recupero-materiali-ferrosi.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/recupero-materiali-ferrosi.png`,
+        srcset: `${baseUrl}/immagini/servizi/recupero-materiali-ferrosi.png`,
       },
     ],
     href: links.servizi["recupero-materiali-ferrosi"],
@@ -329,11 +329,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/spurgo-fosse-biologiche.webp`,
+        srcset: `${baseUrl}/immagini/servizi/spurgo-fosse-biologiche.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/spurgo-fosse-biologiche.png`,
+        srcset: `${baseUrl}/immagini/servizi/spurgo-fosse-biologiche.png`,
       },
     ],
     href: links.servizi["spurgo-fosse-biologiche"].root,
@@ -345,11 +345,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/noleggio-bagni.webp`,
+        srcset: `${baseUrl}/immagini/servizi/noleggio-bagni.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/noleggio-bagni.png`,
+        srcset: `${baseUrl}/immagini/servizi/noleggio-bagni.png`,
       },
     ],
     href: links.servizi["noleggio-bagni-chimici"].root,
@@ -361,11 +361,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/trasporto-acqua-potabile.webp`,
+        srcset: `${baseUrl}/immagini/servizi/trasporto-acqua-potabile.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/trasporto-acqua-potabile.png`,
+        srcset: `${baseUrl}/immagini/servizi/trasporto-acqua-potabile.png`,
       },
     ],
     href: links.servizi["trasporto-acqua"].root,
@@ -377,11 +377,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/videoispezioni-telecamera-robot.webp`,
+        srcset: `${baseUrl}/immagini/servizi/videoispezioni-telecamera-robot.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/videoispezioni-telecamera-robot.png`,
+        srcset: `${baseUrl}/immagini/servizi/videoispezioni-telecamera-robot.png`,
       },
     ],
     href: links.servizi["videoispezioni-telecamera-robot"],
@@ -393,11 +393,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/noleggio-container-cassoni.webp`,
+        srcset: `${baseUrl}/immagini/servizi/noleggio-container-cassoni.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/noleggio-container-cassoni.png`,
+        srcset: `${baseUrl}/immagini/servizi/noleggio-container-cassoni.png`,
       },
     ],
     href: links.servizi["noleggio-container-e-cassoni"],
@@ -409,11 +409,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/escavatore-risucchio.webp`,
+        srcset: `${baseUrl}/immagini/servizi/escavatore-risucchio.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/escavatore-risucchio.png`,
+        srcset: `${baseUrl}/immagini/servizi/escavatore-risucchio.png`,
       },
     ],
     href: links.servizi["escavatore-a-risucchio"],
@@ -425,11 +425,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/trasporto-rifiuti.webp`,
+        srcset: `${baseUrl}/immagini/servizi/trasporto-rifiuti.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/trasporto-rifiuti.png`,
+        srcset: `${baseUrl}/immagini/servizi/trasporto-rifiuti.png`,
       },
     ],
     href: links.servizi["trasporto-rifiuti"].root,
@@ -441,11 +441,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/container-rifiuti-speciali.webp`,
+        srcset: `${baseUrl}/immagini/servizi/container-rifiuti-speciali.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/container-rifiuti-speciali.png`,
+        srcset: `${baseUrl}/immagini/servizi/container-rifiuti-speciali.png`,
       },
     ],
     href: links.servizi["noleggio-container-e-cassoni"],
@@ -457,11 +457,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/centrifugazione-fanghi.webp`,
+        srcset: `${baseUrl}/immagini/servizi/centrifugazione-fanghi.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/centrifugazione-fanghi.png`,
+        srcset: `${baseUrl}/immagini/servizi/centrifugazione-fanghi.png`,
       },
     ],
     href: links.servizi["centrifugazione-o-disidratazione-fanghi"],
@@ -473,11 +473,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/frantoio-mobile-inerti.webp`,
+        srcset: `${baseUrl}/immagini/servizi/frantoio-mobile-inerti.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/frantoio-mobile-inerti.png`,
+        srcset: `${baseUrl}/immagini/servizi/frantoio-mobile-inerti.png`,
       },
     ],
     href: links.servizi["frantoio-mobile-inerti"].root,
@@ -489,11 +489,11 @@ const servicesNavGridData = [
     iconSources: [
       {
         type: "image/webp",
-        srcset: `${baseUrl}/images/services/spurgo-fognature.webp`,
+        srcset: `${baseUrl}/immagini/servizi/spurgo-fognature.webp`,
       },
       {
         type: "image/png",
-        srcset: `${baseUrl}/images/services/spurgo-fognature.png`,
+        srcset: `${baseUrl}/immagini/servizi/spurgo-fognature.png`,
       },
     ],
     href: links.servizi["pulizia-fognature"].root,
@@ -539,7 +539,7 @@ const topNavBarData = {
 
 const footerData = {
   logo: {
-    src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/img0001.png",
+    src: "https://www.maggi-mariano.it/immagini/misc/img0001.png",
     alt: "Maggi Mariano",
     dimensions: { width: 175, height: 90 },
   },
@@ -734,16 +734,16 @@ module.exports = {
     header: {
       navBarSections,
       logo: {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi.png",
+        src: "https://www.maggi-mariano.it/immagini/misc/logo-maggi.png",
         alt: "Maggi Mariano",
       },
     },
     servicesGrid: {
       data: servicesNavGridData,
       decorationImageUrl:
-        "https://www.maggi-mariano.it/wp-content/uploads/2022/06/round-1.png",
+        "https://www.maggi-mariano.it/immagini/misc/round-1.png",
       backgroundImageUrl:
-        "https://www.maggi-mariano.it/wp-content/uploads/2022/06/plant-growing-hand-green-nature-with-sunlight-eco-environment-concept_34152-2232-1.webp",
+        "https://www.maggi-mariano.it/immagini/misc/plant-growing-hand-green-nature-with-sunlight-eco-environment-concept_34152-2232-1.webp",
     },
   },
   misc: {
@@ -757,8 +757,8 @@ module.exports = {
     extendedTitle: "Maggi Mariano Servizi Ecologici",
     email: "serviziecologici@maggimariano.it",
     iconSrc:
-      "https://www.maggi-mariano.it/wp-content/uploads/2022/05/favico-150x150.png",
-    logoSrc: `${baseUrl}/images/logo.png`,
+      "https://www.maggi-mariano.it/immagini/misc/favico-150x150.png",
+    logoSrc: `${baseUrl}/immagini/logo.png`,
   },
   server: {
     mail: {

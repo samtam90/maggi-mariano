@@ -40,7 +40,7 @@ export function getContactStuff({ title }) {
     ),
     images: [
       {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
+        src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-1-1.jpg",
         alt: "Image2",
       },
     ],
@@ -88,7 +88,7 @@ export function getProps({ title, mobile, locationsData }) {
               {
                 type: "image",
                 dimensions: imgDims,
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/fognature.jpg",
                 label: `${title} 1`,
               },
             ],
@@ -105,7 +105,7 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/fognature-2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/fognature-2.jpg",
                 label: `${title} 2`,
                 dimensions: imgDims,
               },

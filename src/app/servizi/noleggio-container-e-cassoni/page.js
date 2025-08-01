@@ -54,25 +54,25 @@ function getProps({ mobile }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/container-1.jpg",
                 label: "Noleggio container e cassoni 1",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/container-2.jpg",
                 label: "Noleggio container e cassoni 2",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-3.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/container-3.jpg",
                 label: "Noleggio container e cassoni 3",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/container-4.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/container-4.jpg",
                 label: "Noleggio container e cassoni 4",
                 dimensions: imgDims,
               },

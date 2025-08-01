@@ -37,11 +37,11 @@ Base.args = {
     "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
   images: [
     {
-      src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
+      src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-5-1-1.jpg",
       alt: "Image1",
     },
     {
-      src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
+      src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-1-1.jpg",
       alt: "Image2",
     },
   ],

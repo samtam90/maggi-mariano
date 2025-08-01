@@ -46,7 +46,7 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Maggi2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
                 label: `${title} 1`,
                 dimensions: imgDims,
               },

@@ -37,7 +37,7 @@ export function getProps({ title, mobile, locationsData }) {
               {
                 type: "image",
                 dimensions: imgDims,
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/botti-12-1024x682.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/botti-12-1024x682.jpg",
                 label: `${title} 1`,
               },
             ],
@@ -54,7 +54,7 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/mezzi-29-1024x682.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/mezzi-29-1024x682.jpg",
                 label: `${title} 2`,
                 dimensions: imgDims,
               },

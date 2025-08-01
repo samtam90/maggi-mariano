@@ -12,7 +12,7 @@ export function getProps({ title, locationsData }) {
         title: title,
         subtitle: "vantaggi e usi",
         image: {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+          src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
           dimensions: { width: 1200, height: 800 },
           alt: "Frantumatore mobile",
         },
@@ -70,7 +70,7 @@ export function getProps({ title, locationsData }) {
           right: title,
         },
         image: {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+          src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
           alt: "Frantumatore mobile",
           dimensions: { width: 1200, height: 800 },
         },
@@ -124,7 +124,7 @@ export function getProps({ title, locationsData }) {
         ],
         images: [
           {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+            src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
             alt: "Image1",
           },
         ],

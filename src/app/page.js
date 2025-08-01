@@ -26,11 +26,11 @@ const props = {
           sources: [
             {
               type: "image/webp",
-              srcset: `${appConfig.data.baseUrl}/images/home/logo-white.webp`,
+              srcset: `${appConfig.data.baseUrl}/immagini/home/logo-white.webp`,
             },
             {
               type: "image/png",
-              srcset: `${appConfig.data.baseUrl}/images/home/logo-white.png`,
+              srcset: `${appConfig.data.baseUrl}/immagini/home/logo-white.png`,
             },
           ],
         },
@@ -40,11 +40,11 @@ const props = {
           sources: [
             {
               type: "image/webp",
-              srcset: `${appConfig.data.baseUrl}/images/home/eco.webp`,
+              srcset: `${appConfig.data.baseUrl}/immagini/home/eco.webp`,
             },
             {
               type: "image/png",
-              srcset: `${appConfig.data.baseUrl}/images/home/eco.png`,
+              srcset: `${appConfig.data.baseUrl}/immagini/home/eco.png`,
             },
           ],
         },
@@ -110,11 +110,11 @@ const props = {
             sources: [
               {
                 type: "image/webp",
-                srcset: `${appConfig.data.baseUrl}/images/home/desc-1.webp`,
+                srcset: `${appConfig.data.baseUrl}/immagini/home/desc-1.webp`,
               },
               {
                 type: "image/jpeg",
-                srcset: `${appConfig.data.baseUrl}/images/home/desc-1.jpg`,
+                srcset: `${appConfig.data.baseUrl}/immagini/home/desc-1.jpg`,
               },
             ],
           },
@@ -129,11 +129,11 @@ const props = {
             sources: [
               {
                 type: "image/webp",
-                srcset: `${appConfig.data.baseUrl}/images/home/desc-2.webp`,
+                srcset: `${appConfig.data.baseUrl}/immagini/home/desc-2.webp`,
               },
               {
                 type: "image/jpeg",
-                srcset: `${appConfig.data.baseUrl}/images/home/desc-2.jpg`,
+                srcset: `${appConfig.data.baseUrl}/immagini/home/desc-2.jpg`,
               },
             ],
           },
@@ -162,11 +162,11 @@ const props = {
         sources: [
           {
             type: "image/webp",
-            srcset: `${appConfig.data.baseUrl}/images/home/frantoio.webp`,
+            srcset: `${appConfig.data.baseUrl}/immagini/home/frantoio.webp`,
           },
           {
             type: "image/jpeg",
-            srcset: `${appConfig.data.baseUrl}/images/home/frantoio.jpg`,
+            srcset: `${appConfig.data.baseUrl}/immagini/home/frantoio.jpg`,
           },
         ],
       },

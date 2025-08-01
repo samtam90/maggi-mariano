@@ -68,9 +68,9 @@ module.exports = {
       },
       backgroundImage: {
         homeFeedbackImage:
-          "url('https://www.maggi-mariano.it/images/home/desc-1.jpg')",
-        title: "url('https://www.maggi-mariano.it/images/title.jpg')",
-        camera: "url('https://www.maggi-mariano.it/images/home/camera.jpg')",
+          "url('https://www.maggi-mariano.it/immagini/home/desc-1.jpg')",
+        title: "url('https://www.maggi-mariano.it/immagini/title.jpg')",
+        camera: "url('https://www.maggi-mariano.it/immagini/home/camera.jpg')",
       },
     },
     zIndex: {

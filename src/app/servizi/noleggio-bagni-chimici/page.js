@@ -67,19 +67,19 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/interno-bagno-chimico.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/interno-bagno-chimico.jpg",
                 label: `${title} 1`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/wc-chimici.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/wc-chimici.jpg",
                 label: `${title} 2`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/wc-chimico2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/wc-chimico2.jpg",
                 label: `${title} 3`,
                 dimensions: imgDims,
               },
@@ -115,11 +115,11 @@ export function getProps({ title, mobile, locationsData }) {
         ],
         images: [
           {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/12248895_10206629587732692_810803295_n.jpg",
+            src: "https://www.maggi-mariano.it/immagini/misc/12248895_10206629587732692_810803295_n.jpg",
             alt: "Image1",
           },
           {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/12270376_10206629588012699_1901414759_n.jpg",
+            src: "https://www.maggi-mariano.it/immagini/misc/12270376_10206629588012699_1901414759_n.jpg",
             alt: "Image2",
           },
         ],

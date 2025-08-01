@@ -27,7 +27,7 @@ Base.args = {
       title: "FRANTOIO MOBILE DI INERTI",
       subtitle: "vantaggi e usi",
       image: {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+        src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
         dimensions: { width: 1200, height: 800 },
         alt: "Frantumatore mobile",
       },
@@ -56,7 +56,7 @@ Base.args = {
         right: "Frantoio mobile inerti Siena",
       },
       image: {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+        src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
         alt: "Frantumatore mobile",
         dimensions: { width: 1200, height: 800 },
       },
@@ -112,11 +112,11 @@ Base.args = {
         "La nostra azienda è dotata di VIDEOCAMERA ROBOTIZZATA per ispezionare le fognature, scarichi e fosse biologiche difficilmente raggiungibili con altri mezzi, permettendoci di risolvere ogni problematica inerente lo Autospurgo Anghiari dei nostri clienti in tempi brevi.",
       images: [
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-5-1-1.jpg",
+          src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-5-1-1.jpg",
           alt: "Image1",
         },
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/08/Telecamera-14-1-1.jpg",
+          src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-1-1.jpg",
           alt: "Image2",
         },
       ],

@@ -70,25 +70,25 @@ function getProps({ mobile }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/centrifugazione_fanghi_1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/centrifugazione_fanghi_1.jpg",
                 label: "Centrifugazione o disidratazione fanghi 1",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/centrifugazione_fanghi_2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/centrifugazione_fanghi_2.jpg",
                 label: "Centrifugazione o disidratazione fanghi 2",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/centrifuga-1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/centrifuga-1.jpg",
                 label: "Centrifugazione o disidratazione fanghi 3",
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/centrifuga-2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/centrifuga-2.jpg",
                 label: "Centrifugazione o disidratazione fanghi 4",
                 dimensions: imgDims,
               },

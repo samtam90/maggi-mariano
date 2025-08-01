@@ -26,18 +26,18 @@ Base.args = {
       ),
       subtitle: "con telecamera robot",
       imageSrc:
-        "https://www.maggi-mariano.it/wp-content/uploads/2022/05/home-1.jpg",
+        "https://www.maggi-mariano.it/immagini/misc/home-1.jpg",
       link: { label: "Lol", href: "https://www.google.it" },
     },
     description: {
       headerImages: [
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/logo-maggi-white.png",
+          src: "https://www.maggi-mariano.it/immagini/misc/logo-maggi-white.png",
           alt: "Maggi",
           dimensions: { width: 300, height: 110 },
         },
         {
-          src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/eco.png",
+          src: "https://www.maggi-mariano.it/immagini/misc/eco.png",
           alt: "Maggi",
           dimensions: { width: 85, height: 105 },
         },
@@ -51,7 +51,7 @@ Base.args = {
             "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell’ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
           ],
           image: {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
+            src: "https://www.maggi-mariano.it/immagini/misc/maggi-servizi-2.jpg",
             alt: "Servizio 1",
             dimensions: { width: imgDim, height: imgDim },
           },
@@ -62,7 +62,7 @@ Base.args = {
             "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici SRL garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
           ],
           image: {
-            src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/maggi-servizi-2.jpg",
+            src: "https://www.maggi-mariano.it/immagini/misc/maggi-servizi-2.jpg",
             alt: "Servizio 1",
             dimensions: { width: imgDim, height: imgDim },
           },
@@ -79,7 +79,7 @@ Base.args = {
         "La capacità di produzione massima dell'impianto mobile è pari a 70 t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi all'anno si ha che l'impianto mobile potrebbe teoricamente al massimo recuperare:",
       ],
       image: {
-        src: "https://www.maggi-mariano.it/wp-content/uploads/2022/05/frantumatore-mobile.jpg",
+        src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
         alt: "Image",
         dimensions: { width: 700, height: 300 },
       },

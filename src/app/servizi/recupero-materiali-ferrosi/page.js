@@ -18,7 +18,7 @@ function getProps({ mobile }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/rottami-metallici.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/rottami-metallici.jpg",
                 dimensions: { width: 1024, height: 1024 },
                 label: "Recupero materiali ferrosi 1",
               },
@@ -37,7 +37,7 @@ function getProps({ mobile }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/pressa-ferro-1-.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/pressa-ferro-1-.jpg",
                 dimensions: { width: 1024, height: 1024 },
                 label: "Recupero materiali ferrosi 1",
               },

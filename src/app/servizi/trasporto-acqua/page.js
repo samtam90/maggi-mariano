@@ -89,19 +89,19 @@ export function getProps({ title, mobile, locationsData }) {
             mediaElements: [
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-1.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/acqua-1.jpg",
                 label: `${title} 1`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-2.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/acqua-2.jpg",
                 label: `${title} 2`,
                 dimensions: imgDims,
               },
               {
                 type: "image",
-                src: "https://www.maggi-mariano.it/wp-content/uploads/2022/06/acqua-3.jpg",
+                src: "https://www.maggi-mariano.it/immagini/misc/acqua-3.jpg",
                 label: `${title} 3`,
                 dimensions: imgDims,
               },
