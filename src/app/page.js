@@ -122,7 +122,9 @@ const props = {
         },
         {
           paragraphs: [
-            "Grazie alla collaborazione con personale qualificato, Maggi Mariano Servizi Ecologici SRL garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
+            "Con la collaborazione di personale altamente qualificato, Maggi Mariano Servizi Ecologici SRL garantisce la massima qualità e sicurezza dei servizi erogati, ed è un partner ideale per tutte le aziende che sono alla ricerca di servizi innovativi, efficienti, puntuali e sicuri per la gestione dei rifiuti.",
+            "Grazie all’impiego di attrezzature all’avanguardia e all’adozione di protocolli operativi rigorosi, Maggi Mariano Servizi Ecologici SRL è in grado di affrontare con competenza ogni tipo di intervento nel settore della gestione ambientale. L’azienda si distingue per la capacità di offrire soluzioni personalizzate, in linea con le normative vigenti e con le esigenze specifiche di ciascun cliente.",
+            "La costante formazione del personale e l’attenzione alla sostenibilità ambientale rendono Maggi Mariano Servizi Ecologici SRL un punto di riferimento nel panorama dei servizi ecologici. L’impegno verso l’innovazione e la qualità consente all’azienda di garantire interventi tempestivi, efficaci e rispettosi dell’ambiente, contribuendo attivamente alla tutela del territorio e al benessere della collettività.",
           ],
           image: {
             alt: "Servizio 2",
