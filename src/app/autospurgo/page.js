@@ -29,7 +29,14 @@ export function getProps({ title, mobile, locationsData }) {
                 <span className="text-gray-600 font-titleBold">
                   risposte ideali per disostruire, svuotare e liberare
                 </span>{" "}
-                qualsiasi impianto, dai pozzi neri alle{" "}
+                qualsiasi impianto, dai{" "}
+                <Link
+                  href={links.servizi["spurgo-pozzi-neri"].root}
+                  className="font-titleBold underline text-green-dark"
+                >
+                  pozzi neri
+                </Link>{" "}
+                alle{" "}
                 <Link
                   href={links.servizi["pulizia-fognature"].root}
                   className="font-titleBold underline text-green-dark"
@@ -81,16 +88,16 @@ export function getProps({ title, mobile, locationsData }) {
                   href={links.servizi["spurgo-fosse-biologiche"].root}
                   className="font-titleBold underline text-green-dark ml-1"
                 >
-                  fosse biologiche
+                  spurgo di fosse biologiche
                 </Link>
-                ,{" "}
+                ,
                 <Link
-                  href={links.servizi["pulizia-fognature"]}
+                  href={links.servizi["pulizia-fognature"].root}
                   className="font-titleBold underline text-green-dark ml-1"
                 >
-                  scarichi fognari
+                  pulizia di scarichi fognari
                 </Link>{" "}
-                e la pulizia di tombini.
+                e di tombini.
               </span>,
               <span>
                 <Link
