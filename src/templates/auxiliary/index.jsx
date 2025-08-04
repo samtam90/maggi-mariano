@@ -306,7 +306,7 @@ export function renderServicesNavGrid({
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
-            <Link href={href} className="block" prefetch={false} rel="nofollow">
+            <Link href={href} className="block" prefetch={false}>
               {content}
             </Link>
           )}

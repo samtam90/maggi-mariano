@@ -17,7 +17,7 @@
     "generate-sitemap": "node ./.script/generate-sitemap.js \"C:/proj/sites/maggi-mariano/.data/out/sitemap.xml\" \"https://www.maggi-mariano.it\""
   },
   "dependencies": {
-    "@italwebcom/tailwind-components": "^1.19.25",
+    "@italwebcom/tailwind-components": "^1.19.26",
     "@next/third-parties": "^15.4.5",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
