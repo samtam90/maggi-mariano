@@ -259,13 +259,13 @@ export function renderServicesNavGrid({
           front={content}
           back={
             <div className="h-full w-full bg-green-primary flex flex-col items-center justify-center text-white font-titleBold">
-              <h3 className="mb-4 text-center">
+              <p className="mb-4 text-center">
                 <span className="text-md lg:text-lg uppercase">{title}</span>
                 <br />
                 <span className="font-title uppercase text-xs lg:text-sm">
                   {subtitle}
                 </span>
-              </h3>
+              </p>
               <div
                 role="button"
                 className="border border-white rounded-lg py-2 px-4 rounded-lg text-sm text-center lg:hover:opacity-75 transition-opacity"
@@ -302,6 +302,7 @@ export function renderServicesNavGrid({
           }}
           heading
           headingElement={titleHeadingElement}
+          includeRightInHeading
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
@@ -321,7 +322,7 @@ export function renderServicesNavGrid({
           }}
           disableHighlight
           renderItemInnerContent={renderItemInnerContent}
-          headingComponent="h3"
+          headingComponent={false}
         >
           {data.map(({ id, title, subtitle, iconSources, href }) => (
             <NavButtonsGrid.Item

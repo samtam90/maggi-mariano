@@ -41,6 +41,7 @@ function Preload() {
   ReactDOM.preload("https://www.maggi-mariano.it/immagini/title.jpg", {
     type: "image/jpeg",
     as: "image",
+    fetchPriority: "high",
   });
 }
 
@@ -69,5 +70,5 @@ export default function RootLayout({ children }) {
 }
 
 export function getDescription({ mainContent }) {
-  return `${mainContent} - Maggi Mariano Servizi Ecologici, da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente.`;
+  return `${mainContent} - Maggi Mariano Servizi Ecologici, al fianco di aziende e cittadini alla salvaguardia dell'ambiente.`;
 }

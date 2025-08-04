@@ -106,23 +106,31 @@ function ContactSection({
         )}
       >
         <div className={twClsx(!isHorizVariant && "mb-6")}>
-          {preTitle && (
-            <p
-              className={twClsx(
-                "text-center mb-3 uppercase text-sm lg:text-lg",
-                classNames?.preTitle
+          {renderHeader(
+            titleHeadingElement,
+            <>
+              {preTitle && (
+                <span
+                  className={twClsx(
+                    "text-center mb-3 uppercase text-sm lg:text-lg block",
+                    classNames?.preTitle
+                  )}
+                  key="pre-title"
+                >
+                  {preTitle}
+                </span>
               )}
-              key="pre-title"
-            >
-              {preTitle}
-            </p>
+              <span
+                className={twClsx(
+                  "font-titleBold py-4 bg-red-primary text-center text-white text-lg lg:text-2xl uppercase block",
+                  classNames?.title
+                )}
+              >
+                {title}
+              </span>
+            </>,
+            { className: "mb-6" }
           )}
-          {renderHeader(titleHeadingElement, title, {
-            className: twClsx(
-              "font-titleBold py-4 bg-red-primary text-center text-white text-lg lg:text-2xl mb-6 uppercase",
-              classNames?.title
-            ),
-          })}
           <p
             className={twClsx(
               "font-titleBold text-center mb-2 lg:mb-1 uppercase",

@@ -20,8 +20,8 @@ export function getProps({ title, mobile, locationsData }) {
             paragraphs: [
               <span className="text-gray-600 font-titleBold">
                 Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
-                i migliori macchinari e le migliori tecnologie per l'autospurgo
-                che ci permettono di garantire interventi tempestivi, poco
+                i migliori macchinari e le migliori tecnologie per il servizio
+                di {title}. Garantiamo interventi di autospurgo tempestivi, poco
                 invasivi e soprattutto a prezzi estremamente concorrenziali.
               </span>,
               <span>
@@ -46,7 +46,7 @@ export function getProps({ title, mobile, locationsData }) {
                 .
               </span>,
               `Offriamo il servizio di ${title} con professionalità e in modo programmato!`,
-              "È possibile stabilire a priori e programmare le nostre ispezioni e interventi per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.",
+              `È possibile stabilire a priori e programmare le nostre ispezioni e interventi di ${title} per tutto l'anno evitando le urgenze e le problematiche che ne conseguono.`,
             ],
             mediaElements: [
               {
@@ -83,7 +83,14 @@ export function getProps({ title, mobile, locationsData }) {
                 >
                   fosse biologiche
                 </Link>
-                , scarichi fognari e la pulizia di tombini.
+                ,{" "}
+                <Link
+                  href={links.servizi["pulizia-fognature"]}
+                  className="font-titleBold underline text-green-dark ml-1"
+                >
+                  scarichi fognari
+                </Link>{" "}
+                e la pulizia di tombini.
               </span>,
               <span>
                 <Link
