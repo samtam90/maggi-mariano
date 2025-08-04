@@ -70,5 +70,5 @@ export default function RootLayout({ children }) {
 }
 
 export function getDescription({ mainContent }) {
-  return `${mainContent} - Maggi Mariano Servizi Ecologici, al fianco di aziende e cittadini alla salvaguardia dell'ambiente.`;
+  return `La ditta Maggi Mariano Servizi Ecologici effettua il servizio di ${mainContent}, al fianco di aziende e cittadini e per la salvaguardia dell'ambiente.`;
 }
