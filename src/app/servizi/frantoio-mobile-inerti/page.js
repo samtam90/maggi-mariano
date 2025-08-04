@@ -141,7 +141,7 @@ export function getProps({ title, locationsData }) {
 
 export function getMetadata({ title }) {
   const description = getDescription({
-    mainContent: `${title}, videoispezioni, escavatore a risucchio`,
+    mainContent: title,
   });
   return {
     title: `${title} - Maggi Mariano Servizi Ecologici`,
