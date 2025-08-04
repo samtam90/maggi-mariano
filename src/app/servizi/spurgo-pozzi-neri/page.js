@@ -1,7 +1,7 @@
 import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
 import { getContactStuff } from "../pulizia-fognature/page";
@@ -80,7 +80,10 @@ export function getProps({ title, mobile, locationsData }) {
   };
 }
 
-export const metadata = getMetadata({ title: "Spurgo pozzi neri" });
+export const metadata = getMetadata({
+  title: "Spurgo pozzi neri",
+  canonical: links.servizi["spurgo-pozzi-neri"].root,
+});
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

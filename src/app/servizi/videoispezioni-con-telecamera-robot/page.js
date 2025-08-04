@@ -1,6 +1,7 @@
 import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { getContactStuff } from "../pulizia-fognature/page";
+import { links } from "../../../../app.config";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -86,6 +87,9 @@ export function getProps({ mobile }) {
 export const metadata = {
   title:
     "Videoispezioni con telecamera robot - Maggi Mariano Servizi Ecologici",
+  alternates: {
+    canonical: links.servizi["videoispezioni-telecamera-robot"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

@@ -1,5 +1,6 @@
 import { withConditionalRendering } from "@/misc/functions";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
+import { links } from "../../../../app.config";
 
 const props = {
   sections: {
@@ -122,6 +123,9 @@ const props = {
 
 export const metadata = {
   title: "Escavatore a risucchio - Maggi Mariano Servizi Ecologici",
+  alternates: {
+    canonical: links.servizi["escavatore-a-risucchio"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

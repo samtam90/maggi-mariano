@@ -1,4 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
+import { links } from "../../../../app.config";
 
 function getProps({ mobile }) {
   return {
@@ -55,6 +56,9 @@ function getProps({ mobile }) {
 
 export const metadata = {
   title: "Recupero materiali ferrosi - Maggi Mariano Servizi Ecologici",
+  alternates: {
+    canonical: links.servizi["recupero-materiali-ferrosi"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

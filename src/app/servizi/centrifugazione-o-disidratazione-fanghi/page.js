@@ -1,4 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
+import { links } from "../../../../app.config";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -104,6 +105,9 @@ function getProps({ mobile }) {
 export const metadata = {
   title:
     "Centrifugazione o disidratazione fanghi - Maggi Mariano Servizi Ecologici",
+  alternates: {
+    canonical: links.servizi["centrifugazione-o-disidratazione-fanghi"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

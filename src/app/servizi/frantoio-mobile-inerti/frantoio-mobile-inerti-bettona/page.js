@@ -1,6 +1,10 @@
 import { getMetadata, withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
 
-export const metadata = getMetadata({ title: "Frantoio mobile inerti Bettona" });
+export const metadata = getMetadata({ 
+    title: "Frantoio mobile inerti Bettona", 
+    canonical: links.servizi["frantoio-mobile-inerti"]["bettona"] 
+});
 export default withBaseProps({ 
     title: "Frantoio mobile inerti Bettona", 
     locationNames: {label: "Bettona", href: "bettona"}  

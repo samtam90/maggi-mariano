@@ -1,4 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
+import { links } from "../../../app.config";
 
 const dims = { width: 640, height: 380 };
 const props = {
@@ -70,6 +71,9 @@ const props = {
 
 export const metadata = {
   title: "Videogallery - Maggi Mariano servizi ecologici",
+  alternates: {
+    canonical: links.videogallery,
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

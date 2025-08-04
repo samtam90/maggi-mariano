@@ -1,12 +1,13 @@
 import { withBaseProps } from "../page";
 import comuni from "../../../../../.data/comuni/perugia.json";
-import appConfig from "../../../../../app.config";
+import appConfig, { links } from "../../../../../app.config";
 import React from "react";
 import { makeNavGridItems } from "@/misc/functions";
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 
 export const metadata = getMetadata({
   title: "Spurgo fosse biologiche Perugia",
+  canonical: links.servizi["spurgo-fosse-biologiche"].perugia,
 });
 export default withBaseProps({
   title: "Spurgo fosse biologiche Perugia",

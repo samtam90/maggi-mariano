@@ -131,7 +131,10 @@ export function getProps({ title, mobile, locationsData }) {
   };
 }
 
-export const metadata = getMetadata({ title: "Pulizia fognature" });
+export const metadata = getMetadata({
+  title: "Pulizia fognature",
+  canonical: links.servizi["pulizia-fognature"].root,
+});
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

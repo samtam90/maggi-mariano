@@ -1,0 +1,10 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { withBaseProps } from "../page";
+
+export const metadata = getMetadata({
+  title: "Trasporto rifiuti Forlì-Cesena",
+});
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Forlì-Cesena", 
+    locationNames: {label: "Forlì-Cesena", href: "forlì-cesena"}  
+});

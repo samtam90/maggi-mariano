@@ -1,7 +1,7 @@
 import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
@@ -127,7 +127,10 @@ export function getProps({ title, mobile, locationsData }) {
   };
 }
 
-export const metadata = getMetadata({ title: "Trasporto acqua" });
+export const metadata = getMetadata({
+  title: "Trasporto acqua",
+  canonical: links.servizi["trasporto-acqua"].root,
+});
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

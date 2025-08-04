@@ -1,10 +1,13 @@
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { makeNavGridItems } from "../../../misc/functions";
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 import comuni from "../../../../.data/comuni/arezzo.json";
 
-export const metadata = getMetadata({ title: "Autospurgo Arezzo" });
+export const metadata = getMetadata({
+  title: "Autospurgo Arezzo",
+  canonical: links.autospurgo.arezzo,
+});
 export default withBaseProps({
   title: "Autospurgo Arezzo",
   locationNames: { label: "Arezzo", href: "arezzo" },

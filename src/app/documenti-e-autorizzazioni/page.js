@@ -1,4 +1,5 @@
 import { withConditionalRendering } from "@/misc/functions";
+import { links } from "../../../app.config";
 
 const imgDims = { width: 512, height: 512 };
 const props = {
@@ -93,6 +94,9 @@ const props = {
 
 export const metadata = {
   title: "Documenti e autorizzazioni - Maggi Mariano servizi ecologici",
+  alternates: {
+    canonical: links["documenti-e-autorizzazioni"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

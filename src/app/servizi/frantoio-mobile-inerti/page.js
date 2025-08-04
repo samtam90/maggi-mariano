@@ -139,7 +139,7 @@ export function getProps({ title, locationsData }) {
   };
 }
 
-export function getMetadata({ title }) {
+export function getMetadata({ title, canonical }) {
   const description = getDescription({
     mainContent: title,
   });
@@ -147,6 +147,9 @@ export function getMetadata({ title }) {
     title: `${title} - Maggi Mariano Servizi Ecologici`,
     description,
     openGraph: getOpenGraphMetadata({ title, description }),
+    alternates: {
+      canonical,
+    },
   };
 }
 
@@ -155,7 +158,10 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/AltMainContent/alt/desktop"),
 });
 
-export const metadata = getMetadata({ title: "Frantoio mobile inerti" });
+export const metadata = getMetadata({
+  title: "Frantoio mobile inerti",
+  canonical: links.servizi["frantoio-mobile-inerti"].root,
+});
 
 export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";

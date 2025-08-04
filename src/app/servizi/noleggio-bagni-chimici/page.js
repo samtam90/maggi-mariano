@@ -1,7 +1,7 @@
 import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import province from "../../../../.data/province.json";
@@ -131,7 +131,10 @@ export function getProps({ title, mobile, locationsData }) {
   };
 }
 
-export const metadata = getMetadata({ title: "Noleggio bagni chimici" });
+export const metadata = getMetadata({
+  title: "Noleggio bagni chimici",
+  canonical: links.servizi["noleggio-bagni-chimici"].root,
+});
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

@@ -1,5 +1,6 @@
 import { withConditionalRendering } from "@/misc/functions";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
+import { links } from "../../../../app.config";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -88,6 +89,9 @@ function getProps({ mobile }) {
 
 export const metadata = {
   title: "Noleggio container e cassoni - Maggi Mariano Servizi Ecologici",
+  alternates: {
+    canonical: links.servizi["noleggio-container-e-cassoni"],
+  },
 };
 
 export const ConditionalPage = withConditionalRendering({

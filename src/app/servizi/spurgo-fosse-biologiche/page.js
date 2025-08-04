@@ -1,7 +1,7 @@
 import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
 import { memo } from "react";
-import appConfig from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import province from "../../../../.data/province.json";
 import { getContactStuff } from "../pulizia-fognature/page";
@@ -81,7 +81,10 @@ export function getProps({ title, mobile, locationsData }) {
   };
 }
 
-export const metadata = getMetadata({ title: "Spurgo fosse biologiche" });
+export const metadata = getMetadata({
+  title: "Spurgo fosse biologiche",
+  canonical: links.servizi["spurgo-fosse-biologiche"].root,
+});
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/MainContent/alt/mobile"),
   Desktop: import("@/templates/MainContent/alt/desktop"),

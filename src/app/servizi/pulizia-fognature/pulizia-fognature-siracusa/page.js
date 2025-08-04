@@ -1,7 +1,11 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
 
-export const metadata = getMetadata({ title: "Pulizia fognature Siracusa" });
+export const metadata = getMetadata({
+  title: "Pulizia fognature Siracusa",
+  canonical: links.servizi["pulizia-fognature"]["siracusa"]
+});
 export default withBaseProps({ 
     title: "Pulizia fognature Siracusa", 
     locationNames: {label: "Siracusa", href: "siracusa"}  

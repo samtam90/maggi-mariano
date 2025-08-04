@@ -35,6 +35,9 @@ export const metadata = {
     title: "Maggi Mariano Servizi Ecologici",
     description,
   }),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 function Preload() {

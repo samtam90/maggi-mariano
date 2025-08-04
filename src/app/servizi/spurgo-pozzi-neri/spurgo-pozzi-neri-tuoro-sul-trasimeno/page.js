@@ -1,8 +1,10 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
 
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Tuoro sul Trasimeno",
+  canonical: links.servizi["spurgo-pozzi-neri"]["tuoro-sul-trasimeno"]
 });
 export default withBaseProps({ 
     title: "Spurgo pozzi neri Tuoro sul Trasimeno", 

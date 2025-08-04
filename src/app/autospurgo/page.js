@@ -174,4 +174,11 @@ export function withBaseProps({ title, locationsData, locationNames }) {
   ));
 }
 
+export const metadata = {
+  title: "Autospurgo - Maggi Mariano servizi ecologici",
+  alternates: {
+    canonical: links.autospurgo.root,
+  },
+};
+
 export default withBaseProps({ title: "Autospurgo" });

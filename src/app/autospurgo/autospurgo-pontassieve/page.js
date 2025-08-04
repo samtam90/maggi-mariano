@@ -1,7 +1,11 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
+import { links } from "../../../../app.config";
 
-export const metadata = getMetadata({ title: "Autospurgo Pontassieve" });
+export const metadata = getMetadata({ 
+    title: "Autospurgo Pontassieve",
+    canonical: links.autospurgo["pontassieve"],
+});
 export default withBaseProps({ 
     title: "Autospurgo Pontassieve", 
     locationNames: {label: "Pontassieve", href: "pontassieve"}  
