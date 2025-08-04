@@ -2,4 +2,7 @@ import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Autospurgo Preci" });
-export default withBaseProps({ title: "Autospurgo Preci" });
+export default withBaseProps({ 
+    title: "Autospurgo Preci", 
+    locationNames: {label: "Preci", href: "preci"}  
+});

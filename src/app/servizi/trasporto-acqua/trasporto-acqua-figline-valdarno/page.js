@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Figline Valdarno",
 });
-export default withBaseProps({ title: "Trasporto acqua Figline Valdarno" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Figline Valdarno", 
+    locationNames: {label: "Figline Valdarno", href: "figline-valdarno"}  
+});

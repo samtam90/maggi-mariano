@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Collazzone",
 });
-export default withBaseProps({ title: "Spurgo pozzi neri Collazzone" });
+export default withBaseProps({ 
+    title: "Spurgo pozzi neri Collazzone", 
+    locationNames: {label: "Collazzone", href: "collazzone"}  
+});

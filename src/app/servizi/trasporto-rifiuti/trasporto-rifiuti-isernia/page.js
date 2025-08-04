@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Isernia",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Isernia" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Isernia", 
+    locationNames: {label: "Isernia", href: "isernia"}  
+});

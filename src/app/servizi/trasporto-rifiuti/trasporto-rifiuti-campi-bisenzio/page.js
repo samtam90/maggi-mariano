@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Campi Bisenzio",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Campi Bisenzio" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Campi Bisenzio", 
+    locationNames: {label: "Campi Bisenzio", href: "campi-bisenzio"}  
+});

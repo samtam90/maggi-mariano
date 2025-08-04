@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Scarperia e San Piero",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Scarperia e San Piero" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Scarperia e San Piero", 
+    locationNames: {label: "Scarperia e San Piero", href: "scarperia-e-san-piero"}  
+});

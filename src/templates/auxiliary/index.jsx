@@ -212,6 +212,14 @@ export function renderMaps({ data, dimensions, classNames }) {
   );
 }
 
+function getHref({ href, suffix }) {
+  if (suffix) {
+    const preSuffixContent = href.substring(href.lastIndexOf("/"));
+    return `${href}${preSuffixContent}-${suffix}`;
+  }
+  return href;
+}
+
 /**
  * @typedef {{
  *    id: number | string,
@@ -225,7 +233,10 @@ export function renderMaps({ data, dimensions, classNames }) {
  *    decorationImageUrl?: string,
  *    backgroundImageUrl?: string,
  *    className?: string,
- *    disableFlipCard?: boolean
+ *    disableFlipCard?: boolean,
+ *    titleHeadingElement?: string,
+ *    flipCardButtonLabel?: string,
+ *    locationNames?: {label: string, href: string}
  * }} param0
  * @returns
  */
@@ -237,6 +248,7 @@ export function renderServicesNavGrid({
   disableFlipCard,
   titleHeadingElement = "h3",
   flipCardButtonLabel = "Scopri di più",
+  locationNames,
 }) {
   const renderItemInnerContent = useCallback(
     (content, { title, subtitle }) =>
@@ -293,7 +305,7 @@ export function renderServicesNavGrid({
         />
         <NavButtonsGrid
           renderHref={(href, content) => (
-            <Link href={href} className="block" prefetch={false}>
+            <Link href={href} className="block" prefetch={false} rel="nofollow">
               {content}
             </Link>
           )}
@@ -316,16 +328,23 @@ export function renderServicesNavGrid({
               key={id}
               id={id}
               title={title}
-              subtitle={subtitle}
+              subtitle={
+                <span>
+                  {subtitle} <br />{" "}
+                  <span className="text-xxs lg:text-xs">
+                    {locationNames?.label}
+                  </span>{" "}
+                </span>
+              }
               icon={
                 <Image
                   sources={iconSources}
-                  alt={`${title} ${subtitle}`}
+                  alt={`${title} ${subtitle} ${locationNames?.label}`}
                   classNames={{ picture: "h-12 w-12 block", image: "w-full" }}
                   loading="lazy"
                 />
               }
-              href={href}
+              href={getHref({ href, suffix: locationNames?.href })}
             />
           ))}
         </NavButtonsGrid>

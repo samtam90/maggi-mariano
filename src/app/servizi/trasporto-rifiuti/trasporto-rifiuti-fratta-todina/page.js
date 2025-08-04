@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Fratta Todina",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Fratta Todina" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Fratta Todina", 
+    locationNames: {label: "Fratta Todina", href: "fratta-todina"}  
+});

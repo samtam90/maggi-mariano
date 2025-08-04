@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Cesa in valdichiana",
 });
-export default withBaseProps({ title: "Trasporto acqua Cesa in valdichiana" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Cesa in valdichiana", 
+    locationNames: {label: "Cesa in valdichiana", href: "cesa-in-valdichiana"}  
+});

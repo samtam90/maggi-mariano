@@ -1,4 +1,7 @@
 import { getMetadata, withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Frantoio mobile inerti Marsciano" });
-export default withBaseProps({ title: "Frantoio mobile inerti Marsciano" });
+export default withBaseProps({ 
+    title: "Frantoio mobile inerti Marsciano", 
+    locationNames: {label: "Marsciano", href: "marsciano"}  
+});

@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Città della Pieve",
 });
-export default withBaseProps({ title: "Trasporto acqua Città della Pieve" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Città della Pieve", 
+    locationNames: {label: "Città della Pieve", href: "città-della-pieve"}  
+});

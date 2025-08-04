@@ -26,12 +26,13 @@ export function getProps({ title, mobile, locationsData }) {
                 nostri clienti ci riconoscono da sempre.
               </HighlightedText>,
               <span>
-                Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
+                Operiamo nel settore del {title} da anni e nel tempo ci siamo
+                attrezzati con
                 <HighlightedText>
                   i migliori macchinari e le migliori tecnologie
                 </HighlightedText>{" "}
-                che ci permettono di garantire interventi tempestivi, poco
-                invasivi e soprattutto{" "}
+                che ci permettono di garantire interventi di {title}
+                tempestivi, poco invasivi e soprattutto{" "}
                 <HighlightedText>
                   a prezzi estremamente concorrenziali
                 </HighlightedText>
@@ -71,8 +72,8 @@ export function getProps({ title, mobile, locationsData }) {
         ),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
+            il servizio di trasporto rifiuti in tutte le province italiane:
           </span>
         ),
       },
@@ -87,7 +88,7 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export function Page({ searchParams, title, locationsData }) {
+export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -95,16 +96,18 @@ export function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

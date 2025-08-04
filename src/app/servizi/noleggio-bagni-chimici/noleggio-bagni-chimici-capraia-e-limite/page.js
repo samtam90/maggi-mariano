@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Capraia e Limite",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Capraia e Limite" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Capraia e Limite", 
+  locationNames: {label: "Capraia e Limite", href: "capraia-e-limite"} 
+});

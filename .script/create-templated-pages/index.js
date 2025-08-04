@@ -80,10 +80,9 @@ async function generatePages(outPath, templatesPath, templatesData) {
       );
       console.log(`\nProcessing full path ${directoryPath}.`);
       await deleteDirectoryIfExisting(directoryPath);
-      const processedTemplate = currentTemplate.replace(
-        /(\[name\])/g,
-        suffix.title
-      );
+      const processedTemplate = currentTemplate
+        .replace(/(\[name\])/g, suffix.title)
+        .replace(/(\[path\])/g, suffix.path);
       try {
         await createDirectoryWithSingleFile(
           directoryPath,

@@ -4,6 +4,7 @@ import { memo } from "react";
 import appConfig, { links } from "../../../../app.config";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import province from "../../../../.data/province.json";
+import { getDescription, getOpenGraphMetadata } from "@/app/layout";
 
 export function getProps({ title, locationsData }) {
   return {
@@ -14,7 +15,7 @@ export function getProps({ title, locationsData }) {
         image: {
           src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
           dimensions: { width: 1200, height: 800 },
-          alt: "Frantumatore mobile",
+          alt: `${title} 1`,
         },
         paragraphs: [
           <span>
@@ -58,9 +59,9 @@ export function getProps({ title, locationsData }) {
             La capacità di produzione massima dell'impianto mobile è pari a 70
             t/h, considerando 8 ore lavorative al giorno e 220 giorni lavorativi
             all'anno si ha che l'impianto mobile potrebbe teoricamente al
-            massimo recuperare: <br /> 
-            • &nbsp; giornalmente: 560 t/g; <br />
-            • &nbsp; annualmente: 123.200 t/anno.
+            massimo recuperare: <br />
+            • &nbsp; giornalmente: 560 t/g; <br />• &nbsp; annualmente: 123.200
+            t/anno.
           </span>,
         ],
       },
@@ -71,7 +72,7 @@ export function getProps({ title, locationsData }) {
         },
         image: {
           src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
-          alt: "Frantumatore mobile",
+          alt: `${title} 2`,
           dimensions: { width: 1200, height: 800 },
         },
         items: [
@@ -104,8 +105,9 @@ export function getProps({ title, locationsData }) {
         ),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> rendiamo
+            disponibile il nostro frantoio mobile inerti in tutte le province
+            italiane:
           </span>
         ),
       },
@@ -125,7 +127,7 @@ export function getProps({ title, locationsData }) {
         images: [
           {
             src: "https://www.maggi-mariano.it/immagini/misc/frantumatore-mobile.jpg",
-            alt: "Image1",
+            alt: `${title} 3`,
           },
         ],
         formTitle:
@@ -138,8 +140,13 @@ export function getProps({ title, locationsData }) {
 }
 
 export function getMetadata({ title }) {
+  const description = getDescription({
+    mainContent: `${title}, videoispezioni con telecamera robot, escavatore a risucchio`,
+  });
   return {
     title: `${title} - Maggi Mariano Servizi Ecologici`,
+    description,
+    openGraph: getOpenGraphMetadata({ title, description }),
   };
 }
 
@@ -150,7 +157,7 @@ export const ConditionalPage = withConditionalRendering({
 
 export const metadata = getMetadata({ title: "Frantoio mobile inerti" });
 
-export function Page({ searchParams, title, locationsData }) {
+export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -158,16 +165,18 @@ export function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

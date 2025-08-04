@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Cerreto di Spoleto",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Cerreto di Spoleto" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Cerreto di Spoleto", 
+  locationNames: {label: "Cerreto di Spoleto", href: "cerreto-di-spoleto"} 
+});

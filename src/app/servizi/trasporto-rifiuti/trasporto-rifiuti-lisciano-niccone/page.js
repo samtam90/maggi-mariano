@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Lisciano Niccone",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Lisciano Niccone" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Lisciano Niccone", 
+    locationNames: {label: "Lisciano Niccone", href: "lisciano-niccone"}  
+});

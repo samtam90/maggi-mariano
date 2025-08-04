@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Badia Prataglia",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Badia Prataglia" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Badia Prataglia", 
+  locationNames: {label: "Badia Prataglia", href: "badia-prataglia"} 
+});

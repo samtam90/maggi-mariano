@@ -10,6 +10,7 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({
   title: "Noleggio bagni chimici Arezzo",
+  locationNames: { label: "Arezzo", href: "arezzo" },
   locationsData: {
     items: makeNavGridItems(
       comuni,
@@ -17,8 +18,9 @@ export default withBaseProps({
     ),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Arezzo:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
+        servizio di noleggio bagni chimici in tutti i comuni della provincia di
+        Arezzo:
       </span>
     ),
   },

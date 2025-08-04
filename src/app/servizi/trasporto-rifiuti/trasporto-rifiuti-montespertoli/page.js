@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Montespertoli",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Montespertoli" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Montespertoli", 
+    locationNames: {label: "Montespertoli", href: "montespertoli"}  
+});

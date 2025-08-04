@@ -106,7 +106,7 @@ const props = {
             "Tutti i nostri servizi sono svolti con la massima attenzione alla sicurezza e alla protezione dell'ambiente, in linea con le normative vigenti e con la massima trasparenza nei confronti dei nostri clienti. Ci impegniamo a offrire un servizio completo e di alta qualità, sempre al passo con le nuove tecnologie e le esigenze del mercato.",
           ],
           image: {
-            alt: "Servizio 1",
+            alt: "Maggi Mariano Servizi Ecologici Autospurgo 1",
             sources: [
               {
                 type: "image/webp",
@@ -127,7 +127,7 @@ const props = {
             "La costante formazione del personale e l’attenzione alla sostenibilità ambientale rendono Maggi Mariano Servizi Ecologici SRL un punto di riferimento nel panorama dei servizi ecologici. L’impegno verso l’innovazione e la qualità consente all’azienda di garantire interventi tempestivi, efficaci e rispettosi dell’ambiente, contribuendo attivamente alla tutela del territorio e al benessere della collettività.",
           ],
           image: {
-            alt: "Servizio 2",
+            alt: "Maggi Mariano Servizi Ecologici Autospurgo 2",
             sources: [
               {
                 type: "image/webp",
@@ -159,7 +159,7 @@ const props = {
         </span>,
       ],
       image: {
-        alt: "Image",
+        alt: "Frantoio mobile inerti",
         dimensions: { width: 700, height: 300 },
         sources: [
           {

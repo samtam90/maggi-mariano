@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Verbano-Cusio-Ossola",
 });
-export default withBaseProps({ title: "Spurgo pozzi neri Verbano-Cusio-Ossola" });
+export default withBaseProps({ 
+    title: "Spurgo pozzi neri Verbano-Cusio-Ossola", 
+    locationNames: {label: "Verbano-Cusio-Ossola", href: "verbano-cusio-ossola"}  
+});

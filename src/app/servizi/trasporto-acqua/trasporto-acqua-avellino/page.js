@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Avellino",
 });
-export default withBaseProps({ title: "Trasporto acqua Avellino" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Avellino", 
+    locationNames: {label: "Avellino", href: "avellino"}  
+});

@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Palazzuolo sul Senio",
 });
-export default withBaseProps({ title: "Trasporto acqua Palazzuolo sul Senio" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Palazzuolo sul Senio", 
+    locationNames: {label: "Palazzuolo sul Senio", href: "palazzuolo-sul-senio"}  
+});

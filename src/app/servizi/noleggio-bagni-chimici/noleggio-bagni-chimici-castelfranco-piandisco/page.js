@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Castelfranco Piandiscò",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Castelfranco Piandiscò" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Castelfranco Piandiscò", 
+  locationNames: {label: "Castelfranco Piandiscò", href: "castelfranco-piandisco"} 
+});

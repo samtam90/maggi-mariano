@@ -2,4 +2,7 @@ import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Pulizia fognature Gualdo Tadino" });
-export default withBaseProps({ title: "Pulizia fognature Gualdo Tadino" });
+export default withBaseProps({ 
+    title: "Pulizia fognature Gualdo Tadino", 
+    locationNames: {label: "Gualdo Tadino", href: "gualdo-tadino"}  
+});

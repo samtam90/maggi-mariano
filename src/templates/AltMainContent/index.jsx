@@ -181,11 +181,14 @@ function renderMiddleSection({ title, preTitle, paragraphs, classNames }) {
         )}
       >
         <header className="mb-4 lg:mb-6">
-          {renderParagraph({
-            content: preTitle,
-            key: "preTitle",
-            className: twClsx("mb-8 lg:mb-12", classNames?.preTitle),
-          })}
+          <h3
+            className={twClsx(
+              "font-title text-sm lg:text-md mb-4 lg:mb-6 leading-normal text-gray-700 mb-8 lg:mb-12",
+              classNames?.preTitle
+            )}
+          >
+            {preTitle}
+          </h3>
           <h2 className="text-xl lg:text-3xl font-titleBold uppercase text-gray-700 text-center">
             {title}
           </h2>
@@ -352,7 +355,12 @@ function renderBottomSection({
  * }} param0
  * @returns
  */
-function AltMainContent({ mobile, sections, onContactFormSubmit }) {
+function AltMainContent({
+  mobile,
+  sections,
+  onContactFormSubmit,
+  locationNames,
+}) {
   const {
     locations: locationsData,
     contacts: contactsData,
@@ -365,7 +373,7 @@ function AltMainContent({ mobile, sections, onContactFormSubmit }) {
   const circledActive = useScrollVisibility(bottomElRef, true);
 
   return (
-    <AuxTemplate mobile={mobile}>
+    <AuxTemplate mobile={mobile} locationNames={locationNames}>
       {renderTopSection({ ...topSectionData, activeUnderline: true })}
       {renderMiddleSection({ ...middleSectionData })}
       <div ref={(r) => (bottomElRef.current = r)}>

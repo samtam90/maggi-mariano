@@ -70,6 +70,7 @@ function MainContentTemplate({
   sections,
   onContactFormSubmit,
   classNames,
+  locationNames,
 }) {
   const {
     contacts: contactsSectionData,
@@ -158,6 +159,7 @@ function MainContentTemplate({
             ...appConfig.data.servicesGrid,
             className: "max-w-6xl",
             flipCardButtonLabel: mobile ? "Caricamento" : "Scopri di più",
+            locationNames,
           })}
         </section>
         {renderMaps({

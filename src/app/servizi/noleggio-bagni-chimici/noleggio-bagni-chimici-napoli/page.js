@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Napoli",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Napoli" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Napoli", 
+  locationNames: {label: "Napoli", href: "napoli"} 
+});

@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Catanzaro",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Catanzaro" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Catanzaro", 
+    locationNames: {label: "Catanzaro", href: "catanzaro"}  
+});

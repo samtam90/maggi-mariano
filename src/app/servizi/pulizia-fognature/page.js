@@ -34,14 +34,14 @@ export function getContactStuff({ title }) {
         </Link>{" "}
         per ispezionare le fognature, scarichi e fosse biologiche difficilmente
         raggiungibili con altri mezzi, permettendoci di risolvere ogni
-        problematica inerente il servizio di {title} dei nostri clienti in
-        tempi brevi.
+        problematica inerente il servizio di {title} dei nostri clienti in tempi
+        brevi.
       </span>
     ),
     images: [
       {
         src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-1-1.jpg",
-        alt: "Image2",
+        alt: `Videocamera ispezioni per ${title}`,
       },
     ],
     formTitle:
@@ -121,8 +121,8 @@ export function getProps({ title, mobile, locationsData }) {
         ),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
+            il servizio di pulizia fognature in tutte le province italiane:
           </span>
         ),
       },
@@ -137,7 +137,7 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export function Page({ searchParams, title, locationsData }) {
+export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -145,16 +145,18 @@ export function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

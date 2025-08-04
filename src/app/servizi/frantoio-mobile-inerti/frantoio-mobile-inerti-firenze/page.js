@@ -1,14 +1,16 @@
-import { getMetadata, withBaseProps } from "../page";
+import { withBaseProps } from "../page";
 import comuni from "../../../../../.data/comuni/firenze.json";
 import appConfig from "../../../../../app.config";
 import React from "react";
 import { makeNavGridItems } from "@/misc/functions";
+import { getMetadata } from "../page";
 
 export const metadata = getMetadata({
   title: "Frantoio mobile inerti Firenze",
 });
 export default withBaseProps({
   title: "Frantoio mobile inerti Firenze",
+  locationNames: { label: "Firenze", href: "firenze" },
   locationsData: {
     items: makeNavGridItems(
       comuni,
@@ -16,8 +18,9 @@ export default withBaseProps({
     ),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Firenze:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> rendiamo
+        disponibile il nostro frantoio mobile inerti in tutti i comuni della
+        provincia di Firenze:
       </span>
     ),
   },

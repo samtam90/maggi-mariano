@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Cagliari",
 });
-export default withBaseProps({ title: "Spurgo pozzi neri Cagliari" });
+export default withBaseProps({ 
+    title: "Spurgo pozzi neri Cagliari", 
+    locationNames: {label: "Cagliari", href: "cagliari"}  
+});

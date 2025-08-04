@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Figline e Incisa Valdarno",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Figline e Incisa Valdarno" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Figline e Incisa Valdarno", 
+  locationNames: {label: "Figline e Incisa Valdarno", href: "figline-e-incisa-valdarno"} 
+});

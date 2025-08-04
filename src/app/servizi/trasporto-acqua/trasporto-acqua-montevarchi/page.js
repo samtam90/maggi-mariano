@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Montevarchi",
 });
-export default withBaseProps({ title: "Trasporto acqua Montevarchi" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Montevarchi", 
+    locationNames: {label: "Montevarchi", href: "montevarchi"}  
+});

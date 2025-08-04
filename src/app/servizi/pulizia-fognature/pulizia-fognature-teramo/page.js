@@ -2,4 +2,7 @@ import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Pulizia fognature Teramo" });
-export default withBaseProps({ title: "Pulizia fognature Teramo" });
+export default withBaseProps({ 
+    title: "Pulizia fognature Teramo", 
+    locationNames: {label: "Teramo", href: "teramo"}  
+});

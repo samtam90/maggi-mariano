@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Sassari",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Sassari" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Sassari", 
+  locationNames: {label: "Sassari", href: "sassari"} 
+});

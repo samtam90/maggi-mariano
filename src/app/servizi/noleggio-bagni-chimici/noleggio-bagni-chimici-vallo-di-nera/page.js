@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Vallo di Nera",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Vallo di Nera" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Vallo di Nera", 
+  locationNames: {label: "Vallo di Nera", href: "vallo-di-nera"} 
+});

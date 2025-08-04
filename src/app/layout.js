@@ -4,15 +4,14 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import ReactDOM from "react-dom";
 import "./globals.css";
 
-const description =
-  "Video Ispezioni con telecamera robot, spurgo fosse biologiche, escavatore a risucchio - Maggi Mariano Servizi Ecologici, sa sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente.";
+const description = getDescription({
+  mainContent:
+    "Video Ispezioni con telecamera robot, spurgo fosse biologiche, escavatore a risucchio",
+});
 
-export const metadata = {
-  title: "Home - Maggi Mariano Servizi Ecologici",
-  description,
-  icon: appConfig.misc.iconSrc,
-  openGraph: {
-    title: "Maggi Mariano Servizi Ecologici",
+export function getOpenGraphMetadata({ title, description }) {
+  return {
+    title,
     description,
     url: `https://${appConfig.misc.url}`,
     locale: "it_IT",
@@ -22,10 +21,20 @@ export const metadata = {
         width: 131,
         height: 48,
         url: "https://www.maggi-mariano.it/immagini/logo.png",
-        alt: "Maggi Mariano Servizi Ecologici",
+        alt: title,
       },
     ],
-  },
+  };
+}
+
+export const metadata = {
+  title: "Home - Maggi Mariano Servizi Ecologici",
+  description,
+  icon: appConfig.misc.iconSrc,
+  openGraph: getOpenGraphMetadata({
+    title: "Maggi Mariano Servizi Ecologici",
+    description,
+  }),
 };
 
 function Preload() {
@@ -57,4 +66,8 @@ export default function RootLayout({ children }) {
       <body>{children}</body>
     </html>
   );
+}
+
+export function getDescription({ mainContent }) {
+  return `${mainContent} - Maggi Mariano Servizi Ecologici, da sempre al fianco di aziende e cittadini per la salvaguardia dell'ambiente.`;
 }

@@ -10,12 +10,14 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({
   title: "Trasporto acqua Arezzo",
+  locationNames: { label: "Arezzo", href: "arezzo" },
   locationsData: {
     items: makeNavGridItems(comuni, appConfig.links.servizi["trasporto-acqua"]),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Arezzo:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
+        servizio di trasporto acqua in tutti i comuni della provincia di
+        Arezzo:
       </span>
     ),
   },

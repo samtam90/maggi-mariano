@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua San Giovanni Valdarno",
 });
-export default withBaseProps({ title: "Trasporto acqua San Giovanni Valdarno" });
+export default withBaseProps({ 
+    title: "Trasporto acqua San Giovanni Valdarno", 
+    locationNames: {label: "San Giovanni Valdarno", href: "san-giovanni-valdarno"}  
+});

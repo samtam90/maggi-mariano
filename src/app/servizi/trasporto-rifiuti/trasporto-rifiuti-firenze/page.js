@@ -10,6 +10,7 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({
   title: "Trasporto rifiuti Firenze",
+  locationNames: { label: "Firenze", href: "firenze" },
   locationsData: {
     items: makeNavGridItems(
       comuni,
@@ -17,8 +18,9 @@ export default withBaseProps({
     ),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Firenze:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
+        servizio di trasporto rifiuti in tutti i comuni della provincia di
+        Firenze:
       </span>
     ),
   },

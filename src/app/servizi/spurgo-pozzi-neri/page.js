@@ -70,8 +70,8 @@ export function getProps({ title, mobile, locationsData }) {
         ),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
+            il servizio di spurgo pozzi neri in tutte le province italiane:
           </span>
         ),
       },
@@ -86,7 +86,7 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export function Page({ searchParams, title, locationsData }) {
+export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -94,16 +94,18 @@ export function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

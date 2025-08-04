@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Verbano-Cusio-Ossola",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Verbano-Cusio-Ossola" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Verbano-Cusio-Ossola", 
+  locationNames: {label: "Verbano-Cusio-Ossola", href: "verbano-cusio-ossola"} 
+});

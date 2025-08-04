@@ -2,4 +2,7 @@ import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Pulizia fognature Caltanissetta" });
-export default withBaseProps({ title: "Pulizia fognature Caltanissetta" });
+export default withBaseProps({ 
+    title: "Pulizia fognature Caltanissetta", 
+    locationNames: {label: "Caltanissetta", href: "caltanissetta"}  
+});

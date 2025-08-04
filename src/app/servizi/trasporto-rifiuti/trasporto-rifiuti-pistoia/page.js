@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Pistoia",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Pistoia" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Pistoia", 
+    locationNames: {label: "Pistoia", href: "pistoia"}  
+});

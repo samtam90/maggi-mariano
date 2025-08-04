@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Foiano in Valdichiana",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Foiano in Valdichiana" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Foiano in Valdichiana", 
+    locationNames: {label: "Foiano in Valdichiana", href: "foiano-in-valdichiana"}  
+});

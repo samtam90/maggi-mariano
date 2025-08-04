@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Bagno a Ripoli",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Bagno a Ripoli" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Bagno a Ripoli", 
+    locationNames: {label: "Bagno a Ripoli", href: "bagno-a-ripoli"}  
+});

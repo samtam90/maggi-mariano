@@ -95,8 +95,8 @@ export function getProps({ title, mobile, locationsData }) {
         ),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
+            il servizio di noleggio bagni chimici in tutte le province italiane:
           </span>
         ),
       },
@@ -116,15 +116,14 @@ export function getProps({ title, mobile, locationsData }) {
         images: [
           {
             src: "https://www.maggi-mariano.it/immagini/misc/12248895_10206629587732692_810803295_n.jpg",
-            alt: "Image1",
+            alt: `${title} 4`,
           },
           {
             src: "https://www.maggi-mariano.it/immagini/misc/12270376_10206629588012699_1901414759_n.jpg",
-            alt: "Image2",
+            alt: `${title} 5`,
           },
         ],
-        formTitle:
-          "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
+        formTitle: `Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni su ${title}`,
         variant: "horizontal",
         imageDimensions: { width: 650, height: mobile ? 350 : 850 },
       },
@@ -138,7 +137,7 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export function Page({ searchParams, title, locationsData }) {
+export function Page({ searchParams, title, locationsData, locationNames }) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -146,16 +145,18 @@ export function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Sassari",
 });
-export default withBaseProps({ title: "Trasporto acqua Sassari" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Sassari", 
+    locationNames: {label: "Sassari", href: "sassari"}  
+});

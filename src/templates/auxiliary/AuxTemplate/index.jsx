@@ -17,6 +17,7 @@ function AuxTemplate({
   className,
   disableAdditionalContent,
   disablePrivacyManagement,
+  locationNames,
 }) {
   let content = (
     <>
@@ -39,6 +40,7 @@ function AuxTemplate({
               ...appConfig.data.servicesGrid,
               className: "max-w-6xl",
               flipCardButtonLabel: mobile ? "Caricamento" : "Scopri di più",
+              locationNames,
             })}
           </section>
           {renderMaps({

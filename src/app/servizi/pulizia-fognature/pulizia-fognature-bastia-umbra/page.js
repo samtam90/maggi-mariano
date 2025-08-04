@@ -2,4 +2,7 @@ import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({ title: "Pulizia fognature Bastia Umbra" });
-export default withBaseProps({ title: "Pulizia fognature Bastia Umbra" });
+export default withBaseProps({ 
+    title: "Pulizia fognature Bastia Umbra", 
+    locationNames: {label: "Bastia Umbra", href: "bastia-umbra"}  
+});

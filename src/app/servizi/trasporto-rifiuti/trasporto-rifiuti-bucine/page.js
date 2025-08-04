@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Bucine",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Bucine" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Bucine", 
+    locationNames: {label: "Bucine", href: "bucine"}  
+});

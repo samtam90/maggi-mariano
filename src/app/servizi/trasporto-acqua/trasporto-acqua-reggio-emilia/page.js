@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto acqua Reggio Emilia",
 });
-export default withBaseProps({ title: "Trasporto acqua Reggio Emilia" });
+export default withBaseProps({ 
+    title: "Trasporto acqua Reggio Emilia", 
+    locationNames: {label: "Reggio Emilia", href: "reggio-emilia"}  
+});

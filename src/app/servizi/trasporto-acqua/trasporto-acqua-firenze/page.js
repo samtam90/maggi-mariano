@@ -10,12 +10,14 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({
   title: "Trasporto acqua Firenze",
+  locationNames: { label: "Firenze", href: "firenze" },
   locationsData: {
     items: makeNavGridItems(comuni, appConfig.links.servizi["trasporto-acqua"]),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Firenze:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
+        servizio di trasporto acqua in tutti i comuni della provincia di
+        Firenze:
       </span>
     ),
   },

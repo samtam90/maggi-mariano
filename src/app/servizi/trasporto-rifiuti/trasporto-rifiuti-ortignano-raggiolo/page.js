@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Ortignano Raggiolo",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Ortignano Raggiolo" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Ortignano Raggiolo", 
+    locationNames: {label: "Ortignano Raggiolo", href: "ortignano-raggiolo"}  
+});

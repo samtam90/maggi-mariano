@@ -20,9 +20,9 @@ export function getProps({ title, mobile, locationsData }) {
             paragraphs: [
               <span className="text-gray-600 font-titleBold">
                 Operiamo nel settore da anni e nel tempo ci siamo attrezzati con
-                i migliori macchinari e le migliori tecnologie che ci permettono
-                di garantire interventi tempestivi, poco invasivi e soprattutto
-                a prezzi estremamente concorrenziali.
+                i migliori macchinari e le migliori tecnologie per l'autospurgo
+                che ci permettono di garantire interventi tempestivi, poco
+                invasivi e soprattutto a prezzi estremamente concorrenziali.
               </span>,
               <span>
                 Garantiamo{" "}
@@ -50,7 +50,7 @@ export function getProps({ title, mobile, locationsData }) {
             ],
             mediaElements: [
               {
-                label: "Image1",
+                label: `${title} 1`,
                 src: "https://www.maggi-mariano.it/immagini/misc/fognature-1.jpg",
                 dimensions: { width: 800, height: 550 },
               },
@@ -76,7 +76,7 @@ export function getProps({ title, mobile, locationsData }) {
                 difficili da raggiungere.
               </span>,
               <span>
-                Effettuiamo anche la stasatura e disotturazione di tubature, 
+                Effettuiamo anche la stasatura e disotturazione di tubature,
                 <Link
                   href={links.servizi["spurgo-fosse-biologiche"].root}
                   className="font-titleBold underline text-green-dark ml-1"
@@ -98,9 +98,8 @@ export function getProps({ title, mobile, locationsData }) {
             ],
             mediaElements: [
               {
-                label: "Image2",
-                srcset:
-                  "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
+                label: `${title} 2`,
+                srcset: "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
                 dimensions: { width: 400, height: 300 },
               },
             ],
@@ -117,8 +116,8 @@ export function getProps({ title, mobile, locationsData }) {
         items: makeNavGridItems(province, appConfig.links.autospurgo),
         title: (
           <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in
-            tutte le province italiane:
+            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
+            il servizio di autospurgo in tutte le province italiane:
           </span>
         ),
       },
@@ -132,7 +131,12 @@ export const ConditionalPage = withConditionalRendering({
   Desktop: import("@/templates/MainContent/alt/desktop"),
 });
 
-export async function Page({ searchParams, title, locationsData }) {
+export async function Page({
+  searchParams,
+  title,
+  locationsData,
+  locationNames,
+}) {
   const mobile = searchParams?.viewport === "mobile";
   const props = getProps({ title, mobile, locationsData });
   return (
@@ -140,16 +144,18 @@ export async function Page({ searchParams, title, locationsData }) {
       {...props}
       searchParams={searchParams}
       onContactFormSubmit={onContactFormSubmit}
+      locationNames={locationNames}
     />
   );
 }
 
-export function withBaseProps({ title, locationsData }) {
+export function withBaseProps({ title, locationsData, locationNames }) {
   return memo(async ({ searchParams }) => (
     <Page
       searchParams={searchParams}
       title={title}
       locationsData={locationsData}
+      locationNames={locationNames}
     />
   ));
 }

@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Ortignano Raggiolo",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Ortignano Raggiolo" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Ortignano Raggiolo", 
+  locationNames: {label: "Ortignano Raggiolo", href: "ortignano-raggiolo"} 
+});

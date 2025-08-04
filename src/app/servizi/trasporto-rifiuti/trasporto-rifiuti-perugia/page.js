@@ -10,6 +10,7 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({
   title: "Trasporto rifiuti Perugia",
+  locationNames: { label: "Perugia", href: "perugia" },
   locationsData: {
     items: makeNavGridItems(
       comuni,
@@ -17,8 +18,9 @@ export default withBaseProps({
     ),
     title: (
       <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> Operiamo in tutte
-        i comuni della provincia di Perugia:
+        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
+        servizio di trasporto rifiuti in tutti i comuni della provincia di
+        Perugia:
       </span>
     ),
   },

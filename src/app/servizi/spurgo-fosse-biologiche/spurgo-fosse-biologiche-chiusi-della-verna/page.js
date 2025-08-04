@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Spurgo fosse biologiche Chiusi della Verna",
 });
-export default withBaseProps({ title: "Spurgo fosse biologiche Chiusi della Verna" });
+export default withBaseProps({ 
+    title: "Spurgo fosse biologiche Chiusi della Verna", 
+    locationNames: {label: "Chiusi della Verna", href: "chiusi-della-verna"}  
+});

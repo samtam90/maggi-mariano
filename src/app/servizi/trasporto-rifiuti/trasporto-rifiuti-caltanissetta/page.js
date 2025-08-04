@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Caltanissetta",
 });
-export default withBaseProps({ title: "Trasporto rifiuti Caltanissetta" });
+export default withBaseProps({ 
+    title: "Trasporto rifiuti Caltanissetta", 
+    locationNames: {label: "Caltanissetta", href: "caltanissetta"}  
+});

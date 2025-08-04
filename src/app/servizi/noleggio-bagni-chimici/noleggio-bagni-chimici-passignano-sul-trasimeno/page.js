@@ -4,4 +4,7 @@ import { withBaseProps } from "../page";
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Passignano sul Trasimeno",
 });
-export default withBaseProps({ title: "Noleggio bagni chimici Passignano sul Trasimeno" });
+export default withBaseProps({ 
+  title: "Noleggio bagni chimici Passignano sul Trasimeno", 
+  locationNames: {label: "Passignano sul Trasimeno", href: "passignano-sul-trasimeno"} 
+});
