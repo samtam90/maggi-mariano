@@ -148,7 +148,7 @@ export function getMetadata({ title, canonical }) {
     description,
     openGraph: getOpenGraphMetadata({ title, description }),
     alternates: {
-      canonical,
+      canonical: `${appConfig.data.baseUrl}${canonical}`,
     },
   };
 }
