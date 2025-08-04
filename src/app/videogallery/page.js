@@ -68,6 +68,10 @@ const props = {
   ],
 };
 
+export const metadata = {
+  title: "Videogallery - Maggi Mariano servizi ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/VideoGallery/alt/mobile"),
   Desktop: import("@/templates/VideoGallery/alt/desktop"),

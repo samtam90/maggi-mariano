@@ -2,9 +2,9 @@ import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 
 export const metadata = getMetadata({
-  title: "Spurgo pozzi neri Forlì-Cesena",
+  title: "Noleggio bagni chimici Forlì-Cesena",
 });
 export default withBaseProps({ 
-    title: "Spurgo pozzi neri Forlì-Cesena", 
-    locationNames: {label: "Forlì-Cesena", href: "forlì-cesena"}  
+  title: "Noleggio bagni chimici Forlì-Cesena", 
+  locationNames: {label: "Forlì-Cesena", href: "forli-cesena"} 
 });

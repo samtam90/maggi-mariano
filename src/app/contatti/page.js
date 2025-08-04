@@ -1,7 +1,6 @@
 import Icons from "@/components/Icons";
 import { withConditionalRendering } from "@/misc/functions";
 import { onContactFormSubmit } from "@/misc/server";
-import appConfig from "../../../app.config";
 
 const props = {
   formTitle: "Usa il modulo sottostante per contattarci",
@@ -59,6 +58,10 @@ const props = {
       icon: <Icons.PencilSquare />,
     },
   ],
+};
+
+export const metadata = {
+  title: "Contatti - Maggi Mariano servizi ecologici",
 };
 
 export const ConditionalPage = withConditionalRendering({

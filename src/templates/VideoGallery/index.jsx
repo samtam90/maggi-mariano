@@ -73,12 +73,12 @@ function VideoGalleryTemplate({ mobile, videos, title }) {
           text: "text-red-primary text-center",
           rightContainer: "text-white text-sm lg:text-lg block lg:inline-block",
           leftContainer: "block lg:inline-block",
-          root: "text-md lg:text-2xl block lg:inline-block mb-12",
+          root: "text-md lg:text-2xl block lg:inline-block",
         }}
         heading
         headingElement="h1"
       />
-      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8">
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 mt-12">
         {videos.map(({ src, label, dimensions, loading }) => (
           <li key={label}>
             <Video

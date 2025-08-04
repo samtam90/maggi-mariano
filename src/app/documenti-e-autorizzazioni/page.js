@@ -91,6 +91,10 @@ const props = {
   ],
 };
 
+export const metadata = {
+  title: "Documenti e autorizzazioni - Maggi Mariano servizi ecologici",
+};
+
 export const ConditionalPage = withConditionalRendering({
   Mobile: import("@/templates/Documents/alt/mobile"),
   Desktop: import("@/templates/Documents/alt/desktop"),

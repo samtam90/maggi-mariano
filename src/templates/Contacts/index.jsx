@@ -46,10 +46,10 @@ function ContactsTemplate({
           rightContainer:
             "text-white text-sm lg:text-2xl block lg:inline-block",
           leftContainer: "block lg:inline-block",
-          root: "text-md lg:text-2xl block lg:inline-block mb-12",
+          root: "text-md lg:text-2xl block lg:inline-block",
         }}
       />
-      <div className="block lg:flex">
+      <div className="block lg:flex mt-12">
         <section
           key="contact-items"
           className="basis-2/5 shrink-0 mb-12 lg:mb-0"
