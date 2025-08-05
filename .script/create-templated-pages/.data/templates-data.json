@@ -537,7 +537,7 @@
       "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
     },
     { "path": "dovadola", "title": "Dovadola", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
-    { "path": "forlì", "title": "Forlì", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "forli", "title": "Forlì", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
     {
       "path": "forlimpopoli",
       "title": "Forlimpopoli",

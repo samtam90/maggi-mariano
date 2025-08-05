@@ -6,11 +6,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Trasporto acqua Forlì",
-  canonical: links.servizi["trasporto-acqua"]["forlì"]
+  canonical: links.servizi["trasporto-acqua"]["forli"]
 });
 export default withBaseProps({ 
     title: "Trasporto acqua Forlì", 
-    locationNames: {label: "Forlì", href: "forlì"},
+    locationNames: {label: "Forlì", href: "forli"},
     locationsData: getProvinceLocationsData({
       links: links.servizi["trasporto-acqua"],
       comuni: comuni["forli-cesena"],

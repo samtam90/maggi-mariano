@@ -15,12 +15,12 @@
   { "path": "chitignano", "title": "Chitignano" },
   { "path": "chiusi-della-verna", "title": "Chiusi della Verna" },
   {
-    "path": "civitella-in-val-di-chiana",
+    "path": "civitella-in-valdichiana",
     "title": "Civitella in Val di Chiana"
   },
   { "path": "cortona", "title": "Cortona" },
-  { "path": "foiano-della-chiana", "title": "Foiano della Chiana" },
-  { "path": "laterina-pergine-valdarno", "title": "Laterina Pergine Valdarno" },
+  { "path": "foiano-in-valdichiana", "title": "Foiano della Chiana" },
+  { "path": "laterina", "title": "Laterina Pergine Valdarno" },
   { "path": "loro-ciuffenna", "title": "Loro Ciuffenna" },
   { "path": "lucignano", "title": "Lucignano" },
   { "path": "marciano-della-chiana", "title": "Marciano della Chiana" },

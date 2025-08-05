@@ -6,11 +6,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Trasporto rifiuti Forlì",
-  canonical: links.servizi["trasporto-rifiuti"]["forlì"]
+  canonical: links.servizi["trasporto-rifiuti"]["forli"]
 });
 export default withBaseProps({ 
     title: "Trasporto rifiuti Forlì", 
-    locationNames: {label: "Forlì", href: "forlì"},
+    locationNames: {label: "Forlì", href: "forli"},
     locationsData: getProvinceLocationsData({
       links: links.servizi["trasporto-rifiuti"],
       comuni: comuni["forli-cesena"],

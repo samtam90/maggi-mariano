@@ -5,11 +5,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Disidratazione fanghi Forlì",
-  canonical: links.servizi["disidratazione-fanghi"]["forlì"],
+  canonical: links.servizi["disidratazione-fanghi"]["forli"],
 });
 export default withBaseProps({
   title: "Disidratazione fanghi Forlì",
-  locationNames: { label: "Forlì", href: "forlì" },
+  locationNames: { label: "Forlì", href: "forli" },
   locationsData: getProvinceLocationsData({
       links: links.servizi["disidratazione-fanghi"],
       comuni: comuni["forli-cesena"],

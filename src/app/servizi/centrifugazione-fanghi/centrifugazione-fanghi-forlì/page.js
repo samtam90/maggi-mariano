@@ -5,11 +5,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Centrifugazione fanghi Forlì",
-  canonical: links.servizi["centrifugazione-fanghi"]["forlì"],
+  canonical: links.servizi["centrifugazione-fanghi"]["forli"],
 });
 export default withBaseProps({
   title: "Centrifugazione fanghi Forlì",
-  locationNames: { label: "Forlì", href: "forlì" },
+  locationNames: { label: "Forlì", href: "forli" },
   locationsData: getProvinceLocationsData({
       links: links.servizi["centrifugazione-fanghi"],
       comuni: comuni["forli-cesena"],

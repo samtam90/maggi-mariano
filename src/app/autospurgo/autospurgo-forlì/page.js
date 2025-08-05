@@ -6,11 +6,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({ 
     title: "Autospurgo Forlì",
-    canonical: links.autospurgo["forlì"],
+    canonical: links.autospurgo["forli"],
 });
 export default withBaseProps({ 
     title: "Autospurgo Forlì", 
-    locationNames: {label: "Forlì", href: "forlì"},
+    locationNames: {label: "Forlì", href: "forli"},
     locationsData: getProvinceLocationsData({
         links: appConfig.links.autospurgo,
         comuni: comuni["forli-cesena"],

@@ -6,11 +6,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Forlì",
-  canonical: links.servizi["spurgo-pozzi-neri"]["forlì"]
+  canonical: links.servizi["spurgo-pozzi-neri"]["forli"]
 });
 export default withBaseProps({ 
     title: "Spurgo pozzi neri Forlì", 
-    locationNames: {label: "Forlì", href: "forlì"},
+    locationNames: {label: "Forlì", href: "forli"},
     locationsData: getProvinceLocationsData({
       links: links.servizi["spurgo-pozzi-neri"],
       comuni: comuni["forli-cesena"],

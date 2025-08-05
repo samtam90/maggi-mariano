@@ -5,11 +5,11 @@ import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Pulizia fognature Forlì",
-  canonical: links.servizi["pulizia-fognature"]["forlì"],
+  canonical: links.servizi["pulizia-fognature"]["forli"],
 });
 export default withBaseProps({
   title: "Pulizia fognature Forlì",
-  locationNames: { label: "Forlì", href: "forlì" },
+  locationNames: { label: "Forlì", href: "forli" },
   locationsData: getProvinceLocationsData({
       links: links.servizi["pulizia-fognature"],
       comuni: comuni["forli-cesena"],
