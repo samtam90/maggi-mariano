@@ -1,24 +1,19 @@
-import { withBaseProps } from "../page";
-import comuni from "../../../../../.data/comuni/arezzo.json";
-import appConfig, { links } from "../../../../../app.config";
-import React from "react";
-import { makeNavGridItems } from "@/misc/functions";
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Trasporto acqua Arezzo",
-  canonical: links.servizi["trasporto-acqua"].arezzo,
+  canonical: links.servizi["trasporto-acqua"]["arezzo"]
 });
-export default withBaseProps({
-  title: "Trasporto acqua Arezzo",
-  locationNames: { label: "Arezzo", href: "arezzo" },
-  locationsData: {
-    items: makeNavGridItems(comuni, appConfig.links.servizi["trasporto-acqua"]),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
-        servizio di trasporto acqua in tutti i comuni della provincia di Arezzo:
-      </span>
-    ),
-  },
+export default withBaseProps({ 
+    title: "Trasporto acqua Arezzo", 
+    locationNames: {label: "Arezzo", href: "arezzo"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["trasporto-acqua"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

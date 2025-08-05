@@ -1,11 +1,18 @@
 import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
-export const metadata = getMetadata({ 
-    title: "Frantoio mobile inerti Verbano-Cusio-Ossola", 
-    canonical: links.servizi["frantoio-mobile-inerti"]["verbano-cusio-ossola"] 
+export const metadata = getMetadata({
+  title: "Frantoio mobile inerti Verbano-Cusio-Ossola",
+  canonical: links.servizi["frantoio-mobile-inerti"]["verbano-cusio-ossola"],
 });
-export default withBaseProps({ 
-    title: "Frantoio mobile inerti Verbano-Cusio-Ossola", 
-    locationNames: {label: "Verbano-Cusio-Ossola", href: "verbano-cusio-ossola"}  
+export default withBaseProps({
+  title: "Frantoio mobile inerti Verbano-Cusio-Ossola",
+  locationNames: { label: "Verbano-Cusio-Ossola", href: "verbano-cusio-ossola" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["frantoio-mobile-inerti"],
+      comuni: comuni["verbano-cusio-ossola"],
+      name: "Verbano-Cusio-Ossola",
+  }),
 });

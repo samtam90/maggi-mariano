@@ -1,6 +1,8 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import { links } from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
+import comuni from "../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({ 
     title: "Autospurgo Cesa in valdichiana",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Autospurgo Cesa in valdichiana", 
-    locationNames: {label: "Cesa in valdichiana", href: "cesa-in-valdichiana"}  
+    locationNames: {label: "Cesa in valdichiana", href: "cesa-in-valdichiana"},
+    locationsData: getProvinceLocationsData({
+        links: appConfig.links.autospurgo,
+        comuni: comuni["arezzo"],
+        name: "Arezzo",
+    }),
 });

@@ -1,28 +1,18 @@
-import { withBaseProps } from "../page";
-import comuni from "../../../../../.data/comuni/firenze.json";
-import appConfig, { links } from "../../../../../app.config";
-import React from "react";
-import { makeNavGridItems } from "@/misc/functions";
-import { getMetadata } from "../page";
+import { getMetadata, withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Frantoio mobile inerti Firenze",
-  canonical: links.servizi["frantoio-mobile-inerti"].firenze,
+  canonical: links.servizi["frantoio-mobile-inerti"]["firenze"],
 });
 export default withBaseProps({
   title: "Frantoio mobile inerti Firenze",
   locationNames: { label: "Firenze", href: "firenze" },
-  locationsData: {
-    items: makeNavGridItems(
-      comuni,
-      appConfig.links.servizi["frantoio-mobile-inerti"]
-    ),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> rendiamo
-        disponibile il nostro frantoio mobile inerti in tutti i comuni della
-        provincia di Firenze:
-      </span>
-    ),
-  },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["frantoio-mobile-inerti"],
+      comuni: comuni["firenze"],
+      name: "Firenze",
+  }),
 });

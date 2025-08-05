@@ -1,6 +1,8 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import { links } from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
+import comuni from "../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({ 
     title: "Autospurgo Gambassi Terme",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Autospurgo Gambassi Terme", 
-    locationNames: {label: "Gambassi Terme", href: "gambassi-terme"}  
+    locationNames: {label: "Gambassi Terme", href: "gambassi-terme"},
+    locationsData: getProvinceLocationsData({
+        links: appConfig.links.autospurgo,
+        comuni: comuni["firenze"],
+        name: "Firenze",
+    }),
 });

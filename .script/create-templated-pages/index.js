@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 /**
- * @typedef {{path: string, title: string}} Suffix
+ * @typedef {{path: string, title: string, province?: {path: string, title: string}}} Suffix
  */
 
 /**
@@ -80,9 +80,12 @@ async function generatePages(outPath, templatesPath, templatesData) {
       );
       console.log(`\nProcessing full path ${directoryPath}.`);
       await deleteDirectoryIfExisting(directoryPath);
-      const processedTemplate = currentTemplate
+      const provinceData = suffix.province || suffix;
+      let processedTemplate = currentTemplate
         .replace(/(\[name\])/g, suffix.title)
-        .replace(/(\[path\])/g, suffix.path);
+        .replace(/(\[path\])/g, suffix.path)
+        .replace(/(\[province.path\])/g, provinceData.path)
+        .replace(/(\[province.name\])/g, provinceData.title);
       try {
         await createDirectoryWithSingleFile(
           directoryPath,

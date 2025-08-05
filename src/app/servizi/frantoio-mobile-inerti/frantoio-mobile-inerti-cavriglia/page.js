@@ -1,11 +1,18 @@
 import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
-export const metadata = getMetadata({ 
-    title: "Frantoio mobile inerti Cavriglia", 
-    canonical: links.servizi["frantoio-mobile-inerti"]["cavriglia"] 
+export const metadata = getMetadata({
+  title: "Frantoio mobile inerti Cavriglia",
+  canonical: links.servizi["frantoio-mobile-inerti"]["cavriglia"],
 });
-export default withBaseProps({ 
-    title: "Frantoio mobile inerti Cavriglia", 
-    locationNames: {label: "Cavriglia", href: "cavriglia"}  
+export default withBaseProps({
+  title: "Frantoio mobile inerti Cavriglia",
+  locationNames: { label: "Cavriglia", href: "cavriglia" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["frantoio-mobile-inerti"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

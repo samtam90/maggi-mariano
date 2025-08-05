@@ -1,28 +1,19 @@
-import { withBaseProps } from "../page";
-import comuni from "../../../../../.data/comuni/arezzo.json";
-import appConfig, { links } from "../../../../../app.config";
-import React from "react";
-import { makeNavGridItems } from "@/misc/functions";
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Arezzo",
-  canonical: links.servizi["spurgo-pozzi-neri"].arezzo,
+  canonical: links.servizi["spurgo-pozzi-neri"]["arezzo"]
 });
-export default withBaseProps({
-  title: "Spurgo pozzi neri Arezzo",
-  locationNames: { label: "Arezzo", href: "arezzo" },
-  locationsData: {
-    items: makeNavGridItems(
-      comuni,
-      appConfig.links.servizi["spurgo-pozzi-neri"]
-    ),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
-        servizio di spurgo pozzi neri in tutti i comuni della provincia di
-        Arezzo:
-      </span>
-    ),
-  },
+export default withBaseProps({ 
+    title: "Spurgo pozzi neri Arezzo", 
+    locationNames: {label: "Arezzo", href: "arezzo"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["spurgo-pozzi-neri"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

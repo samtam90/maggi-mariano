@@ -1,6 +1,8 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo pozzi neri Todi",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Spurgo pozzi neri Todi", 
-    locationNames: {label: "Todi", href: "todi"}  
+    locationNames: {label: "Todi", href: "todi"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["spurgo-pozzi-neri"],
+      comuni: comuni["perugia"],
+      name: "Perugia",
+  }),
 });

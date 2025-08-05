@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Chiusi della Verna",
-  canonical: links.servizi["noleggio-bagni-chimici"]["chiusi-della-verna"]
+  canonical: links.servizi["noleggio-bagni-chimici"]["chiusi-della-verna"],
 });
-export default withBaseProps({ 
-  title: "Noleggio bagni chimici Chiusi della Verna", 
-  locationNames: {label: "Chiusi della Verna", href: "chiusi-della-verna"} 
+export default withBaseProps({
+  title: "Noleggio bagni chimici Chiusi della Verna",
+  locationNames: { label: "Chiusi della Verna", href: "chiusi-della-verna" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

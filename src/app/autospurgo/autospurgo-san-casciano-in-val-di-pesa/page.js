@@ -1,6 +1,8 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import { links } from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
+import comuni from "../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({ 
     title: "Autospurgo San Casciano in Val di Pesa",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Autospurgo San Casciano in Val di Pesa", 
-    locationNames: {label: "San Casciano in Val di Pesa", href: "san-casciano-in-val-di-pesa"}  
+    locationNames: {label: "San Casciano in Val di Pesa", href: "san-casciano-in-val-di-pesa"},
+    locationsData: getProvinceLocationsData({
+        links: appConfig.links.autospurgo,
+        comuni: comuni["firenze"],
+        name: "Firenze",
+    }),
 });

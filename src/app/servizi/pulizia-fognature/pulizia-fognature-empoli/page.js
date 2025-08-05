@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Pulizia fognature Empoli",
-  canonical: links.servizi["pulizia-fognature"]["empoli"]
+  canonical: links.servizi["pulizia-fognature"]["empoli"],
 });
-export default withBaseProps({ 
-    title: "Pulizia fognature Empoli", 
-    locationNames: {label: "Empoli", href: "empoli"}  
+export default withBaseProps({
+  title: "Pulizia fognature Empoli",
+  locationNames: { label: "Empoli", href: "empoli" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["pulizia-fognature"],
+      comuni: comuni["firenze"],
+      name: "Firenze",
+  }),
 });

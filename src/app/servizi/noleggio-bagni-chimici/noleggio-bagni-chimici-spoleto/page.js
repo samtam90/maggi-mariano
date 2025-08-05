@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Spoleto",
-  canonical: links.servizi["noleggio-bagni-chimici"]["spoleto"]
+  canonical: links.servizi["noleggio-bagni-chimici"]["spoleto"],
 });
-export default withBaseProps({ 
-  title: "Noleggio bagni chimici Spoleto", 
-  locationNames: {label: "Spoleto", href: "spoleto"} 
+export default withBaseProps({
+  title: "Noleggio bagni chimici Spoleto",
+  locationNames: { label: "Spoleto", href: "spoleto" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["perugia"],
+      name: "Perugia",
+  }),
 });

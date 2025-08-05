@@ -1,6 +1,8 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import { links } from "../../../../app.config";
+import appConfig, { links } from "../../../../app.config";
+import comuni from "../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({ 
     title: "Autospurgo Ortignano Raggiolo",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Autospurgo Ortignano Raggiolo", 
-    locationNames: {label: "Ortignano Raggiolo", href: "ortignano-raggiolo"}  
+    locationNames: {label: "Ortignano Raggiolo", href: "ortignano-raggiolo"},
+    locationsData: getProvinceLocationsData({
+        links: appConfig.links.autospurgo,
+        comuni: comuni["arezzo"],
+        name: "Arezzo",
+    }),
 });

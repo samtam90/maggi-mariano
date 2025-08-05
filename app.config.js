@@ -17,9 +17,13 @@ function makeNavBarItems(data, prefix, links, additionalItems = {}) {
 const { default: Link } = require("next/link");
 
 const province = require("./.data/province.json");
+
 const comuniArezzo = require("./.data/comuni/arezzo.json");
 const comuniFirenze = require("./.data/comuni/firenze.json");
 const comuniPerugia = require("./.data/comuni/perugia.json");
+const comuniSiena = require("./.data/comuni/siena.json");
+const comuniTerni = require("./.data/comuni/terni.json");
+const comuniForliCesena = require("./.data/comuni/forli-cesena.json");
 
 const baseUrl = "https://www.maggi-mariano.it";
 const allLocations = [
@@ -27,6 +31,9 @@ const allLocations = [
   ...comuniArezzo,
   ...comuniFirenze,
   ...comuniPerugia,
+  ...comuniSiena,
+  ...comuniTerni,
+  ...comuniForliCesena,
 ];
 
 const links = {
@@ -40,9 +47,23 @@ const links = {
   contatti: "/contatti",
   "documenti-e-autorizzazioni": "/documenti-e-autorizzazioni",
   servizi: {
+    "escavatore-a-risucchio": "/servizi/escavatore-a-risucchio",
     "centrifugazione-o-disidratazione-fanghi":
       "/servizi/centrifugazione-o-disidratazione-fanghi",
-    "escavatore-a-risucchio": "/servizi/escavatore-a-risucchio",
+    "centrifugazione-fanghi": makeLinks(
+      {
+        root: "/servizi/centrifugazione-fanghi",
+      },
+      allLocations,
+      "/servizi/centrifugazione-fanghi/centrifugazione-fanghi"
+    ),
+    "disidratazione-fanghi": makeLinks(
+      {
+        root: "/servizi/disidratazione-fanghi",
+      },
+      allLocations,
+      "/servizi/disidratazione-fanghi/disidratazione-fanghi"
+    ),
     "frantoio-mobile-inerti": makeLinks(
       {
         root: "/servizi/frantoio-mobile-inerti",
@@ -122,6 +143,21 @@ const navBarSections = {
       "Autospurgo",
       links.autospurgo
     ),
+    "Autospurgo Siena": makeNavBarItems(
+      comuniSiena,
+      "Autospurgo",
+      links.autospurgo
+    ),
+    "Autospurgo Terni": makeNavBarItems(
+      comuniTerni,
+      "Autospurgo",
+      links.autospurgo
+    ),
+    "Autospurgo Forlì-Cesena": makeNavBarItems(
+      comuniForliCesena,
+      "Autospurgo",
+      links.autospurgo
+    ),
   }),
   Servizi: {
     "Frantoio mobile inerti": makeNavBarItems(
@@ -144,10 +180,97 @@ const navBarSections = {
           "Frantoio mobile inerti",
           links.servizi["frantoio-mobile-inerti"]
         ),
+        "Frantoio mobile inerti Siena": makeNavBarItems(
+          comuniSiena,
+          "Frantoio mobile inerti",
+          links.servizi["frantoio-mobile-inerti"]
+        ),
+        "Frantoio mobile inerti Terni": makeNavBarItems(
+          comuniTerni,
+          "Frantoio mobile inerti",
+          links.servizi["frantoio-mobile-inerti"]
+        ),
+        "Frantoio mobile inerti Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Frantoio mobile inerti",
+          links.servizi["frantoio-mobile-inerti"]
+        ),
       }
     ),
-    "Centrifugazione o disidratazione fanghi":
-      links.servizi["centrifugazione-o-disidratazione-fanghi"],
+    "Centrifugazione fanghi": makeNavBarItems(
+      province,
+      "Centrifugazione fanghi",
+      links.servizi["centrifugazione-fanghi"],
+      {
+        "Centrifugazione fanghi Arezzo": makeNavBarItems(
+          comuniArezzo,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+        "Centrifugazione fanghi Firenze": makeNavBarItems(
+          comuniFirenze,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+        "Centrifugazione fanghi Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+        "Centrifugazione fanghi Siena": makeNavBarItems(
+          comuniSiena,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+        "Centrifugazione fanghi Terni": makeNavBarItems(
+          comuniTerni,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+        "Centrifugazione fanghi Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Centrifugazione fanghi",
+          links.servizi["centrifugazione-fanghi"]
+        ),
+      }
+    ),
+    "Disidratazione fanghi": makeNavBarItems(
+      province,
+      "Disidratazione fanghi",
+      links.servizi["disidratazione-fanghi"],
+      {
+        "Disidratazione fanghi Arezzo": makeNavBarItems(
+          comuniArezzo,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+        "Disidratazione fanghi Firenze": makeNavBarItems(
+          comuniFirenze,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+        "Disidratazione fanghi Perugia": makeNavBarItems(
+          comuniPerugia,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+        "Disidratazione fanghi Siena": makeNavBarItems(
+          comuniSiena,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+        "Disidratazione fanghi Terni": makeNavBarItems(
+          comuniTerni,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+        "Disidratazione fanghi Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Disidratazione fanghi",
+          links.servizi["disidratazione-fanghi"]
+        ),
+      }
+    ),
     "Escavatore a risucchio": links.servizi["escavatore-a-risucchio"],
     "Noleggio bagni chimici": makeNavBarItems(
       province,
@@ -166,6 +289,21 @@ const navBarSections = {
         ),
         "Noleggio bagni chimici Perugia": makeNavBarItems(
           comuniPerugia,
+          "Noleggio bagni chimici",
+          links.servizi["noleggio-bagni-chimici"]
+        ),
+        "Noleggio bagni chimici Siena": makeNavBarItems(
+          comuniSiena,
+          "Noleggio bagni chimici",
+          links.servizi["noleggio-bagni-chimici"]
+        ),
+        "Noleggio bagni chimici Terni": makeNavBarItems(
+          comuniTerni,
+          "Noleggio bagni chimici",
+          links.servizi["noleggio-bagni-chimici"]
+        ),
+        "Noleggio bagni chimici Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
           "Noleggio bagni chimici",
           links.servizi["noleggio-bagni-chimici"]
         ),
@@ -193,6 +331,21 @@ const navBarSections = {
           "Pulizia fognature",
           links.servizi["pulizia-fognature"]
         ),
+        "Pulizia fognature Siena": makeNavBarItems(
+          comuniSiena,
+          "Pulizia fognature",
+          links.servizi["pulizia-fognature"]
+        ),
+        "Pulizia fognature Terni": makeNavBarItems(
+          comuniTerni,
+          "Pulizia fognature",
+          links.servizi["pulizia-fognature"]
+        ),
+        "Pulizia fognature Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Pulizia fognature",
+          links.servizi["pulizia-fognature"]
+        ),
       }
     ),
     "Recupero materiali ferrosi": links.servizi["recupero-materiali-ferrosi"],
@@ -213,6 +366,21 @@ const navBarSections = {
         ),
         "Spurgo fosse biologiche Perugia": makeNavBarItems(
           comuniPerugia,
+          "Spurgo fosse biologiche",
+          links.servizi["spurgo-fosse-biologiche"]
+        ),
+        "Spurgo fosse biologiche Siena": makeNavBarItems(
+          comuniSiena,
+          "Spurgo fosse biologiche",
+          links.servizi["spurgo-fosse-biologiche"]
+        ),
+        "Spurgo fosse biologiche Terni": makeNavBarItems(
+          comuniTerni,
+          "Spurgo fosse biologiche",
+          links.servizi["spurgo-fosse-biologiche"]
+        ),
+        "Spurgo fosse biologiche Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
           "Spurgo fosse biologiche",
           links.servizi["spurgo-fosse-biologiche"]
         ),
@@ -238,6 +406,21 @@ const navBarSections = {
           "Spurgo pozzi neri",
           links.servizi["spurgo-pozzi-neri"]
         ),
+        "Spurgo pozzi neri Siena": makeNavBarItems(
+          comuniSiena,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
+        ),
+        "Spurgo pozzi neri Terni": makeNavBarItems(
+          comuniTerni,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
+        ),
+        "Spurgo pozzi neri Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Spurgo pozzi neri",
+          links.servizi["spurgo-pozzi-neri"]
+        ),
       }
     ),
     "Trasporto acqua": makeNavBarItems(
@@ -260,6 +443,21 @@ const navBarSections = {
           "Trasporto acqua",
           links.servizi["trasporto-acqua"]
         ),
+        "Trasporto acqua Siena": makeNavBarItems(
+          comuniSiena,
+          "Trasporto acqua",
+          links.servizi["trasporto-acqua"]
+        ),
+        "Trasporto acqua Terni": makeNavBarItems(
+          comuniTerni,
+          "Trasporto acqua",
+          links.servizi["trasporto-acqua"]
+        ),
+        "Trasporto acqua Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
+          "Trasporto acqua",
+          links.servizi["trasporto-acqua"]
+        ),
       }
     ),
     "Trasporto rifiuti": makeNavBarItems(
@@ -279,6 +477,21 @@ const navBarSections = {
         ),
         "Trasporto rifiuti Perugia": makeNavBarItems(
           comuniPerugia,
+          "Trasporto rifiuti",
+          links.servizi["trasporto-rifiuti"]
+        ),
+        "Trasporto rifiuti Siena": makeNavBarItems(
+          comuniSiena,
+          "Trasporto rifiuti",
+          links.servizi["trasporto-rifiuti"]
+        ),
+        "Trasporto rifiuti Terni": makeNavBarItems(
+          comuniTerni,
+          "Trasporto rifiuti",
+          links.servizi["trasporto-rifiuti"]
+        ),
+        "Trasporto rifiuti Forlì-Cesena": makeNavBarItems(
+          comuniForliCesena,
           "Trasporto rifiuti",
           links.servizi["trasporto-rifiuti"]
         ),

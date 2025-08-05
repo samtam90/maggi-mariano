@@ -1,15 +1,15 @@
-import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
-import { onContactFormSubmit } from "@/misc/server";
-import { memo } from "react";
 import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
-import province from "../../../../.data/province.json";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import { getContactStuff } from "../pulizia-fognature/page";
+import {
+  getBaseLocationsData,
+  withBaseProps as withExternalBaseProps,
+} from "@/misc/pages";
 
 const imgDims = { width: 1024, height: 1024 };
 
-export function getProps({ title, mobile, locationsData }) {
+export function getBaseProps({ title, mobile, locationsData }) {
   return {
     sections: {
       mainContent: {
@@ -110,18 +110,12 @@ export function getProps({ title, mobile, locationsData }) {
           },
         ],
       },
-      locations: locationsData || {
-        items: makeNavGridItems(
-          province,
-          appConfig.links.servizi["trasporto-acqua"]
-        ),
-        title: (
-          <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
-            il servizio di trasporto acqua in tutte le province italiane:
-          </span>
-        ),
-      },
+      locations:
+        locationsData ||
+        getBaseLocationsData({
+          links: appConfig.links.servizi["trasporto-acqua"],
+          serviceName: "trasporto acqua",
+        }),
       contacts: getContactStuff({ title }),
     },
   };
@@ -131,33 +125,18 @@ export const metadata = getMetadata({
   title: "Trasporto acqua",
   canonical: links.servizi["trasporto-acqua"].root,
 });
-export const ConditionalPage = withConditionalRendering({
-  Mobile: import("@/templates/MainContent/alt/mobile"),
-  Desktop: import("@/templates/MainContent/alt/desktop"),
-});
-
-export function Page({ searchParams, title, locationsData, locationNames }) {
-  const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile, locationsData });
-  return (
-    <ConditionalPage
-      {...props}
-      searchParams={searchParams}
-      onContactFormSubmit={onContactFormSubmit}
-      locationNames={locationNames}
-    />
-  );
-}
 
 export function withBaseProps({ title, locationsData, locationNames }) {
-  return memo(async ({ searchParams }) => (
-    <Page
-      searchParams={searchParams}
-      title={title}
-      locationsData={locationsData}
-      locationNames={locationNames}
-    />
-  ));
+  return withExternalBaseProps({
+    title,
+    locationNames,
+    locationsData,
+    getBaseProps,
+    Components: {
+      Mobile: import("@/templates/MainContent/alt/mobile"),
+      Desktop: import("@/templates/MainContent/alt/desktop"),
+    },
+  });
 }
 
 export default withBaseProps({ title: "Trasporto acqua" });

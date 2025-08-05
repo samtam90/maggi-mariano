@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Crotone",
-  canonical: links.servizi["noleggio-bagni-chimici"]["crotone"]
+  canonical: links.servizi["noleggio-bagni-chimici"]["crotone"],
 });
-export default withBaseProps({ 
-  title: "Noleggio bagni chimici Crotone", 
-  locationNames: {label: "Crotone", href: "crotone"} 
+export default withBaseProps({
+  title: "Noleggio bagni chimici Crotone",
+  locationNames: { label: "Crotone", href: "crotone" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["crotone"],
+      name: "Crotone",
+  }),
 });

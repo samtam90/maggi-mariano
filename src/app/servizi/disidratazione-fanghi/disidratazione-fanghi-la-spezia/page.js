@@ -1,0 +1,18 @@
+import { getMetadata, withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
+
+export const metadata = getMetadata({
+  title: "Disidratazione fanghi La Spezia",
+  canonical: links.servizi["disidratazione-fanghi"]["la-spezia"],
+});
+export default withBaseProps({
+  title: "Disidratazione fanghi La Spezia",
+  locationNames: { label: "La Spezia", href: "la-spezia" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["disidratazione-fanghi"],
+      comuni: comuni["la-spezia"],
+      name: "La Spezia",
+  }),
+});

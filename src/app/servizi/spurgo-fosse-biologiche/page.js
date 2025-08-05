@@ -1,14 +1,14 @@
-import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
-import { onContactFormSubmit } from "@/misc/server";
-import { memo } from "react";
 import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
-import province from "../../../../.data/province.json";
 import { getContactStuff } from "../pulizia-fognature/page";
+import {
+  getBaseLocationsData,
+  withBaseProps as withExternalBaseProps,
+} from "@/misc/pages";
 
 const imgDims = { width: 1024, height: 1024 };
 
-export function getProps({ title, mobile, locationsData }) {
+export function getBaseProps({ title, mobile, locationsData }) {
   return {
     sections: {
       mainContent: {
@@ -63,19 +63,12 @@ export function getProps({ title, mobile, locationsData }) {
           },
         ],
       },
-      locations: locationsData || {
-        items: makeNavGridItems(
-          province,
-          appConfig.links.servizi["spurgo-fosse-biologiche"]
-        ),
-        title: (
-          <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
-            il servizio di spurgo fosse biologiche in tutte le province
-            italiane:
-          </span>
-        ),
-      },
+      locations:
+        locationsData ||
+        getBaseLocationsData({
+          links: appConfig.links.servizi["spurgo-fosse-biologiche"],
+          serviceName: "spurgo fosse biologiche",
+        }),
       contacts: getContactStuff({ title }),
     },
   };
@@ -85,33 +78,18 @@ export const metadata = getMetadata({
   title: "Spurgo fosse biologiche",
   canonical: links.servizi["spurgo-fosse-biologiche"].root,
 });
-export const ConditionalPage = withConditionalRendering({
-  Mobile: import("@/templates/MainContent/alt/mobile"),
-  Desktop: import("@/templates/MainContent/alt/desktop"),
-});
-
-export function Page({ searchParams, title, locationsData, locationNames }) {
-  const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile, locationsData });
-  return (
-    <ConditionalPage
-      {...props}
-      searchParams={searchParams}
-      onContactFormSubmit={onContactFormSubmit}
-      locationNames={locationNames}
-    />
-  );
-}
 
 export function withBaseProps({ title, locationsData, locationNames }) {
-  return memo(async ({ searchParams }) => (
-    <Page
-      searchParams={searchParams}
-      title={title}
-      locationsData={locationsData}
-      locationNames={locationNames}
-    />
-  ));
+  return withExternalBaseProps({
+    title,
+    locationNames,
+    locationsData,
+    getBaseProps,
+    Components: {
+      Mobile: import("@/templates/MainContent/alt/mobile"),
+      Desktop: import("@/templates/MainContent/alt/desktop"),
+    },
+  });
 }
 
 export default withBaseProps({ title: "Spurgo fosse biologiche" });

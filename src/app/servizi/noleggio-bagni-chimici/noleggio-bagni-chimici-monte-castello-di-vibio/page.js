@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Monte Castello di Vibio",
-  canonical: links.servizi["noleggio-bagni-chimici"]["monte-castello-di-vibio"]
+  canonical: links.servizi["noleggio-bagni-chimici"]["monte-castello-di-vibio"],
 });
-export default withBaseProps({ 
-  title: "Noleggio bagni chimici Monte Castello di Vibio", 
-  locationNames: {label: "Monte Castello di Vibio", href: "monte-castello-di-vibio"} 
+export default withBaseProps({
+  title: "Noleggio bagni chimici Monte Castello di Vibio",
+  locationNames: { label: "Monte Castello di Vibio", href: "monte-castello-di-vibio" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["perugia"],
+      name: "Perugia",
+  }),
 });

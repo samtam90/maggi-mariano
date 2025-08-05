@@ -14,6 +14,9 @@
     "format-comuni-arezzo": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Arezzo\"",
     "format-comuni-firenze": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Firenze\"",
     "format-comuni-perugia": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Perugia\"",
+    "format-comuni-terni": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Terni\"",
+    "format-comuni-siena": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Siena\"",
+    "format-comuni-cesena": "node ./.script/format-comuni.js \"C:/proj/sites/maggi-mariano/.script/format-comuni\" \"Forlì-Cesena\"",
     "generate-sitemap": "node ./.script/generate-sitemap.js \"C:/proj/sites/maggi-mariano/.data/out/sitemap.xml\" \"https://www.maggi-mariano.it\""
   },
   "dependencies": {

@@ -1,6 +1,8 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo fosse biologiche Roma",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Spurgo fosse biologiche Roma", 
-    locationNames: {label: "Roma", href: "roma"}  
+    locationNames: {label: "Roma", href: "roma"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["spurgo-fosse-biologiche"],
+      comuni: comuni["roma"],
+      name: "Roma",
+  }),
 });

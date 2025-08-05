@@ -1,10 +1,19 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo fosse biologiche Foiano in Valdichiana",
+  canonical: links.servizi["spurgo-fosse-biologiche"]["foiano-in-valdichiana"]
 });
 export default withBaseProps({ 
     title: "Spurgo fosse biologiche Foiano in Valdichiana", 
-    locationNames: {label: "Foiano in Valdichiana", href: "foiano-in-valdichiana"}  
+    locationNames: {label: "Foiano in Valdichiana", href: "foiano-in-valdichiana"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["spurgo-fosse-biologiche"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

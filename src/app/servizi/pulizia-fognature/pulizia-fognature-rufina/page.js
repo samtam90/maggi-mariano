@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Pulizia fognature Rufina",
-  canonical: links.servizi["pulizia-fognature"]["rufina"]
+  canonical: links.servizi["pulizia-fognature"]["rufina"],
 });
-export default withBaseProps({ 
-    title: "Pulizia fognature Rufina", 
-    locationNames: {label: "Rufina", href: "rufina"}  
+export default withBaseProps({
+  title: "Pulizia fognature Rufina",
+  locationNames: { label: "Rufina", href: "rufina" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["pulizia-fognature"],
+      comuni: comuni["firenze"],
+      name: "Firenze",
+  }),
 });

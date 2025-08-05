@@ -1,28 +1,19 @@
-import { withBaseProps } from "../page";
-import comuni from "../../../../../.data/comuni/perugia.json";
-import appConfig, { links } from "../../../../../app.config";
-import React from "react";
-import { makeNavGridItems } from "@/misc/functions";
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Spurgo fosse biologiche Perugia",
-  canonical: links.servizi["spurgo-fosse-biologiche"].perugia,
+  canonical: links.servizi["spurgo-fosse-biologiche"]["perugia"]
 });
-export default withBaseProps({
-  title: "Spurgo fosse biologiche Perugia",
-  locationNames: { label: "Perugia", href: "perugia" },
-  locationsData: {
-    items: makeNavGridItems(
-      comuni,
-      appConfig.links.servizi["spurgo-fosse-biologiche"]
-    ),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
-        servizio di spurgo fosse biologiche in tutti i comuni della provincia di
-        Perugia:
-      </span>
-    ),
-  },
+export default withBaseProps({ 
+    title: "Spurgo fosse biologiche Perugia", 
+    locationNames: {label: "Perugia", href: "perugia"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["spurgo-fosse-biologiche"],
+      comuni: comuni["perugia"],
+      name: "Perugia",
+  }),
 });

@@ -1,6 +1,8 @@
 {
   "prefixes": [
     "autospurgo",
+    "centrifugazione-fanghi",
+    "disidratazione-fanghi",
     "frantoio-mobile-inerti",
     "noleggio-bagni-chimici",
     "pulizia-fognature",
@@ -120,160 +122,640 @@
     { "path": "vicenza", "title": "Vicenza" },
     { "path": "viterbo", "title": "Viterbo" },
 
-    { "path": "anghiari", "title": "Anghiari" },
-    { "path": "badia-prataglia", "title": "Badia Prataglia" },
-    { "path": "badia-tedalda", "title": "Badia Tedalda" },
-    { "path": "bibbiena", "title": "Bibbiena" },
-    { "path": "bucine", "title": "Bucine" },
-    { "path": "camucia", "title": "Camucia" },
-    { "path": "capolona", "title": "Capolona" },
-    { "path": "caprese-michelangelo", "title": "Caprese Michelangelo" },
-    { "path": "castel-focognano", "title": "Castel Focognano" },
-    { "path": "castel-san-niccolo", "title": "Castel San Niccolò" },
-    { "path": "castelfranco-piandisco", "title": "Castelfranco Piandiscò" },
-    { "path": "castiglion-fibocchi", "title": "Castiglion Fibocchi" },
-    { "path": "castiglion-fiorentino", "title": "Castiglion Fiorentino" },
-    { "path": "cavriglia", "title": "Cavriglia" },
-    { "path": "cesa-in-valdichiana", "title": "Cesa in valdichiana" },
-    { "path": "chitignano", "title": "Chitignano" },
-    { "path": "chiusi-della-verna", "title": "Chiusi della Verna" },
-    { "path": "civitella-in-valdichiana", "title": "Civitella in Valdichiana" },
-    { "path": "cortona", "title": "Cortona" },
-    { "path": "figline-valdarno", "title": "Figline Valdarno" },
-    { "path": "foiano-della-chiana", "title": "Foiano della Chiana" },
-    { "path": "laterina", "title": "Laterina" },
-    { "path": "loro-ciuffenna", "title": "Loro ciuffenna" },
-    { "path": "lucignano", "title": "Lucignano" },
-    { "path": "marciano-della-chiana", "title": "Marciano della Chiana" },
-    { "path": "monte-san-savino", "title": "Monte San Savino" },
-    { "path": "montemignaio", "title": "Montemignaio" },
-    { "path": "monterchi", "title": "Monterchi" },
-    { "path": "montevarchi", "title": "Montevarchi" },
-    { "path": "ortignano-raggiolo", "title": "Ortignano Raggiolo" },
-    { "path": "pergine-valdarno", "title": "Pergine Valdarno" },
-    { "path": "pieve-al-toppo", "title": "Pieve al Toppo" },
-    { "path": "pieve-santo-stefano", "title": "Pieve Santo Stefano" },
-    { "path": "poppi", "title": "Poppi" },
-    { "path": "pratovecchio-stia", "title": "Pratovecchio Stia" },
-    { "path": "rassina", "title": "Rassina" },
-    { "path": "rigutino", "title": "Rigutino" },
-    { "path": "san-giovanni-valdarno", "title": "San Giovanni Valdarno" },
-    { "path": "sansepolcro", "title": "Sansepolcro" },
-    { "path": "sestino", "title": "Sestino" },
-    { "path": "soci", "title": "Soci" },
-    { "path": "subbiano", "title": "Subbiano" },
-    { "path": "talla", "title": "Talla" },
-    { "path": "terranuova-bracciolini", "title": "Terranuova Bracciolini" },
+    { "path": "anghiari", "title": "Anghiari", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "badia-prataglia",
+      "title": "Badia Prataglia",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "badia-tedalda", "title": "Badia Tedalda", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "bibbiena", "title": "Bibbiena", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "bucine", "title": "Bucine", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "camucia", "title": "Camucia", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "capolona", "title": "Capolona", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "caprese-michelangelo",
+      "title": "Caprese Michelangelo",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "castel-focognano",
+      "title": "Castel Focognano",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "castel-san-niccolo",
+      "title": "Castel San Niccolò",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "castelfranco-piandisco",
+      "title": "Castelfranco Piandiscò",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "castiglion-fibocchi",
+      "title": "Castiglion Fibocchi",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "castiglion-fiorentino",
+      "title": "Castiglion Fiorentino",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "cavriglia", "title": "Cavriglia", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "cesa-in-valdichiana",
+      "title": "Cesa in valdichiana",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "chitignano", "title": "Chitignano", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "chiusi-della-verna",
+      "title": "Chiusi della Verna",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "civitella-in-valdichiana",
+      "title": "Civitella in Valdichiana",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "cortona", "title": "Cortona", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "figline-valdarno",
+      "title": "Figline Valdarno",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "foiano-in-valdichiana",
+      "title": "Foiano in Valdichiana",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "laterina", "title": "Laterina", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "loro-ciuffenna",
+      "title": "Loro ciuffenna",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "lucignano", "title": "Lucignano", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "marciano-della-chiana",
+      "title": "Marciano della Chiana",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "monte-san-savino",
+      "title": "Monte San Savino",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "montemignaio", "title": "Montemignaio", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "monterchi", "title": "Monterchi", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "montevarchi", "title": "Montevarchi", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "ortignano-raggiolo",
+      "title": "Ortignano Raggiolo",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "pergine-valdarno",
+      "title": "Pergine Valdarno",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "pieve-al-toppo",
+      "title": "Pieve al Toppo",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    {
+      "path": "pieve-santo-stefano",
+      "title": "Pieve Santo Stefano",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "poppi", "title": "Poppi", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "pratovecchio-stia",
+      "title": "Pratovecchio Stia",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "rassina", "title": "Rassina", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "rigutino", "title": "Rigutino", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "san-giovanni-valdarno",
+      "title": "San Giovanni Valdarno",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
+    { "path": "sansepolcro", "title": "Sansepolcro", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "sestino", "title": "Sestino", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "soci", "title": "Soci", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "subbiano", "title": "Subbiano", "province": {"title": "Arezzo", "path": "arezzo"} },
+    { "path": "talla", "title": "Talla", "province": {"title": "Arezzo", "path": "arezzo"} },
+    {
+      "path": "terranuova-bracciolini",
+      "title": "Terranuova Bracciolini",
+      "province": {"title": "Arezzo", "path": "arezzo"}
+    },
 
-    { "path": "bagno-a-ripoli", "title": "Bagno a Ripoli" },
-    { "path": "barberino-di-mugello", "title": "Barberino di Mugello" },
-    { "path": "barberino-tavarnelle", "title": "Barberino Tavarnelle" },
-    { "path": "borgo-san-lorenzo", "title": "Borgo San Lorenzo" },
-    { "path": "calenzano", "title": "Calenzano" },
-    { "path": "campi-bisenzio", "title": "Campi Bisenzio" },
-    { "path": "capraia-e-limite", "title": "Capraia e Limite" },
-    { "path": "castelfiorentino", "title": "Castelfiorentino" },
-    { "path": "cerreto-guidi", "title": "Cerreto Guidi" },
-    { "path": "certaldo", "title": "Certaldo" },
-    { "path": "dicomano", "title": "Dicomano" },
-    { "path": "empoli", "title": "Empoli" },
-    { "path": "fiesole", "title": "Fiesole" },
+    {
+      "path": "bagno-a-ripoli",
+      "title": "Bagno a Ripoli",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "barberino-di-mugello",
+      "title": "Barberino di Mugello",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "barberino-tavarnelle",
+      "title": "Barberino Tavarnelle",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "borgo-san-lorenzo",
+      "title": "Borgo San Lorenzo",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "calenzano", "title": "Calenzano", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "campi-bisenzio",
+      "title": "Campi Bisenzio",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "capraia-e-limite",
+      "title": "Capraia e Limite",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "castelfiorentino",
+      "title": "Castelfiorentino",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "cerreto-guidi",
+      "title": "Cerreto Guidi",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "certaldo", "title": "Certaldo", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "dicomano", "title": "Dicomano", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "empoli", "title": "Empoli", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "fiesole", "title": "Fiesole", "province": {"title": "Firenze", "path": "firenze"} },
     {
       "path": "figline-e-incisa-valdarno",
-      "title": "Figline e Incisa Valdarno"
+      "title": "Figline e Incisa Valdarno",
+      "province": {"title": "Firenze", "path": "firenze"}
     },
-    { "path": "firenze", "title": "Firenze" },
-    { "path": "firenzuola", "title": "Firenzuola" },
-    { "path": "fucecchio", "title": "Fucecchio" },
-    { "path": "gambassi-terme", "title": "Gambassi Terme" },
-    { "path": "greve-in-chianti", "title": "Greve in Chianti" },
-    { "path": "impruneta", "title": "Impruneta" },
-    { "path": "lastra-a-signa", "title": "Lastra a Signa" },
-    { "path": "londa", "title": "Londa" },
-    { "path": "marradi", "title": "Marradi" },
-    { "path": "montaione", "title": "Montaione" },
-    { "path": "montelupo-fiorentino", "title": "Montelupo Fiorentino" },
-    { "path": "montespertoli", "title": "Montespertoli" },
-    { "path": "palazzuolo-sul-senio", "title": "Palazzuolo sul Senio" },
-    { "path": "pelago", "title": "Pelago" },
-    { "path": "pontassieve", "title": "Pontassieve" },
-    { "path": "reggello", "title": "Reggello" },
-    { "path": "rignano-sull-arno", "title": "Rignano sull'Arno" },
-    { "path": "rufina", "title": "Rufina" },
+    { "path": "firenze", "title": "Firenze", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "firenzuola", "title": "Firenzuola", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "fucecchio", "title": "Fucecchio", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "gambassi-terme",
+      "title": "Gambassi Terme",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "greve-in-chianti",
+      "title": "Greve in Chianti",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "impruneta", "title": "Impruneta", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "lastra-a-signa",
+      "title": "Lastra a Signa",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "londa", "title": "Londa", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "marradi", "title": "Marradi", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "montaione", "title": "Montaione", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "montelupo-fiorentino",
+      "title": "Montelupo Fiorentino",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "montespertoli",
+      "title": "Montespertoli",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "palazzuolo-sul-senio",
+      "title": "Palazzuolo sul Senio",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "pelago", "title": "Pelago", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "pontassieve", "title": "Pontassieve", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "reggello", "title": "Reggello", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "rignano-sull-arno",
+      "title": "Rignano sull'Arno",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "rufina", "title": "Rufina", "province": {"title": "Firenze", "path": "firenze"} },
     {
       "path": "san-casciano-in-val-di-pesa",
-      "title": "San Casciano in Val di Pesa"
+      "title": "San Casciano in Val di Pesa",
+      "province": {"title": "Firenze", "path": "firenze"}
     },
-    { "path": "san-godenzo", "title": "San Godenzo" },
-    { "path": "scandicci", "title": "Scandicci" },
-    { "path": "scarperia-e-san-piero", "title": "Scarperia e San Piero" },
-    { "path": "sesto-fiorentino", "title": "Sesto Fiorentino" },
-    { "path": "signa", "title": "Signa" },
-    { "path": "vaglia", "title": "Vaglia" },
-    { "path": "vicchio", "title": "Vicchio" },
-    { "path": "vinci", "title": "Vinci" },
+    { "path": "san-godenzo", "title": "San Godenzo", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "scandicci", "title": "Scandicci", "province": {"title": "Firenze", "path": "firenze"} },
+    {
+      "path": "scarperia-e-san-piero",
+      "title": "Scarperia e San Piero",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    {
+      "path": "sesto-fiorentino",
+      "title": "Sesto Fiorentino",
+      "province": {"title": "Firenze", "path": "firenze"}
+    },
+    { "path": "signa", "title": "Signa", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "vaglia", "title": "Vaglia", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "vicchio", "title": "Vicchio", "province": {"title": "Firenze", "path": "firenze"} },
+    { "path": "vinci", "title": "Vinci", "province": {"title": "Firenze", "path": "firenze"} },
 
-    { "path": "assisi", "title": "Assisi" },
-    { "path": "bastia-umbra", "title": "Bastia Umbra" },
-    { "path": "bettona", "title": "Bettona" },
-    { "path": "bevagna", "title": "Bevagna" },
-    { "path": "campello-sul-clitunno", "title": "Campello sul Clitunno" },
-    { "path": "cannara", "title": "Cannara" },
-    { "path": "cascia", "title": "Cascia" },
-    { "path": "castel-ritaldi", "title": "Castel Ritaldi" },
-    { "path": "castiglione-del-lago", "title": "Castiglione del Lago" },
-    { "path": "cerreto-di-spoleto", "title": "Cerreto di Spoleto" },
-    { "path": "citerna", "title": "Citerna" },
-    { "path": "città-della-pieve", "title": "Città della Pieve" },
-    { "path": "città-di-castello", "title": "Città di Castello" },
-    { "path": "collazzone", "title": "Collazzone" },
-    { "path": "corciano", "title": "Corciano" },
-    { "path": "costacciaro", "title": "Costacciaro" },
-    { "path": "deruta", "title": "Deruta" },
-    { "path": "foligno", "title": "Foligno" },
-    { "path": "fossato-di-vico", "title": "Fossato di Vico" },
-    { "path": "fratta-todina", "title": "Fratta Todina" },
-    { "path": "giano-dell-umbria", "title": "Giano dell'Umbria" },
-    { "path": "gualdo-cattaneo", "title": "Gualdo Cattaneo" },
-    { "path": "gualdo-tadino", "title": "Gualdo Tadino" },
-    { "path": "gubbio", "title": "Gubbio" },
-    { "path": "lisciano-niccone", "title": "Lisciano Niccone" },
-    { "path": "magione", "title": "Magione" },
-    { "path": "marsciano", "title": "Marsciano" },
-    { "path": "massa-martana", "title": "Massa Martana" },
-    { "path": "monte-castello-di-vibio", "title": "Monte Castello di Vibio" },
+    { "path": "assisi", "title": "Assisi", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "bastia-umbra", "title": "Bastia Umbra", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "bettona", "title": "Bettona", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "bevagna", "title": "Bevagna", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "campello-sul-clitunno",
+      "title": "Campello sul Clitunno",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "cannara", "title": "Cannara", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "cascia", "title": "Cascia", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "castel-ritaldi",
+      "title": "Castel Ritaldi",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "castiglione-del-lago",
+      "title": "Castiglione del Lago",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "cerreto-di-spoleto",
+      "title": "Cerreto di Spoleto",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "citerna", "title": "Citerna", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "città-della-pieve",
+      "title": "Città della Pieve",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "città-di-castello",
+      "title": "Città di Castello",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "collazzone", "title": "Collazzone", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "corciano", "title": "Corciano", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "costacciaro", "title": "Costacciaro", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "deruta", "title": "Deruta", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "foligno", "title": "Foligno", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "fossato-di-vico",
+      "title": "Fossato di Vico",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "fratta-todina",
+      "title": "Fratta Todina",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "giano-dell-umbria",
+      "title": "Giano dell'Umbria",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "gualdo-cattaneo",
+      "title": "Gualdo Cattaneo",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "gualdo-tadino",
+      "title": "Gualdo Tadino",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "gubbio", "title": "Gubbio", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "lisciano-niccone",
+      "title": "Lisciano Niccone",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "magione", "title": "Magione", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "marsciano", "title": "Marsciano", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "massa-martana",
+      "title": "Massa Martana",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "monte-castello-di-vibio",
+      "title": "Monte Castello di Vibio",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
     {
       "path": "monte-santa-maria-tiberina",
-      "title": "Monte Santa Maria Tiberina"
+      "title": "Monte Santa Maria Tiberina",
+      "province": {"title": "Perugia", "path": "perugia"}
     },
-    { "path": "montefalco", "title": "Montefalco" },
-    { "path": "monteleone-di-spoleto", "title": "Monteleone di Spoleto" },
-    { "path": "montone", "title": "Montone" },
-    { "path": "nocera-umbra", "title": "Nocera Umbra" },
-    { "path": "norcia", "title": "Norcia" },
-    { "path": "paciano", "title": "Paciano" },
-    { "path": "panicale", "title": "Panicale" },
-    { "path": "passignano-sul-trasimeno", "title": "Passignano sul Trasimeno" },
-    { "path": "perugia", "title": "Perugia" },
-    { "path": "piegaro", "title": "Piegaro" },
-    { "path": "pietralunga", "title": "Pietralunga" },
-    { "path": "poggiodomo", "title": "Poggiodomo" },
-    { "path": "preci", "title": "Preci" },
-    { "path": "san-giustino", "title": "San Giustino" },
-    { "path": "sant-anatolia-di-narco", "title": "Sant'Anatolia di Narco" },
-    { "path": "scheggia-e-pascelupo", "title": "Scheggia e Pascelupo" },
-    { "path": "scheggino", "title": "Scheggino" },
-    { "path": "sellano", "title": "Sellano" },
-    { "path": "sigillo", "title": "Sigillo" },
-    { "path": "spello", "title": "Spello" },
-    { "path": "spoleto", "title": "Spoleto" },
-    { "path": "todi", "title": "Todi" },
-    { "path": "torgiano", "title": "Torgiano" },
-    { "path": "trevi", "title": "Trevi" },
-    { "path": "tuoro-sul-trasimeno", "title": "Tuoro sul Trasimeno" },
-    { "path": "umbertide", "title": "Umbertide" },
-    { "path": "valfabbrica", "title": "Valfabbrica" },
-    { "path": "vallo-di-nera", "title": "Vallo di Nera" },
-    { "path": "valtopina", "title": "Valtopina" }
+    { "path": "montefalco", "title": "Montefalco", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "monteleone-di-spoleto",
+      "title": "Monteleone di Spoleto",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "montone", "title": "Montone", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "nocera-umbra", "title": "Nocera Umbra", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "norcia", "title": "Norcia", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "paciano", "title": "Paciano", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "panicale", "title": "Panicale", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "passignano-sul-trasimeno",
+      "title": "Passignano sul Trasimeno",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "perugia", "title": "Perugia", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "piegaro", "title": "Piegaro", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "pietralunga", "title": "Pietralunga", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "poggiodomo", "title": "Poggiodomo", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "preci", "title": "Preci", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "san-giustino", "title": "San Giustino", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "sant-anatolia-di-narco",
+      "title": "Sant'Anatolia di Narco",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    {
+      "path": "scheggia-e-pascelupo",
+      "title": "Scheggia e Pascelupo",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "scheggino", "title": "Scheggino", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "sellano", "title": "Sellano", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "sigillo", "title": "Sigillo", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "spello", "title": "Spello", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "spoleto", "title": "Spoleto", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "todi", "title": "Todi", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "torgiano", "title": "Torgiano", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "trevi", "title": "Trevi", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "tuoro-sul-trasimeno",
+      "title": "Tuoro sul Trasimeno",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "umbertide", "title": "Umbertide", "province": {"title": "Perugia", "path": "perugia"} },
+    { "path": "valfabbrica", "title": "Valfabbrica", "province": {"title": "Perugia", "path": "perugia"} },
+    {
+      "path": "vallo-di-nera",
+      "title": "Vallo di Nera",
+      "province": {"title": "Perugia", "path": "perugia"}
+    },
+    { "path": "valtopina", "title": "Valtopina", "province": {"title": "Perugia", "path": "perugia"} },
+
+    {
+      "path": "bagno-di-romagna",
+      "title": "Bagno di Romagna",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "bertinoro", "title": "Bertinoro", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "borghi", "title": "Borghi", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "castrocaro-terme-e-terra-del-sole",
+      "title": "Castrocaro Terme e Terra del Sole",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "cesena", "title": "Cesena", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "cesenatico", "title": "Cesenatico", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "civitella-di-romagna",
+      "title": "Civitella di Romagna",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "dovadola", "title": "Dovadola", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "forlì", "title": "Forlì", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "forlimpopoli",
+      "title": "Forlimpopoli",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "galeata", "title": "Galeata", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "gambettola", "title": "Gambettola", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "gatteo", "title": "Gatteo", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "longiano", "title": "Longiano", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "meldola", "title": "Meldola", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "mercato-saraceno",
+      "title": "Mercato Saraceno",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "modigliana", "title": "Modigliana", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "montiano", "title": "Montiano", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "portico-e-san-benedetto",
+      "title": "Portico e San Benedetto",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "predappio", "title": "Predappio", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "premilcuore",
+      "title": "Premilcuore",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    {
+      "path": "rocca-san-casciano",
+      "title": "Rocca San Casciano",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    {
+      "path": "roncofreddo",
+      "title": "Roncofreddo",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    {
+      "path": "san-mauro-pascoli",
+      "title": "San Mauro Pascoli",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    {
+      "path": "santa-sofia",
+      "title": "Santa Sofia",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "sarsina", "title": "Sarsina", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    {
+      "path": "savignano-sul-rubicone",
+      "title": "Savignano sul Rubicone",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    {
+      "path": "sogliano-al-rubicone",
+      "title": "Sogliano al Rubicone",
+      "province": {"title": "Forlì Cesena", "path": "forli-cesena"}
+    },
+    { "path": "tredozio", "title": "Tredozio", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+    { "path": "verghereto", "title": "Verghereto", "province": {"title": "Forlì Cesena", "path": "forli-cesena"} },
+
+    {
+      "path": "abbadia-san-salvatore",
+      "title": "Abbadia San Salvatore",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "asciano", "title": "Asciano", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "buonconvento", "title": "Buonconvento", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "casole-d-elsa", "title": "Casole d'Elsa", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "castellina-in-chianti",
+      "title": "Castellina in Chianti",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    {
+      "path": "castelnuovo-berardenga",
+      "title": "Castelnuovo Berardenga",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    {
+      "path": "castiglione-d-orcia",
+      "title": "Castiglione d'Orcia",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "cetona", "title": "Cetona", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "chianciano-terme",
+      "title": "Chianciano Terme",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "chiusdino", "title": "Chiusdino", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "chiusi", "title": "Chiusi", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "colle-di-val-d-elsa",
+      "title": "Colle di Val d'Elsa",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    {
+      "path": "gaiole-in-chianti",
+      "title": "Gaiole in Chianti",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "montalcino", "title": "Montalcino", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "montepulciano", "title": "Montepulciano", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "monteriggioni", "title": "Monteriggioni", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "monteroni-d-arbia",
+      "title": "Monteroni d'Arbia",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "monticiano", "title": "Monticiano", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "murlo", "title": "Murlo", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "piancastagnaio",
+      "title": "Piancastagnaio",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "pienza", "title": "Pienza", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "poggibonsi", "title": "Poggibonsi", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "radda-in-chianti",
+      "title": "Radda in Chianti",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "radicofani", "title": "Radicofani", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "radicondoli", "title": "Radicondoli", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "rapolano-terme",
+      "title": "Rapolano Terme",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    {
+      "path": "san-casciano-dei-bagni",
+      "title": "San Casciano dei Bagni",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "san-gimignano", "title": "San Gimignano", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "san-quirico-d-orcia",
+      "title": "San Quirico d'Orcia",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "sarteano", "title": "Sarteano", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "siena", "title": "Siena", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "sinalunga", "title": "Sinalunga", "province": {"title": "Siena", "path": "siena"} },
+    { "path": "sovicille", "title": "Sovicille", "province": {"title": "Siena", "path": "siena"} },
+    {
+      "path": "torrita-di-siena",
+      "title": "Torrita di Siena",
+      "province": {"title": "Siena", "path": "siena"}
+    },
+    { "path": "trequanda", "title": "Trequanda", "province": {"title": "Siena", "path": "siena"} },
+
+    { "path": "acquasparta", "title": "Acquasparta", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "allerona", "title": "Allerona", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "alviano", "title": "Alviano", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "amelia", "title": "Amelia", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "arrone", "title": "Arrone", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "attigliano", "title": "Attigliano", "province": {"title": "Terni", "path": "terni"} },
+    {
+      "path": "avigliano-umbro",
+      "title": "Avigliano Umbro",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    { "path": "baschi", "title": "Baschi", "province": {"title": "Terni", "path": "terni"} },
+    {
+      "path": "calvi-dell-umbria",
+      "title": "Calvi dell'Umbria",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    {
+      "path": "castel-giorgio",
+      "title": "Castel Giorgio",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    {
+      "path": "castel-viscardo",
+      "title": "Castel Viscardo",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    { "path": "fabro", "title": "Fabro", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "ferentillo", "title": "Ferentillo", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "ficulle", "title": "Ficulle", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "giove", "title": "Giove", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "guardea", "title": "Guardea", "province": {"title": "Terni", "path": "terni"} },
+    {
+      "path": "lugnano-in-teverina",
+      "title": "Lugnano in Teverina",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    {
+      "path": "montecastrilli",
+      "title": "Montecastrilli",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    { "path": "montecchio", "title": "Montecchio", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "montefranco", "title": "Montefranco", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "montegabbione", "title": "Montegabbione", "province": {"title": "Terni", "path": "terni"} },
+    {
+      "path": "monteleone-d-orvieto",
+      "title": "Monteleone d'Orvieto",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    { "path": "narni", "title": "Narni", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "orvieto", "title": "Orvieto", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "otricoli", "title": "Otricoli", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "parrano", "title": "Parrano", "province": {"title": "Terni", "path": "terni"} },
+    {
+      "path": "penna-in-teverina",
+      "title": "Penna in Teverina",
+      "province": {"title": "Terni", "path": "terni"}
+    },
+    { "path": "polino", "title": "Polino", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "porano", "title": "Porano", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "san-gemini", "title": "San Gemini", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "san-venanzo", "title": "San Venanzo", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "stroncone", "title": "Stroncone", "province": {"title": "Terni", "path": "terni"} },
+    { "path": "terni", "title": "Terni", "province": {"title": "Terni", "path": "terni"} }
   ]
 }

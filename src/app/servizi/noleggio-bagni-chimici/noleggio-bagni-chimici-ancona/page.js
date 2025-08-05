@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Ancona",
-  canonical: links.servizi["noleggio-bagni-chimici"]["ancona"]
+  canonical: links.servizi["noleggio-bagni-chimici"]["ancona"],
 });
-export default withBaseProps({ 
-  title: "Noleggio bagni chimici Ancona", 
-  locationNames: {label: "Ancona", href: "ancona"} 
+export default withBaseProps({
+  title: "Noleggio bagni chimici Ancona",
+  locationNames: { label: "Ancona", href: "ancona" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["ancona"],
+      name: "Ancona",
+  }),
 });

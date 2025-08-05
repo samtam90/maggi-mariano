@@ -1,0 +1,19 @@
+import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
+
+export const metadata = getMetadata({
+  title: "Trasporto acqua Chiusi",
+  canonical: links.servizi["trasporto-acqua"]["chiusi"]
+});
+export default withBaseProps({ 
+    title: "Trasporto acqua Chiusi", 
+    locationNames: {label: "Chiusi", href: "chiusi"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["trasporto-acqua"],
+      comuni: comuni["siena"],
+      name: "Siena",
+  }),
+});

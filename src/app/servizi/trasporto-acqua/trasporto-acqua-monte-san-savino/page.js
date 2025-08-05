@@ -1,6 +1,8 @@
 import { getMetadata } from "../../frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Trasporto acqua Monte San Savino",
@@ -8,5 +10,10 @@ export const metadata = getMetadata({
 });
 export default withBaseProps({ 
     title: "Trasporto acqua Monte San Savino", 
-    locationNames: {label: "Monte San Savino", href: "monte-san-savino"}  
+    locationNames: {label: "Monte San Savino", href: "monte-san-savino"},
+    locationsData: getProvinceLocationsData({
+      links: links.servizi["trasporto-acqua"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

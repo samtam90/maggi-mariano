@@ -1,57 +1,17 @@
-import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
-import { onContactFormSubmit } from "@/misc/server";
-import { memo } from "react";
+import { makeNavGridItems } from "@/misc/functions";
 import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
 import province from "../../../../.data/province.json";
-import Link from "next/link";
+import {
+  getBaseLocationsData,
+  getContactStuff,
+  withBaseProps as withExternalBaseProps,
+} from "@/misc/pages";
 
 const imgDims = { width: 1024, height: 1024 };
 
-export function getContactStuff({ title }) {
-  return {
-    preTitle: "Per ogni tua problematica e urgenza riguardante",
-    title,
-    phoneNumbers: [
-      {
-        label: "Tel.: 0575/520447",
-        href: "tel:0575520447",
-      },
-      {
-        label: "Cell.: 334 3889878",
-        href: "tel:3343889878",
-      },
-    ],
-    content: (
-      <span className="leading-normal">
-        La nostra azienda è dotata di{" "}
-        <Link
-          href={links.servizi["videoispezioni-telecamera-robot"]}
-          className="font-titleBold underline text-green-dark"
-        >
-          VIDEOCAMERA ROBOTIZZATA
-        </Link>{" "}
-        per ispezionare le fognature, scarichi e fosse biologiche difficilmente
-        raggiungibili con altri mezzi, permettendoci di risolvere ogni
-        problematica inerente il servizio di {title} dei nostri clienti in tempi
-        brevi.
-      </span>
-    ),
-    images: [
-      {
-        src: "https://www.maggi-mariano.it/immagini/misc/Telecamera-14-1-1.jpg",
-        alt: `Videocamera ispezioni per ${title}`,
-      },
-    ],
-    formTitle:
-      "Se preferisici puoi inviarci una mail tramite questo form per chiedere informazioni",
-    variant: "horizontal",
-    imageDimensions: { width: 650, height: 850 },
-  };
-}
-
-export function getProps({ title, mobile, locationsData }) {
+export function getBaseProps({ title, mobile, locationsData }) {
   return {
     sections: {
       mainContent: {
@@ -114,18 +74,12 @@ export function getProps({ title, mobile, locationsData }) {
           },
         ],
       },
-      locations: locationsData || {
-        items: makeNavGridItems(
-          province,
-          appConfig.links.servizi["pulizia-fognature"]
-        ),
-        title: (
-          <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo
-            il servizio di pulizia fognature in tutte le province italiane:
-          </span>
-        ),
-      },
+      locations:
+        locationsData ||
+        getBaseLocationsData({
+          links: appConfig.links.servizi["pulizia-fognature"],
+          serviceName: "pulizia fognature",
+        }),
       contacts: getContactStuff({ title }),
     },
   };
@@ -135,33 +89,19 @@ export const metadata = getMetadata({
   title: "Pulizia fognature",
   canonical: links.servizi["pulizia-fognature"].root,
 });
-export const ConditionalPage = withConditionalRendering({
-  Mobile: import("@/templates/MainContent/alt/mobile"),
-  Desktop: import("@/templates/MainContent/alt/desktop"),
-});
-
-export function Page({ searchParams, title, locationsData, locationNames }) {
-  const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile, locationsData });
-  return (
-    <ConditionalPage
-      {...props}
-      searchParams={searchParams}
-      onContactFormSubmit={onContactFormSubmit}
-      locationNames={locationNames}
-    />
-  );
-}
 
 export function withBaseProps({ title, locationsData, locationNames }) {
-  return memo(async ({ searchParams }) => (
-    <Page
-      searchParams={searchParams}
-      title={title}
-      locationsData={locationsData}
-      locationNames={locationNames}
-    />
-  ));
+  return withExternalBaseProps({
+    title,
+    locationNames,
+    locationsData,
+    getBaseProps,
+    Components: {
+      Mobile: import("@/templates/MainContent/alt/mobile"),
+      Desktop: import("@/templates/MainContent/alt/desktop"),
+    },
+  });
 }
 
+export { getContactStuff, getMetadata };
 export default withBaseProps({ title: "Pulizia fognature" });

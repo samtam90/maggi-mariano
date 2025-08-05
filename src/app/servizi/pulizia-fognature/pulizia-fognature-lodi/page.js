@@ -1,12 +1,18 @@
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
-import { withBaseProps } from "../page";
+import { getMetadata, withBaseProps } from "../page";
 import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Pulizia fognature Lodi",
-  canonical: links.servizi["pulizia-fognature"]["lodi"]
+  canonical: links.servizi["pulizia-fognature"]["lodi"],
 });
-export default withBaseProps({ 
-    title: "Pulizia fognature Lodi", 
-    locationNames: {label: "Lodi", href: "lodi"}  
+export default withBaseProps({
+  title: "Pulizia fognature Lodi",
+  locationNames: { label: "Lodi", href: "lodi" },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["pulizia-fognature"],
+      comuni: comuni["lodi"],
+      name: "Lodi",
+  }),
 });

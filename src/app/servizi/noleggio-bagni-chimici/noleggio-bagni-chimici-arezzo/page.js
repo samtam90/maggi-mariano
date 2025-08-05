@@ -1,28 +1,18 @@
-import { withBaseProps } from "../page";
-import comuni from "../../../../../.data/comuni/arezzo.json";
-import appConfig, { links } from "../../../../../app.config";
-import React from "react";
-import { makeNavGridItems } from "@/misc/functions";
-import { getMetadata } from "../../frantoio-mobile-inerti/page";
+import { getMetadata, withBaseProps } from "../page";
+import { links } from "../../../../../app.config";
+import comuni from "../../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
 export const metadata = getMetadata({
   title: "Noleggio bagni chimici Arezzo",
-  canonical: links.servizi["noleggio-bagni-chimici"].arezzo,
+  canonical: links.servizi["noleggio-bagni-chimici"]["arezzo"],
 });
 export default withBaseProps({
   title: "Noleggio bagni chimici Arezzo",
   locationNames: { label: "Arezzo", href: "arezzo" },
-  locationsData: {
-    items: makeNavGridItems(
-      comuni,
-      appConfig.links.servizi["noleggio-bagni-chimici"]
-    ),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> offriamo il
-        servizio di noleggio bagni chimici in tutti i comuni della provincia di
-        Arezzo:
-      </span>
-    ),
-  },
+  locationsData: getProvinceLocationsData({
+      links: links.servizi["noleggio-bagni-chimici"],
+      comuni: comuni["arezzo"],
+      name: "Arezzo",
+  }),
 });

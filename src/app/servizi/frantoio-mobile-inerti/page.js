@@ -1,12 +1,12 @@
-import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
-import { onContactFormSubmit } from "@/misc/server";
-import { memo } from "react";
-import appConfig, { links } from "../../../../app.config";
+import { links } from "../../../../app.config";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
-import province from "../../../../.data/province.json";
-import { getDescription, getOpenGraphMetadata } from "@/app/layout";
+import {
+  getBaseLocationsData,
+  getMetadata,
+  withBaseProps as withExternalBaseProps,
+} from "@/misc/pages";
 
-export function getProps({ title, locationsData }) {
+export function getBaseProps({ title, locationsData }) {
   return {
     sections: {
       top: {
@@ -98,19 +98,12 @@ export function getProps({ title, locationsData }) {
           },
         ],
       },
-      locations: locationsData || {
-        items: makeNavGridItems(
-          province,
-          appConfig.links.servizi["frantoio-mobile-inerti"]
-        ),
-        title: (
-          <span>
-            Tramite le nostre due sedi di Poppi e di Arezzo <br /> rendiamo
-            disponibile il nostro frantoio mobile inerti in tutte le province
-            italiane:
-          </span>
-        ),
-      },
+      locations:
+        locationsData ||
+        getBaseLocationsData({
+          links: links.servizi["frantoio-mobile-inerti"],
+          serviceName: "frantoio mobile inerti",
+        }),
       contacts: {
         preTitle: "Per ogni tua problematica e urgenza riguardante",
         title,
@@ -139,52 +132,23 @@ export function getProps({ title, locationsData }) {
   };
 }
 
-export function getMetadata({ title, canonical }) {
-  const description = getDescription({
-    mainContent: title,
-  });
-  return {
-    title: `${title} - Maggi Mariano Servizi Ecologici`,
-    description,
-    openGraph: getOpenGraphMetadata({ title, description }),
-    alternates: {
-      canonical: `${appConfig.data.baseUrl}${canonical}`,
-    },
-  };
-}
-
-export const ConditionalPage = withConditionalRendering({
-  Mobile: import("@/templates/AltMainContent/alt/mobile"),
-  Desktop: import("@/templates/AltMainContent/alt/desktop"),
-});
-
 export const metadata = getMetadata({
   title: "Frantoio mobile inerti",
   canonical: links.servizi["frantoio-mobile-inerti"].root,
 });
 
-export function Page({ searchParams, title, locationsData, locationNames }) {
-  const mobile = searchParams?.viewport === "mobile";
-  const props = getProps({ title, mobile, locationsData });
-  return (
-    <ConditionalPage
-      {...props}
-      searchParams={searchParams}
-      onContactFormSubmit={onContactFormSubmit}
-      locationNames={locationNames}
-    />
-  );
-}
-
 export function withBaseProps({ title, locationsData, locationNames }) {
-  return memo(async ({ searchParams }) => (
-    <Page
-      searchParams={searchParams}
-      title={title}
-      locationsData={locationsData}
-      locationNames={locationNames}
-    />
-  ));
+  return withExternalBaseProps({
+    title,
+    locationNames,
+    locationsData,
+    getBaseProps,
+    Components: {
+      Mobile: import("@/templates/AltMainContent/alt/mobile"),
+      Desktop: import("@/templates/AltMainContent/alt/desktop"),
+    },
+  });
 }
 
+export { getMetadata };
 export default withBaseProps({ title: "Frantoio mobile inerti" });

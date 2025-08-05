@@ -1,23 +1,19 @@
-import appConfig, { links } from "../../../../app.config";
-import { makeNavGridItems } from "../../../misc/functions";
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import comuni from "../../../../.data/comuni/perugia.json";
+import appConfig, { links } from "../../../../app.config";
+import comuni from "../../../../.data/comuni.json";
+import { getProvinceLocationsData } from "@/misc/pages";
 
-export const metadata = getMetadata({
-  title: "Autospurgo Perugia",
-  canonical: links.autospurgo.perugia,
+export const metadata = getMetadata({ 
+    title: "Autospurgo Perugia",
+    canonical: links.autospurgo["perugia"],
 });
-export default withBaseProps({
-  title: "Autospurgo Perugia",
-  locationNames: { label: "Perugia", href: "perugia" },
-  locationsData: {
-    items: makeNavGridItems(comuni, appConfig.links.autospurgo),
-    title: (
-      <span>
-        Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo il
-        servizio di autospurgo in tutti i comuni della provincia di Perugia:
-      </span>
-    ),
-  },
+export default withBaseProps({ 
+    title: "Autospurgo Perugia", 
+    locationNames: {label: "Perugia", href: "perugia"},
+    locationsData: getProvinceLocationsData({
+        links: appConfig.links.autospurgo,
+        comuni: comuni["perugia"],
+        name: "Perugia",
+    }),
 });
