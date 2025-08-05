@@ -38,3 +38,4 @@ export function withBaseProps({ title, locationsData, locationNames }) {
 }
 
 export { getMetadata };
+export default withBaseProps({ title: "Disidratazione fanghi" });

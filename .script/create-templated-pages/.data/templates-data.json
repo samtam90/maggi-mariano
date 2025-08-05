@@ -401,12 +401,12 @@
     },
     { "path": "citerna", "title": "Citerna", "province": {"title": "Perugia", "path": "perugia"} },
     {
-      "path": "città-della-pieve",
+      "path": "citta-della-pieve",
       "title": "Città della Pieve",
       "province": {"title": "Perugia", "path": "perugia"}
     },
     {
-      "path": "città-di-castello",
+      "path": "citta-di-castello",
       "title": "Città di Castello",
       "province": {"title": "Perugia", "path": "perugia"}
     },

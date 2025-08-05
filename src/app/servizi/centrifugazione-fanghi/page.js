@@ -129,3 +129,5 @@ export function withBaseProps({ title, locationsData, locationNames }) {
     getBaseProps,
   });
 }
+
+export default withBaseProps({ title: "Centrifugazione fanghi" });
