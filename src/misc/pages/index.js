@@ -130,6 +130,7 @@ export function withBaseProps({
   title,
   locationsData,
   locationNames,
+  additionalServiceLocations,
   getBaseProps,
   Components,
 }) {
@@ -137,8 +138,16 @@ export function withBaseProps({
   const ConditionalPage = withConditionalRendering(Components);
   return memo(async ({ searchParams }) => {
     const mobile = searchParams?.viewport === "mobile";
+    const isBot = searchParams?.isBot === "true";
+
     /* gets base props for current page, using provided getBaseProps prop */
-    const props = getBaseProps({ title, mobile, locationsData });
+    const props = getBaseProps({
+      title,
+      mobile,
+      locationsData,
+      additionalServiceLocations,
+      isBot,
+    });
     return (
       <ConditionalPage
         {...props}

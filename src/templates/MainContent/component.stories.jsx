@@ -1,6 +1,7 @@
 import React from "react";
 import MainContentTemplate from ".";
 import AppThemeProvider from "../../components/AppThemeProvider";
+import AdditionalServiceLocations from "../../components/AdditionalServiceLocations";
 
 export default {
   title: "Templates/MainContent",
@@ -65,8 +66,7 @@ Base.args = {
           mediaElements: [
             {
               label: "Image2",
-              srcset:
-                "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
+              srcset: "https://www.maggi-mariano.it/immagini/misc/Maggi2.jpg",
               dimensions: { width: 400, height: 300 },
             },
           ],
@@ -75,6 +75,15 @@ Base.args = {
             paragraphsContainer: "flex-grow",
             paragraphs: "mb-4",
           },
+        },
+        {
+          content: (
+            <AdditionalServiceLocations
+              locations={Array.from({ length: 32 }).map((v, k) => `loc${k}`)}
+              serviceName="autospurgo"
+              maxInitialShownLocations={12}
+            />
+          ),
         },
       ],
     },
