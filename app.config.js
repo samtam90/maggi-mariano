@@ -982,7 +982,12 @@ module.exports = {
         pass: "Mariano1960!!",
       },
       senderMail: "postmaster@maggi-mariano.it",
-      adminMails: ["samuele.tamburi@gmail.com", "info@italwebcom.it"],
+      adminMails: [
+        "samuele.tamburi@gmail.com",
+        "info@italwebcom.it",
+        "serviziecologici@maggi-mariano.it",
+        "serviziecologici@maggimariano.it",
+      ],
     },
   },
   links,
