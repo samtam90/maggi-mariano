@@ -1,8 +1,10 @@
 import { twJoin, twMerge, ClassNameValue } from "tailwind-merge";
-import React, { ReactNode, ComponentType, memo, Suspense } from "react";
+import React, { ReactNode, ComponentType } from "react";
 import appConfig from "../../../app.config";
-import dynamic from "next/dynamic";
-import Splash from "../../components/Splash";
+import {
+  Splash,
+  withConditionalRendering as withConditionalRendering_external,
+} from "@italwebcom/nextjs-components";
 
 /**
  * @typedef {"h1" | "h2" | "h3" | "h4" | "h5" | "h6"} HeaderComponent
@@ -96,37 +98,10 @@ export function renderHeader(component, content, props) {
  * @returns
  */
 export function withConditionalRendering(InComponents) {
-  const splash = (
+  return withConditionalRendering_external(
+    InComponents,
     <Splash alt={appConfig.misc.title} src={appConfig.misc.logoSrc} />
   );
-  const Components = {
-    Mobile: dynamic(() => InComponents.Mobile, { loading: () => splash }),
-    Desktop: dynamic(() => InComponents.Desktop, { loading: () => splash }),
-  };
-  return memo(async (props) => {
-    const { searchParams } = props;
-    return (
-      <div>
-        <Suspense
-          fallback={
-            <div className="h-screen flex items-center justify-center">
-              <img
-                alt={appConfig.misc.title}
-                src={appConfig.misc.logoSrc}
-                className="object-contain inline-block"
-              />
-            </div>
-          }
-        >
-          {searchParams?.viewport === "mobile" ? (
-            <Components.Mobile {...props} />
-          ) : (
-            <Components.Desktop {...props} />
-          )}
-        </Suspense>
-      </div>
-    );
-  });
 }
 
 /**

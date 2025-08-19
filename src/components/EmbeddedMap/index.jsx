@@ -1,9 +1,8 @@
 import React, { memo } from "react";
-import TitleWithOpaqueSubtitle, {
-  Title,
-  ClassNames as TitleClassNames,
-} from "../TitleWithOpaqueSubtitle";
+import { components, Title } from "@italwebcom/tailwind-components";
 import { HeaderComponent, twClsx } from "../../misc/functions";
+
+const { TitleWithOpaqueSubtitle } = components;
 
 function makeLabel(title, subtitle) {
   return `${title.left} ${title.right} ${subtitle}`;
@@ -17,7 +16,11 @@ function makeLabel(title, subtitle) {
  *      src: string,
  *      classNames?: {
  *          map?: string,
- *          title?: TitleClassNames
+ *          title?: {
+ *            title?: Title;
+ *            subtitle?: string;
+ *            root?: string;
+ *          }
  *      },
  *      titleHeadingElement?: HeaderComponent,
  *      dimensions: {width: number, height: number},

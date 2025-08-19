@@ -1,8 +1,10 @@
 import { twClsx } from "../../misc/functions";
 import React, { memo } from "react";
-import SpecialText from "../SpecialText";
 import { Paragraph } from "../../misc";
 import Image, { ImageProps } from "../Image";
+import { components } from "@italwebcom/tailwind-components";
+
+const {SpecialText} = components;
 
 /**
  * @typedef {{

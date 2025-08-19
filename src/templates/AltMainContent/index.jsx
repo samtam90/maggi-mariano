@@ -7,10 +7,10 @@ import testIDs from "../../misc/testIDs";
 import ContactSection from "../../components/ContactSection";
 import { Image } from "../../misc";
 import { twClsx } from "../../misc/functions";
-import SpecialText from "../../components/SpecialText";
 import tailwindConfig from "../../../tailwind.config";
-import { hooks } from "@italwebcom/tailwind-components";
+import { hooks, components } from "@italwebcom/tailwind-components";
 
+const {SpecialText} = components;
 const { useScrollVisibility } = hooks;
 
 /**

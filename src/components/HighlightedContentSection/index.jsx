@@ -1,11 +1,13 @@
 import React, { memo } from "react";
-import SpecialText from "../SpecialText";
 import { Paragraph } from "../../misc";
 import { twClsx } from "../../misc/functions";
 import tailwindConfig from "../../../tailwind.config";
 import { renderParagraphs } from "../ImageParagraphSections";
 import LinkButton from "../LinkButton";
 import Image, { ImageProps } from "../Image";
+import { components } from "@italwebcom/tailwind-components";
+
+const {SpecialText} = components;
 
 /**
  * @typedef {{
