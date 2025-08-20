@@ -2,7 +2,7 @@ import { memo } from "react";
 import appConfig, { links } from "../../../app.config";
 import { makeNavGridItems, withConditionalRendering } from "../functions";
 import { onContactFormSubmit } from "../server";
-import province from "../../../.data/province.json";
+import provinceDef from "../../../.data/province.json";
 import Link from "next/link";
 
 export function getProvinceLocationsData({ comuni, links, name }) {
@@ -62,13 +62,17 @@ export function getContactStuff({ title }) {
   };
 }
 
-export function getBaseLocationsData({ links, serviceName }) {
+export function getBaseLocationsData({
+  links,
+  serviceName,
+  province = provinceDef,
+}) {
   return {
     items: makeNavGridItems(province, links),
     title: (
       <span>
         Tramite le nostre due sedi di Poppi e di Arezzo <br /> effettuiamo il
-        servizio di {serviceName} in tutte le province italiane:
+        servizio di {serviceName} nelle seguenti province:
       </span>
     ),
   };

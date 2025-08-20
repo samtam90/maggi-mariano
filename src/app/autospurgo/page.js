@@ -6,6 +6,7 @@ import {
   getBaseLocationsData,
   withBaseProps as withExternalBaseProps,
 } from "../../misc/pages";
+import provinceAlt from "../../../.data/province-alt.json";
 import AdditionalServiceLocations from "@/components/AdditionalServiceLocations";
 
 export function getBaseProps({
@@ -150,6 +151,7 @@ export function getBaseProps({
         getBaseLocationsData({
           links: links.autospurgo,
           serviceName: "autospurgo",
+          province: provinceAlt,
         }),
       contacts: getContactStuff({ title }),
     },

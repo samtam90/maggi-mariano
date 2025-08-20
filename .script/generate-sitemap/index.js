@@ -45,8 +45,10 @@ function generateSitemapNodes(elements) {
 }
 
 /**
+ * @typedef {{prefixes: PathElement[], suffixes: PathElement[]}} TemplateData
+ *
  * @returns
- * @param {{prefixes: PathElement[], suffixes: PathElement[]}} templatesData
+ * @param {TemplateData[]} templatesData
  * @param {SitemapDataElement[]?} additionalElements
  * @param {string} baseUrl
  * @param {string} outPath
@@ -60,19 +62,21 @@ async function generateSitemap(
   processBaseUrl
 ) {
   const templatedPagesData = [];
-  const { prefixes, suffixes } = templatesData;
+  for (const templateData of templatesData) {
+    const { prefixes, suffixes } = templateData;
 
-  /* generate names & URLs for templated pages */
-  for (const prefix of prefixes) {
-    for (const suffix of suffixes) {
-      const id = `${prefix.path}-${suffix.path}`;
-      const actualBaseUrl = processBaseUrl(baseUrl, prefix.path);
-      const dataElement = {
-        id,
-        name: `${prefix.title} ${suffix.title}`,
-        url: `${actualBaseUrl}/${prefix.path}/${id}`,
-      };
-      templatedPagesData.push(dataElement);
+    /* generate names & URLs for templated pages */
+    for (const prefix of prefixes) {
+      for (const suffix of suffixes) {
+        const id = `${prefix.path}-${suffix.path}`;
+        const actualBaseUrl = processBaseUrl(baseUrl, prefix.path);
+        const dataElement = {
+          id,
+          name: `${prefix.title} ${suffix.title}`,
+          url: `${actualBaseUrl}/${prefix.path}/${id}`,
+        };
+        templatedPagesData.push(dataElement);
+      }
     }
   }
 

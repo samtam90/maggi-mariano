@@ -11,16 +11,28 @@ function processBaseUrl(baseUrl, prefixPath) {
   return baseUrl;
 }
 
-const prefixes = [
-  { title: "Autospurgo", path: "autospurgo" },
-  { title: "Frantoio mobile inerti", path: "frantoio-mobile-inerti" },
-  { title: "Noleggio bagni chimici", path: "noleggio-bagni-chimici" },
-  { title: "Pulizia fognature", path: "pulizia-fognature" },
-  { title: "Spurgo fosse biologiche", path: "spurgo-fosse-biologiche" },
-  { title: "Trasporto acqua", path: "trasporto-acqua" },
-  { title: "Trasporto rifiuti", path: "trasporto-rifiuti" },
+const inData = [
+  {
+    prefixes: [
+      { title: "Frantoio mobile inerti", path: "frantoio-mobile-inerti" },
+      { title: "Centrifugazione fanghi", path: "centrifugazione-fanghi" },
+      { title: "Disidratazione fanghi", path: "disidratazione-fanghi" },
+    ],
+    suffixes: templatesData[0].suffixes,
+  },
+  {
+    prefixes: [
+      { title: "Autospurgo", path: "autospurgo" },
+      { title: "Noleggio bagni chimici", path: "noleggio-bagni-chimici" },
+      { title: "Pulizia fognature", path: "pulizia-fognature" },
+      { title: "Spurgo fosse biologiche", path: "spurgo-fosse-biologiche" },
+      { title: "Trasporto acqua", path: "trasporto-acqua" },
+      { title: "Trasporto rifiuti", path: "trasporto-rifiuti" },
+    ],
+    suffixes: templatesData[1].suffixes,
+  },
 ];
-const { suffixes } = templatesData;
+
 const additionalElements = [
   {
     id: "home",
@@ -75,7 +87,7 @@ function getAdditionalElements(baseUrl) {
 
 (async function () {
   await generateSitemap(
-    { prefixes, suffixes },
+    inData,
     getAdditionalElements(baseUrl, additionalElements),
     baseUrl,
     outPath,

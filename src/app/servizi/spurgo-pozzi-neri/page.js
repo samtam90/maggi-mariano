@@ -1,9 +1,6 @@
-import { makeNavGridItems, withConditionalRendering } from "@/misc/functions";
-import { onContactFormSubmit } from "@/misc/server";
-import { memo } from "react";
 import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
-import province from "../../../../.data/province.json";
+import province from "../../../../.data/province-alt.json";
 import { getContactStuff } from "../pulizia-fognature/page";
 import {
   getBaseLocationsData,
@@ -72,6 +69,7 @@ export function getBaseProps({ title, mobile, locationsData }) {
         getBaseLocationsData({
           links: appConfig.links.servizi["spurgo-pozzi-neri"],
           serviceName: "spurgo pozzi neri",
+          province,
         }),
       contacts: getContactStuff({ title }),
     },

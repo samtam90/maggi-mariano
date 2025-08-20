@@ -1,0 +1,15 @@
+[
+  { "path": "arezzo", "title": "Arezzo" },
+  { "path": "firenze", "title": "Firenze" },
+  { "path": "forli-cesena", "title": "Forlì-Cesena" },
+  { "path": "grosseto", "title": "Grosseto" },
+  { "path": "livorno", "title": "Livorno" },
+  { "path": "lucca", "title": "Lucca" },
+  { "path": "massa-carrara", "title": "Massa-Carrara" },
+  { "path": "perugia", "title": "Perugia" },
+  { "path": "pisa", "title": "Pisa" },
+  { "path": "pistoia", "title": "Pistoia" },
+  { "path": "prato", "title": "Prato" },
+  { "path": "siena", "title": "Siena" },
+  { "path": "terni", "title": "Terni" }
+]

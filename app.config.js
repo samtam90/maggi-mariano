@@ -17,6 +17,7 @@ function makeNavBarItems(data, prefix, links, additionalItems = {}) {
 const { default: Link } = require("next/link");
 
 const province = require("./.data/province.json");
+const provinceAlt = require("./.data/province-alt.json");
 
 const comuniArezzo = require("./.data/comuni/arezzo.json");
 const comuniFirenze = require("./.data/comuni/firenze.json");
@@ -25,9 +26,7 @@ const comuniSiena = require("./.data/comuni/siena.json");
 const comuniTerni = require("./.data/comuni/terni.json");
 const comuniForliCesena = require("./.data/comuni/forli-cesena.json");
 
-const baseUrl = "https://www.maggi-mariano.it";
-const allLocations = [
-  ...province,
+const comuni = [
   ...comuniArezzo,
   ...comuniFirenze,
   ...comuniPerugia,
@@ -36,12 +35,17 @@ const allLocations = [
   ...comuniForliCesena,
 ];
 
+const baseUrl = "https://www.maggi-mariano.it";
+
+const allLocations = [...province, ...comuni];
+const allLocationsAlt = [...provinceAlt, ...comuni];
+
 const links = {
   autospurgo: makeLinks(
     {
       root: "/autospurgo",
     },
-    allLocations,
+    allLocationsAlt,
     "/autospurgo/autospurgo"
   ),
   contatti: "/contatti",
@@ -75,7 +79,7 @@ const links = {
       {
         root: "/servizi/noleggio-bagni-chimici",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/noleggio-bagni-chimici/noleggio-bagni-chimici"
     ),
     "noleggio-container-e-cassoni": "/servizi/noleggio-container-e-cassoni",
@@ -83,7 +87,7 @@ const links = {
       {
         root: "/servizi/pulizia-fognature",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/pulizia-fognature/pulizia-fognature"
     ),
     "recupero-materiali-ferrosi": "/servizi/recupero-materiali-ferrosi",
@@ -91,28 +95,28 @@ const links = {
       {
         root: "/servizi/spurgo-pozzi-neri",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/spurgo-pozzi-neri/spurgo-pozzi-neri"
     ),
     "spurgo-fosse-biologiche": makeLinks(
       {
         root: "/servizi/spurgo-fosse-biologiche",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/spurgo-fosse-biologiche/spurgo-fosse-biologiche"
     ),
     "trasporto-acqua": makeLinks(
       {
         root: "/servizi/trasporto-acqua",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/trasporto-acqua/trasporto-acqua"
     ),
     "trasporto-rifiuti": makeLinks(
       {
         root: "/servizi/trasporto-rifiuti",
       },
-      allLocations,
+      allLocationsAlt,
       "/servizi/trasporto-rifiuti/trasporto-rifiuti"
     ),
     "videoispezioni-telecamera-robot":
@@ -127,7 +131,7 @@ const links = {
 
 const navBarSections = {
   Home: "/",
-  Autospurgo: makeNavBarItems(province, "Autospurgo", links.autospurgo, {
+  Autospurgo: makeNavBarItems(provinceAlt, "Autospurgo", links.autospurgo, {
     "Autospurgo Arezzo": makeNavBarItems(
       comuniArezzo,
       "Autospurgo",
@@ -273,7 +277,7 @@ const navBarSections = {
     ),
     "Escavatore a risucchio": links.servizi["escavatore-a-risucchio"],
     "Noleggio bagni chimici": makeNavBarItems(
-      province,
+      provinceAlt,
       "Noleggio bagni chimici",
       links.servizi["noleggio-bagni-chimici"],
       {
@@ -312,7 +316,7 @@ const navBarSections = {
     "Noleggio container e cassoni":
       links.servizi["noleggio-container-e-cassoni"],
     "Pulizia fognature": makeNavBarItems(
-      province,
+      provinceAlt,
       "Pulizia fognature",
       links.servizi["pulizia-fognature"],
       {
@@ -350,7 +354,7 @@ const navBarSections = {
     ),
     "Recupero materiali ferrosi": links.servizi["recupero-materiali-ferrosi"],
     "Spurgo fosse biologiche": makeNavBarItems(
-      province,
+      provinceAlt,
       "Spurgo fosse biologiche",
       links.servizi["spurgo-fosse-biologiche"],
       {
@@ -387,7 +391,7 @@ const navBarSections = {
       }
     ),
     "Spurgo pozzi neri": makeNavBarItems(
-      province,
+      provinceAlt,
       "Spurgo pozzi neri",
       links.servizi["spurgo-pozzi-neri"],
       {
@@ -424,7 +428,7 @@ const navBarSections = {
       }
     ),
     "Trasporto acqua": makeNavBarItems(
-      province,
+      provinceAlt,
       "Trasporto acqua",
       links.servizi["trasporto-acqua"],
       {
@@ -461,7 +465,7 @@ const navBarSections = {
       }
     ),
     "Trasporto rifiuti": makeNavBarItems(
-      province,
+      provinceAlt,
       "Trasporto rifiuti",
       links.servizi["trasporto-rifiuti"],
       {

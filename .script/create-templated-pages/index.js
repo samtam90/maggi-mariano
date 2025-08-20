@@ -56,49 +56,52 @@ async function createDirectoryWithSingleFile(directoryPath, filename, content) {
 }
 
 /**
+ * @typedef {{prefixes: string[], suffixes: Suffix[]}} TemplateData
+ *
  * @returns
  * @param {string} outPath
  * @param {string} templatesPath
- * @param {{prefixes: string[], suffixes: Suffix[]}} templatesData
+ * @param {TemplateData[]} templatesData
  */
 async function generatePages(outPath, templatesPath, templatesData) {
-  const { prefixes, suffixes } = templatesData;
-  const templates = await readTemplates(templatesPath, prefixes);
-
-  for (const prefix of prefixes) {
-    console.log(`\nProcessing prefix ${prefix}.`);
-    /**
-     * @type {string}
-     */
-    const currentTemplate = templates[prefix];
-    const outerDirectoryPath = path.resolve(outPath, prefix);
-    for (const suffix of suffixes) {
-      const directoryPath = path.resolve(
-        outPath,
-        prefix,
-        `${prefix}-${suffix.path}`
-      );
-      console.log(`\nProcessing full path ${directoryPath}.`);
-      await deleteDirectoryIfExisting(directoryPath);
-      const provinceData = suffix.province || suffix;
-      let processedTemplate = currentTemplate
-        .replace(/(\[name\])/g, suffix.title)
-        .replace(/(\[path\])/g, suffix.path)
-        .replace(/(\[province.path\])/g, provinceData.path)
-        .replace(/(\[province.name\])/g, provinceData.title);
-      try {
-        await createDirectoryWithSingleFile(
-          directoryPath,
-          "page.js",
-          processedTemplate
+  for (const templateData of templatesData) {
+    const { prefixes, suffixes } = templateData;
+    const templates = await readTemplates(templatesPath, prefixes);
+    for (const prefix of prefixes) {
+      console.log(`\nProcessing prefix ${prefix}.`);
+      /**
+       * @type {string}
+       */
+      const currentTemplate = templates[prefix];
+      const outerDirectoryPath = path.resolve(outPath, prefix);
+      for (const suffix of suffixes) {
+        const directoryPath = path.resolve(
+          outPath,
+          prefix,
+          `${prefix}-${suffix.path}`
         );
-      } catch (err) {
-        await fs.promises.mkdir(outerDirectoryPath);
-        await createDirectoryWithSingleFile(
-          directoryPath,
-          "page.js",
-          processedTemplate
-        );
+        console.log(`\nProcessing full path ${directoryPath}.`);
+        await deleteDirectoryIfExisting(directoryPath);
+        const provinceData = suffix.province || suffix;
+        let processedTemplate = currentTemplate
+          .replace(/(\[name\])/g, suffix.title)
+          .replace(/(\[path\])/g, suffix.path)
+          .replace(/(\[province.path\])/g, provinceData.path)
+          .replace(/(\[province.name\])/g, provinceData.title);
+        try {
+          await createDirectoryWithSingleFile(
+            directoryPath,
+            "page.js",
+            processedTemplate
+          );
+        } catch (err) {
+          await fs.promises.mkdir(outerDirectoryPath);
+          await createDirectoryWithSingleFile(
+            directoryPath,
+            "page.js",
+            processedTemplate
+          );
+        }
       }
     }
   }

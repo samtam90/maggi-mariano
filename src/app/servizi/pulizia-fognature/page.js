@@ -1,8 +1,7 @@
-import { makeNavGridItems } from "@/misc/functions";
 import appConfig, { links } from "../../../../app.config";
 import { getMetadata } from "../frantoio-mobile-inerti/page";
 import { HighlightedText } from "../centrifugazione-o-disidratazione-fanghi/page";
-import province from "../../../../.data/province.json";
+import province from "../../../../.data/province-alt.json";
 import {
   getBaseLocationsData,
   getContactStuff,
@@ -79,6 +78,7 @@ export function getBaseProps({ title, mobile, locationsData }) {
         getBaseLocationsData({
           links: appConfig.links.servizi["pulizia-fognature"],
           serviceName: "pulizia fognature",
+          province,
         }),
       contacts: getContactStuff({ title }),
     },

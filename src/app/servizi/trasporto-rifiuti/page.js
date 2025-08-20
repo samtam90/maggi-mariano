@@ -6,6 +6,7 @@ import {
   getBaseLocationsData,
   withBaseProps as withExternalBaseProps,
 } from "@/misc/pages";
+import province from "../../../../.data/province-alt.json";
 
 const imgDims = { width: 1024, height: 1024 };
 
@@ -70,6 +71,7 @@ export function getBaseProps({ title, mobile, locationsData }) {
         getBaseLocationsData({
           links: appConfig.links.servizi["trasporto-rifiuti"],
           serviceName: "trasporto rifiuti",
+          province,
         }),
       contacts: getContactStuff({ title }),
     },

@@ -1,6 +1,6 @@
 import { getMetadata } from "../../servizi/frantoio-mobile-inerti/page";
 import { withBaseProps } from "../page";
-import appConfig, { links } from "../../../../app.config";
+import { links } from "../../../../app.config";
 import comuni from "../../../../.data/comuni.json";
 import { getProvinceLocationsData } from "@/misc/pages";
 
@@ -12,7 +12,7 @@ export default withBaseProps({
     title: "Autospurgo Figline Valdarno", 
     locationNames: {label: "Figline Valdarno", href: "figline-valdarno"},
     locationsData: getProvinceLocationsData({
-        links: appConfig.links.autospurgo,
+        links: links.autospurgo,
         comuni: comuni["arezzo"],
         name: "Arezzo",
     }),
